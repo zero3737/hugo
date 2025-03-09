@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Categories on carlos</title>
+        <link>https://example.com/categories/</link>
+        <description>Recent content in Categories on carlos</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Example Person</copyright>
+        <lastBuildDate>Mon, 10 Mar 2025 05:20:08 +0800</lastBuildDate><atom:link href="https://example.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Git</title>
+        <link>https://example.com/categories/git/</link>
+        <pubDate>Mon, 10 Mar 2025 05:08:44 +0800</pubDate>
+        
+        <guid>https://example.com/categories/git/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Github</title>
+        <link>https://example.com/categories/github/</link>
+        <pubDate>Mon, 10 Mar 2025 05:08:44 +0800</pubDate>
+        
+        <guid>https://example.com/categories/github/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Linux</title>
+        <link>https://example.com/categories/linux/</link>
+        <pubDate>Mon, 10 Mar 2025 05:08:44 +0800</pubDate>
+        
+        <guid>https://example.com/categories/linux/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Ubuntu</title>
+        <link>https://example.com/categories/ubuntu/</link>
+        <pubDate>Mon, 10 Mar 2025 05:08:44 +0800</pubDate>
+        
+        <guid>https://example.com/categories/ubuntu/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>编程</title>
+        <link>https://example.com/categories/%E7%BC%96%E7%A8%8B/</link>
+        <pubDate>Mon, 10 Mar 2025 05:08:44 +0800</pubDate>
+        
+        <guid>https://example.com/categories/%E7%BC%96%E7%A8%8B/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Gitee</title>
+        <link>https://example.com/categories/gitee/</link>
+        <pubDate>Mon, 10 Mar 2025 02:27:12 +0800</pubDate>
+        
+        <guid>https://example.com/categories/gitee/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Windows</title>
+        <link>https://example.com/categories/windows/</link>
+        <pubDate>Sun, 09 Mar 2025 23:32:19 +0800</pubDate>
+        
+        <guid>https://example.com/categories/windows/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>电脑知识</title>
+        <link>https://example.com/categories/%E7%94%B5%E8%84%91%E7%9F%A5%E8%AF%86/</link>
+        <pubDate>Sun, 09 Mar 2025 23:32:19 +0800</pubDate>
+        
+        <guid>https://example.com/categories/%E7%94%B5%E8%84%91%E7%9F%A5%E8%AF%86/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>邮箱</title>
+        <link>https://example.com/categories/%E9%82%AE%E7%AE%B1/</link>
+        <pubDate>Sun, 09 Mar 2025 23:32:19 +0800</pubDate>
+        
+        <guid>https://example.com/categories/%E9%82%AE%E7%AE%B1/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Hugo</title>
+        <link>https://example.com/categories/hugo/</link>
+        <pubDate>Sun, 09 Mar 2025 22:49:27 +0800</pubDate>
+        
+        <guid>https://example.com/categories/hugo/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>笔记</title>
+        <link>https://example.com/categories/%E7%AC%94%E8%AE%B0/</link>
+        <pubDate>Sun, 09 Mar 2025 22:49:27 +0800</pubDate>
+        
+        <guid>https://example.com/categories/%E7%AC%94%E8%AE%B0/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Aigc</title>
+        <link>https://example.com/categories/aigc/</link>
+        <pubDate>Sun, 09 Mar 2025 22:22:02 +0800</pubDate>
+        
+        <guid>https://example.com/categories/aigc/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Chatgpt</title>
+        <link>https://example.com/categories/chatgpt/</link>
+        <pubDate>Sun, 09 Mar 2025 22:22:02 +0800</pubDate>
+        
+        <guid>https://example.com/categories/chatgpt/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Deepseek</title>
+        <link>https://example.com/categories/deepseek/</link>
+        <pubDate>Sun, 09 Mar 2025 22:22:02 +0800</pubDate>
+        
+        <guid>https://example.com/categories/deepseek/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Docker</title>
+        <link>https://example.com/categories/docker/</link>
+        <pubDate>Sun, 09 Mar 2025 22:22:02 +0800</pubDate>
+        
+        <guid>https://example.com/categories/docker/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Nginx</title>
+        <link>https://example.com/categories/nginx/</link>
+        <pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/categories/nginx/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>写作</title>
+        <link>https://example.com/categories/%E5%86%99%E4%BD%9C/</link>
+        <pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/categories/%E5%86%99%E4%BD%9C/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>运维</title>
+        <link>https://example.com/categories/%E8%BF%90%E7%BB%B4/</link>
+        <pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/categories/%E8%BF%90%E7%BB%B4/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Edge</title>
+        <link>https://example.com/categories/edge/</link>
+        <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/categories/edge/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Https</title>
+        <link>https://example.com/categories/https/</link>
+        <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/categories/https/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>浏览器</title>
+        <link>https://example.com/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/</link>
+        <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>前端</title>
+        <link>https://example.com/categories/%E5%89%8D%E7%AB%AF/</link>
+        <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/categories/%E5%89%8D%E7%AB%AF/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Java</title>
+        <link>https://example.com/categories/java/</link>
+        <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/categories/java/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>JavaScript</title>
+        <link>https://example.com/categories/javascript/</link>
+        <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/categories/javascript/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Python</title>
+        <link>https://example.com/categories/python/</link>
+        <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/categories/python/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>办公</title>
+        <link>https://example.com/categories/%E5%8A%9E%E5%85%AC/</link>
+        <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/categories/%E5%8A%9E%E5%85%AC/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Obsidian</title>
+        <link>https://example.com/categories/obsidian/</link>
+        <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/categories/obsidian/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>
