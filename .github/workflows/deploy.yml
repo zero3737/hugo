@@ -12,6 +12,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: source  # 明确检出source分支
+
       - name: hugo 设置，生成静态文件
         uses: peaceiris/actions-hugo@v2
         with:
@@ -23,6 +24,12 @@ jobs:
         run: cp -r //home/runner/work/hugo/hugo/static/00-assets/ /home/runner/work/hugo/hugo/static/_resources
       - name: Build static files
         run: hugo --minify --gc
+
+      - name: Set up SSH  
+        uses: webfactory/ssh-agent@v0.8.0  
+        with:  
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          
       - name: 发布到 main 分支  
         uses: peaceiris/actions-gh-pages@v3  
         with:  
