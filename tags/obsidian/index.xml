@@ -51,6 +51,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/3a70e88f90cd0095f62fc5a4db7bea9c.png&#34; alt=&#34;3a70e88f90cd0095f62fc5a4db7bea9c.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;h2 id=&#34;启动与配置&#34;&gt;启动与配置
@@ -78,6 +81,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/40b6311d8afdc67f7c5375a424df3e59.png&#34; alt=&#34;40b6311d8afdc67f7c5375a424df3e59.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;启动 hugo 服务&lt;/p&gt;
@@ -298,6 +304,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250305051412.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;h2 id=&#34;兼容-joplin&#34;&gt;兼容 joplin
@@ -316,6 +325,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250305051749.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;obsidian 主流知识库目录结构要符合主流标准，不然很难管理。joplin 附件都是存放在自己的数据文件夹下，用户不用关心附件管理问题。而 obsidian 需要自己设计知识库目录结构，不然管理非常头疼。&lt;/p&gt;
@@ -334,6 +346,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250305052330.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;看起来非常清爽，为了兼容新的目录结构，需要使用符号链接。&lt;/p&gt;
@@ -385,6 +400,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250305195822.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;h2 id=&#34;元数据&#34;&gt;元数据
@@ -403,6 +421,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250305201453.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;h2 id=&#34;双链&#34;&gt;双链
@@ -421,6 +442,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250305202010.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;不过很鸡肋唉，谁会写笔记的时候复制粘贴别的笔记名啊。&lt;/p&gt;
@@ -439,6 +463,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250305202754.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;h2 id=&#34;白板&#34;&gt;白板
@@ -457,6 +484,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250305203500.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;简单可视化操作，就是实现思维导图。&lt;/p&gt;
@@ -474,6 +504,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250305203241.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;h2 id=&#34;第三方插件&#34;&gt;第三方插件
@@ -494,6 +527,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250305204112.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;点击浏览即可安装第三方插件，访问的是 github&lt;/p&gt;
@@ -511,6 +547,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250305204145.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;h2 id=&#34;模板&#34;&gt;模板
@@ -529,6 +568,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250305212000.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;在「模板」插件设置中指定模板文件夹（如 Templates）‌。&lt;/p&gt;
@@ -546,6 +588,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250305212044.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;编写模板内容，在 Templates 文件夹新建 hugo-template.md，内容如下&lt;/p&gt;
@@ -617,6 +662,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250306024401.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;h2 id=&#34;实例&#34;&gt;实例

@@ -31,6 +31,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250307030309.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;启用正则表达式，输入 &lt;code&gt;.*&lt;/code&gt; 匹配任意文件名&lt;/p&gt;
@@ -50,6 +53,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250307030156.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 </description>

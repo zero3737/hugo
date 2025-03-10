@@ -30,6 +30,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308235044.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;点击链接，域名会默认加端口号，导致访问失败 404&lt;/p&gt;
@@ -47,6 +50,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308235159.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;h2 id=&#34;解决方案&#34;&gt;解决方案
@@ -98,6 +104,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308225610.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;而在本地却能正常复制粘贴，比如 localhost 可以正常复制粘贴。这可能是因为在局域网环境下，浏览器对剪贴板的访问权限被限制，导致&lt;code&gt;navigator.clipboard&lt;/code&gt;对象不可用，从而引发该错误。&lt;/p&gt;
@@ -211,6 +220,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308230546.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 </description>

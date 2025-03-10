@@ -42,6 +42,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309003651.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;第二列为 pid，关闭进程的时候会用到。&lt;/p&gt;

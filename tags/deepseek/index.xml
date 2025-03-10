@@ -29,6 +29,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309221804.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;这是因为前端页面长时间请求外国 api 接口造成的&lt;/p&gt;
@@ -48,6 +51,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309222046.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 </description>
@@ -74,6 +80,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/9e12b9fa9798cdd67e1a13d408bd2027.png&#34; alt=&#34;9e12b9fa9798cdd67e1a13d408bd2027.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;主流方式是 OpenAI API，许多第三方 api 都提供  OpenAI API 方式接入，比如腾讯、字节和百度。&lt;/p&gt;
@@ -93,6 +102,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/90a1ccefa40829851812ebf768521e1c.png&#34; alt=&#34;90a1ccefa40829851812ebf768521e1c.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;点击加号即可对接 one api&lt;/p&gt;
@@ -110,6 +122,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/46f4a567d9983609698d465bf6f1fbc3.png&#34; alt=&#34;46f4a567d9983609698d465bf6f1fbc3.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;还可以通过函数方式创建模型，用来支持 deepseek 思维链功能。&lt;/p&gt;
@@ -127,6 +142,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/7acfae58c81f9a908f0656733390d24e.png&#34; alt=&#34;7acfae58c81f9a908f0656733390d24e.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 </description>
@@ -167,6 +185,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/c2737dbbb941d2af59d096ebd328572d.png&#34; alt=&#34;c2737dbbb941d2af59d096ebd328572d.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;创建接入点&lt;/p&gt;
@@ -184,6 +205,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/1f7dbe20c67bf9666199f6b25a40e6f6.png&#34; alt=&#34;1f7dbe20c67bf9666199f6b25a40e6f6.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;没有实名认证，必须实名认证&lt;/p&gt;
@@ -201,6 +225,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/837a4ced5dd4f31832c4296e162694f4.png&#34; alt=&#34;837a4ced5dd4f31832c4296e162694f4.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;one api 接入配置&lt;/p&gt;
@@ -218,6 +245,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/f8e9b0efaa447a2b304f4ddeb3e3264b.png&#34; alt=&#34;f8e9b0efaa447a2b304f4ddeb3e3264b.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;oben webui 通过“外部链接”方式对接 one api，one api 统一管理所有 api 接口。&lt;/p&gt;
@@ -235,6 +265,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/3a11b9a7391484f94ca105b50fd7b515.png&#34; alt=&#34;3a11b9a7391484f94ca105b50fd7b515.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;这里 v1 为固定写法，不要钻牛角尖。秘钥填 one api 的。&lt;/p&gt;
@@ -252,6 +285,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/4975450d6bdfc18aa9d2b3eb8283dd9c.png&#34; alt=&#34;4975450d6bdfc18aa9d2b3eb8283dd9c.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;填这个秘钥即可。&lt;/p&gt;
@@ -269,6 +305,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/abd9981b1c2f3d54b8e9c7cf43887431.png&#34; alt=&#34;abd9981b1c2f3d54b8e9c7cf43887431.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;h2 id=&#34;腾讯&#34;&gt;腾讯
@@ -289,6 +328,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/ff2790aa1bed7c9a8d63951b7e59d80d.png&#34; alt=&#34;ff2790aa1bed7c9a8d63951b7e59d80d.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;查看文档即可，只有 r1 和 v3。&lt;/p&gt;
@@ -306,6 +348,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/fbba04c7b5371eee746323b8d05c3fe9.png&#34; alt=&#34;fbba04c7b5371eee746323b8d05c3fe9.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;h2 id=&#34;百度&#34;&gt;百度
@@ -327,6 +372,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/6d0f0245a5d81b9d660424836afa45a6.png&#34; alt=&#34;6d0f0245a5d81b9d660424836afa45a6.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;参数填 deepseek-r1 即可&lt;/p&gt;
@@ -344,6 +392,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/8a402c9041b659fd33298a6a464a1617.png&#34; alt=&#34;8a402c9041b659fd33298a6a464a1617.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;这里可查看哪些模型可以使用&lt;/p&gt;
@@ -361,6 +412,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/188d0c91d796544e7353288ac5c933df.png&#34; alt=&#34;188d0c91d796544e7353288ac5c933df.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 </description>
@@ -387,6 +441,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/558020a4688e631f36c1ee25a1b2e700.png&#34; alt=&#34;558020a4688e631f36c1ee25a1b2e700.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;申请 api&lt;/p&gt;
@@ -404,6 +461,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/e7ce6ac20832b41eda2cdc4c25faa517.png&#34; alt=&#34;e7ce6ac20832b41eda2cdc4c25faa517.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;可以查看剩余 token&lt;/p&gt;
@@ -421,6 +481,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/a4c9c68e947160e62c43a23bfecbc974.png&#34; alt=&#34;a4c9c68e947160e62c43a23bfecbc974.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;h2 id=&#34;火山联网&#34;&gt;火山联网
@@ -441,6 +504,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/0b940231abda1bdab47807ab0c174e7c.png&#34; alt=&#34;0b940231abda1bdab47807ab0c174e7c.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;默认即可，点击创建&lt;/p&gt;
@@ -458,6 +524,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/0434e823f8fa0908808a8dee717b7a5f.png&#34; alt=&#34;0434e823f8fa0908808a8dee717b7a5f.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;需要手动开通联网功能，有免费额度。&lt;/p&gt;
@@ -475,6 +544,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/837b27e76f2732129abb108d9a8788de.png&#34; alt=&#34;837b27e76f2732129abb108d9a8788de.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;api 调用&lt;/p&gt;
@@ -492,6 +564,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/6ad5505749e5d30445d3de310cf45584.png&#34; alt=&#34;6ad5505749e5d30445d3de310cf45584.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;选择“openai-sdk”&lt;/p&gt;
@@ -509,6 +584,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/c698649b1e53c917c9a1fd1daa2d5ce9.png&#34; alt=&#34;c698649b1e53c917c9a1fd1daa2d5ce9.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;联网功能的 api 和默认的 api 不一样，有区别。&lt;/p&gt;
@@ -526,6 +604,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/f1262990056a5426a859bb9acca0c799.png&#34; alt=&#34;f1262990056a5426a859bb9acca0c799.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;模型 id 也跟默认的不一样。&lt;/p&gt;
@@ -543,6 +624,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/604364ecd026d573cd6e18981bacc3d3.png&#34; alt=&#34;604364ecd026d573cd6e18981bacc3d3.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;api key 没有变化，按照下图配置即可。&lt;/p&gt;
@@ -560,6 +644,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/c02f34c2d6e525bc45dd3129b00a4d6b.png&#34; alt=&#34;c02f34c2d6e525bc45dd3129b00a4d6b.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;记得在这里启用，并修改名字。&lt;/p&gt;
@@ -577,6 +664,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/446cd6c557abc46b387046de73b42be1.png&#34; alt=&#34;446cd6c557abc46b387046de73b42be1.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;主页选择新的模型 api，即可体验联网功能的 deepseek&lt;/p&gt;
@@ -594,6 +684,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/0cf0ce5715c4ee25e3324a6fef6781c3.png&#34; alt=&#34;0cf0ce5715c4ee25e3324a6fef6781c3.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;h2 id=&#34;腾讯&#34;&gt;腾讯
@@ -614,6 +707,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/a401dbae5d1b34d26689649480e74480.png&#34; alt=&#34;a401dbae5d1b34d26689649480e74480.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;跟着文档走即可：&lt;a class=&#34;link&#34; href=&#34;https://cloud.tencent.com/document/product/1759/116006&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -638,6 +734,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/880b5b6e9c60a59b11ab999a4ffc8fc3.png&#34; alt=&#34;880b5b6e9c60a59b11ab999a4ffc8fc3.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 </description>
@@ -667,6 +766,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/26038ada0439c2e602506f25fd869a43.png&#34; alt=&#34;26038ada0439c2e602506f25fd869a43.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;管理员面板&lt;/p&gt;
@@ -684,6 +786,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/96993edfca5420c7d6df4aff0a6bed49.png&#34; alt=&#34;96993edfca5420c7d6df4aff0a6bed49.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;注意链接是固定格式&lt;/p&gt;
@@ -701,6 +806,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/aa9c3c78c85b3f4f6b4130cc08febaf5.png&#34; alt=&#34;aa9c3c78c85b3f4f6b4130cc08febaf5.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;点击启用，可以重命名。&lt;/p&gt;
@@ -718,6 +826,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/2f740c7a357c3bf2987f5b8f6448b524.png&#34; alt=&#34;2f740c7a357c3bf2987f5b8f6448b524.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;该方式是导入 deepseek 模型，所以要重新选择刚刚创建的模型，one api 有所区别。如果之前导入过其他 api 模型，需要重新选择，这种方式是通过函数导入模型。&lt;/p&gt;
@@ -735,6 +846,9 @@
 		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/f7dfb78c19f2a7e4865d5c6053249965.png&#34; alt=&#34;f7dfb78c19f2a7e4865d5c6053249965.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
+&lt;script&gt;
+	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
+&lt;/script&gt;
 
 &lt;/p&gt;
 </description>
