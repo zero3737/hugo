@@ -14,13 +14,13 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: source  # 明确检出source分支
-
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.125.7'  # 指定Hugo版本
           extended: true  # 启用扩展版
-
+      - name: Fix permissions  
+        run: sudo chmod -R 755 /home/runner/work/hugo/hugo/static/_resources
       - name: Build static files
         run: hugo --minify --gc
 
