@@ -46,13 +46,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250310054915.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250310054915.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310054915.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310054915.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;宝塔定时执行脚本即可&lt;/p&gt;
@@ -66,13 +63,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250310055150.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250310055150.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310055150.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310055150.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;可以手动执行，测试脚本&lt;/p&gt;
@@ -86,13 +80,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250310055256.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250310055256.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310055256.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310055256.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 </description>
@@ -115,13 +106,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309224336.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309224336.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309224336.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309224336.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;h2 id=&#34;修改时间格式&#34;&gt;修改时间格式
@@ -136,13 +124,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309224526.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309224526.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309224526.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309224526.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;添加代码&lt;/p&gt;
@@ -173,13 +158,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309224906.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309224906.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309224906.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309224906.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;h2 id=&#34;配置最后修改于&#34;&gt;配置「最后修改于」
@@ -205,13 +187,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309224844.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309224844.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309224844.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309224844.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 </description>
@@ -321,13 +300,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250308235044.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250308235044.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308235044.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308235044.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;点击链接，域名会默认加端口号，导致访问失败 404&lt;/p&gt;
@@ -341,13 +317,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250308235159.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250308235159.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308235159.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308235159.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;h2 id=&#34;解决方案&#34;&gt;解决方案
@@ -385,13 +358,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309005606.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309005606.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309005606.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309005606.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;原来图片很小，不方便自己查看，比如这里，根本看不清楚日志。&lt;/p&gt;
@@ -405,13 +375,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309005706.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309005706.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309005706.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309005706.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;h2 id=&#34;实操&#34;&gt;实操
@@ -426,13 +393,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309005917.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309005917.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309005917.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309005917.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;添加配置，编辑 &lt;code&gt;/root/hugo&lt;/code&gt; 主目录下的 hugo.yaml，我的 Ubuntu 环境&lt;/p&gt;
@@ -505,13 +469,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309023944.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309023944.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309023944.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309023944.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;就是添加这么一个小图标的功能，点击即可跳到 b 站的个人主页&lt;/p&gt;
@@ -530,13 +491,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309024420.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309024420.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309024420.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309024420.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;我的文件为 &lt;code&gt;bilibili.svg&lt;/code&gt;&lt;/p&gt;
@@ -550,13 +508,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309024514.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309024514.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309024514.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309024514.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;添加对应配置文件即可。&lt;/p&gt;
@@ -627,13 +582,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250308225610.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250308225610.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308225610.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308225610.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;而在本地却能正常复制粘贴，比如 localhost 可以正常复制粘贴。这可能是因为在局域网环境下，浏览器对剪贴板的访问权限被限制，导致&lt;code&gt;navigator.clipboard&lt;/code&gt;对象不可用，从而引发该错误。&lt;/p&gt;
@@ -743,13 +695,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250308230546.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250308230546.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308230546.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308230546.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 </description>
@@ -772,13 +721,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250308220615.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250308220615.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308220615.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308220615.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;这是因为启动命令没有设置 baseURL，添加这个参数即可正常访问。&lt;/p&gt;
@@ -803,13 +749,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250308221013.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250308221013.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308221013.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308221013.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 </description>
@@ -834,13 +777,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250307035003.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250307035003.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250307035003.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250307035003.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;h2 id=&#34;stack-网站主页头像&#34;&gt;stack 网站主页头像
@@ -855,13 +795,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250307043911.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250307043911.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250307043911.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250307043911.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;我的是 &lt;code&gt;/root/hugo/themes/hugo-theme-stack/assets/img&lt;/code&gt; 目录下。&lt;/p&gt;
@@ -878,13 +815,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250307054226.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250307054226.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250307054226.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250307054226.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;h2 id=&#34;侧边栏汉化&#34;&gt;侧边栏汉化
@@ -899,13 +833,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250308013647.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250308013647.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308013647.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308013647.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;找到对应目录，编辑 md 文件即可。&lt;/p&gt;
@@ -919,13 +850,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250308013407.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250308013407.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308013407.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308013407.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;以 archives 为例，修改成“归档”即可。&lt;/p&gt;
@@ -939,13 +867,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250308013933.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250308013933.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308013933.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308013933.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;h2 id=&#34;language&#34;&gt;Language
@@ -974,13 +899,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250308023414.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250308023414.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308023414.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308023414.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;h2 id=&#34;友链归档多列显示&#34;&gt;友链、归档多列显示
@@ -1041,13 +963,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250308035843.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250308035843.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308035843.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308035843.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;注释图中 html 片段即可&lt;/p&gt;
@@ -1061,13 +980,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250308040444.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250308040444.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308040444.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308040444.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;h2 id=&#34;归档页面添加标签&#34;&gt;归档页面添加标签
@@ -1252,13 +1168,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/_resources/3a70e88f90cd0095f62fc5a4db7bea9c.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/_resources/3a70e88f90cd0095f62fc5a4db7bea9c.png&#34; alt=&#34;3a70e88f90cd0095f62fc5a4db7bea9c.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/3a70e88f90cd0095f62fc5a4db7bea9c.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/3a70e88f90cd0095f62fc5a4db7bea9c.png&#34; alt=&#34;3a70e88f90cd0095f62fc5a4db7bea9c.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;h2 id=&#34;启动与配置&#34;&gt;启动与配置
@@ -1282,13 +1195,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/_resources/40b6311d8afdc67f7c5375a424df3e59.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/_resources/40b6311d8afdc67f7c5375a424df3e59.png&#34; alt=&#34;40b6311d8afdc67f7c5375a424df3e59.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/40b6311d8afdc67f7c5375a424df3e59.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/40b6311d8afdc67f7c5375a424df3e59.png&#34; alt=&#34;40b6311d8afdc67f7c5375a424df3e59.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;启动 hugo 服务&lt;/p&gt;
@@ -1523,13 +1433,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250306041658.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250306041658.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250306041658.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250306041658.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 </description>

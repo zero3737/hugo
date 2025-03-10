@@ -27,13 +27,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309231028.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309231028.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231028.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231028.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;输入邮箱服务器密码，不是 qq 账号密码&lt;/p&gt;
@@ -47,13 +44,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309231116.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309231116.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231116.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231116.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;获取 qq 邮箱服务器密码，设置-账号，划到底部&lt;/p&gt;
@@ -67,13 +61,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309231242.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309231242.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231242.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231242.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;找到管理服务&lt;/p&gt;
@@ -87,13 +78,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309231416.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309231416.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231416.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231416.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;生成授权码，即可获得 qq 邮箱服务器密码&lt;/p&gt;
@@ -107,13 +95,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309231555.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309231555.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231555.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231555.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;填入 Outlook 即可登录成功&lt;/p&gt;
@@ -127,13 +112,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309231701.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309231701.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231701.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231701.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;h2 id=&#34;163-邮箱&#34;&gt;163 邮箱
@@ -148,13 +130,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309232432.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309232432.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309232432.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309232432.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;然后填入 163 邮箱账号，以及授权码，即可同步邮箱&lt;/p&gt;
@@ -168,13 +147,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309232720.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309232720.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309232720.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309232720.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;h2 id=&#34;微软和-gmail-邮箱&#34;&gt;微软和 gmail 邮箱
@@ -190,13 +166,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309233129.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250309233129.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309233129.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309233129.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 </description>
@@ -246,13 +219,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250308200920.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250308200920.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308200920.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308200920.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;在输入框中，输入信息，会自动弹出经常输入的信息，而且删不掉，没有任何实际作用。&lt;/p&gt;
@@ -268,13 +238,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250308201144.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250308201144.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308201144.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308201144.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;关闭“保存并填充基本信息”即可&lt;/p&gt;
@@ -300,13 +267,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250307030309.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250307030309.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250307030309.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250307030309.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 &lt;p&gt;启用正则表达式，输入 &lt;code&gt;.*&lt;/code&gt; 匹配任意文件名&lt;/p&gt;
@@ -322,13 +286,10 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250307030156.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/00-assets/Pasted%20image%2020250307030156.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250307030156.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250307030156.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
-&lt;script&gt;
-	console.log(&#34;我的:&#34;+&#34;\/hugo&#34;);
-&lt;/script&gt;
 
 &lt;/p&gt;
 </description>
