@@ -7,14 +7,12 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    permissions:  
-      contents: write  # 允许写入工作目录 
     steps:
-      - name: Checkout source
+      - name: 监测 source 分支
         uses: actions/checkout@v4
         with:
           ref: source  # 明确检出source分支
-      - name: Setup Hugo
+      - name: hugo 设置，生成静态文件
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.125.7'  # 指定Hugo版本
@@ -25,11 +23,11 @@ jobs:
         run: cp -r //home/runner/work/hugo/hugo/static/00-assets/ /home/runner/work/hugo/hugo/static/_resources
       - name: Build static files
         run: hugo --minify --gc
-
-      - name: Deploy to main
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          destination_branch: main  # 指定目标分支为main
+      - name: 发布到 main 分支  
+        uses: peaceiris/actions-gh-pages@v3  
+        with:  
+          github_token: ${{ secrets.GITHUB_TOKEN }}  
+          publish_dir: ./public  
+          publish_branch: main  # 正确参数名称
           force_orphan: true  # 强制清空目标分支历史
+
