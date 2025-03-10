@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Aigc on carlos</title>
-        <link>https://example.com/tags/aigc/</link>
+        <link>https://zero3737.github.io/hugo/tags/aigc/</link>
         <description>Recent content in Aigc on carlos</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Sun, 09 Mar 2025 22:22:39 +0800</lastBuildDate><atom:link href="https://example.com/tags/aigc/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 09 Mar 2025 22:22:39 +0800</lastBuildDate><atom:link href="https://zero3737.github.io/hugo/tags/aigc/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>open webui 长时间白屏</title>
-        <link>https://example.com/p/open-webui-%E9%95%BF%E6%97%B6%E9%97%B4%E7%99%BD%E5%B1%8F/</link>
+        <link>https://zero3737.github.io/hugo/p/open-webui-%E9%95%BF%E6%97%B6%E9%97%B4%E7%99%BD%E5%B1%8F/</link>
         <pubDate>Sun, 09 Mar 2025 22:22:02 +0800</pubDate>
         
-        <guid>https://example.com/p/open-webui-%E9%95%BF%E6%97%B6%E9%97%B4%E7%99%BD%E5%B1%8F/</guid>
-        <description>&lt;img src="https://example.com/bg/02.jpg" alt="Featured image of post open webui 长时间白屏" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+        <guid>https://zero3737.github.io/hugo/p/open-webui-%E9%95%BF%E6%97%B6%E9%97%B4%E7%99%BD%E5%B1%8F/</guid>
+        <description>&lt;img src="https://zero3737.github.io/hugo/bg/02.jpg" alt="Featured image of post open webui 长时间白屏" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;open webui 进入不了主界面，长时间白屏&lt;/p&gt;
 &lt;p&gt;
 
@@ -25,8 +25,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250309221804.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250309221804.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309221804.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309221804.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -44,8 +44,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250309222046.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250309222046.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309222046.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309222046.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -54,11 +54,11 @@
         </item>
         <item>
         <title>open webui 使用教程</title>
-        <link>https://example.com/p/open-webui-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link>
+        <link>https://zero3737.github.io/hugo/p/open-webui-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link>
         <pubDate>Sun, 09 Mar 2025 21:56:49 +0800</pubDate>
         
-        <guid>https://example.com/p/open-webui-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid>
-        <description>&lt;img src="https://example.com/bg/49.jpg" alt="Featured image of post open webui 使用教程" /&gt;&lt;h2 id=&#34;open-webui-导入模型-api&#34;&gt;open webui 导入模型 api
+        <guid>https://zero3737.github.io/hugo/p/open-webui-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid>
+        <description>&lt;img src="https://zero3737.github.io/hugo/bg/49.jpg" alt="Featured image of post open webui 使用教程" /&gt;&lt;h2 id=&#34;open-webui-导入模型-api&#34;&gt;open webui 导入模型 api
 &lt;/h2&gt;&lt;p&gt;open webui 支持 3 种方式导入模型，分别是：OpenAI API、Ollama API 和直接连接。&lt;/p&gt;
 &lt;p&gt;
 
@@ -70,8 +70,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/9e12b9fa9798cdd67e1a13d408bd2027.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/9e12b9fa9798cdd67e1a13d408bd2027.png&#34; alt=&#34;9e12b9fa9798cdd67e1a13d408bd2027.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/9e12b9fa9798cdd67e1a13d408bd2027.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/9e12b9fa9798cdd67e1a13d408bd2027.png&#34; alt=&#34;9e12b9fa9798cdd67e1a13d408bd2027.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -89,8 +89,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/90a1ccefa40829851812ebf768521e1c.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/90a1ccefa40829851812ebf768521e1c.png&#34; alt=&#34;90a1ccefa40829851812ebf768521e1c.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/90a1ccefa40829851812ebf768521e1c.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/90a1ccefa40829851812ebf768521e1c.png&#34; alt=&#34;90a1ccefa40829851812ebf768521e1c.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -106,8 +106,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/46f4a567d9983609698d465bf6f1fbc3.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/46f4a567d9983609698d465bf6f1fbc3.png&#34; alt=&#34;46f4a567d9983609698d465bf6f1fbc3.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/46f4a567d9983609698d465bf6f1fbc3.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/46f4a567d9983609698d465bf6f1fbc3.png&#34; alt=&#34;46f4a567d9983609698d465bf6f1fbc3.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -123,8 +123,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/7acfae58c81f9a908f0656733390d24e.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/7acfae58c81f9a908f0656733390d24e.png&#34; alt=&#34;7acfae58c81f9a908f0656733390d24e.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/7acfae58c81f9a908f0656733390d24e.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/7acfae58c81f9a908f0656733390d24e.png&#34; alt=&#34;7acfae58c81f9a908f0656733390d24e.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -133,11 +133,11 @@
         </item>
         <item>
         <title>open webui 对接 deepseek</title>
-        <link>https://example.com/p/open-webui-%E5%AF%B9%E6%8E%A5-deepseek/</link>
+        <link>https://zero3737.github.io/hugo/p/open-webui-%E5%AF%B9%E6%8E%A5-deepseek/</link>
         <pubDate>Sun, 09 Mar 2025 21:54:56 +0800</pubDate>
         
-        <guid>https://example.com/p/open-webui-%E5%AF%B9%E6%8E%A5-deepseek/</guid>
-        <description>&lt;img src="https://example.com/bg/56.jpg" alt="Featured image of post open webui 对接 deepseek" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+        <guid>https://zero3737.github.io/hugo/p/open-webui-%E5%AF%B9%E6%8E%A5-deepseek/</guid>
+        <description>&lt;img src="https://zero3737.github.io/hugo/bg/56.jpg" alt="Featured image of post open webui 对接 deepseek" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;主流大模型平台的 API：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;SiliconFlow (硅基流动)&lt;/li&gt;
@@ -163,8 +163,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/c2737dbbb941d2af59d096ebd328572d.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/c2737dbbb941d2af59d096ebd328572d.png&#34; alt=&#34;c2737dbbb941d2af59d096ebd328572d.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/c2737dbbb941d2af59d096ebd328572d.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/c2737dbbb941d2af59d096ebd328572d.png&#34; alt=&#34;c2737dbbb941d2af59d096ebd328572d.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -180,8 +180,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/1f7dbe20c67bf9666199f6b25a40e6f6.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/1f7dbe20c67bf9666199f6b25a40e6f6.png&#34; alt=&#34;1f7dbe20c67bf9666199f6b25a40e6f6.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/1f7dbe20c67bf9666199f6b25a40e6f6.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/1f7dbe20c67bf9666199f6b25a40e6f6.png&#34; alt=&#34;1f7dbe20c67bf9666199f6b25a40e6f6.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -197,8 +197,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/837a4ced5dd4f31832c4296e162694f4.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/837a4ced5dd4f31832c4296e162694f4.png&#34; alt=&#34;837a4ced5dd4f31832c4296e162694f4.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/837a4ced5dd4f31832c4296e162694f4.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/837a4ced5dd4f31832c4296e162694f4.png&#34; alt=&#34;837a4ced5dd4f31832c4296e162694f4.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -214,8 +214,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/f8e9b0efaa447a2b304f4ddeb3e3264b.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/f8e9b0efaa447a2b304f4ddeb3e3264b.png&#34; alt=&#34;f8e9b0efaa447a2b304f4ddeb3e3264b.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/f8e9b0efaa447a2b304f4ddeb3e3264b.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/f8e9b0efaa447a2b304f4ddeb3e3264b.png&#34; alt=&#34;f8e9b0efaa447a2b304f4ddeb3e3264b.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -231,8 +231,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/3a11b9a7391484f94ca105b50fd7b515.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/3a11b9a7391484f94ca105b50fd7b515.png&#34; alt=&#34;3a11b9a7391484f94ca105b50fd7b515.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/3a11b9a7391484f94ca105b50fd7b515.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/3a11b9a7391484f94ca105b50fd7b515.png&#34; alt=&#34;3a11b9a7391484f94ca105b50fd7b515.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -248,8 +248,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/4975450d6bdfc18aa9d2b3eb8283dd9c.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/4975450d6bdfc18aa9d2b3eb8283dd9c.png&#34; alt=&#34;4975450d6bdfc18aa9d2b3eb8283dd9c.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/4975450d6bdfc18aa9d2b3eb8283dd9c.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/4975450d6bdfc18aa9d2b3eb8283dd9c.png&#34; alt=&#34;4975450d6bdfc18aa9d2b3eb8283dd9c.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -265,8 +265,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/abd9981b1c2f3d54b8e9c7cf43887431.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/abd9981b1c2f3d54b8e9c7cf43887431.png&#34; alt=&#34;abd9981b1c2f3d54b8e9c7cf43887431.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/abd9981b1c2f3d54b8e9c7cf43887431.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/abd9981b1c2f3d54b8e9c7cf43887431.png&#34; alt=&#34;abd9981b1c2f3d54b8e9c7cf43887431.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -285,8 +285,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/ff2790aa1bed7c9a8d63951b7e59d80d.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/ff2790aa1bed7c9a8d63951b7e59d80d.png&#34; alt=&#34;ff2790aa1bed7c9a8d63951b7e59d80d.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/ff2790aa1bed7c9a8d63951b7e59d80d.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/ff2790aa1bed7c9a8d63951b7e59d80d.png&#34; alt=&#34;ff2790aa1bed7c9a8d63951b7e59d80d.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -302,8 +302,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/fbba04c7b5371eee746323b8d05c3fe9.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/fbba04c7b5371eee746323b8d05c3fe9.png&#34; alt=&#34;fbba04c7b5371eee746323b8d05c3fe9.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/fbba04c7b5371eee746323b8d05c3fe9.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/fbba04c7b5371eee746323b8d05c3fe9.png&#34; alt=&#34;fbba04c7b5371eee746323b8d05c3fe9.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -323,8 +323,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/6d0f0245a5d81b9d660424836afa45a6.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/6d0f0245a5d81b9d660424836afa45a6.png&#34; alt=&#34;6d0f0245a5d81b9d660424836afa45a6.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/6d0f0245a5d81b9d660424836afa45a6.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/6d0f0245a5d81b9d660424836afa45a6.png&#34; alt=&#34;6d0f0245a5d81b9d660424836afa45a6.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -340,8 +340,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/8a402c9041b659fd33298a6a464a1617.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/8a402c9041b659fd33298a6a464a1617.png&#34; alt=&#34;8a402c9041b659fd33298a6a464a1617.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/8a402c9041b659fd33298a6a464a1617.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/8a402c9041b659fd33298a6a464a1617.png&#34; alt=&#34;8a402c9041b659fd33298a6a464a1617.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -357,8 +357,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/188d0c91d796544e7353288ac5c933df.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/188d0c91d796544e7353288ac5c933df.png&#34; alt=&#34;188d0c91d796544e7353288ac5c933df.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/188d0c91d796544e7353288ac5c933df.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/188d0c91d796544e7353288ac5c933df.png&#34; alt=&#34;188d0c91d796544e7353288ac5c933df.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -367,11 +367,11 @@
         </item>
         <item>
         <title>open webui deepseek api 联网</title>
-        <link>https://example.com/p/open-webui-deepseek-api-%E8%81%94%E7%BD%91/</link>
+        <link>https://zero3737.github.io/hugo/p/open-webui-deepseek-api-%E8%81%94%E7%BD%91/</link>
         <pubDate>Sun, 09 Mar 2025 21:52:37 +0800</pubDate>
         
-        <guid>https://example.com/p/open-webui-deepseek-api-%E8%81%94%E7%BD%91/</guid>
-        <description>&lt;img src="https://example.com/bg/37.jpg" alt="Featured image of post open webui deepseek api 联网" /&gt;&lt;h2 id=&#34;火山-api-申请&#34;&gt;火山 api 申请
+        <guid>https://zero3737.github.io/hugo/p/open-webui-deepseek-api-%E8%81%94%E7%BD%91/</guid>
+        <description>&lt;img src="https://zero3737.github.io/hugo/bg/37.jpg" alt="Featured image of post open webui deepseek api 联网" /&gt;&lt;h2 id=&#34;火山-api-申请&#34;&gt;火山 api 申请
 &lt;/h2&gt;&lt;p&gt;路径如下&lt;/p&gt;
 &lt;p&gt;
 
@@ -383,8 +383,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/558020a4688e631f36c1ee25a1b2e700.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/558020a4688e631f36c1ee25a1b2e700.png&#34; alt=&#34;558020a4688e631f36c1ee25a1b2e700.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/558020a4688e631f36c1ee25a1b2e700.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/558020a4688e631f36c1ee25a1b2e700.png&#34; alt=&#34;558020a4688e631f36c1ee25a1b2e700.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -400,8 +400,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/e7ce6ac20832b41eda2cdc4c25faa517.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/e7ce6ac20832b41eda2cdc4c25faa517.png&#34; alt=&#34;e7ce6ac20832b41eda2cdc4c25faa517.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/e7ce6ac20832b41eda2cdc4c25faa517.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/e7ce6ac20832b41eda2cdc4c25faa517.png&#34; alt=&#34;e7ce6ac20832b41eda2cdc4c25faa517.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -417,8 +417,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/a4c9c68e947160e62c43a23bfecbc974.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/a4c9c68e947160e62c43a23bfecbc974.png&#34; alt=&#34;a4c9c68e947160e62c43a23bfecbc974.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/a4c9c68e947160e62c43a23bfecbc974.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/a4c9c68e947160e62c43a23bfecbc974.png&#34; alt=&#34;a4c9c68e947160e62c43a23bfecbc974.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -437,8 +437,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/0b940231abda1bdab47807ab0c174e7c.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/0b940231abda1bdab47807ab0c174e7c.png&#34; alt=&#34;0b940231abda1bdab47807ab0c174e7c.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/0b940231abda1bdab47807ab0c174e7c.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/0b940231abda1bdab47807ab0c174e7c.png&#34; alt=&#34;0b940231abda1bdab47807ab0c174e7c.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -454,8 +454,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/0434e823f8fa0908808a8dee717b7a5f.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/0434e823f8fa0908808a8dee717b7a5f.png&#34; alt=&#34;0434e823f8fa0908808a8dee717b7a5f.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/0434e823f8fa0908808a8dee717b7a5f.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/0434e823f8fa0908808a8dee717b7a5f.png&#34; alt=&#34;0434e823f8fa0908808a8dee717b7a5f.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -471,8 +471,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/837b27e76f2732129abb108d9a8788de.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/837b27e76f2732129abb108d9a8788de.png&#34; alt=&#34;837b27e76f2732129abb108d9a8788de.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/837b27e76f2732129abb108d9a8788de.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/837b27e76f2732129abb108d9a8788de.png&#34; alt=&#34;837b27e76f2732129abb108d9a8788de.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -488,8 +488,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/6ad5505749e5d30445d3de310cf45584.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/6ad5505749e5d30445d3de310cf45584.png&#34; alt=&#34;6ad5505749e5d30445d3de310cf45584.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/6ad5505749e5d30445d3de310cf45584.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/6ad5505749e5d30445d3de310cf45584.png&#34; alt=&#34;6ad5505749e5d30445d3de310cf45584.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -505,8 +505,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/c698649b1e53c917c9a1fd1daa2d5ce9.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/c698649b1e53c917c9a1fd1daa2d5ce9.png&#34; alt=&#34;c698649b1e53c917c9a1fd1daa2d5ce9.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/c698649b1e53c917c9a1fd1daa2d5ce9.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/c698649b1e53c917c9a1fd1daa2d5ce9.png&#34; alt=&#34;c698649b1e53c917c9a1fd1daa2d5ce9.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -522,8 +522,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/f1262990056a5426a859bb9acca0c799.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/f1262990056a5426a859bb9acca0c799.png&#34; alt=&#34;f1262990056a5426a859bb9acca0c799.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/f1262990056a5426a859bb9acca0c799.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/f1262990056a5426a859bb9acca0c799.png&#34; alt=&#34;f1262990056a5426a859bb9acca0c799.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -539,8 +539,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/604364ecd026d573cd6e18981bacc3d3.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/604364ecd026d573cd6e18981bacc3d3.png&#34; alt=&#34;604364ecd026d573cd6e18981bacc3d3.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/604364ecd026d573cd6e18981bacc3d3.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/604364ecd026d573cd6e18981bacc3d3.png&#34; alt=&#34;604364ecd026d573cd6e18981bacc3d3.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -556,8 +556,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/c02f34c2d6e525bc45dd3129b00a4d6b.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/c02f34c2d6e525bc45dd3129b00a4d6b.png&#34; alt=&#34;c02f34c2d6e525bc45dd3129b00a4d6b.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/c02f34c2d6e525bc45dd3129b00a4d6b.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/c02f34c2d6e525bc45dd3129b00a4d6b.png&#34; alt=&#34;c02f34c2d6e525bc45dd3129b00a4d6b.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -573,8 +573,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/446cd6c557abc46b387046de73b42be1.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/446cd6c557abc46b387046de73b42be1.png&#34; alt=&#34;446cd6c557abc46b387046de73b42be1.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/446cd6c557abc46b387046de73b42be1.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/446cd6c557abc46b387046de73b42be1.png&#34; alt=&#34;446cd6c557abc46b387046de73b42be1.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -590,8 +590,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/0cf0ce5715c4ee25e3324a6fef6781c3.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/0cf0ce5715c4ee25e3324a6fef6781c3.png&#34; alt=&#34;0cf0ce5715c4ee25e3324a6fef6781c3.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/0cf0ce5715c4ee25e3324a6fef6781c3.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/0cf0ce5715c4ee25e3324a6fef6781c3.png&#34; alt=&#34;0cf0ce5715c4ee25e3324a6fef6781c3.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -610,8 +610,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/a401dbae5d1b34d26689649480e74480.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/a401dbae5d1b34d26689649480e74480.png&#34; alt=&#34;a401dbae5d1b34d26689649480e74480.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/a401dbae5d1b34d26689649480e74480.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/a401dbae5d1b34d26689649480e74480.png&#34; alt=&#34;a401dbae5d1b34d26689649480e74480.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -634,8 +634,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/880b5b6e9c60a59b11ab999a4ffc8fc3.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/880b5b6e9c60a59b11ab999a4ffc8fc3.png&#34; alt=&#34;880b5b6e9c60a59b11ab999a4ffc8fc3.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/880b5b6e9c60a59b11ab999a4ffc8fc3.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/880b5b6e9c60a59b11ab999a4ffc8fc3.png&#34; alt=&#34;880b5b6e9c60a59b11ab999a4ffc8fc3.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -644,11 +644,11 @@
         </item>
         <item>
         <title>open webui deepseek 支持思维链</title>
-        <link>https://example.com/p/open-webui-deepseek-%E6%94%AF%E6%8C%81%E6%80%9D%E7%BB%B4%E9%93%BE/</link>
+        <link>https://zero3737.github.io/hugo/p/open-webui-deepseek-%E6%94%AF%E6%8C%81%E6%80%9D%E7%BB%B4%E9%93%BE/</link>
         <pubDate>Sun, 09 Mar 2025 21:48:09 +0800</pubDate>
         
-        <guid>https://example.com/p/open-webui-deepseek-%E6%94%AF%E6%8C%81%E6%80%9D%E7%BB%B4%E9%93%BE/</guid>
-        <description>&lt;img src="https://example.com/bg/09.jpg" alt="Featured image of post open webui deepseek 支持思维链" /&gt;&lt;h2 id=&#34;思维链&#34;&gt;思维链
+        <guid>https://zero3737.github.io/hugo/p/open-webui-deepseek-%E6%94%AF%E6%8C%81%E6%80%9D%E7%BB%B4%E9%93%BE/</guid>
+        <description>&lt;img src="https://zero3737.github.io/hugo/bg/09.jpg" alt="Featured image of post open webui deepseek 支持思维链" /&gt;&lt;h2 id=&#34;思维链&#34;&gt;思维链
 &lt;/h2&gt;&lt;p&gt;deepseek 支持思维链代码：&lt;a class=&#34;link&#34; href=&#34;https://openwebui.com/f/zgccrui/deepseek_r1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;地址1&lt;/a&gt;
 &lt;/p&gt;
@@ -663,8 +663,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/26038ada0439c2e602506f25fd869a43.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/26038ada0439c2e602506f25fd869a43.png&#34; alt=&#34;26038ada0439c2e602506f25fd869a43.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/26038ada0439c2e602506f25fd869a43.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/26038ada0439c2e602506f25fd869a43.png&#34; alt=&#34;26038ada0439c2e602506f25fd869a43.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -680,8 +680,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/96993edfca5420c7d6df4aff0a6bed49.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/96993edfca5420c7d6df4aff0a6bed49.png&#34; alt=&#34;96993edfca5420c7d6df4aff0a6bed49.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/96993edfca5420c7d6df4aff0a6bed49.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/96993edfca5420c7d6df4aff0a6bed49.png&#34; alt=&#34;96993edfca5420c7d6df4aff0a6bed49.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -697,8 +697,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/aa9c3c78c85b3f4f6b4130cc08febaf5.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/aa9c3c78c85b3f4f6b4130cc08febaf5.png&#34; alt=&#34;aa9c3c78c85b3f4f6b4130cc08febaf5.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/aa9c3c78c85b3f4f6b4130cc08febaf5.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/aa9c3c78c85b3f4f6b4130cc08febaf5.png&#34; alt=&#34;aa9c3c78c85b3f4f6b4130cc08febaf5.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -714,8 +714,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/2f740c7a357c3bf2987f5b8f6448b524.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/2f740c7a357c3bf2987f5b8f6448b524.png&#34; alt=&#34;2f740c7a357c3bf2987f5b8f6448b524.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/2f740c7a357c3bf2987f5b8f6448b524.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/2f740c7a357c3bf2987f5b8f6448b524.png&#34; alt=&#34;2f740c7a357c3bf2987f5b8f6448b524.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -731,8 +731,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/_resources/f7dfb78c19f2a7e4865d5c6053249965.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/_resources/f7dfb78c19f2a7e4865d5c6053249965.png&#34; alt=&#34;f7dfb78c19f2a7e4865d5c6053249965.png&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/_resources/f7dfb78c19f2a7e4865d5c6053249965.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/_resources/f7dfb78c19f2a7e4865d5c6053249965.png&#34; alt=&#34;f7dfb78c19f2a7e4865d5c6053249965.png&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 

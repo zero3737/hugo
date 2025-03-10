@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>电脑知识 on carlos</title>
-        <link>https://example.com/categories/%E7%94%B5%E8%84%91%E7%9F%A5%E8%AF%86/</link>
+        <link>https://zero3737.github.io/hugo/categories/%E7%94%B5%E8%84%91%E7%9F%A5%E8%AF%86/</link>
         <description>Recent content in 电脑知识 on carlos</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Sun, 09 Mar 2025 23:33:04 +0800</lastBuildDate><atom:link href="https://example.com/categories/%E7%94%B5%E8%84%91%E7%9F%A5%E8%AF%86/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 09 Mar 2025 23:33:04 +0800</lastBuildDate><atom:link href="https://zero3737.github.io/hugo/categories/%E7%94%B5%E8%84%91%E7%9F%A5%E8%AF%86/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>outlook 聚合邮箱，实现邮箱管理</title>
-        <link>https://example.com/p/outlook-%E8%81%9A%E5%90%88%E9%82%AE%E7%AE%B1%E5%AE%9E%E7%8E%B0%E9%82%AE%E7%AE%B1%E7%AE%A1%E7%90%86/</link>
+        <link>https://zero3737.github.io/hugo/p/outlook-%E8%81%9A%E5%90%88%E9%82%AE%E7%AE%B1%E5%AE%9E%E7%8E%B0%E9%82%AE%E7%AE%B1%E7%AE%A1%E7%90%86/</link>
         <pubDate>Sun, 09 Mar 2025 23:32:19 +0800</pubDate>
         
-        <guid>https://example.com/p/outlook-%E8%81%9A%E5%90%88%E9%82%AE%E7%AE%B1%E5%AE%9E%E7%8E%B0%E9%82%AE%E7%AE%B1%E7%AE%A1%E7%90%86/</guid>
-        <description>&lt;img src="https://example.com/bg/19.jpg" alt="Featured image of post outlook 聚合邮箱，实现邮箱管理" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+        <guid>https://zero3737.github.io/hugo/p/outlook-%E8%81%9A%E5%90%88%E9%82%AE%E7%AE%B1%E5%AE%9E%E7%8E%B0%E9%82%AE%E7%AE%B1%E7%AE%A1%E7%90%86/</guid>
+        <description>&lt;img src="https://zero3737.github.io/hugo/bg/19.jpg" alt="Featured image of post outlook 聚合邮箱，实现邮箱管理" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;outlook 本土化非常好，可以同步 qq、163、gamil 以及微软邮箱&lt;/p&gt;
 &lt;h2 id=&#34;qq-邮箱&#34;&gt;qq 邮箱
 &lt;/h2&gt;&lt;p&gt;添加账户-输入邮箱账号&lt;/p&gt;
@@ -27,8 +27,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250309231028.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250309231028.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231028.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231028.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -44,8 +44,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250309231116.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250309231116.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231116.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231116.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -61,8 +61,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250309231242.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250309231242.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231242.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231242.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -78,8 +78,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250309231416.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250309231416.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231416.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231416.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -95,8 +95,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250309231555.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250309231555.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231555.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231555.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -112,8 +112,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250309231701.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250309231701.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231701.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231701.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -130,8 +130,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250309232432.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250309232432.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309232432.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309232432.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -147,8 +147,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250309232720.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250309232720.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309232720.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309232720.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -166,8 +166,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250309233129.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250309233129.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309233129.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309233129.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -176,11 +176,11 @@
         </item>
         <item>
         <title>关闭 edge 自动填充表单功能</title>
-        <link>https://example.com/p/%E5%85%B3%E9%97%AD-edge-%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E8%A1%A8%E5%8D%95%E5%8A%9F%E8%83%BD/</link>
+        <link>https://zero3737.github.io/hugo/p/%E5%85%B3%E9%97%AD-edge-%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E8%A1%A8%E5%8D%95%E5%8A%9F%E8%83%BD/</link>
         <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E5%85%B3%E9%97%AD-edge-%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E8%A1%A8%E5%8D%95%E5%8A%9F%E8%83%BD/</guid>
-        <description>&lt;img src="https://example.com/bg/39.jpg" alt="Featured image of post 关闭 edge 自动填充表单功能" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+        <guid>https://zero3737.github.io/hugo/p/%E5%85%B3%E9%97%AD-edge-%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E8%A1%A8%E5%8D%95%E5%8A%9F%E8%83%BD/</guid>
+        <description>&lt;img src="https://zero3737.github.io/hugo/bg/39.jpg" alt="Featured image of post 关闭 edge 自动填充表单功能" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;如何关闭 edge 自动填充表单功能&lt;/p&gt;
 &lt;p&gt;
 
@@ -192,8 +192,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250308200920.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250308200920.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308200920.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308200920.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -211,8 +211,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250308201144.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250308201144.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308201144.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308201144.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 

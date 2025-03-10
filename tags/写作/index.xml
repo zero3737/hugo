@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>写作 on carlos</title>
-        <link>https://example.com/tags/%E5%86%99%E4%BD%9C/</link>
+        <link>https://zero3737.github.io/hugo/tags/%E5%86%99%E4%BD%9C/</link>
         <description>Recent content in 写作 on carlos</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Sun, 09 Mar 2025 05:42:30 +0800</lastBuildDate><atom:link href="https://example.com/tags/%E5%86%99%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 09 Mar 2025 05:42:30 +0800</lastBuildDate><atom:link href="https://zero3737.github.io/hugo/tags/%E5%86%99%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>hugo “关于”页面模板</title>
-        <link>https://example.com/p/hugo-%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF/</link>
+        <link>https://zero3737.github.io/hugo/p/hugo-%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF/</link>
         <pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/hugo-%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF/</guid>
-        <description>&lt;img src="https://example.com/bg/03.jpg" alt="Featured image of post hugo “关于”页面模板" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+        <guid>https://zero3737.github.io/hugo/p/hugo-%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF/</guid>
+        <description>&lt;img src="https://zero3737.github.io/hugo/bg/03.jpg" alt="Featured image of post hugo “关于”页面模板" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;本文将分享一个全面且有创意的自我介绍框架，既能涵盖基础信息，又能突出个性和独特性。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;介绍自己 20 个角度&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;

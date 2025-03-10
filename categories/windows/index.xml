@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Windows on carlos</title>
-        <link>https://example.com/categories/windows/</link>
+        <link>https://zero3737.github.io/hugo/categories/windows/</link>
         <description>Recent content in Windows on carlos</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Sun, 09 Mar 2025 23:33:04 +0800</lastBuildDate><atom:link href="https://example.com/categories/windows/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 09 Mar 2025 23:33:04 +0800</lastBuildDate><atom:link href="https://zero3737.github.io/hugo/categories/windows/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>outlook 聚合邮箱，实现邮箱管理</title>
-        <link>https://example.com/p/outlook-%E8%81%9A%E5%90%88%E9%82%AE%E7%AE%B1%E5%AE%9E%E7%8E%B0%E9%82%AE%E7%AE%B1%E7%AE%A1%E7%90%86/</link>
+        <link>https://zero3737.github.io/hugo/p/outlook-%E8%81%9A%E5%90%88%E9%82%AE%E7%AE%B1%E5%AE%9E%E7%8E%B0%E9%82%AE%E7%AE%B1%E7%AE%A1%E7%90%86/</link>
         <pubDate>Sun, 09 Mar 2025 23:32:19 +0800</pubDate>
         
-        <guid>https://example.com/p/outlook-%E8%81%9A%E5%90%88%E9%82%AE%E7%AE%B1%E5%AE%9E%E7%8E%B0%E9%82%AE%E7%AE%B1%E7%AE%A1%E7%90%86/</guid>
-        <description>&lt;img src="https://example.com/bg/19.jpg" alt="Featured image of post outlook 聚合邮箱，实现邮箱管理" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+        <guid>https://zero3737.github.io/hugo/p/outlook-%E8%81%9A%E5%90%88%E9%82%AE%E7%AE%B1%E5%AE%9E%E7%8E%B0%E9%82%AE%E7%AE%B1%E7%AE%A1%E7%90%86/</guid>
+        <description>&lt;img src="https://zero3737.github.io/hugo/bg/19.jpg" alt="Featured image of post outlook 聚合邮箱，实现邮箱管理" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;outlook 本土化非常好，可以同步 qq、163、gamil 以及微软邮箱&lt;/p&gt;
 &lt;h2 id=&#34;qq-邮箱&#34;&gt;qq 邮箱
 &lt;/h2&gt;&lt;p&gt;添加账户-输入邮箱账号&lt;/p&gt;
@@ -27,8 +27,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250309231028.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250309231028.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231028.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231028.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -44,8 +44,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250309231116.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250309231116.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231116.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231116.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -61,8 +61,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250309231242.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250309231242.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231242.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231242.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -78,8 +78,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250309231416.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250309231416.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231416.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231416.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -95,8 +95,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250309231555.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250309231555.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231555.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231555.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -112,8 +112,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250309231701.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250309231701.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231701.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309231701.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -130,8 +130,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250309232432.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250309232432.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309232432.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309232432.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -147,8 +147,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250309232720.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250309232720.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309232720.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309232720.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -166,8 +166,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250309233129.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250309233129.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309233129.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309233129.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -176,11 +176,11 @@
         </item>
         <item>
         <title>windows 开机执行bat脚本，含隐藏命令窗口</title>
-        <link>https://example.com/p/windows-%E5%BC%80%E6%9C%BA%E6%89%A7%E8%A1%8Cbat%E8%84%9A%E6%9C%AC%E5%90%AB%E9%9A%90%E8%97%8F%E5%91%BD%E4%BB%A4%E7%AA%97%E5%8F%A3/</link>
+        <link>https://zero3737.github.io/hugo/p/windows-%E5%BC%80%E6%9C%BA%E6%89%A7%E8%A1%8Cbat%E8%84%9A%E6%9C%AC%E5%90%AB%E9%9A%90%E8%97%8F%E5%91%BD%E4%BB%A4%E7%AA%97%E5%8F%A3/</link>
         <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/windows-%E5%BC%80%E6%9C%BA%E6%89%A7%E8%A1%8Cbat%E8%84%9A%E6%9C%AC%E5%90%AB%E9%9A%90%E8%97%8F%E5%91%BD%E4%BB%A4%E7%AA%97%E5%8F%A3/</guid>
-        <description>&lt;img src="https://example.com/bg/30.jpg" alt="Featured image of post windows 开机执行bat脚本，含隐藏命令窗口" /&gt;&lt;h2 id=&#34;启动文件夹&#34;&gt;启动文件夹
+        <guid>https://zero3737.github.io/hugo/p/windows-%E5%BC%80%E6%9C%BA%E6%89%A7%E8%A1%8Cbat%E8%84%9A%E6%9C%AC%E5%90%AB%E9%9A%90%E8%97%8F%E5%91%BD%E4%BB%A4%E7%AA%97%E5%8F%A3/</guid>
+        <description>&lt;img src="https://zero3737.github.io/hugo/bg/30.jpg" alt="Featured image of post windows 开机执行bat脚本，含隐藏命令窗口" /&gt;&lt;h2 id=&#34;启动文件夹&#34;&gt;启动文件夹
 &lt;/h2&gt;&lt;p&gt;按 Win + R 键打开“运行”对话框。&lt;/p&gt;
 &lt;p&gt;输入 shell:startup 并按 Enter 键，这将打开“启动”文件夹。这个文件夹中的所有程序都会在系统启动时自动运行。&lt;/p&gt;
 &lt;p&gt;将脚本放入“启动”文件夹‌。&lt;/p&gt;
@@ -203,11 +203,11 @@
         </item>
         <item>
         <title>关闭 edge 自动填充表单功能</title>
-        <link>https://example.com/p/%E5%85%B3%E9%97%AD-edge-%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E8%A1%A8%E5%8D%95%E5%8A%9F%E8%83%BD/</link>
+        <link>https://zero3737.github.io/hugo/p/%E5%85%B3%E9%97%AD-edge-%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E8%A1%A8%E5%8D%95%E5%8A%9F%E8%83%BD/</link>
         <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E5%85%B3%E9%97%AD-edge-%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E8%A1%A8%E5%8D%95%E5%8A%9F%E8%83%BD/</guid>
-        <description>&lt;img src="https://example.com/bg/39.jpg" alt="Featured image of post 关闭 edge 自动填充表单功能" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+        <guid>https://zero3737.github.io/hugo/p/%E5%85%B3%E9%97%AD-edge-%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E8%A1%A8%E5%8D%95%E5%8A%9F%E8%83%BD/</guid>
+        <description>&lt;img src="https://zero3737.github.io/hugo/bg/39.jpg" alt="Featured image of post 关闭 edge 自动填充表单功能" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;如何关闭 edge 自动填充表单功能&lt;/p&gt;
 &lt;p&gt;
 
@@ -219,8 +219,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250308200920.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250308200920.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308200920.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308200920.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -238,8 +238,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250308201144.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250308201144.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308201144.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308201144.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -249,11 +249,11 @@
         </item>
         <item>
         <title>PowerToys 批量重命名</title>
-        <link>https://example.com/p/powertoys-%E6%89%B9%E9%87%8F%E9%87%8D%E5%91%BD%E5%90%8D/</link>
+        <link>https://zero3737.github.io/hugo/p/powertoys-%E6%89%B9%E9%87%8F%E9%87%8D%E5%91%BD%E5%90%8D/</link>
         <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/powertoys-%E6%89%B9%E9%87%8F%E9%87%8D%E5%91%BD%E5%90%8D/</guid>
-        <description>&lt;img src="https://example.com/bg/02.jpg" alt="Featured image of post PowerToys 批量重命名" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+        <guid>https://zero3737.github.io/hugo/p/powertoys-%E6%89%B9%E9%87%8F%E9%87%8D%E5%91%BD%E5%90%8D/</guid>
+        <description>&lt;img src="https://zero3737.github.io/bg/02.jpg" alt="Featured image of post PowerToys 批量重命名" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;本文主题是如何批量重命名文件，从 00 开始递增，强制保留 2 位数&lt;/p&gt;
 &lt;h2 id=&#34;使用-powerrename-批量重命名&#34;&gt;使用 PowerRename 批量重命名
 &lt;/h2&gt;&lt;p&gt;右键点击选定的文件，选择“PowerRename”选项，打开 PowerRename 窗口。&lt;/p&gt;
@@ -267,8 +267,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250307030309.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250307030309.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250307030309.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250307030309.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -286,8 +286,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250307030156.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250307030156.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250307030156.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250307030156.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -296,11 +296,11 @@
         </item>
         <item>
         <title>符号链接 mklink</title>
-        <link>https://example.com/p/%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5-mklink/</link>
+        <link>https://zero3737.github.io/hugo/p/%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5-mklink/</link>
         <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5-mklink/</guid>
-        <description>&lt;img src="https://example.com/bg/13.jpg" alt="Featured image of post 符号链接 mklink" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+        <guid>https://zero3737.github.io/hugo/p/%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5-mklink/</guid>
+        <description>&lt;img src="https://zero3737.github.io/bg/13.jpg" alt="Featured image of post 符号链接 mklink" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;符号链接（Symbolic Link）是一种文件系统中的概念，它允许你创建一个指向另一个文件或目录的快捷方式。符号链接在 Windows、Linux 和 Mac 系统中都有支持，但它们的行为和兼容性可能会有所不同。下面我将详细解释符号链接的作用以及为什么在某些情况下可能无法兼容不同路径。&lt;/p&gt;
 &lt;h2 id=&#34;windows-使用&#34;&gt;Windows 使用
 &lt;/h2&gt;&lt;p&gt;在 Windows 系统中，可以使用 mklink 命令来创建符号链接。以下是基本语法：&lt;/p&gt;

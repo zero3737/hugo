@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>运维 on carlos</title>
-        <link>https://example.com/tags/%E8%BF%90%E7%BB%B4/</link>
+        <link>https://zero3737.github.io/hugo/tags/%E8%BF%90%E7%BB%B4/</link>
         <description>Recent content in 运维 on carlos</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Sun, 09 Mar 2025 00:41:53 +0800</lastBuildDate><atom:link href="https://example.com/tags/%E8%BF%90%E7%BB%B4/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 09 Mar 2025 00:41:53 +0800</lastBuildDate><atom:link href="https://zero3737.github.io/hugo/tags/%E8%BF%90%E7%BB%B4/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Linux 中查看进程以及杀死进程的方法</title>
-        <link>https://example.com/p/linux-%E4%B8%AD%E6%9F%A5%E7%9C%8B%E8%BF%9B%E7%A8%8B%E4%BB%A5%E5%8F%8A%E6%9D%80%E6%AD%BB%E8%BF%9B%E7%A8%8B%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+        <link>https://zero3737.github.io/hugo/p/linux-%E4%B8%AD%E6%9F%A5%E7%9C%8B%E8%BF%9B%E7%A8%8B%E4%BB%A5%E5%8F%8A%E6%9D%80%E6%AD%BB%E8%BF%9B%E7%A8%8B%E7%9A%84%E6%96%B9%E6%B3%95/</link>
         <pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/linux-%E4%B8%AD%E6%9F%A5%E7%9C%8B%E8%BF%9B%E7%A8%8B%E4%BB%A5%E5%8F%8A%E6%9D%80%E6%AD%BB%E8%BF%9B%E7%A8%8B%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
-        <description>&lt;img src="https://example.com/bg/10.jpg" alt="Featured image of post Linux 中查看进程以及杀死进程的方法" /&gt;&lt;h2 id=&#34;查看进程&#34;&gt;查看进程
+        <guid>https://zero3737.github.io/hugo/p/linux-%E4%B8%AD%E6%9F%A5%E7%9C%8B%E8%BF%9B%E7%A8%8B%E4%BB%A5%E5%8F%8A%E6%9D%80%E6%AD%BB%E8%BF%9B%E7%A8%8B%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+        <description>&lt;img src="https://zero3737.github.io/hugo/bg/10.jpg" alt="Featured image of post Linux 中查看进程以及杀死进程的方法" /&gt;&lt;h2 id=&#34;查看进程&#34;&gt;查看进程
 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt;ps 命令&lt;/strong&gt;：命令用于报告当前系统的进程状态。常用的组合有 &lt;code&gt;ps aux&lt;/code&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;a&lt;/code&gt;：显示所有用户的进程&lt;/li&gt;
@@ -38,8 +38,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250309003651.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250309003651.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309003651.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309003651.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -79,11 +79,11 @@
         </item>
         <item>
         <title>windows 开机执行bat脚本，含隐藏命令窗口</title>
-        <link>https://example.com/p/windows-%E5%BC%80%E6%9C%BA%E6%89%A7%E8%A1%8Cbat%E8%84%9A%E6%9C%AC%E5%90%AB%E9%9A%90%E8%97%8F%E5%91%BD%E4%BB%A4%E7%AA%97%E5%8F%A3/</link>
+        <link>https://zero3737.github.io/hugo/p/windows-%E5%BC%80%E6%9C%BA%E6%89%A7%E8%A1%8Cbat%E8%84%9A%E6%9C%AC%E5%90%AB%E9%9A%90%E8%97%8F%E5%91%BD%E4%BB%A4%E7%AA%97%E5%8F%A3/</link>
         <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/windows-%E5%BC%80%E6%9C%BA%E6%89%A7%E8%A1%8Cbat%E8%84%9A%E6%9C%AC%E5%90%AB%E9%9A%90%E8%97%8F%E5%91%BD%E4%BB%A4%E7%AA%97%E5%8F%A3/</guid>
-        <description>&lt;img src="https://example.com/bg/30.jpg" alt="Featured image of post windows 开机执行bat脚本，含隐藏命令窗口" /&gt;&lt;h2 id=&#34;启动文件夹&#34;&gt;启动文件夹
+        <guid>https://zero3737.github.io/hugo/p/windows-%E5%BC%80%E6%9C%BA%E6%89%A7%E8%A1%8Cbat%E8%84%9A%E6%9C%AC%E5%90%AB%E9%9A%90%E8%97%8F%E5%91%BD%E4%BB%A4%E7%AA%97%E5%8F%A3/</guid>
+        <description>&lt;img src="https://zero3737.github.io/hugo/bg/30.jpg" alt="Featured image of post windows 开机执行bat脚本，含隐藏命令窗口" /&gt;&lt;h2 id=&#34;启动文件夹&#34;&gt;启动文件夹
 &lt;/h2&gt;&lt;p&gt;按 Win + R 键打开“运行”对话框。&lt;/p&gt;
 &lt;p&gt;输入 shell:startup 并按 Enter 键，这将打开“启动”文件夹。这个文件夹中的所有程序都会在系统启动时自动运行。&lt;/p&gt;
 &lt;p&gt;将脚本放入“启动”文件夹‌。&lt;/p&gt;

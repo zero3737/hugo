@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Ubuntu on carlos</title>
-        <link>https://example.com/tags/ubuntu/</link>
+        <link>https://zero3737.github.io/hugo/tags/ubuntu/</link>
         <description>Recent content in Ubuntu on carlos</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Mon, 10 Mar 2025 05:54:58 +0800</lastBuildDate><atom:link href="https://example.com/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 10 Mar 2025 05:58:18 +0800</lastBuildDate><atom:link href="https://zero3737.github.io/hugo/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>hugo 定时推送代码</title>
-        <link>https://example.com/p/hugo-%E5%AE%9A%E6%97%B6%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81/</link>
+        <link>https://zero3737.github.io/hugo/p/hugo-%E5%AE%9A%E6%97%B6%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81/</link>
         <pubDate>Mon, 10 Mar 2025 05:53:27 +0800</pubDate>
         
-        <guid>https://example.com/p/hugo-%E5%AE%9A%E6%97%B6%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81/</guid>
-        <description>&lt;img src="https://example.com/bg/27.jpg" alt="Featured image of post hugo 定时推送代码" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+        <guid>https://zero3737.github.io/hugo/p/hugo-%E5%AE%9A%E6%97%B6%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81/</guid>
+        <description>&lt;img src="https://zero3737.github.io/hugo/bg/27.jpg" alt="Featured image of post hugo 定时推送代码" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;提前配置好 git 仓库，配置好 ssh，该脚本是在 ssh 配置完成下编写，不然要输入用户名和密码&lt;/p&gt;
 &lt;h2 id=&#34;实操&#34;&gt;实操
 &lt;/h2&gt;&lt;p&gt;新建 sh 文件，内容如下&lt;/p&gt;
@@ -46,8 +46,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250310054915.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250310054915.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310054915.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310054915.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -63,8 +63,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250310055150.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250310055150.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310055150.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310055150.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -80,8 +80,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250310055256.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250310055256.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310055256.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310055256.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -90,11 +90,11 @@
         </item>
         <item>
         <title>github ssh 免密推送代码</title>
-        <link>https://example.com/p/github-ssh-%E5%85%8D%E5%AF%86%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81/</link>
+        <link>https://zero3737.github.io/hugo/p/github-ssh-%E5%85%8D%E5%AF%86%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81/</link>
         <pubDate>Mon, 10 Mar 2025 05:08:44 +0800</pubDate>
         
-        <guid>https://example.com/p/github-ssh-%E5%85%8D%E5%AF%86%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81/</guid>
-        <description>&lt;img src="https://example.com/bg/44.jpg" alt="Featured image of post github ssh 免密推送代码" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+        <guid>https://zero3737.github.io/hugo/p/github-ssh-%E5%85%8D%E5%AF%86%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81/</guid>
+        <description>&lt;img src="https://zero3737.github.io/hugo/bg/44.jpg" alt="Featured image of post github ssh 免密推送代码" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;如果使用 https 方式推送代码，每次推送代码都需要输入用户名和密码，不方便，也不利于创建脚本&lt;/p&gt;
 &lt;h2 id=&#34;生成-ssh-密钥对&#34;&gt;生成 SSH 密钥对
 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt;执行密钥生成命令&lt;/strong&gt;&lt;/p&gt;
@@ -118,8 +118,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250310044611.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250310044611.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310044611.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310044611.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -146,8 +146,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250310044947.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250310044947.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310044947.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310044947.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -163,8 +163,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250310045237.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250310045237.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310045237.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310045237.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -180,8 +180,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250310045511.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250310045511.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310045511.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310045511.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -206,8 +206,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250310050519.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250310050519.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310050519.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310050519.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -232,8 +232,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250310051040.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250310051040.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310051040.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310051040.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -260,8 +260,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250310051908.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250310051908.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310051908.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310051908.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -270,11 +270,11 @@
         </item>
         <item>
         <title>github 新建仓库以及推送代码</title>
-        <link>https://example.com/p/github-%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81/</link>
+        <link>https://zero3737.github.io/hugo/p/github-%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81/</link>
         <pubDate>Mon, 10 Mar 2025 03:59:47 +0800</pubDate>
         
-        <guid>https://example.com/p/github-%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81/</guid>
-        <description>&lt;img src="https://example.com/bg/47.jpg" alt="Featured image of post github 新建仓库以及推送代码" /&gt;&lt;h2 id=&#34;github-新建仓库&#34;&gt;github 新建仓库
+        <guid>https://zero3737.github.io/hugo/p/github-%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81/</guid>
+        <description>&lt;img src="https://zero3737.github.io/hugo/bg/47.jpg" alt="Featured image of post github 新建仓库以及推送代码" /&gt;&lt;h2 id=&#34;github-新建仓库&#34;&gt;github 新建仓库
 &lt;/h2&gt;&lt;p&gt;github 仓库主页选择 new&lt;/p&gt;
 &lt;p&gt;
 
@@ -286,8 +286,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250310033650.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250310033650.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310033650.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310033650.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -303,8 +303,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250310033741.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250310033741.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310033741.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310033741.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -320,8 +320,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250310033845.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250310033845.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310033845.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310033845.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -389,8 +389,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250310035219.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250310035219.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310035219.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310035219.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -478,8 +478,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250310043619.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250310043619.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310043619.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250310043619.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -488,11 +488,11 @@
         </item>
         <item>
         <title>Linux 中查看进程以及杀死进程的方法</title>
-        <link>https://example.com/p/linux-%E4%B8%AD%E6%9F%A5%E7%9C%8B%E8%BF%9B%E7%A8%8B%E4%BB%A5%E5%8F%8A%E6%9D%80%E6%AD%BB%E8%BF%9B%E7%A8%8B%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+        <link>https://zero3737.github.io/hugo/p/linux-%E4%B8%AD%E6%9F%A5%E7%9C%8B%E8%BF%9B%E7%A8%8B%E4%BB%A5%E5%8F%8A%E6%9D%80%E6%AD%BB%E8%BF%9B%E7%A8%8B%E7%9A%84%E6%96%B9%E6%B3%95/</link>
         <pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/linux-%E4%B8%AD%E6%9F%A5%E7%9C%8B%E8%BF%9B%E7%A8%8B%E4%BB%A5%E5%8F%8A%E6%9D%80%E6%AD%BB%E8%BF%9B%E7%A8%8B%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
-        <description>&lt;img src="https://example.com/bg/10.jpg" alt="Featured image of post Linux 中查看进程以及杀死进程的方法" /&gt;&lt;h2 id=&#34;查看进程&#34;&gt;查看进程
+        <guid>https://zero3737.github.io/hugo/p/linux-%E4%B8%AD%E6%9F%A5%E7%9C%8B%E8%BF%9B%E7%A8%8B%E4%BB%A5%E5%8F%8A%E6%9D%80%E6%AD%BB%E8%BF%9B%E7%A8%8B%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+        <description>&lt;img src="https://zero3737.github.io/hugo/bg/10.jpg" alt="Featured image of post Linux 中查看进程以及杀死进程的方法" /&gt;&lt;h2 id=&#34;查看进程&#34;&gt;查看进程
 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt;ps 命令&lt;/strong&gt;：命令用于报告当前系统的进程状态。常用的组合有 &lt;code&gt;ps aux&lt;/code&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;a&lt;/code&gt;：显示所有用户的进程&lt;/li&gt;
@@ -517,8 +517,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250309003651.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250309003651.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309003651.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250309003651.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -558,11 +558,11 @@
         </item>
         <item>
         <title>homepage 配置</title>
-        <link>https://example.com/p/homepage-%E9%85%8D%E7%BD%AE/</link>
+        <link>https://zero3737.github.io/hugo/p/homepage-%E9%85%8D%E7%BD%AE/</link>
         <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/homepage-%E9%85%8D%E7%BD%AE/</guid>
-        <description>&lt;img src="https://example.com/bg/54.jpg" alt="Featured image of post homepage 配置" /&gt;&lt;h2 id=&#34;homepage-主要配置文件功能介绍&#34;&gt;Homepage 主要配置文件功能介绍
+        <guid>https://zero3737.github.io/hugo/p/homepage-%E9%85%8D%E7%BD%AE/</guid>
+        <description>&lt;img src="https://zero3737.github.io/bg/54.jpg" alt="Featured image of post homepage 配置" /&gt;&lt;h2 id=&#34;homepage-主要配置文件功能介绍&#34;&gt;Homepage 主要配置文件功能介绍
 &lt;/h2&gt;&lt;p&gt;1、settings.yaml&lt;/p&gt;
 &lt;p&gt;homepage的设置文件，用来设置：语言、布局、标题、favicon图标、背景图片等。&lt;/p&gt;
 &lt;p&gt;2、service.yaml&lt;/p&gt;
@@ -733,11 +733,11 @@
         </item>
         <item>
         <title>符号链接 mklink</title>
-        <link>https://example.com/p/%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5-mklink/</link>
+        <link>https://zero3737.github.io/hugo/p/%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5-mklink/</link>
         <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5-mklink/</guid>
-        <description>&lt;img src="https://example.com/bg/13.jpg" alt="Featured image of post 符号链接 mklink" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+        <guid>https://zero3737.github.io/hugo/p/%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5-mklink/</guid>
+        <description>&lt;img src="https://zero3737.github.io/bg/13.jpg" alt="Featured image of post 符号链接 mklink" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;符号链接（Symbolic Link）是一种文件系统中的概念，它允许你创建一个指向另一个文件或目录的快捷方式。符号链接在 Windows、Linux 和 Mac 系统中都有支持，但它们的行为和兼容性可能会有所不同。下面我将详细解释符号链接的作用以及为什么在某些情况下可能无法兼容不同路径。&lt;/p&gt;
 &lt;h2 id=&#34;windows-使用&#34;&gt;Windows 使用
 &lt;/h2&gt;&lt;p&gt;在 Windows 系统中，可以使用 mklink 命令来创建符号链接。以下是基本语法：&lt;/p&gt;

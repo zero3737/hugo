@@ -4,16 +4,16 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="前言 知识库目录结构设计： 临时收集层\u200c：设立Inbox文件夹存放未整理的零散笔记，作为缓冲区域\u200c。 时间维度\u200c：通过Calendar或日期格式文件夹（如2025/03/2025-03-06）管理日记、会议记录等时间敏感内容\u200c。 主题/领域层\u200c：按知识领域（如Domains/Science、Domains/Technology）或项目（如Projects/Work）分类核心笔记\u200c。 功能辅助层\u200c：设置Sources（文献）、Cards（卡片笔记）等文件夹存放特定类型内容\u200c。 动态调整机制： 新笔记先进入Inbox，定期整理后迁移至主题或时间目录\u200c。 高频使用的笔记可保留在主题目录，低频或完成的项目移至Archive归档文件夹\u200c。 我这里只保留了草稿区和归档区。assets 用来保存图片和附件，templates 用来存放模板文件。 实例 方案1，以主题为主，时间为辅，适用场景\u200c：知识库以学科领域或长期项目为核心。 1 2 3 4 5 6 7 📂 Knowledge_Base ├─ 📂 Domains # 主题领域 │ ├─ 📂 Science │ └─ 📂 Technology ├─ 📂 Projects # 短期项目 ├─ 📂 Calendar # 时间相关笔记（日记、会议记录） └─ 📂 Inbox # 临时收集区 方案2，时间轴驱动，\u200c适用场景\u200c：日记、日常灵感记录为主。 实现方式\u200c： 设置日记模板路径为YYYY/MM/YYYY-MM-DD，按年月自动生成嵌套文件夹\u200c。 结合标签（如#会议、#灵感）实现跨时间检索。 方案3，功能导向扁平化，适用场景\u200c：追求快速检索，避免过度分类。 结构示例\u200c： 1 2 3 4 📂 Notes ├─ 📄 2025-03-06-会议纪要 # 直接以日期+标题命名 ├─ 📄 科技趋势分析 # 主题型笔记 └─ 📂 Archive # 低频内容归档 总结 避免过度细分\u200c：文件夹层级建议不超过3层，依赖搜索和双向链接替代硬性分类\u200c。 统一命名规则\u200c：日期格式（如YYYY-MM-DD）、主题前缀（如[科技]XXX）提升可读性\u200c。 结合插件优化\u200c：使用Templater自动生成时间目录，或Quick Switcher快速跳转高频文件夹\u200c。 ">
 <title>obsidian 知识库设计</title>
 
-<link rel='canonical' href='https://example.com/p/obsidian-%E7%9F%A5%E8%AF%86%E5%BA%93%E8%AE%BE%E8%AE%A1/'>
+<link rel='canonical' href='https://zero3737.github.io/hugo/p/obsidian-%E7%9F%A5%E8%AF%86%E5%BA%93%E8%AE%BE%E8%AE%A1/'>
 
-<link rel="stylesheet" href="/scss/style.min.c8bea631cb49298ca88af154463382224452f4e21f446d0687dcbcb09a16ccad.css"><meta property='og:title' content="obsidian 知识库设计">
+<link rel="stylesheet" href="/hugo/scss/style.min.c8bea631cb49298ca88af154463382224452f4e21f446d0687dcbcb09a16ccad.css"><meta property='og:title' content="obsidian 知识库设计">
 <meta property='og:description' content="前言 知识库目录结构设计： 临时收集层\u200c：设立Inbox文件夹存放未整理的零散笔记，作为缓冲区域\u200c。 时间维度\u200c：通过Calendar或日期格式文件夹（如2025/03/2025-03-06）管理日记、会议记录等时间敏感内容\u200c。 主题/领域层\u200c：按知识领域（如Domains/Science、Domains/Technology）或项目（如Projects/Work）分类核心笔记\u200c。 功能辅助层\u200c：设置Sources（文献）、Cards（卡片笔记）等文件夹存放特定类型内容\u200c。 动态调整机制： 新笔记先进入Inbox，定期整理后迁移至主题或时间目录\u200c。 高频使用的笔记可保留在主题目录，低频或完成的项目移至Archive归档文件夹\u200c。 我这里只保留了草稿区和归档区。assets 用来保存图片和附件，templates 用来存放模板文件。 实例 方案1，以主题为主，时间为辅，适用场景\u200c：知识库以学科领域或长期项目为核心。 1 2 3 4 5 6 7 📂 Knowledge_Base ├─ 📂 Domains # 主题领域 │ ├─ 📂 Science │ └─ 📂 Technology ├─ 📂 Projects # 短期项目 ├─ 📂 Calendar # 时间相关笔记（日记、会议记录） └─ 📂 Inbox # 临时收集区 方案2，时间轴驱动，\u200c适用场景\u200c：日记、日常灵感记录为主。 实现方式\u200c： 设置日记模板路径为YYYY/MM/YYYY-MM-DD，按年月自动生成嵌套文件夹\u200c。 结合标签（如#会议、#灵感）实现跨时间检索。 方案3，功能导向扁平化，适用场景\u200c：追求快速检索，避免过度分类。 结构示例\u200c： 1 2 3 4 📂 Notes ├─ 📄 2025-03-06-会议纪要 # 直接以日期+标题命名 ├─ 📄 科技趋势分析 # 主题型笔记 └─ 📂 Archive # 低频内容归档 总结 避免过度细分\u200c：文件夹层级建议不超过3层，依赖搜索和双向链接替代硬性分类\u200c。 统一命名规则\u200c：日期格式（如YYYY-MM-DD）、主题前缀（如[科技]XXX）提升可读性\u200c。 结合插件优化\u200c：使用Templater自动生成时间目录，或Quick Switcher快速跳转高频文件夹\u200c。 ">
-<meta property='og:url' content='https://example.com/p/obsidian-%E7%9F%A5%E8%AF%86%E5%BA%93%E8%AE%BE%E8%AE%A1/'>
+<meta property='og:url' content='https://zero3737.github.io/hugo/p/obsidian-%E7%9F%A5%E8%AF%86%E5%BA%93%E8%AE%BE%E8%AE%A1/'>
 <meta property='og:site_name' content='carlos'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='obsidian' /><meta property='article:tag' content='笔记' /><meta property='article:published_time' content='2025-03-06T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-03-07T02:57:01&#43;08:00'/><meta property='og:image' content='https://example.com/bg/25.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='obsidian' /><meta property='article:tag' content='笔记' /><meta property='article:published_time' content='2025-03-06T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-03-07T02:57:01&#43;08:00'/><meta property='og:image' content='https://zero3737.github.io/bg/25.jpg' />
 <meta name="twitter:title" content="obsidian 知识库设计">
 <meta name="twitter:description" content="前言 知识库目录结构设计： 临时收集层\u200c：设立Inbox文件夹存放未整理的零散笔记，作为缓冲区域\u200c。 时间维度\u200c：通过Calendar或日期格式文件夹（如2025/03/2025-03-06）管理日记、会议记录等时间敏感内容\u200c。 主题/领域层\u200c：按知识领域（如Domains/Science、Domains/Technology）或项目（如Projects/Work）分类核心笔记\u200c。 功能辅助层\u200c：设置Sources（文献）、Cards（卡片笔记）等文件夹存放特定类型内容\u200c。 动态调整机制： 新笔记先进入Inbox，定期整理后迁移至主题或时间目录\u200c。 高频使用的笔记可保留在主题目录，低频或完成的项目移至Archive归档文件夹\u200c。 我这里只保留了草稿区和归档区。assets 用来保存图片和附件，templates 用来存放模板文件。 实例 方案1，以主题为主，时间为辅，适用场景\u200c：知识库以学科领域或长期项目为核心。 1 2 3 4 5 6 7 📂 Knowledge_Base ├─ 📂 Domains # 主题领域 │ ├─ 📂 Science │ └─ 📂 Technology ├─ 📂 Projects # 短期项目 ├─ 📂 Calendar # 时间相关笔记（日记、会议记录） └─ 📂 Inbox # 临时收集区 方案2，时间轴驱动，\u200c适用场景\u200c：日记、日常灵感记录为主。 实现方式\u200c： 设置日记模板路径为YYYY/MM/YYYY-MM-DD，按年月自动生成嵌套文件夹\u200c。 结合标签（如#会议、#灵感）实现跨时间检索。 方案3，功能导向扁平化，适用场景\u200c：追求快速检索，避免过度分类。 结构示例\u200c： 1 2 3 4 📂 Notes ├─ 📄 2025-03-06-会议纪要 # 直接以日期+标题命名 ├─ 📄 科技趋势分析 # 主题型笔记 └─ 📂 Archive # 低频内容归档 总结 避免过度细分\u200c：文件夹层级建议不超过3层，依赖搜索和双向链接替代硬性分类\u200c。 统一命名规则\u200c：日期格式（如YYYY-MM-DD）、主题前缀（如[科技]XXX）提升可读性\u200c。 结合插件优化\u200c：使用Templater自动生成时间目录，或Quick Switcher快速跳转高频文件夹\u200c。 "><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://example.com/bg/25.jpg' />
+    <meta name="twitter:image" content='https://zero3737.github.io/bg/25.jpg' />
     <link rel="shortcut icon" href="https://gohugo.io/favicon-32x32.png" />
 
     </head>
@@ -53,13 +53,13 @@
         
             
             <figure class="site-avatar">
-                <a href="/">
+                <a href="/hugo/">
                 
                     
                     
                     
                         
-                        <img src="/img/avatar_hue50fb72c0afb8b01efc1d26d121e9d46_66295_300x0_resize_box_3.png" width="300"
+                        <img src="/hugo/img/avatar_hue50fb72c0afb8b01efc1d26d121e9d46_66295_300x0_resize_box_3.png" width="300"
                             height="300" class="site-logo" loading="lazy" alt="Avatar">
                     
                 
@@ -72,7 +72,7 @@
         
         
         <div class="site-meta">
-            <h1 class="site-name"><a href="/">carlos</a></h1>
+            <h1 class="site-name"><a href="/hugo">carlos</a></h1>
             <h2 class="site-description">笔记分享，记录个人成长。</h2>
         </div>
     </header><ol class="menu-social">
@@ -130,7 +130,7 @@
         
         
         <li >
-            <a href='/' >
+            <a href='/hugo/' >
                 
                 
                 
@@ -150,7 +150,7 @@
         
         
         <li >
-            <a href='/%E5%85%B3%E4%BA%8E/' >
+            <a href='/hugo/%E5%85%B3%E4%BA%8E/' >
                 
                 
                 
@@ -169,7 +169,7 @@
         
         
         <li >
-            <a href='/archives/' >
+            <a href='/hugo/archives/' >
                 
                 
                 
@@ -189,7 +189,7 @@
         
         
         <li >
-            <a href='/search/' >
+            <a href='/hugo/search/' >
                 
                 
                 
@@ -208,7 +208,7 @@
         
         
         <li >
-            <a href='/%E5%8F%8B%E9%93%BE/' >
+            <a href='/hugo/%E5%8F%8B%E9%93%BE/' >
                 
                 
                 
@@ -293,7 +293,7 @@
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/obsidian-%E7%9F%A5%E8%AF%86%E5%BA%93%E8%AE%BE%E8%AE%A1/">
+            <a href="/hugo/p/obsidian-%E7%9F%A5%E8%AF%86%E5%BA%93%E8%AE%BE%E8%AE%A1/">
                 
                     <img src="/bg/25.jpg" loading="lazy" alt="Featured image of post obsidian 知识库设计" />
                 
@@ -305,11 +305,11 @@
     
     <header class="article-category">
         
-            <a href="/categories/obsidian/" >
+            <a href="/hugo/categories/obsidian/" >
                 Obsidian
             </a>
         
-            <a href="/categories/%E7%AC%94%E8%AE%B0/" >
+            <a href="/hugo/categories/%E7%AC%94%E8%AE%B0/" >
                 笔记
             </a>
         
@@ -318,7 +318,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/obsidian-%E7%9F%A5%E8%AF%86%E5%BA%93%E8%AE%BE%E8%AE%A1/">obsidian 知识库设计</a>
+            <a href="/hugo/p/obsidian-%E7%9F%A5%E8%AF%86%E5%BA%93%E8%AE%BE%E8%AE%A1/">obsidian 知识库设计</a>
         </h2>
     
         
@@ -458,9 +458,9 @@
     
     <section class="article-tags">
         
-            <a href="/tags/obsidian/">Obsidian</a>
+            <a href="/hugo/tags/obsidian/">Obsidian</a>
         
-            <a href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
+            <a href="/hugo/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
         
     </section>
 
@@ -506,7 +506,7 @@
             
                 
 <article class="has-image">
-    <a href="/p/hugo-%E5%85%A5%E9%97%A8%E7%AF%87/">
+    <a href="/hugo/p/hugo-%E5%85%A5%E9%97%A8%E7%AF%87/">
         
         
             <div class="article-image">
@@ -525,7 +525,7 @@
             
                 
 <article class="has-image">
-    <a href="/p/obsidian-%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">
+    <a href="/hugo/p/obsidian-%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">
         
         
             <div class="article-image">
@@ -544,12 +544,31 @@
             
                 
 <article class="has-image">
-    <a href="/p/hugo-%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F/">
+    <a href="/hugo/p/hugo-%E5%AE%9A%E6%97%B6%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81/">
         
         
             <div class="article-image">
                 
-                    <img src="/bg/27.jpg" loading="lazy" data-key="" data-hash="/bg/27.jpg"/>
+                    <img src="/hugo/bg/27.jpg" loading="lazy" data-key="" data-hash="/hugo/bg/27.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">hugo 定时推送代码</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/hugo/p/hugo-%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/hugo/bg/27.jpg" loading="lazy" data-key="" data-hash="/hugo/bg/27.jpg"/>
                 
             </div>
         
@@ -563,37 +582,18 @@
             
                 
 <article class="has-image">
-    <a href="/p/hugo-nginx-%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E5%9F%9F%E5%90%8D%E9%BB%98%E8%AE%A4%E5%8A%A0%E7%AB%AF%E5%8F%A3%E5%8F%B7/">
+    <a href="/hugo/p/hugo-nginx-%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E5%9F%9F%E5%90%8D%E9%BB%98%E8%AE%A4%E5%8A%A0%E7%AB%AF%E5%8F%A3%E5%8F%B7/">
         
         
             <div class="article-image">
                 
-                    <img src="/bg/37.jpg" loading="lazy" data-key="" data-hash="/bg/37.jpg"/>
+                    <img src="/hugo/bg/37.jpg" loading="lazy" data-key="" data-hash="/hugo/bg/37.jpg"/>
                 
             </div>
         
 
         <div class="article-details">
             <h2 class="article-title">hugo nginx 反向代理域名默认加端口号</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
-    <a href="/p/hugo-stack-%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0-b-%E7%AB%99%E5%9B%BE%E6%A0%87%E8%B7%B3%E8%BD%AC%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E9%85%8D%E7%BD%AE/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/bg/38.jpg" loading="lazy" data-key="" data-hash="/bg/38.jpg"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">hugo stack 主题添加 b 站图标跳转个人主页配置</h2>
         </div>
     </a>
 </article>
@@ -707,7 +707,7 @@
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+            </script><script type="text/javascript" src="/hugo/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Edge on carlos</title>
-        <link>https://example.com/tags/edge/</link>
+        <link>https://zero3737.github.io/hugo/tags/edge/</link>
         <description>Recent content in Edge on carlos</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Sat, 08 Mar 2025 20:13:27 +0800</lastBuildDate><atom:link href="https://example.com/tags/edge/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 08 Mar 2025 20:13:27 +0800</lastBuildDate><atom:link href="https://zero3737.github.io/hugo/tags/edge/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>关闭 edge 自动填充表单功能</title>
-        <link>https://example.com/p/%E5%85%B3%E9%97%AD-edge-%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E8%A1%A8%E5%8D%95%E5%8A%9F%E8%83%BD/</link>
+        <link>https://zero3737.github.io/hugo/p/%E5%85%B3%E9%97%AD-edge-%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E8%A1%A8%E5%8D%95%E5%8A%9F%E8%83%BD/</link>
         <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/%E5%85%B3%E9%97%AD-edge-%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E8%A1%A8%E5%8D%95%E5%8A%9F%E8%83%BD/</guid>
-        <description>&lt;img src="https://example.com/bg/39.jpg" alt="Featured image of post 关闭 edge 自动填充表单功能" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+        <guid>https://zero3737.github.io/hugo/p/%E5%85%B3%E9%97%AD-edge-%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E8%A1%A8%E5%8D%95%E5%8A%9F%E8%83%BD/</guid>
+        <description>&lt;img src="https://zero3737.github.io/hugo/bg/39.jpg" alt="Featured image of post 关闭 edge 自动填充表单功能" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;如何关闭 edge 自动填充表单功能&lt;/p&gt;
 &lt;p&gt;
 
@@ -25,8 +25,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250308200920.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250308200920.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308200920.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308200920.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
@@ -44,8 +44,8 @@
 
 
 &lt;div class=&#34;post-img-view&#34;&gt;
-	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://example.com/00-assets/Pasted%20image%2020250308201144.png&#34;&gt;
-		&lt;img loading=&#39;lazy&#39; src=&#34;https://example.com/00-assets/Pasted%20image%2020250308201144.png&#34; alt=&#34;&#34;  /&gt;
+	&lt;a data-fancybox=&#34;gallery&#34; href=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308201144.png&#34;&gt;
+		&lt;img loading=&#39;lazy&#39; src=&#34;https://zero3737.github.io/hugo/00-assets/Pasted%20image%2020250308201144.png&#34; alt=&#34;&#34;  /&gt;
 	&lt;/a&gt;
 &lt;/div&gt;
 
