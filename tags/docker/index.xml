@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Sun, 09 Mar 2025 22:22:39 +0800</lastBuildDate><atom:link href="https://zero3737.github.io/hugo/tags/docker/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 10 Mar 2025 21:21:51 +0800</lastBuildDate><atom:link href="https://zero3737.github.io/hugo/tags/docker/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>open webui 长时间白屏</title>
         <link>https://zero3737.github.io/hugo/p/open-webui-%E9%95%BF%E6%97%B6%E9%97%B4%E7%99%BD%E5%B1%8F/</link>
         <pubDate>Sun, 09 Mar 2025 22:22:02 +0800</pubDate>
@@ -745,7 +745,7 @@
         <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>https://zero3737.github.io/hugo/p/homepage-%E9%85%8D%E7%BD%AE/</guid>
-        <description>&lt;img src="https://zero3737.github.io/bg/54.jpg" alt="Featured image of post homepage 配置" /&gt;&lt;h2 id=&#34;homepage-主要配置文件功能介绍&#34;&gt;Homepage 主要配置文件功能介绍
+        <description>&lt;img src="https://zero3737.github.io/hugo/bg/54.jpg" alt="Featured image of post homepage 配置" /&gt;&lt;h2 id=&#34;homepage-主要配置文件功能介绍&#34;&gt;Homepage 主要配置文件功能介绍
 &lt;/h2&gt;&lt;p&gt;1、settings.yaml&lt;/p&gt;
 &lt;p&gt;homepage的设置文件，用来设置：语言、布局、标题、favicon图标、背景图片等。&lt;/p&gt;
 &lt;p&gt;2、service.yaml&lt;/p&gt;

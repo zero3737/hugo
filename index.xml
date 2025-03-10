@@ -3251,7 +3251,7 @@
         <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>https://zero3737.github.io/hugo/p/powertoys-%E6%89%B9%E9%87%8F%E9%87%8D%E5%91%BD%E5%90%8D/</guid>
-        <description>&lt;img src="https://zero3737.github.io/bg/02.jpg" alt="Featured image of post PowerToys 批量重命名" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+        <description>&lt;img src="https://zero3737.github.io/hugo/bg/02.jpg" alt="Featured image of post PowerToys 批量重命名" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;本文主题是如何批量重命名文件，从 00 开始递增，强制保留 2 位数&lt;/p&gt;
 &lt;h2 id=&#34;使用-powerrename-批量重命名&#34;&gt;使用 PowerRename 批量重命名
 &lt;/h2&gt;&lt;p&gt;右键点击选定的文件，选择“PowerRename”选项，打开 PowerRename 窗口。&lt;/p&gt;
@@ -3371,7 +3371,7 @@
         <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>https://zero3737.github.io/hugo/p/homepage-%E9%85%8D%E7%BD%AE/</guid>
-        <description>&lt;img src="https://zero3737.github.io/bg/54.jpg" alt="Featured image of post homepage 配置" /&gt;&lt;h2 id=&#34;homepage-主要配置文件功能介绍&#34;&gt;Homepage 主要配置文件功能介绍
+        <description>&lt;img src="https://zero3737.github.io/hugo/bg/54.jpg" alt="Featured image of post homepage 配置" /&gt;&lt;h2 id=&#34;homepage-主要配置文件功能介绍&#34;&gt;Homepage 主要配置文件功能介绍
 &lt;/h2&gt;&lt;p&gt;1、settings.yaml&lt;/p&gt;
 &lt;p&gt;homepage的设置文件，用来设置：语言、布局、标题、favicon图标、背景图片等。&lt;/p&gt;
 &lt;p&gt;2、service.yaml&lt;/p&gt;
@@ -3546,7 +3546,7 @@
         <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>https://zero3737.github.io/hugo/p/hugo-%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E7%AE%A1%E7%90%86/</guid>
-        <description>&lt;img src="https://zero3737.github.io/bg/34.jpg" alt="Featured image of post hugo 笔记图片管理" /&gt;&lt;h2 id=&#34;本地存储方案&#34;&gt;本地存储方案
+        <description>&lt;img src="https://zero3737.github.io/hugo/bg/34.jpg" alt="Featured image of post hugo 笔记图片管理" /&gt;&lt;h2 id=&#34;本地存储方案&#34;&gt;本地存储方案
 &lt;/h2&gt;&lt;p&gt;一、static 文件夹集中管理&lt;/p&gt;
 &lt;p&gt;在 Hugo 项目根目录创建 static/images 文件夹，将图片统一存放于此。引用时使用绝对路径：&lt;code&gt;![描述](/images/图片名.jpg)&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;优势：Hugo 构建时自动复制到网站根目录，路径稳定，适合高频更新且需长期保留的图片‌。&lt;/p&gt;
@@ -3566,7 +3566,7 @@
         <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>https://zero3737.github.io/hugo/p/hugo-%E5%85%A5%E9%97%A8%E7%AF%87/</guid>
-        <description>&lt;img src="https://zero3737.github.io/bg/49.jpg" alt="Featured image of post hugo 入门篇" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+        <description>&lt;img src="https://zero3737.github.io/hugo/bg/49.jpg" alt="Featured image of post hugo 入门篇" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;本文是在 ubuntu 环境中安装 hugo。&lt;/p&gt;
 &lt;h2 id=&#34;安装&#34;&gt;安装
 &lt;/h2&gt;&lt;p&gt;安装命令&lt;/p&gt;
@@ -3830,7 +3830,7 @@
         <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>https://zero3737.github.io/hugo/p/hugo-%E6%97%B6%E5%8C%BA%E9%97%AE%E9%A2%98%E5%AF%BC%E8%87%B4%E6%96%87%E7%AB%A0%E6%9C%AA%E6%98%BE%E7%A4%BA/</guid>
-        <description>&lt;img src="https://zero3737.github.io/bg/15.jpg" alt="Featured image of post hugo 时区问题导致文章未显示" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+        <description>&lt;img src="https://zero3737.github.io/hugo/bg/15.jpg" alt="Featured image of post hugo 时区问题导致文章未显示" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;在 hugo 中，当文章时间设置为当天的话，将文章发布到国外服务器中并进行构建的话，该文章可能没有显示在文章列表里。&lt;/p&gt;
 &lt;p&gt;Hugo 时间默认为格林威治时间，因为中国的时间比格林威治时间早 8 个小时，格林威治时间没有到你配置的时间的时候，文章是不会出现在文章列表里的。&lt;/p&gt;
 &lt;h2 id=&#34;解决方案&#34;&gt;解决方案
@@ -3879,7 +3879,7 @@
         <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>https://zero3737.github.io/hugo/p/obsidian-%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid>
-        <description>&lt;img src="https://zero3737.github.io/bg/18.jpg" alt="Featured image of post obsidian 基础使用教程" /&gt;&lt;h2 id=&#34;文件与链接&#34;&gt;文件与链接
+        <description>&lt;img src="https://zero3737.github.io/hugo/bg/18.jpg" alt="Featured image of post obsidian 基础使用教程" /&gt;&lt;h2 id=&#34;文件与链接&#34;&gt;文件与链接
 &lt;/h2&gt;&lt;p&gt;配置如图&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;内部链接类型选择“相对路径”，兼容markdown&lt;/li&gt;
@@ -4191,7 +4191,7 @@
         <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>https://zero3737.github.io/hugo/p/obsidian-%E7%9F%A5%E8%AF%86%E5%BA%93%E8%AE%BE%E8%AE%A1/</guid>
-        <description>&lt;img src="https://zero3737.github.io/bg/25.jpg" alt="Featured image of post obsidian 知识库设计" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+        <description>&lt;img src="https://zero3737.github.io/hugo/bg/25.jpg" alt="Featured image of post obsidian 知识库设计" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;知识库目录结构设计：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;临时收集层‌：设立Inbox文件夹存放未整理的零散笔记，作为缓冲区域‌。&lt;/li&gt;
@@ -4279,7 +4279,7 @@
         <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>https://zero3737.github.io/hugo/p/%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5-mklink/</guid>
-        <description>&lt;img src="https://zero3737.github.io/bg/13.jpg" alt="Featured image of post 符号链接 mklink" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+        <description>&lt;img src="https://zero3737.github.io/hugo/bg/13.jpg" alt="Featured image of post 符号链接 mklink" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;符号链接（Symbolic Link）是一种文件系统中的概念，它允许你创建一个指向另一个文件或目录的快捷方式。符号链接在 Windows、Linux 和 Mac 系统中都有支持，但它们的行为和兼容性可能会有所不同。下面我将详细解释符号链接的作用以及为什么在某些情况下可能无法兼容不同路径。&lt;/p&gt;
 &lt;h2 id=&#34;windows-使用&#34;&gt;Windows 使用
 &lt;/h2&gt;&lt;p&gt;在 Windows 系统中，可以使用 mklink 命令来创建符号链接。以下是基本语法：&lt;/p&gt;

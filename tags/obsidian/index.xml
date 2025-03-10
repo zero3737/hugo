@@ -7,13 +7,13 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Fri, 07 Mar 2025 02:57:01 +0800</lastBuildDate><atom:link href="https://zero3737.github.io/hugo/tags/obsidian/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 10 Mar 2025 21:21:33 +0800</lastBuildDate><atom:link href="https://zero3737.github.io/hugo/tags/obsidian/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>hugo 入门篇</title>
         <link>https://zero3737.github.io/hugo/p/hugo-%E5%85%A5%E9%97%A8%E7%AF%87/</link>
         <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>https://zero3737.github.io/hugo/p/hugo-%E5%85%A5%E9%97%A8%E7%AF%87/</guid>
-        <description>&lt;img src="https://zero3737.github.io/bg/49.jpg" alt="Featured image of post hugo 入门篇" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+        <description>&lt;img src="https://zero3737.github.io/hugo/bg/49.jpg" alt="Featured image of post hugo 入门篇" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;本文是在 ubuntu 环境中安装 hugo。&lt;/p&gt;
 &lt;h2 id=&#34;安装&#34;&gt;安装
 &lt;/h2&gt;&lt;p&gt;安装命令&lt;/p&gt;
@@ -277,7 +277,7 @@
         <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>https://zero3737.github.io/hugo/p/obsidian-%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid>
-        <description>&lt;img src="https://zero3737.github.io/bg/18.jpg" alt="Featured image of post obsidian 基础使用教程" /&gt;&lt;h2 id=&#34;文件与链接&#34;&gt;文件与链接
+        <description>&lt;img src="https://zero3737.github.io/hugo/bg/18.jpg" alt="Featured image of post obsidian 基础使用教程" /&gt;&lt;h2 id=&#34;文件与链接&#34;&gt;文件与链接
 &lt;/h2&gt;&lt;p&gt;配置如图&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;内部链接类型选择“相对路径”，兼容markdown&lt;/li&gt;
@@ -589,7 +589,7 @@
         <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>https://zero3737.github.io/hugo/p/obsidian-%E7%9F%A5%E8%AF%86%E5%BA%93%E8%AE%BE%E8%AE%A1/</guid>
-        <description>&lt;img src="https://zero3737.github.io/bg/25.jpg" alt="Featured image of post obsidian 知识库设计" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+        <description>&lt;img src="https://zero3737.github.io/hugo/bg/25.jpg" alt="Featured image of post obsidian 知识库设计" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;知识库目录结构设计：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;临时收集层‌：设立Inbox文件夹存放未整理的零散笔记，作为缓冲区域‌。&lt;/li&gt;

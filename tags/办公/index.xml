@@ -7,13 +7,13 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Fri, 07 Mar 2025 03:08:26 +0800</lastBuildDate><atom:link href="https://zero3737.github.io/hugo/tags/%E5%8A%9E%E5%85%AC/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 10 Mar 2025 21:20:13 +0800</lastBuildDate><atom:link href="https://zero3737.github.io/hugo/tags/%E5%8A%9E%E5%85%AC/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>PowerToys 批量重命名</title>
         <link>https://zero3737.github.io/hugo/p/powertoys-%E6%89%B9%E9%87%8F%E9%87%8D%E5%91%BD%E5%90%8D/</link>
         <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>https://zero3737.github.io/hugo/p/powertoys-%E6%89%B9%E9%87%8F%E9%87%8D%E5%91%BD%E5%90%8D/</guid>
-        <description>&lt;img src="https://zero3737.github.io/bg/02.jpg" alt="Featured image of post PowerToys 批量重命名" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+        <description>&lt;img src="https://zero3737.github.io/hugo/bg/02.jpg" alt="Featured image of post PowerToys 批量重命名" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;本文主题是如何批量重命名文件，从 00 开始递增，强制保留 2 位数&lt;/p&gt;
 &lt;h2 id=&#34;使用-powerrename-批量重命名&#34;&gt;使用 PowerRename 批量重命名
 &lt;/h2&gt;&lt;p&gt;右键点击选定的文件，选择“PowerRename”选项，打开 PowerRename 窗口。&lt;/p&gt;

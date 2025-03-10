@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Mon, 10 Mar 2025 05:58:18 +0800</lastBuildDate><atom:link href="https://zero3737.github.io/hugo/tags/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 10 Mar 2025 21:21:44 +0800</lastBuildDate><atom:link href="https://zero3737.github.io/hugo/tags/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>hugo 定时推送代码</title>
         <link>https://zero3737.github.io/hugo/p/hugo-%E5%AE%9A%E6%97%B6%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81/</link>
         <pubDate>Mon, 10 Mar 2025 05:53:27 +0800</pubDate>
@@ -1114,7 +1114,7 @@
         <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>https://zero3737.github.io/hugo/p/hugo-%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E7%AE%A1%E7%90%86/</guid>
-        <description>&lt;img src="https://zero3737.github.io/bg/34.jpg" alt="Featured image of post hugo 笔记图片管理" /&gt;&lt;h2 id=&#34;本地存储方案&#34;&gt;本地存储方案
+        <description>&lt;img src="https://zero3737.github.io/hugo/bg/34.jpg" alt="Featured image of post hugo 笔记图片管理" /&gt;&lt;h2 id=&#34;本地存储方案&#34;&gt;本地存储方案
 &lt;/h2&gt;&lt;p&gt;一、static 文件夹集中管理&lt;/p&gt;
 &lt;p&gt;在 Hugo 项目根目录创建 static/images 文件夹，将图片统一存放于此。引用时使用绝对路径：&lt;code&gt;![描述](/images/图片名.jpg)&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;优势：Hugo 构建时自动复制到网站根目录，路径稳定，适合高频更新且需长期保留的图片‌。&lt;/p&gt;
@@ -1134,7 +1134,7 @@
         <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>https://zero3737.github.io/hugo/p/hugo-%E5%85%A5%E9%97%A8%E7%AF%87/</guid>
-        <description>&lt;img src="https://zero3737.github.io/bg/49.jpg" alt="Featured image of post hugo 入门篇" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+        <description>&lt;img src="https://zero3737.github.io/hugo/bg/49.jpg" alt="Featured image of post hugo 入门篇" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;本文是在 ubuntu 环境中安装 hugo。&lt;/p&gt;
 &lt;h2 id=&#34;安装&#34;&gt;安装
 &lt;/h2&gt;&lt;p&gt;安装命令&lt;/p&gt;
@@ -1398,7 +1398,7 @@
         <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>https://zero3737.github.io/hugo/p/hugo-%E6%97%B6%E5%8C%BA%E9%97%AE%E9%A2%98%E5%AF%BC%E8%87%B4%E6%96%87%E7%AB%A0%E6%9C%AA%E6%98%BE%E7%A4%BA/</guid>
-        <description>&lt;img src="https://zero3737.github.io/bg/15.jpg" alt="Featured image of post hugo 时区问题导致文章未显示" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+        <description>&lt;img src="https://zero3737.github.io/hugo/bg/15.jpg" alt="Featured image of post hugo 时区问题导致文章未显示" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;在 hugo 中，当文章时间设置为当天的话，将文章发布到国外服务器中并进行构建的话，该文章可能没有显示在文章列表里。&lt;/p&gt;
 &lt;p&gt;Hugo 时间默认为格林威治时间，因为中国的时间比格林威治时间早 8 个小时，格林威治时间没有到你配置的时间的时候，文章是不会出现在文章列表里的。&lt;/p&gt;
 &lt;h2 id=&#34;解决方案&#34;&gt;解决方案
