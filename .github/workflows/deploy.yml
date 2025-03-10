@@ -29,9 +29,9 @@ jobs:
         run: hugo --minify --gc
 
       - name: 发布到 main 分支  
-        uses: peaceiris/actions-gh-pages@v3  
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          ssh_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          deploy_key: ${{ secrets.SSH_PRIVATE_KEY }}
           publish_dir: ./public  
           publish_branch: main  # 正确参数名称
           force_orphan: true  # 强制覆盖目标分支
