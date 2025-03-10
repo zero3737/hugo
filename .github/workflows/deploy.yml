@@ -24,7 +24,10 @@ jobs:
         run: cp -r //home/runner/work/hugo/hugo/static/00-assets/ /home/runner/work/hugo/hugo/static/_resources
       - name: Build static files
         run: hugo --minify --gc
-          
+
+      - name: Test SSH Connection  
+        run: ssh -T git@github.com
+
       - name: 发布到 main 分支  
         uses: peaceiris/actions-gh-pages@v3  
         with:  
