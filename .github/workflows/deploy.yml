@@ -19,8 +19,8 @@ jobs:
         with:
           hugo-version: '0.125.7'  # 指定Hugo版本
           extended: true  # 启用扩展版
-      - name: Fix permissions  
-        run: sudo chmod -R 755 /home/runner/work/hugo/hugo/static/_resources
+      - name: Print current path  
+        run: pwd
       - name: Build static files
         run: hugo --minify --gc
 
