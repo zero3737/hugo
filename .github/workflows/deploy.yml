@@ -1,0 +1,31 @@
+name: Deploy Hugo to GitHub Pages
+
+on:
+  push:
+    branches: [ source ]  # 仅监控source分支的推送
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          ref: source  # 明确检出source分支
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.125.7'  # 指定Hugo版本
+          extended: true  # 启用扩展版
+
+      - name: Build static files
+        run: hugo --minify --gc
+
+      - name: Deploy to main
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          destination_branch: main  # 指定目标分支为main
+          force_orphan: true  # 强制清空目标分支历史

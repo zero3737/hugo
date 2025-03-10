@@ -103,12 +103,27 @@ git commit -m "提交说明"‌
 git branch -M main
 ```
 
-**补充说明**：若通过 `git init` 初始化仓库后需将默认分支从 `master` 改为 `main`，执行一次 `git branch -M main` 即可永久生效‌。
+**补充说明**
+
+- 若通过 `git init` 初始化仓库后需将默认分支从 `master` 改为 `main`，执行一次 `git branch -M main` 即可永久生效‌。
+- 强制重命名当前本地分支‌（例如将默认分支从 master 改为 main），与 GitHub 仓库名无关‌。这是 git 本地命令。
 
 推送到 github 仓库
 
 ```shell
 git push -u origin main
+```
+
+**补充说明**：
+
+- 会将当前本地分支‌推送到远程仓库的 source 分支，并建立追踪关系（-u 参数的作用）‌。若远程 source 分支不存在，此命令会自动创建该分支‌。
+- 本地分支名与远程分支名 ‌无需相同‌。例如，本地分支为 main，仍可推送至远程 source 分支‌。
+- 后续使用 git push（不带参数）时，默认推送至已关联的远程分支（即 source）‌。
+
+当本地分支名与远程分支名不一致时，‌需通过参数或配置明确指定映射关系‌，否则会因默认规则冲突导致推送失败‌。
+
+```shell
+git push -u origin 本地分支名:远程分支名
 ```
 
 如果是一个人，遇到冲突，不想处理，可以强制推送
