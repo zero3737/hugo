@@ -24,17 +24,19 @@ jobs:
         run: cp -r //home/runner/work/hugo/hugo/static/00-assets/ /home/runner/work/hugo/hugo/static/_resources
       - name: Build static files
         run: hugo --minify --gc
-
-      - name: Set up SSH  
-        uses: webfactory/ssh-agent@v0.8.0  
-        with:  
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
           
       - name: 发布到 main 分支  
         uses: peaceiris/actions-gh-pages@v3  
         with:  
-          github_token: ${{ secrets.GITHUB_TOKEN }}  
+          github_token: ""
+          ssh_key: ${{ secrets.SSH_PRIVATE_KEY }}
           publish_dir: ./public  
           publish_branch: main  # 正确参数名称
-          force_orphan: true  # 强制清空目标分支历史
+          force_orphan: true  # 强制覆盖目标分支
+          external_repository: git@github.com:zero3737/hugo.git
+        env:  
+          # 配置 Git 用户信息  
+          GIT_USER_NAME: "root"  
+          GIT_USER_EMAIL: "root@localhost"
+          
 
