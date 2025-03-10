@@ -35,7 +35,6 @@ jobs:
           publish_dir: ./public  
           publish_branch: main  # 正确参数名称
           force_orphan: true  # 强制覆盖目标分支
-          external_repository: zero3737/git@github.com:zero3737/hugo.git
         env:  
           # 配置 Git 用户信息  
           GIT_USER_NAME: "root"  
