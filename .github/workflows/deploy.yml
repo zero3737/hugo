@@ -19,11 +19,11 @@ jobs:
           hugo-version: '0.125.7'  # 指定Hugo版本
           extended: true  # 启用扩展版
 
-      - name: 删除符号链接
-        run: rm -f /home/runner/work/hugo/hugo/static/_resources
+      # - name: 删除符号链接
+      #   run: rm -f /home/runner/work/hugo/hugo/static/_resources
 
-      - name: 复制图片
-        run: cp -r //home/runner/work/hugo/hugo/static/00-assets/ /home/runner/work/hugo/hugo/static/_resources
+      # - name: 复制图片
+      #   run: cp -r /home/runner/work/hugo/hugo/static/00-assets/ /home/runner/work/hugo/hugo/static/_resources
 
       - name: hugo 生成静态文件
         run: hugo --minify --gc
