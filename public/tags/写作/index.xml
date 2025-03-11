@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>写作 on carlos</title>
+        <link>https://zero3737.github.io/hugo/tags/%E5%86%99%E4%BD%9C/</link>
+        <description>Recent content in 写作 on carlos</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Example Person</copyright>
+        <lastBuildDate>Sun, 09 Mar 2025 05:42:30 +0800</lastBuildDate><atom:link href="https://zero3737.github.io/hugo/tags/%E5%86%99%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>hugo “关于”页面模板</title>
+        <link>https://zero3737.github.io/hugo/p/hugo-%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF/</link>
+        <pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://zero3737.github.io/hugo/p/hugo-%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF/</guid>
+        <description>&lt;img src="https://zero3737.github.io/hugo/bg/03.jpg" alt="Featured image of post hugo “关于”页面模板" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;本文将分享一个全面且有创意的自我介绍框架，既能涵盖基础信息，又能突出个性和独特性。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;介绍自己 20 个角度&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;个人简介&lt;/li&gt;
+&lt;li&gt;专业技能&lt;/li&gt;
+&lt;li&gt;工作经历&lt;/li&gt;
+&lt;li&gt;成就与荣誉&lt;/li&gt;
+&lt;li&gt;兴趣爱好&lt;/li&gt;
+&lt;li&gt;联系方式&lt;/li&gt;
+&lt;li&gt;性格特点&lt;/li&gt;
+&lt;li&gt;教育背景&lt;/li&gt;
+&lt;li&gt;语言能力&lt;/li&gt;
+&lt;li&gt;社会实践&lt;/li&gt;
+&lt;li&gt;社团活动&lt;/li&gt;
+&lt;li&gt;志愿经历&lt;/li&gt;
+&lt;li&gt;培训经历&lt;/li&gt;
+&lt;li&gt;个人作品&lt;/li&gt;
+&lt;li&gt;证书资质&lt;/li&gt;
+&lt;li&gt;行业见解&lt;/li&gt;
+&lt;li&gt;职业规划&lt;/li&gt;
+&lt;li&gt;个人价值观&lt;/li&gt;
+&lt;li&gt;技术栈&lt;/li&gt;
+&lt;li&gt;沟通风格&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;除了介绍自己，还能介绍博客的主题，博客初衷等待。&lt;/p&gt;
+&lt;h2 id=&#34;关于页面案例&#34;&gt;“关于”页面案例
+&lt;/h2&gt;&lt;p&gt;hugo “关于”页面模板&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-md&#34; data-lang=&#34;md&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;## 👤 我是谁？
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 🎮 游戏老餮：原神开服玩家/王者荣耀泉水指挥官/Steam喜加一专业户
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 💻 专业级赛博搬砖工，致富宣言：&amp;#34;只要副本刷得够，排骨顿顿能加肉&amp;#34;（懂的都懂）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 🖼️ 壁纸收藏家：小红车创意工坊常驻嘉宾，桌面壁纸半小时一换星人
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 🔄 人形重启键：&amp;#34;遇到问题先重启&amp;#34;是刻进DNA的祖传秘方（成功率51%）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; ⚠️ 免责声明：会写代码≠会修电脑！
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;## 🌸 我的快乐老家
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 🌸 美少女游戏非专业测评员（XP系统公开版）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 🕹️ 游戏日常：原神锄大地/王者0-10-0的快乐/Steam喜加一重症患者
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 🔧 数码日常：图吧垃圾佬预备役
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;## 📒 关于这个博客
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gu&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 🪟 Windows驯兽师笔记
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 🐧 Ubuntu生存指南
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 🕳️ 踩坑记录（同一个坑绝不掉两次...大概）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 🎬 剪辑民工进化论
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 📈 Excel野路子研究院
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; 💾 赛博口粮储备站（全网失效链接墓志铭合集）
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

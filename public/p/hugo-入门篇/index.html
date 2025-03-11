@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="前言 本文是在 ubuntu 环境中安装 hugo。 安装 安装命令 1 2 sudo apt update sudo apt -y install hugo 验证是否安装成功 1 hugo version 安装成功会显示如下信息。 启动与配置 创建站点目录 1 hugo new site quickstart 将主题文件放到站点目录中的 themes 目录下 启动 hugo 服务 1 hugo server 绑定到 0.0.0.0 hugo server 默认绑定到 127.0.0.1（localhost），因此只能在本机访问。 1 hugo server --bind=&#34;0.0.0.0&#34; 在启动 hugo server 时，使用 &ndash;bind 参数将其绑定到 0.0.0.0，这样可以监听所有网络接口。 这样，局域网内的其他设备可以通过你的服务器 IP 地址访问 Hugo 服务。例如，如果服务器的 IP 是 192.168.1.100，可以通过 http://192.168.1.100:1313 访问。 指定端口号 如果需要指定端口号，可以使用 -p 参数： 1 hugo server --bind=&#34;0.">
+<title>hugo 入门篇</title>
+
+<link rel='canonical' href='https://zero3737.github.io/hugo/p/hugo-%E5%85%A5%E9%97%A8%E7%AF%87/'>
+
+<link rel="stylesheet" href="/hugo/scss/style.min.c8bea631cb49298ca88af154463382224452f4e21f446d0687dcbcb09a16ccad.css"><meta property='og:title' content="hugo 入门篇">
+<meta property='og:description' content="前言 本文是在 ubuntu 环境中安装 hugo。 安装 安装命令 1 2 sudo apt update sudo apt -y install hugo 验证是否安装成功 1 hugo version 安装成功会显示如下信息。 启动与配置 创建站点目录 1 hugo new site quickstart 将主题文件放到站点目录中的 themes 目录下 启动 hugo 服务 1 hugo server 绑定到 0.0.0.0 hugo server 默认绑定到 127.0.0.1（localhost），因此只能在本机访问。 1 hugo server --bind=&#34;0.0.0.0&#34; 在启动 hugo server 时，使用 &ndash;bind 参数将其绑定到 0.0.0.0，这样可以监听所有网络接口。 这样，局域网内的其他设备可以通过你的服务器 IP 地址访问 Hugo 服务。例如，如果服务器的 IP 是 192.168.1.100，可以通过 http://192.168.1.100:1313 访问。 指定端口号 如果需要指定端口号，可以使用 -p 参数： 1 hugo server --bind=&#34;0.">
+<meta property='og:url' content='https://zero3737.github.io/hugo/p/hugo-%E5%85%A5%E9%97%A8%E7%AF%87/'>
+<meta property='og:site_name' content='carlos'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:tag' content='笔记' /><meta property='article:tag' content='obsidian' /><meta property='article:published_time' content='2025-03-06T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-03-10T21:21:33&#43;08:00'/><meta property='og:image' content='https://zero3737.github.io/hugo/bg/49.jpg' />
+<meta name="twitter:title" content="hugo 入门篇">
+<meta name="twitter:description" content="前言 本文是在 ubuntu 环境中安装 hugo。 安装 安装命令 1 2 sudo apt update sudo apt -y install hugo 验证是否安装成功 1 hugo version 安装成功会显示如下信息。 启动与配置 创建站点目录 1 hugo new site quickstart 将主题文件放到站点目录中的 themes 目录下 启动 hugo 服务 1 hugo server 绑定到 0.0.0.0 hugo server 默认绑定到 127.0.0.1（localhost），因此只能在本机访问。 1 hugo server --bind=&#34;0.0.0.0&#34; 在启动 hugo server 时，使用 &ndash;bind 参数将其绑定到 0.0.0.0，这样可以监听所有网络接口。 这样，局域网内的其他设备可以通过你的服务器 IP 地址访问 Hugo 服务。例如，如果服务器的 IP 是 192.168.1.100，可以通过 http://192.168.1.100:1313 访问。 指定端口号 如果需要指定端口号，可以使用 -p 参数： 1 hugo server --bind=&#34;0."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://zero3737.github.io/hugo/bg/49.jpg' />
+    <link rel="shortcut icon" href="https://gohugo.io/favicon-32x32.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/hugo/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/hugo/img/avatar_hue50fb72c0afb8b01efc1d26d121e9d46_66295_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/hugo">carlos</a></h1>
+            <h2 class="site-description">笔记分享，记录个人成长。</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/zero3737'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/4069668'
+                        target="_blank"
+                        title="Bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bilibili"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6z" /><path d="M8 3l2 3" /><path d="M16 3l-2 3" /><path d="M9 13v-2" /><path d="M15 11v2" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://v.douyin.com/i54RfHqR/'
+                        target="_blank"
+                        title="tiktok"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-tiktok"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z" /></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/hugo/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugo/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugo/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugo/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/hugo/%E5%8F%8B%E9%93%BE/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友链</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#安装">安装</a></li>
+    <li><a href="#启动与配置">启动与配置</a>
+      <ol>
+        <li><a href="#绑定到-0000">绑定到 0.0.0.0</a></li>
+        <li><a href="#指定端口号">指定端口号</a></li>
+        <li><a href="#设置-baseurl">设置 baseURL</a></li>
+      </ol>
+    </li>
+    <li><a href="#主题">主题</a></li>
+    <li><a href="#头部元数据">头部元数据</a></li>
+    <li><a href="#文章不同元数据模板">文章不同元数据模板</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/hugo/p/hugo-%E5%85%A5%E9%97%A8%E7%AF%87/">
+                
+                    <img src="/hugo/bg/49.jpg" loading="lazy" alt="Featured image of post hugo 入门篇" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/hugo/categories/hugo/" >
+                Hugo
+            </a>
+        
+            <a href="/hugo/categories/%E7%AC%94%E8%AE%B0/" >
+                笔记
+            </a>
+        
+            <a href="/hugo/categories/obsidian/" >
+                Obsidian
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/hugo/p/hugo-%E5%85%A5%E9%97%A8%E7%AF%87/">hugo 入门篇</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2025-03-06</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 2 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="前言">前言
+</h2><p>本文是在 ubuntu 环境中安装 hugo。</p>
+<h2 id="安装">安装
+</h2><p>安装命令</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">sudo apt update
+</span></span><span class="line"><span class="cl">sudo apt -y install hugo
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>验证是否安装成功</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hugo version
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>安装成功会显示如下信息。</p>
+<p>
+
+
+
+
+
+
+
+
+<div class="post-img-view">
+	<a data-fancybox="gallery" href="https://zero3737.github.io/hugo/_resources/3a70e88f90cd0095f62fc5a4db7bea9c.png">
+		<img loading='lazy' src="https://zero3737.github.io/hugo/_resources/3a70e88f90cd0095f62fc5a4db7bea9c.png" alt="3a70e88f90cd0095f62fc5a4db7bea9c.png"  />
+	</a>
+</div>
+
+</p>
+<h2 id="启动与配置">启动与配置
+</h2><p>创建站点目录</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">hugo new site quickstart
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>将主题文件放到站点目录中的 themes 目录下</p>
+<p>
+
+
+
+
+
+
+
+
+<div class="post-img-view">
+	<a data-fancybox="gallery" href="https://zero3737.github.io/hugo/_resources/40b6311d8afdc67f7c5375a424df3e59.png">
+		<img loading='lazy' src="https://zero3737.github.io/hugo/_resources/40b6311d8afdc67f7c5375a424df3e59.png" alt="40b6311d8afdc67f7c5375a424df3e59.png"  />
+	</a>
+</div>
+
+</p>
+<p>启动 hugo 服务</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">hugo server
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="绑定到-0000">绑定到 0.0.0.0
+</h3><p>hugo server 默认绑定到 127.0.0.1（localhost），因此只能在本机访问。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">hugo server --bind<span class="o">=</span><span class="s2">&#34;0.0.0.0&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在启动 hugo server 时，使用 &ndash;bind 参数将其绑定到 0.0.0.0，这样可以监听所有网络接口。</p>
+<p>这样，局域网内的其他设备可以通过你的服务器 IP 地址访问 Hugo 服务。例如，如果服务器的 IP 是 192.168.1.100，可以通过 <code>http://192.168.1.100:1313</code> 访问。</p>
+<h3 id="指定端口号">指定端口号
+</h3><p>如果需要指定端口号，可以使用 -p 参数：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">hugo server --bind<span class="o">=</span><span class="s2">&#34;0.0.0.0&#34;</span> -p <span class="m">1234</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="设置-baseurl">设置 baseURL
+</h3><p>如果页面资源加载失败或样式错乱，可能是因为 baseURL 默认指向 localhost。可以通过 &ndash;baseURL 参数指定为服务器的 IP 地址：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hugo server --bind=&#34;0.0.0.0&#34; --baseURL=&#34;http://192.168.1.100/&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>将 <code>192.168.1.100</code> 替换为你的实际服务器 IP。</p>
+<h2 id="主题">主题
+</h2><ul>
+<li>把 hugo_blog/themes/hugo-theme-stack/exampleSite/config.yaml 文件拷贝到 hugo_blog 目录下。</li>
+<li>把 hugo_blog/themes/hugo-theme-stack/exampleSite/content 目录下的文件拷贝到 hugo_blog 目录下。</li>
+</ul>
+<p>hugo-theme-stack 主题有样例配置文件作为参考，直接复制粘贴即可。</p>
+<h2 id="头部元数据">头部元数据
+</h2><p>Hugo 的 ‌Front Matter‌（文件头部元数据）定义了内容的核心参数，控制页面生成、URL 结构和内容管理。</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>slug</td>
+<td>自定义文章 URL 末尾部分，优先级高于标题（title）‌</td>
+</tr>
+<tr>
+<td>draft</td>
+<td>标记是否为草稿（true/false），草稿默认不发布到生产环境‌</td>
+</tr>
+<tr>
+<td>categories</td>
+<td>类别</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>标签</td>
+</tr>
+<tr>
+<td>image</td>
+<td>定义文章或页面的封面图</td>
+</tr>
+<tr>
+<td>title‌</td>
+<td>定义页面标题</td>
+</tr>
+<tr>
+<td>date</td>
+<td>设置内容发布日期，控制文章在列表中的排序</td>
+</tr>
+<tr>
+<td>description</td>
+<td>提供页面摘要描述，用于 SEO 优化和社交媒体分享</td>
+</tr>
+<tr>
+<td>weight</td>
+<td>控制内容在列表或菜单中的排序权重</td>
+</tr>
+<tr>
+<td>author</td>
+<td>声明文章作者信息，支持多作者配置</td>
+</tr>
+</tbody>
+</table></div>
+<p>categories 和 tags</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="l">categories = [&#34;技术&#34;, &#34;前端&#34;] </span><span class="w"> </span><span class="c"># 支持多层级  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="l">tags = [&#34;Hugo&#34;, &#34;静态站点&#34;]    </span><span class="w"> </span><span class="c"># 多个标签以数组形式定义‌:ml-citation{ref=&#34;1&#34; data=&#34;citationList&#34;}  </span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>image 基础用法，需将图片存放在 static 目录下，通过相对路径引用‌。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="l">image = &#34;/img/logo3.png&#34; </span><span class="w"> </span><span class="c"># 对应 static/img/logo3.png  </span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>支持 http 远程调佣</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="l">image = &#34;https://example.com/cover.jpg&#34;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="文章不同元数据模板">文章不同元数据模板
+</h2><p>‌TOML 格式‌编写元数据，用来兼容 hugo</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="err">+++</span>
+</span></span><span class="line"><span class="cl"><span class="nx">date</span> <span class="p">=</span> <span class="s2">&#34;{{date:YYYY-MM-DD}}&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s2">&#34;{{title}}&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">tags</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;Hugo&#34;</span><span class="p">,</span> <span class="s2">&#34;静态站点&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">categories</span> <span class="p">=</span> <span class="p">[</span><span class="s2">&#34;技术&#34;</span><span class="p">,</span> <span class="s2">&#34;前端&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">description</span> <span class="p">=</span> <span class="s2">&#34;hello world!&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">image</span> <span class="p">=</span> <span class="s2">&#34;https://api.timelessq.com/bing/random&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">author</span> <span class="p">=</span> <span class="s2">&#34;carlos&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="err">+++</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>YAML 格式‌编写元数据</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;示例文章&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">date</span><span class="p">:</span><span class="w"> </span><span class="ld">2025-03-06</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">draft</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nn">---</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>JSON 格式</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;title&#34;</span><span class="p">:</span> <span class="s2">&#34;示例文章&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;date&#34;</span><span class="p">:</span> <span class="s2">&#34;2025-03-06&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;draft&#34;</span><span class="p">:</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/hugo/tags/hugo/">Hugo</a>
+        
+            <a href="/hugo/tags/%E7%AC%94%E8%AE%B0/">笔记</a>
+        
+            <a href="/hugo/tags/obsidian/">Obsidian</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 2025-03-10 21:21 CST
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/hugo/p/hugo-%E9%85%8D%E5%90%88-github-action-%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/hugo/bg/03.jpg" loading="lazy" data-key="" data-hash="/hugo/bg/03.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">hugo 配合 github action 自动化部署</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/hugo/p/hugo-%E9%83%A8%E7%BD%B2%E5%88%B0-github-pages-%E9%83%A8%E5%88%86%E6%96%87%E7%AB%A0-404/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/hugo/bg/02.jpg" loading="lazy" data-key="" data-hash="/hugo/bg/02.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">hugo 部署到 github pages 部分文章 404</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/hugo/p/hugo-%E9%83%A8%E7%BD%B2%E5%88%B0-github-pages/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/hugo/bg/35.jpg" loading="lazy" data-key="" data-hash="/hugo/bg/35.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">hugo 部署到 github pages</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/hugo/p/hugo-%E5%AE%9A%E6%97%B6%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/hugo/bg/27.jpg" loading="lazy" data-key="" data-hash="/hugo/bg/27.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">hugo 定时推送代码</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/hugo/p/hugo-%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/hugo/bg/27.jpg" loading="lazy" data-key="" data-hash="/hugo/bg/27.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">hugo 修改时间格式</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 Example Person
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/hugo/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<div id="particles-js"></div>
+
+<script src="https://cdn.bootcdn.net/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+<script>
+  particlesJS.load('particles-js', "https://letere-gzj.github.io/hugo-stack/background/particles/particlesjs-config.json", function() {
+    console.log('particles.js loaded - callback');
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+<style>
+  #particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+</style>
+
+    </body>
+</html>
