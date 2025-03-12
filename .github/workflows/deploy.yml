@@ -26,7 +26,7 @@ jobs:
       #   run: cp -r /home/runner/work/hugo/hugo/static/00-assets/ /home/runner/work/hugo/hugo/static/_resources
 
       - name: hugo 生成静态文件
-        run: hugo --minify --gc --config ./hugo.yaml --baseURL "https://zero3737.github.io/hugo/"
+        run: hugo --minify --gc --config ./hugo.yaml --baseURL "http://www.carlos.ip-ddns.com/"
 
       - name: 发布到 main 分支  
         uses: peaceiris/actions-gh-pages@v4
