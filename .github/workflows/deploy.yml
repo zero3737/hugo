@@ -28,6 +28,9 @@ jobs:
       - name: hugo 生成静态文件
         run: hugo --minify --gc --config ./hugo.yaml --baseURL "http://www.carlos.ip-ddns.com/"
 
+      - name: github pages 自定义域名
+        run: echo "www.carlos.ip-ddns.com" > "/home/runner/work/hugo/hugo/public/CNAME"
+
       - name: 发布到 main 分支  
         uses: peaceiris/actions-gh-pages@v4
         with:
