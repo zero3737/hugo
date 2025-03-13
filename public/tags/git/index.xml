@@ -1,0 +1,2193 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Git on carlos</title>
+        <link>https://hugo-ap0.pages.dev/tags/git/</link>
+        <description>Recent content in Git on carlos</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Example Person</copyright>
+        <lastBuildDate>Thu, 13 Mar 2025 16:55:17 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/tags/git/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>hugo 部署到 cloudflare</title>
+        <link>https://hugo-ap0.pages.dev/p/hugo-%E9%83%A8%E7%BD%B2%E5%88%B0-cloudflare/</link>
+        <pubDate>Tue, 11 Mar 2025 21:12:53 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/hugo-%E9%83%A8%E7%BD%B2%E5%88%B0-cloudflare/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/52.webp" alt="Featured image of post hugo 部署到 cloudflare" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;本文主题是 hugo 如何部署到 cloudflare，访问效果在国内其实和 github pages 差不多，呵呵&lt;/p&gt;
+&lt;h2 id=&#34;实操&#34;&gt;实操
+&lt;/h2&gt;&lt;p&gt;选择 pages&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311210040.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250311210040.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311210040.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311210040.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;选择仓库&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311061153.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250311061153.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311061153.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311061153.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;根据自己实际情况填写，构建命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo --gc --minify --environment production
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311210217.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250311210217.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311210217.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311210217.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;我这里因为 github page 已经部署过了，所以再单独创建一份配置用来区分&lt;/p&gt;
+&lt;p&gt;在 &lt;code&gt;/root/hugo/config/production&lt;/code&gt; 创建 &lt;code&gt;hugo.yaml&lt;/code&gt; 文件，然后上传到 github，通过 &lt;code&gt;--environment production&lt;/code&gt; 参数用来指定配置文件&lt;/p&gt;
+&lt;p&gt;通过 &lt;code&gt;HUGO_VERSION&lt;/code&gt; 指定 hugo 版本，我这里选择 &lt;code&gt;0.125.7&lt;/code&gt; 版本&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311210743.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250311210743.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311210743.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311210743.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;点击“保存并部署”即可将 github 的 hugo 源文件克隆到 cloudflare，cloudflare 就会自动生成 hugo 静态文件并发布&lt;/p&gt;
+&lt;h2 id=&#34;删除项目&#34;&gt;删除项目
+&lt;/h2&gt;&lt;p&gt;点击设置，划到最底部，点击删除即可。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311061506.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250311061506.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311061506.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311061506.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;h2 id=&#34;补充说明&#34;&gt;补充说明
+&lt;/h2&gt;&lt;p&gt;如果样式错误，可以通过参数 &lt;code&gt;--baseURL &amp;quot;https://custom-url.com/&amp;quot;&lt;/code&gt; 强制指定域名完整命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo --baseURL &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://custom-url.com/&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>github 修改默认分支</title>
+        <link>https://hugo-ap0.pages.dev/p/github-%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E5%88%86%E6%94%AF/</link>
+        <pubDate>Tue, 11 Mar 2025 05:36:53 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/github-%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E5%88%86%E6%94%AF/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/53.webp" alt="Featured image of post github 修改默认分支" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;本文主要主题是通过 github 页面，修改默认分支。&lt;/p&gt;
+&lt;h2 id=&#34;操作&#34;&gt;操作
+&lt;/h2&gt;&lt;p&gt;找到 Settings&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311053457.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250311053457.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311053457.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311053457.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;点击该图标，就能切换分支&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311053541.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250311053541.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311053541.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311053541.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;修改成功截图&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311053628.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250311053628.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311053628.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311053628.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>hugo 配合 github action 自动化部署</title>
+        <link>https://hugo-ap0.pages.dev/p/hugo-%E9%85%8D%E5%90%88-github-action-%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/</link>
+        <pubDate>Tue, 11 Mar 2025 05:07:03 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/hugo-%E9%85%8D%E5%90%88-github-action-%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/03.webp" alt="Featured image of post hugo 配合 github action 自动化部署" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;hugo 配合 github action 实现自动化部署，例如将 hugo 源码推送到 github 仓库，通过 github 服务器的 hugo 服务生成静态文件，最后自动发布到  main 分支。&lt;/p&gt;
+&lt;h2 id=&#34;实操&#34;&gt;实操
+&lt;/h2&gt;&lt;p&gt;github 创建 source 分支用来存放源码，然后在本地 git 仓库新建 &lt;code&gt;.github/workflows&lt;/code&gt; 目录，文件名不能改变，这是 github action 默认识别路径。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311045254.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250311045254.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311045254.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311045254.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;在该目录下创建 &lt;code&gt;任意名称.yaml&lt;/code&gt;，内容如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;Deploy Hugo to GitHub Pages&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;push&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;branches&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;source ] &lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 仅监控source分支的推送&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;jobs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;deploy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;runs-on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;ubuntu-latest&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;steps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;监测 source 分支&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;actions/checkout@v4&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;with&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;ref&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;source &lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 明确检出source分支&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;hugo 设置&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;peaceiris/actions-hugo@v2&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;with&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;hugo-version&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;0.125.7&amp;#39;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 指定Hugo版本&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;extended&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 启用扩展版&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;删除符号链接&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;rm -f /home/runner/work/hugo/hugo/static/_resources&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;复制图片&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;cp -r //home/runner/work/hugo/hugo/static/00-assets/ /home/runner/work/hugo/hugo/static/_resources&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;hugo 生成静态文件&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;hugo --minify --gc&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;发布到 main 分支  &lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;peaceiris/actions-gh-pages@v4&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;with&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;deploy_key&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;${{ secrets.SSH_PRIVATE_KEY }}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;publish_dir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;./public  &lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;publish_branch&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;main &lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 正确参数名称&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;force_orphan&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 强制覆盖目标分支&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;env&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 配置 Git 用户信息  &lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;GIT_USER_NAME&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;root&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;          &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;GIT_USER_EMAIL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;root@localhost&amp;#34;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;runs-on 指定环境，可以指定 windows、ubuntu 以及 macos&lt;/li&gt;
+&lt;li&gt;on 为事件，自动执行脚本的事件，这里为 push 自动触发脚本&lt;/li&gt;
+&lt;li&gt;name 为注释&lt;/li&gt;
+&lt;li&gt;uses 为使用模块，这里加载了 &lt;code&gt;actions/checkout@v4&lt;/code&gt;、&lt;code&gt;peaceiris/actions-hugo@v2&lt;/code&gt; 等待模块&lt;/li&gt;
+&lt;li&gt;run 为执行命令，这里为 ubuntu 环境，所以都是 ubuntu 命令&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;${{ secrets.SSH_PRIVATE_KEY }}&lt;/code&gt; 为变量名，我是通过 ssh  方式推送到 main 分支，用到 &lt;code&gt;peaceiris/actions-gh-pages@v4&lt;/code&gt; 模块，其他为官方默认配置，不必理会&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;将本地 git 公钥和私钥配置到 github，我这里默认已经配置好公钥，只需要将私钥配置到 action 即可&lt;/p&gt;
+&lt;p&gt;要想 github action 识别 &lt;code&gt;${{ secrets.SSH_PRIVATE_KEY }}&lt;/code&gt; 变量，需要手动配置，找到 Settings&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311050114.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250311050114.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311050114.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311050114.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;注意变量名要一致，我这里为 &lt;code&gt;SSH_PRIVATE_KEY&lt;/code&gt;，用的时候是 &lt;code&gt;${{ secrets.SSH_PRIVATE_KEY }}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311050215.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250311050215.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311050215.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311050215.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;将 git 仓库推送到 github source 分支即可自动构建，点击进去，即可排查错误&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311050623.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250311050623.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311050623.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311050623.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>github 创建新分支</title>
+        <link>https://hugo-ap0.pages.dev/p/github-%E5%88%9B%E5%BB%BA%E6%96%B0%E5%88%86%E6%94%AF/</link>
+        <pubDate>Tue, 11 Mar 2025 02:35:32 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/github-%E5%88%9B%E5%BB%BA%E6%96%B0%E5%88%86%E6%94%AF/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/32.webp" alt="Featured image of post github 创建新分支" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;github 页面怎么创建新分支？有两种办法，一是通过网页创建，二是通过本地 git 命令创建，然后推送到远程仓库。本文主要通过网页图形化界面创建。&lt;/p&gt;
+&lt;h2 id=&#34;实操&#34;&gt;实操
+&lt;/h2&gt;&lt;p&gt;找到 Branch&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311022446.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250311022446.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311022446.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311022446.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;点击 New branch 按钮&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311022535.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250311022535.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311022535.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311022535.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;h2 id=&#34;your-branches-和-active-branches&#34;&gt;Your branches‌ 和 ‌Active branches
+&lt;/h2&gt;&lt;p&gt;GitHub 界面中显示的 ‌Your branches‌ 和 ‌Active branches‌ 是两种不同的分支分类方式&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311023329.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250311023329.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311023329.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311023329.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;Your branches‌ 是当前用户（即你）在仓库中创建的所有分支，包括本地推送或直接在 GitHub 网页创建的分支‌。&lt;/p&gt;
+&lt;p&gt;Active branches 仓库中所有活跃的分支（包括 main、dev 等主分支及近期有更新的分支），无论创建者是谁‌。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>hugo 部署到 github pages 部分文章 404</title>
+        <link>https://hugo-ap0.pages.dev/p/hugo-%E9%83%A8%E7%BD%B2%E5%88%B0-github-pages-%E9%83%A8%E5%88%86%E6%96%87%E7%AB%A0-404/</link>
+        <pubDate>Tue, 11 Mar 2025 00:33:02 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/hugo-%E9%83%A8%E7%BD%B2%E5%88%B0-github-pages-%E9%83%A8%E5%88%86%E6%96%87%E7%AB%A0-404/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/02.webp" alt="Featured image of post hugo 部署到 github pages 部分文章 404" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;我的部分文章是 joplin 导出，而静态资源是存放在 &lt;code&gt;_resources&lt;/code&gt; 目录。GitHub Pages 默认启用 Jekyll 引擎，会忽略以下划线 &lt;code&gt;_&lt;/code&gt; 开头的目录（如 &lt;code&gt;_resources&lt;/code&gt;）‌。&lt;/p&gt;
+&lt;h2 id=&#34;解决方案&#34;&gt;解决方案
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;禁用 Jekyll 处理&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在项目根目录或发布分支（如 &lt;code&gt;gh-pages&lt;/code&gt;）中添加空文件 &lt;code&gt;.nojekyll&lt;/code&gt;，以阻止 Jekyll 过滤特殊命名目录‌。&lt;/p&gt;
+&lt;p&gt;在 hugo public 目录运行命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;touch .nojekyll
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;确保 &lt;code&gt;.nojekyll&lt;/code&gt; 文件被提交到 Git 仓库中。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311003040.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250311003040.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311003040.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311003040.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;访问成功，不会出现 404 错误。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311003236.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250311003236.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311003236.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311003236.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>hugo 部署到 github pages</title>
+        <link>https://hugo-ap0.pages.dev/p/hugo-%E9%83%A8%E7%BD%B2%E5%88%B0-github-pages/</link>
+        <pubDate>Mon, 10 Mar 2025 23:44:35 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/hugo-%E9%83%A8%E7%BD%B2%E5%88%B0-github-pages/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/35.webp" alt="Featured image of post hugo 部署到 github pages" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;本文主题是 hugo 怎么部署到 github pages&lt;/p&gt;
+&lt;h2 id=&#34;实操&#34;&gt;实操
+&lt;/h2&gt;&lt;p&gt;设置 baseurl，不然会样式错误。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310233803.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250310233803.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310233803.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310233803.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;将 public 目录下的静态文件上传到 github，找到 Settings&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310233913.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250310233913.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310233913.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310233913.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;找到 pages，设置分支，设置根目录，保存即可。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310234041.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250310234041.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310234041.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310234041.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;如果 &lt;code&gt;username.github.io&lt;/code&gt; 作为仓库名，直接访问即可，我的是 hugo 作为仓库名，所以要在后面加 hugo 目录，完整 url：&lt;code&gt;username.github.io/hugo&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;访问成功截图&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310234348.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250310234348.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310234348.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310234348.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>hugo 定时推送代码</title>
+        <link>https://hugo-ap0.pages.dev/p/hugo-%E5%AE%9A%E6%97%B6%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81/</link>
+        <pubDate>Mon, 10 Mar 2025 05:53:27 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/hugo-%E5%AE%9A%E6%97%B6%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/27.webp" alt="Featured image of post hugo 定时推送代码" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;提前配置好 git 仓库，配置好 ssh，该脚本是在 ssh 配置完成下编写，不然要输入用户名和密码&lt;/p&gt;
+&lt;h2 id=&#34;实操&#34;&gt;实操
+&lt;/h2&gt;&lt;p&gt;新建 sh 文件，内容如下&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /root/hugo
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /root/hugo/public
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add .
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;auto commit: &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;date +&lt;span class=&#34;s1&#34;&gt;&amp;#39;%Y-%m-%d %H:%M:%S&amp;#39;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push origin main
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo nohup sh /root/shell/hugo.sh start &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&amp;gt;&amp;gt; /root/shell/shell.log &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;宝塔创建计划任务&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310054915.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250310054915.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310054915.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310054915.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;宝塔定时执行脚本即可&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310055150.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250310055150.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310055150.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310055150.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;可以手动执行，测试脚本&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310055256.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250310055256.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310055256.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310055256.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>github ssh 免密推送代码</title>
+        <link>https://hugo-ap0.pages.dev/p/github-ssh-%E5%85%8D%E5%AF%86%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81/</link>
+        <pubDate>Mon, 10 Mar 2025 05:08:44 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/github-ssh-%E5%85%8D%E5%AF%86%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/44.webp" alt="Featured image of post github ssh 免密推送代码" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;如果使用 https 方式推送代码，每次推送代码都需要输入用户名和密码，不方便，也不利于创建脚本&lt;/p&gt;
+&lt;h2 id=&#34;生成-ssh-密钥对&#34;&gt;生成 SSH 密钥对
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;执行密钥生成命令&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh-keygen -t rsa -b &lt;span class=&#34;m&#34;&gt;4096&lt;/span&gt; -C &lt;span class=&#34;s2&#34;&gt;&amp;#34;root@localhost&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这里的账户填写本地 git 账户，而非 github 账号&lt;/p&gt;
+&lt;p&gt;默认回车 3 次&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310044611.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250310044611.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310044611.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310044611.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;密钥生成后，id_rsa 为私钥（需保密），id_rsa.pub 为公钥（需上传）‌&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;查看公钥内容&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat ~/.ssh/id_rsa.pub
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;github-添加公钥&#34;&gt;github 添加公钥
+&lt;/h2&gt;&lt;p&gt;主页头像 -&amp;gt; &amp;ldquo;Settings&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310044947.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250310044947.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310044947.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310044947.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;找到 &amp;ldquo;New SSH key&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310045237.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250310045237.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310045237.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310045237.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;输入 github 账户密码&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310045511.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250310045511.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310045511.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310045511.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;h2 id=&#34;配置-git-使用-ssh-协议&#34;&gt;配置 git 使用 ssh 协议
+&lt;/h2&gt;&lt;p&gt;查看当前远程仓库协议&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git remote -v
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310050519.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250310050519.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310050519.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310050519.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;若为 https 协议，需改为 ssh 格式&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git remote set-url origin git@github.com:zero3737/hugo.git
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;仓库改为自己的&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310051040.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250310051040.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310051040.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310051040.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;h2 id=&#34;测试-ssh-连接&#34;&gt;测试 ssh 连接
+&lt;/h2&gt;&lt;p&gt;验证密钥配置是否成功&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh -T git@github.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;推送代码&#34;&gt;推送代码
+&lt;/h2&gt;&lt;p&gt;出现 &lt;code&gt;Are you sure you want to continue connecting (yes/no/[fingerprint])?&lt;/code&gt; 输入 yes 即可，此提示是 SSH 客户端的安全验证机制，在首次连接到某台服务器时触发。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310051908.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250310051908.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310051908.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310051908.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>github 新建仓库以及推送代码</title>
+        <link>https://hugo-ap0.pages.dev/p/github-%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81/</link>
+        <pubDate>Mon, 10 Mar 2025 03:59:47 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/github-%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/47.webp" alt="Featured image of post github 新建仓库以及推送代码" /&gt;&lt;h2 id=&#34;github-新建仓库&#34;&gt;github 新建仓库
+&lt;/h2&gt;&lt;p&gt;github 仓库主页选择 new&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310033650.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250310033650.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310033650.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310033650.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;输入仓库名，‌然后选择公开（Public）或私有（Private）权限‌。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310033741.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250310033741.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310033741.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310033741.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;划到底部，点击 “Create repository” 即可新建完毕&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310033845.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250310033845.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310033845.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310033845.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;h2 id=&#34;ubuntu-安装-git&#34;&gt;ubuntu 安装 git
+&lt;/h2&gt;&lt;p&gt;ubuntu 默认安装 git，呵呵，没有安装执行以下命令&lt;/p&gt;
+&lt;p&gt;一、更新系统软件包列表&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt update
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;二、执行安装命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install git -y
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;三、验证安装结果&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git --version
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;初始化-git&#34;&gt;初始化 git
+&lt;/h2&gt;&lt;p&gt;配置 git 用户名和邮箱&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global user.name &lt;span class=&#34;s2&#34;&gt;&amp;#34;root&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global user.email &lt;span class=&#34;s2&#34;&gt;&amp;#34;root@localhost&amp;#34;&lt;/span&gt;‌
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;查看全局配置&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global user.name
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global user.email
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;运行结果&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310035219.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250310035219.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310035219.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310035219.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;补充说明&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Git 全局配置中的用户名和邮箱均可完全自定义（如 &lt;code&gt;root&lt;/code&gt; 和 &lt;code&gt;root@localhost&lt;/code&gt;）。这两个命令设置的名字和邮箱会出现在每次提交记录中，而用户名的自定义是允许的，只要符合一定的规范。&lt;/p&gt;
+&lt;p&gt;在团队项目中，建议使用真实姓名或可识别昵称，便于追溯提交记录‌。&lt;/p&gt;
+&lt;h2 id=&#34;关联本地与远程仓库&#34;&gt;关联本地与远程仓库
+&lt;/h2&gt;&lt;p&gt;本地初始化仓库并关联远程地址&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git init
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git remote add origin git@github.com:YourName/RepoName.git‌
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;上传代码&#34;&gt;上传代码
+&lt;/h2&gt;&lt;p&gt;手动提交命令，提交到本地 git&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add .          &lt;span class=&#34;c1&#34;&gt;# 添加所有文件到暂存区&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;提交说明&amp;#34;&lt;/span&gt;‌
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;重命名当前分支为 main‌&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git branch -M main
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;补充说明&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;若通过 &lt;code&gt;git init&lt;/code&gt; 初始化仓库后需将默认分支从 &lt;code&gt;master&lt;/code&gt; 改为 &lt;code&gt;main&lt;/code&gt;，执行一次 &lt;code&gt;git branch -M main&lt;/code&gt; 即可永久生效‌。&lt;/li&gt;
+&lt;li&gt;强制重命名当前本地分支‌（例如将默认分支从 master 改为 main），与 GitHub 仓库名无关‌。这是 git 本地命令。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;推送到 github 仓库&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push -u origin main
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;补充说明&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;会将当前本地分支‌推送到远程仓库的 source 分支，并建立追踪关系（-u 参数的作用）‌。若远程 source 分支不存在，此命令会自动创建该分支‌。&lt;/li&gt;
+&lt;li&gt;本地分支名与远程分支名 ‌无需相同‌。例如，本地分支为 main，仍可推送至远程 source 分支‌。&lt;/li&gt;
+&lt;li&gt;后续使用 git push（不带参数）时，默认推送至已关联的远程分支（即 source）‌。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当本地分支名与远程分支名不一致时，‌需通过参数或配置明确指定映射关系‌，否则会因默认规则冲突导致推送失败‌。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push -u origin 本地分支名:远程分支名
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;如果是一个人，遇到冲突，不想处理，可以强制推送&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push -f origin main
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;可执行脚本定时提交&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;#!/bin/bash
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;cp&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; /path/to/your/repo     &lt;span class=&#34;c1&#34;&gt;# 切换到项目目录‌&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add .                 &lt;span class=&#34;c1&#34;&gt;# 添加所有修改到暂存区‌&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;Auto commit: &lt;/span&gt;&lt;span class=&#34;k&#34;&gt;$(&lt;/span&gt;date +&lt;span class=&#34;s1&#34;&gt;&amp;#39;%Y-%m-%d %H:%M:%S&amp;#39;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;  &lt;span class=&#34;c1&#34;&gt;# 自动生成带时间的提交说明‌&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push origin main      &lt;span class=&#34;c1&#34;&gt;# 推送代码到远程仓库‌&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;输入 github 账户名以及密码，不是 git 的用户名和密码&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310043619.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250310043619.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310043619.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250310043619.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>github 使用教程</title>
+        <link>https://hugo-ap0.pages.dev/p/github-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link>
+        <pubDate>Mon, 10 Mar 2025 02:24:20 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/github-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/20.webp" alt="Featured image of post github 使用教程" /&gt;&lt;h2 id=&#34;ssh-配置&#34;&gt;ssh 配置
+&lt;/h2&gt;&lt;p&gt;如果使用 SSH 方式推送代码，需要配置 SSH Key。&lt;/p&gt;
+&lt;p&gt;把邮件地址换成自己的邮件地址，该命令意思是生成 SSH Key。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh-keygen -t rsa -C &amp;#34;youremail@example.com&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;运行命令一路回车，使用默认值即可。如果运行顺利，会在用户主目录生成 .ssh 目录，里面有 id_rsa （私钥）和 id_rsa.pub （公钥）两个文件。&lt;/p&gt;
+&lt;p&gt;进入用户主目录：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd ~
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;然后登录 github 账号找到 SSH Keys 选项，添加 SSH Key，Key 内容为 id_rsa.pub （公钥）内容。&lt;/p&gt;
+&lt;p&gt;GitHub 允许你添加多个 Key。假定你有若干电脑，只要把每台电脑的 Key 都添加到 GitHub，就可以在每台电脑上往 GitHub 推送了。&lt;/p&gt;
+&lt;p&gt;在 GitHub 上免费托管的 Git 仓库，任何人都可以看到（但只有你自己才能改）。&lt;/p&gt;
+&lt;p&gt;验证 SSH 配置是否成功：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ssh -T git@github.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;watchstar-和-fork-的区别&#34;&gt;watch、star 和 fork 的区别
+&lt;/h2&gt;&lt;p&gt;watch:&lt;/p&gt;
+&lt;p&gt;对于别人的项目，默认自己都处于 Not watching 的状态；当你选择 Watching，表示你以后会关注这个项目的所有动态。这个项目以后只要发生变动，如被别人提交了 push request、被别人发起了 issue 等等情况，你都会在自己的个人通知中心，收到一条通知消息。如果你设置了个人邮箱，那么你的邮箱也可能收到相应的邮件。&lt;/p&gt;
+&lt;p&gt;star:&lt;/p&gt;
+&lt;p&gt;类似关注或者点赞，当你点击 star，表示你喜欢这个项目，和对这个项目的支持。&lt;/p&gt;
+&lt;p&gt;fork:&lt;/p&gt;
+&lt;p&gt;点击 fork，相当于你自己有了一份原项目的拷贝，当然这个拷贝只是针对当时的项目文件；如果后续原项目文件发生改变，你必须通过其他的方式去同步。&lt;/p&gt;
+&lt;h2 id=&#34;添加协作者push权限&#34;&gt;添加协作者（push权限）
+&lt;/h2&gt;&lt;p&gt;设置选项，找到协作者（Collaborators）选项，添加用户。&lt;/p&gt;
+&lt;h2 id=&#34;github-pages-预览-html&#34;&gt;GitHub Pages 预览 HTML
+&lt;/h2&gt;&lt;p&gt;你的仓库 -&amp;gt; Settings -&amp;gt; Options -&amp;gt; GitHub Pages&lt;/p&gt;
+&lt;p&gt;Source 中选择 master branch。&lt;/p&gt;
+&lt;p&gt;找到 GitHub Pages 中的地址，如下图所示：&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/_resources/1.webp&#34;
+   data-webp=&#34;/_resources/1.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/_resources/1.jpg&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    &lt;source srcset=&#34;https://hugo-ap0.pages.dev/_resources/1.webp&#34; type=&#34;image/webp&#34;&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/_resources/1.jpg&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;在上面的地址基础上加上你的相对与仓库的文件路径。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;GitHub Pages 自定义域名&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;仓库 -&amp;gt; Settings&lt;/p&gt;
+&lt;p&gt;箭头处填写对应域名即可（允许该域名进行CNAME访问）。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/_resources/3-4.png&#34;
+   data-webp=&#34;/_resources/3-4.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/_resources/3-4.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/_resources/3-4.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;等待域名生效，一般为 10 分钟。&lt;/p&gt;
+&lt;p&gt;补充：DNS 服务器中将记录类型配置成 CNAME（别名记录），记录值填写 GitHub Pages 分配的域名。&lt;/p&gt;
+&lt;h2 id=&#34;github-发布二进制文件让其他人下载&#34;&gt;Github 发布二进制文件让其他人下载
+&lt;/h2&gt;&lt;p&gt;仓库主页 -&amp;gt; release&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/_resources/2.jpg&#34;
+   data-webp=&#34;/_resources/2.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/_resources/2.jpg&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/_resources/2.jpg&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;点击下图箭头所指按钮。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/_resources/3.jpg&#34;
+   data-webp=&#34;/_resources/3.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/_resources/3.jpg&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/_resources/3.jpg&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;根据下图提示输入相应内容即可。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/_resources/4.jpg&#34;
+   data-webp=&#34;/_resources/4.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/_resources/4.jpg&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/_resources/4.jpg&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;分布完成别人即可下载你的发布内容。&lt;/p&gt;
+&lt;h2 id=&#34;github-搜索指令&#34;&gt;Github 搜索指令
+&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;命令&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;stars:&amp;gt;=500&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;搜索 star 大于等于 500 的项目。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;stars:&amp;gt;=500 language:java&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;搜索 star 大于等于 500 的项目且为 JAVA 语言的项目。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+        </item>
+        <item>
+        <title>git 入门使用 2</title>
+        <link>https://hugo-ap0.pages.dev/p/git-%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8-2/</link>
+        <pubDate>Mon, 10 Mar 2025 02:20:13 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/git-%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8-2/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/13.webp" alt="Featured image of post git 入门使用 2" /&gt;&lt;h2 id=&#34;放弃本地修改并强制拉取更新&#34;&gt;放弃本地修改并强制拉取更新
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git fetch --all
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git reset --hard origin/master
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;git fetch&lt;/code&gt; 指令是下载远程仓库最新内容，不做合并。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git reset&lt;/code&gt; 指令把HEAD指向master最新版本。&lt;/p&gt;
+&lt;h2 id=&#34;git-忽略特殊文件&#34;&gt;git 忽略特殊文件
+&lt;/h2&gt;&lt;p&gt;在 Git 工作区的根目录下创建一个特殊的 .gitignore 文件。忽略指定文件：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;test.md
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;index.html
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;如果要忽略某一类文件，内容如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;*.class
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;*.html
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;git-ssh-远程连接服务器&#34;&gt;git ssh 远程连接服务器
+&lt;/h2&gt;&lt;p&gt;git bash 输入 &lt;code&gt;ssh root@192.168.1.102&lt;/code&gt; 命令，接着输入密码即可连接远程服务器。&lt;/p&gt;
+&lt;p&gt;root 为用户名，@ 符号紧跟 IP 地址。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;退出连接&lt;/strong&gt;：&lt;code&gt;Ctrl + D&lt;/code&gt; 退出连接&lt;/p&gt;
+&lt;h2 id=&#34;git-服务器搭建&#34;&gt;git 服务器搭建
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;本地 git 服务器搭建方案&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://gogs.io/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Gogs&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://about.gitlab.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitLab&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>git 入门使用</title>
+        <link>https://hugo-ap0.pages.dev/p/git-%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8/</link>
+        <pubDate>Mon, 10 Mar 2025 02:09:10 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/git-%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/10.webp" alt="Featured image of post git 入门使用" /&gt;&lt;h2 id=&#34;概念&#34;&gt;概念
+&lt;/h2&gt;&lt;p&gt;所有的版本控制系统，其实只能跟踪文本文件的改动，比如 TXT 文件、网页、所有的程序代码等等。而图片、视频这些二进制文件，虽然也能由版本控制系统管理，但没法跟踪文件的变化，只能把二进制文件每次改动串起来，也就是只知道图片从 100KB 改成了 120KB。Microsoft 的 Word 格式是二进制格式，因此，版本控制系统是没法跟踪 Word 文件的改动的。&lt;/p&gt;
+&lt;p&gt;工作区：就是你在电脑里能看到的目录。&lt;/p&gt;
+&lt;p&gt;版本库：工作区有一个隐藏目录 .git，这个不算工作区，而是 Git 的版本库。版本库里存了很多东西，其中最重要的就是称为 stage（或者叫 index）的暂存区。&lt;/p&gt;
+&lt;p&gt;还有 Git 为我们自动创建的第一个分支 master，以及指向 master 的一个指针叫 HEAD。&lt;/p&gt;
+&lt;h2 id=&#34;配置姓名和邮箱&#34;&gt;配置姓名和邮箱
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global user.name &amp;#34;Your Name&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global user.email &amp;#34;email@example.com&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;--global&lt;/code&gt; 参数表示这台机器上所有的 Git 仓库都会使用这个配置。当然也可以对某个仓库指定不同的用户名和 Email 地址。&lt;/p&gt;
+&lt;h2 id=&#34;本地仓库&#34;&gt;本地仓库
+&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;命令&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git init&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;在当前目录下会自动生成 .git 隐藏文件夹，该隐藏文件夹就是 git 版本库。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git add &amp;lt;file&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;将文件添加到暂存区（将目标文件加入跟踪列表）。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git add -A&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;将所有文件添加到存储区。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git add -f App.class&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;强制添加。被 git 忽略的文件也可以强制添加。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git commit –m &amp;quot;message&amp;quot;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;将暂存区文件提交到版本库。&lt;code&gt;-m&lt;/code&gt; 参数为提交说明。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git status&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;显示工作目录和暂存区的状态。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git log --pretty=oneline&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;显示提交日志。&lt;code&gt;--pretty=oneline&lt;/code&gt; 只显示 commit id 和描述。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git reflog&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;查看命令历史。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git diff &amp;lt;file&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;比较当前文件和暂存区文件差异。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git diff HEAD [&amp;lt;path&amp;gt;...]&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;比较工作区与最新本地版本库。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git reset --hard HEAD^&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;将当前 HEAD 复位到指定状态。HEAD 表示当前版本，&lt;code&gt;HEAD^&lt;/code&gt; 表示上一个版本，&lt;code&gt;HEAD^^&lt;/code&gt; 表示上上一个版本，&lt;code&gt;HEAD~100&lt;/code&gt; 表示前 100 个版本。&lt;br/&gt;Git 的版本回退速度非常快，因为 Git 在内部有个指向当前版本的 HEAD 指针。当你回退版本的时候，Git 仅仅是改变 HEAD 指向。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git reset HEAD &amp;lt;file&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;把暂存区的修改撤销掉，重新放回工作区。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git checkout --file&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;文件在工作区的修改全部撤销。文件没有被放到暂存区，撤销修改就回到和版本库一模一样的状态；文件已经添加到暂存区后，撤销修改就回到添加到暂存区后的状态。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git rm file&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;删除文件，同时还会将这个删除操作记录放到缓存区。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;分支管理&#34;&gt;分支管理
+&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;命令&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git checkout master&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;切换分支。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git branch&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;查看当前有哪些分支。当前分支前面有个星号。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git branch dev&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;创建分支 dev。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git branch -d dev&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;删除 dev 分支。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git branch -D dev&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;强制删除 dev 分支。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git branch dev origin/dev&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;创建远程 origin 的 dev 分支到本地。默认克隆只有master分支。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git checkout -b dev&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;创建并切换到 dev 分支。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git merge dev&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;将当前分支合并到 dev 分支。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git merge --no-ff -m &amp;quot;merge with no-ff&amp;quot; dev&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;将当前分支合并到 dev 分支。&lt;code&gt;--no-ff&lt;/code&gt; 参数，表示禁用快速模式。&lt;br/&gt;普通模式：当前分支合并时会提交到版本库，不是简单的变更指针指向。&lt;br/&gt;快速模式：把当前分支指向指定分支。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git log –graph&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;查看分支合并图。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;分支策略&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;master 分支称为主分支，HEAD 表示指向当前分支。&lt;/p&gt;
+&lt;p&gt;master 分支应该是非常稳定的，dev 分支是不稳定的。1.0 版本发布时，再把 dev 分支合并到 master 上，在 master 分支发布 1.0 版本。每个人都在 dev 分支上干活，每个人都有自己的分支，时不时地往 dev 分支上合并。&lt;/p&gt;
+&lt;p&gt;在 master 分支修复 bug，必须新建 bug 分支，修复完切换到 master 分支合并 bug 分支。&lt;/p&gt;
+&lt;p&gt;在 dev 分支上开发新功能，新建 Feature 分支，新功能开发完毕切换到 dev 分支合并，如果不想合并必须强制删除。&lt;/p&gt;
+&lt;p&gt;总结：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;master 分支是主分支，因此要时刻与远程同步。&lt;/li&gt;
+&lt;li&gt;dev 分支是开发分支，团队所有成员都需要在上面工作，所以也需要与远程同步。&lt;/li&gt;
+&lt;li&gt;bug 分支只用于在本地修复 bug，就没必要推到远程了，除非老板要看看你每周到底修复了几个 bug。&lt;/li&gt;
+&lt;li&gt;feature 分支是否推到远程，取决于你是否和你的小伙伴合作在上面开发。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;status&#34;&gt;status
+&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;命令&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git stash&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;会把所有未提交的修改（包括暂存的和非暂存的）都保存起来。便于切换其他分支，修改其它分支的代码。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git stash list&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;列出通过 stash 储藏的修改。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git stash apply stash@{0}&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;恢复 stash@{0}。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git stash drop stash@{0}&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;删除 stash@{0}。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git stash pop&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;恢复的同时把stash内容删除。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;标签管理&#34;&gt;标签管理
+&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;命令&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git tag &amp;lt;name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;给最近的 commit 打上标签。tag 就是一个让人容易记住的有意义的名字，它跟某个 commit 绑在一起。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git tag v0.9 f52c633&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;给指定 commit id 打上标签。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git tag&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;显示所有标签。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;远程仓库&#34;&gt;远程仓库
+&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;命令&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git remote add [shortname] [url]&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;添加远程仓库关联。shortname 只能对应一个 url。&lt;br/&gt;注意：推送代码前必须先关联远程仓库。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git remote&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;不带参数，列出已经存在的远程连接。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git remote –v&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;列出远程连接，并显示对应 url。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git remote remove &amp;lt;name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;删除远程仓库。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git push &amp;lt;远程主机名&amp;gt; &amp;lt;本地分支名&amp;gt;:&amp;lt;远程分支名&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;将本地分支的更新，推送到远程主机。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git push origin master&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;将本地的 master 分支推送到 origin 主机的 master 分支。如果 master 不存在，则会被新建。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git push -u origin master&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;-u 选项指定一个默认主机，这样后面就可以不加任何参数使用 git push。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git push origin :master&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;删除指定的远程分支，因为这等同于推送一个空的本地分支到远程分支。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git push &amp;ndash;all origin&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;推送所有分支。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git push -f origin dev:master&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;强制推送。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git clone &amp;lt;版本库的网址&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;本地主机生成一个目录，与远程主机的版本库同名。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git clone &amp;lt;版本库的网址&amp;gt; &amp;lt;本地目录名&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;如果要指定不同的目录名，可以将目录名作为git clone命令的第二个参数。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git pull &amp;lt;远程主机名&amp;gt; &amp;lt;远程分支名&amp;gt;:&amp;lt;本地分支名&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;拉取远程主机某个分支的更新，再与本地的指定分支合并。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git fetch &amp;lt;远程主机名&amp;gt; &amp;lt;远程分支名&amp;gt;:&amp;lt;本地分支名&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git fetch&lt;/code&gt; 和 &lt;code&gt;git pull&lt;/code&gt; 类似，但不会自动合并当前分支。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git branch --set-upstream debug origin/debug&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;将本地 bug 分支与远程的 bug 分支关联。解决拉取时 git 提示 &lt;code&gt;no tracking information&lt;/code&gt; 的问题。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;克隆和拉取&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;clone 是本地没有 repository 时，将远程 repository 整个下载过来&lt;/p&gt;
+&lt;p&gt;pull 是本地有 repository 时，将远程 repository 里新的 commit 数据(如有的话)下载过来，并且与本地代码 merge。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

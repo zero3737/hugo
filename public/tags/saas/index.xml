@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Saas on carlos</title>
+        <link>https://hugo-ap0.pages.dev/tags/saas/</link>
+        <description>Recent content in Saas on carlos</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Example Person</copyright>
+        <lastBuildDate>Thu, 13 Mar 2025 16:55:16 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/tags/saas/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Cloudflare for SaaS 定义</title>
+        <link>https://hugo-ap0.pages.dev/p/cloudflare-for-saas-%E5%AE%9A%E4%B9%89/</link>
+        <pubDate>Tue, 11 Mar 2025 23:22:37 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/cloudflare-for-saas-%E5%AE%9A%E4%B9%89/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/37.webp" alt="Featured image of post Cloudflare for SaaS 定义" /&gt;&lt;h2 id=&#34;saas&#34;&gt;‌SaaS
+&lt;/h2&gt;&lt;p&gt;‌SaaS（Software as a Service，软件即服务）‌ 是一种基于云端的软件服务模式，用户通过互联网访问服务商提供的应用程序，无需自行购买、安装或维护本地软硬件‌。&lt;/p&gt;
+&lt;p&gt;类比理解‌：类似“共享单车”，用户只需扫码使用，无需承担车辆维护责任‌。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;核心特征&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;服务商托管软件并负责维护、更新与安全‌；&lt;/li&gt;
+&lt;li&gt;用户通过订阅按需付费，降低初期投入成本‌。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;cloudflare-for-saas&#34;&gt;Cloudflare for SaaS
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;定义&lt;/strong&gt;：Cloudflare for SaaS‌ 是 Cloudflare 面向 SaaS 开发者提供的 ‌基础设施服务套件‌，专注于解决 SaaS 应用在域名管理、安全防护和性能优化方面的需求‌。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;核心功能&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自定义域名托管‌：允许客户绑定自己的域名（如 app.client-company.com）到你的 SaaS 平台，无需自行配置 DNS 或 SSL 证书‌；&lt;/li&gt;
+&lt;li&gt;自动化 SSL 证书‌：为每个客户域名自动签发和管理 SSL/TLS 证书（支持泛域名），保障 HTTPS 加密访问‌；&lt;/li&gt;
+&lt;li&gt;全球 CDN 加速‌：通过 Cloudflare 的全球网络分发静态和动态内容，降低延迟‌；&lt;/li&gt;
+&lt;li&gt;安全防护‌：集成 DDoS 防护、Web 应用防火墙（WAF）和 Bot 管理，抵御网络攻击‌。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;概念混淆&#34;&gt;概念混淆
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;明确上下文&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;讨论软件服务模式‌时，SaaS 指代“软件即服务”；&lt;/li&gt;
+&lt;li&gt;讨论开发工具‌时，Cloudflare for SaaS 是专为 SaaS 开发者提供的技术方案。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Cloudflare for SaaS 与通用 SaaS 概念不冲突&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cloudflare for SaaS‌ 是工具，帮助开发者构建 SaaS 应用；&lt;/li&gt;
+&lt;li&gt;通用 SaaS‌ 是商业模式，描述软件交付方式。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

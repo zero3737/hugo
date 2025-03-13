@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>前端 on carlos</title>
+        <link>https://hugo-ap0.pages.dev/tags/%E5%89%8D%E7%AB%AF/</link>
+        <description>Recent content in 前端 on carlos</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Example Person</copyright>
+        <lastBuildDate>Thu, 13 Mar 2025 16:55:16 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/tags/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>图片懒加载</title>
+        <link>https://hugo-ap0.pages.dev/p/%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD/</link>
+        <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/58.webp" alt="Featured image of post 图片懒加载" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;图片懒加载是一种网页优化技术，用于延迟加载非关键的图片资源，直到用户滚动到它们的位置。这样可以加快页面初始加载速度，节省带宽，提升用户体验。&lt;/p&gt;
+&lt;h2 id=&#34;工作原理&#34;&gt;工作原理
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;延迟加载&lt;/strong&gt;：当网页加载时，只加载可视区域内的图片，其他图片暂不加载。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;滚动检测&lt;/strong&gt;：用户滚动页面时，检测图片是否进入可视区域。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;按需加载&lt;/strong&gt;：一旦图片进入可视区域，立即加载该图片。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;优点&#34;&gt;优点
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;加快初始加载&lt;/strong&gt;：减少首次加载的资源量，页面更快呈现。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;节省带宽&lt;/strong&gt;：用户无需加载未查看的图片，减少数据流量。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;优化体验&lt;/strong&gt;：页面响应更快，浏览更流畅。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;应用场景&#34;&gt;应用场景
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;长网页&lt;/strong&gt;：包含大量图片的长页面，如电商网站商品列表。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;图片库&lt;/strong&gt;：图片较多的页面，如社交媒体相册。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;移动设备&lt;/strong&gt;：带宽有限时，节省流量尤为重要。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;实现方式&#34;&gt;实现方式
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;JavaScript 监听滚动事件&lt;/strong&gt;：通过 &lt;code&gt;onscroll&lt;/code&gt; 事件检测图片位置。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;使用 Intersection Observer API&lt;/strong&gt;：现代浏览器推荐，高效检测元素可见性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;第三方库&lt;/strong&gt;：如 &lt;code&gt;lazyload&lt;/code&gt;，简化实现过程。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;懒加载技术在现代网页开发中广泛应用，有效提升性能和用户体验。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

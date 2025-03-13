@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>电脑知识 on carlos</title>
+        <link>https://hugo-ap0.pages.dev/categories/%E7%94%B5%E8%84%91%E7%9F%A5%E8%AF%86/</link>
+        <description>Recent content in 电脑知识 on carlos</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Example Person</copyright>
+        <lastBuildDate>Thu, 13 Mar 2025 16:55:20 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/categories/%E7%94%B5%E8%84%91%E7%9F%A5%E8%AF%86/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>outlook 聚合邮箱，实现邮箱管理</title>
+        <link>https://hugo-ap0.pages.dev/p/outlook-%E8%81%9A%E5%90%88%E9%82%AE%E7%AE%B1%E5%AE%9E%E7%8E%B0%E9%82%AE%E7%AE%B1%E7%AE%A1%E7%90%86/</link>
+        <pubDate>Sun, 09 Mar 2025 23:32:19 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/outlook-%E8%81%9A%E5%90%88%E9%82%AE%E7%AE%B1%E5%AE%9E%E7%8E%B0%E9%82%AE%E7%AE%B1%E7%AE%A1%E7%90%86/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/19.webp" alt="Featured image of post outlook 聚合邮箱，实现邮箱管理" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;outlook 本土化非常好，可以同步 qq、163、gamil 以及微软邮箱&lt;/p&gt;
+&lt;h2 id=&#34;qq-邮箱&#34;&gt;qq 邮箱
+&lt;/h2&gt;&lt;p&gt;添加账户-输入邮箱账号&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250309231028.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250309231028.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250309231028.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250309231028.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;输入邮箱服务器密码，不是 qq 账号密码&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250309231116.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250309231116.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250309231116.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250309231116.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;获取 qq 邮箱服务器密码，设置-账号，划到底部&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250309231242.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250309231242.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250309231242.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250309231242.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;找到管理服务&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250309231416.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250309231416.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250309231416.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250309231416.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;生成授权码，即可获得 qq 邮箱服务器密码&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250309231555.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250309231555.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250309231555.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250309231555.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;填入 Outlook 即可登录成功&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250309231701.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250309231701.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250309231701.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250309231701.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;h2 id=&#34;163-邮箱&#34;&gt;163 邮箱
+&lt;/h2&gt;&lt;p&gt;和 qq 邮箱同理，先获取邮箱服务器密码，设置-&amp;ldquo;POP3/SMTP/IMAP&amp;rdquo;-开启，即可获取授权码&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250309232432.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250309232432.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250309232432.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250309232432.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;然后填入 163 邮箱账号，以及授权码，即可同步邮箱&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250309232720.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250309232720.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250309232720.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250309232720.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;h2 id=&#34;微软和-gmail-邮箱&#34;&gt;微软和 gmail 邮箱
+&lt;/h2&gt;&lt;p&gt;微软邮箱和 gmail 支持直接输入账户密码直接同步，不需要获取邮箱服务器密码&lt;/p&gt;
+&lt;p&gt;微软以及谷歌官网登陆，然后默认下一步即可同步邮箱&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250309233129.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250309233129.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250309233129.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250309233129.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>关闭 edge 自动填充表单功能</title>
+        <link>https://hugo-ap0.pages.dev/p/%E5%85%B3%E9%97%AD-edge-%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E8%A1%A8%E5%8D%95%E5%8A%9F%E8%83%BD/</link>
+        <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/%E5%85%B3%E9%97%AD-edge-%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E8%A1%A8%E5%8D%95%E5%8A%9F%E8%83%BD/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/39.webp" alt="Featured image of post 关闭 edge 自动填充表单功能" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;如何关闭 edge 自动填充表单功能&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250308200920.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250308200920.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250308200920.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250308200920.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;在输入框中，输入信息，会自动弹出经常输入的信息，而且删不掉，没有任何实际作用。&lt;/p&gt;
+&lt;h2 id=&#34;实操&#34;&gt;实操
+&lt;/h2&gt;&lt;p&gt;地址栏输入 &lt;code&gt;edge://wallet/settings&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250308201144.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250308201144.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250308201144.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250308201144.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;关闭“保存并填充基本信息”即可&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

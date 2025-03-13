@@ -1,0 +1,1271 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Cloudflare on carlos</title>
+        <link>https://hugo-ap0.pages.dev/tags/cloudflare/</link>
+        <description>Recent content in Cloudflare on carlos</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Example Person</copyright>
+        <lastBuildDate>Thu, 13 Mar 2025 16:55:17 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/tags/cloudflare/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>cloudns 托管到 cloudflare</title>
+        <link>https://hugo-ap0.pages.dev/p/cloudns-%E6%89%98%E7%AE%A1%E5%88%B0-cloudflare/</link>
+        <pubDate>Thu, 13 Mar 2025 02:28:40 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/cloudns-%E6%89%98%E7%AE%A1%E5%88%B0-cloudflare/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/40.webp" alt="Featured image of post cloudns 托管到 cloudflare" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;cloudns(免费域名)托管到 cloudflare，正常购买的域名，只要在域名服务商管理后台添加 2 条 dns 记录，就能正常托管 cloudflare，但是免费域名需要额外配置。&lt;/p&gt;
+&lt;h2 id=&#34;操作&#34;&gt;操作
+&lt;/h2&gt;&lt;p&gt;注册cloudns：&lt;a class=&#34;link&#34; href=&#34;https://www.cloudns.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;地址1&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;一个账号只能申请一个域名，点击这里申请&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313015351.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250313015351.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313015351.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313015351.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;申请免费域名即可&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313015415.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250313015415.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313015415.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313015415.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;点击申请的域名，进行 dns 记录添加&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313015446.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250313015446.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313015446.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313015446.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;然后 cloudflare 域名托管，默认操作即可，点击下一步，点击下一步&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313015648.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250313015648.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313015648.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313015648.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;域名管理后台添加 dns 记录，根据自己实际情况填写&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-txt&#34; data-lang=&#34;txt&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;类型 NS 主机 留空 指向到 ready.ns.cloudflare.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;类型 NS 主机 留空 指向到 auth.ns.cloudflare.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;类型 NS 主机 _acme-challenge 指向到 ready.ns.cloudflare.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;类型 NS 主机 _acme-challenge 指向到 auth.ns.cloudflare.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;类型 CNAME 主机 * 指向到 ready.ns.cloudflare.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;将 ns 记录改成自己的&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313015841.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250313015841.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313015841.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313015841.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;dns 记录配置参考，正常域名只要添加 2 条 ns 记录就能托管在 cloudflare，但是我用的是免费域名&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313020057.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250313020057.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313020057.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313020057.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;添加 7 条 dns 记录，可以不用配置 cloudflare 边缘证书，也不用更改“SSL/TLS 加密”模式&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-txt&#34; data-lang=&#34;txt&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;类型 NS 主机 留空 指向到 ready.ns.cloudflare.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;类型 NS 主机 留空 指向到 auth.ns.cloudflare.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;类型 NS 主机 _acme-challenge 指向到 ready.ns.cloudflare.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;类型 NS 主机 _acme-challenge 指向到 auth.ns.cloudflare.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;类型 NS 主机 maintunnel 指向到 ready.ns.cloudflare.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;类型 NS 主机 maintunnel 指向到 auth.ns.cloudflare.com
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;类型 CNAME 主机 * 指向到 maintunnel.mydns.ip-ddns.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;如果使用的是7条域名记录，那么须要在cloudflare添加一条CNAME记录&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;类型 CNAME 主机 maintunnel 指向到 &lt;code&gt;fast-fast.asuscomm.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;或指向到 &lt;code&gt;cloudflare.182682.xyz&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;看这个域名应该是使用第三方服务，呵呵。&lt;/p&gt;
+&lt;p&gt;以上是实现了子级域名的基本操作，以后子级域名只需要在cloudflare上操作即可。&lt;/p&gt;
+&lt;p&gt;对于主域名 mydns.ip-ddns.com 的解析操作分为两种情况（假设服务器IP是 10.20.30.40）
+完全走CDN 【推荐使用这种方案】&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-txt&#34; data-lang=&#34;txt&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#cloudns
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;类型 A 主机 留空 指向到 104.18.15.19
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#cloudflare 开启小黄云
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;类型 A 主机 @ 指向到 10.20.30.40 并开启小黄云
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;完全不走 CDN 【仅需要原始解析时使用】&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-txt&#34; data-lang=&#34;txt&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#cloudns
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;类型 A 主机 留空 指向到 10.20.30.40
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;#cloudflare 不开启小黄云
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;类型 A 主机 @ 指向到 10.20.30.40
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;最后回到 cloudflare,大概 5 分钟左右就会看到域名已经生效可用。不管是 A、AAAA 还是隧道都要记得开启小黄云&lt;code&gt;Proxied&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;经过以上的操作就可以让 cloudns 在 cloudflare 上愉快的撒欢了。&lt;/p&gt;
+&lt;p&gt;我这里为 github pages 套 cdn，cloudflare dns 记录添加 a 记录指向以下 ip 地址即可&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-txt&#34; data-lang=&#34;txt&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;185.199.108.153 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;185.199.109.153 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;185.199.110.153 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;185.199.111.153
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;参考配置&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313021313.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250313021313.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313021313.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313021313.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;然后在 cloudns 域名管理后台添加一条 a 记录，ip 地址为默认 ip，不需要改变，照着抄就可以了，应该是 cloudflare ip 地址&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313021422.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250313021422.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313021422.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313021422.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;h2 id=&#34;https-访问失败&#34;&gt;https 访问失败
+&lt;/h2&gt;&lt;p&gt;如果添加 5 条记录，https 访问会不正常，需要域名添加 txt 记录进行认证，边缘证书认证成功截图&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313021641.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250313021641.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313021641.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313021641.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;如果是“txt 待认证”需要在域名管理后台添加 txt 记录进行认证，根据实际情况填写&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313021813.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250313021813.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313021813.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313021813.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;也可以在 cloudflare 进行添加 txt 记录&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313021927.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250313021927.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313021927.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313021927.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;txt 认证成功，删除即可，没什么鸟用，一般都是自动化认证的，呵呵。通过工具（如 &lt;code&gt;acme.sh&lt;/code&gt; 或 &lt;code&gt;Certbot&lt;/code&gt;）集成 Cloudflare 的 DNS API，自动完成 TXT 记录的添加和删除。&lt;/p&gt;
+&lt;h2 id=&#34;重定向的次数过多解决方案&#34;&gt;「重定向的次数过多」解决方案
+&lt;/h2&gt;&lt;p&gt;如果浏览器出现「重定向的次数过多」，需要额外配置 ssl 加密模型&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313022409.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250313022409.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313022409.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313022409.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;选择任意两个都可以&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313022432.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250313022432.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313022432.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313022432.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;h2 id=&#34;验证成功&#34;&gt;验证成功
+&lt;/h2&gt;&lt;p&gt;域名命令，出现 cf 特殊字段即可表示 cdn 开启成功，我这里给 github pages 套了 cdn&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;curl -I https://www.carlos.ip-ddns.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313022602.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250313022602.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313022602.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313022602.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;或者 ping 自己的主机名，没有出现 github ip 地址表示开启 cdn 成功&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-txt&#34; data-lang=&#34;txt&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ping www.carlos.ip-ddns.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313022806.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250313022806.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313022806.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313022806.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>cloudflare 开启 cdn</title>
+        <link>https://hugo-ap0.pages.dev/p/cloudflare-%E5%BC%80%E5%90%AF-cdn/</link>
+        <pubDate>Thu, 13 Mar 2025 00:39:30 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/cloudflare-%E5%BC%80%E5%90%AF-cdn/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/30.webp" alt="Featured image of post cloudflare 开启 cdn" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;本文主要介绍网站如何在 cloudflare 上开启 cdn&lt;/p&gt;
+&lt;h2 id=&#34;操作&#34;&gt;操作
+&lt;/h2&gt;&lt;p&gt;在 cloudflare 上添加域名&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250312184752.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250312184752.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250312184752.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250312184752.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;默认下一步即可，这里保存名称服务器（Name Servers）&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250312184915.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250312184915.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250312184915.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250312184915.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;在域名注册商后台添加 ns 记录（Name Servers），我这里的是免费域名：&lt;a class=&#34;link&#34; href=&#34;https://www.cloudns.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;地址1&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250312185307.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250312185307.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250312185307.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250312185307.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;不同域名注册商操作不一样，但是都是大同小异，都是添加 dns 记录，成功截图&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250312185451.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250312185451.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250312185451.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250312185451.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;在 Cloudflare 的 DNS 管理页面中，每个解析记录左侧的云朵图标‌需处于橙色点亮状态（表示流量经过 CDN）。灰色状态则代表直连服务器，未启用加速。&lt;/p&gt;
+&lt;p&gt;要求域名支持托管，不然任何设置都白费。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250312185627.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250312185627.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250312185627.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250312185627.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;我这里主机名是 blog，橙色云朵表示已经开启 cdn&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;SSL/TLS 模式配置&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;需在 Cloudflare 后台的 SSL/TLS 设置中选择 ‌Full‌ 或 ‌Full (Strict)‌ 模式，否则 HTTPS 请求可能无法通过 CDN 加密传输。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313003453.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250313003453.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313003453.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313003453.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;使用 CloudFlare 导致网站「重定向的次数过多」，记得点击一下，选择“完全”或者“完全（严格）”&lt;/p&gt;
+&lt;h2 id=&#34;验证-cdn-是否生效&#34;&gt;验证 CDN 是否生效
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Ping 检测&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在终端执行 &lt;code&gt;ping yourdomain.com&lt;/code&gt;，若返回的 IP 地址与源服务器不同（显示为 Cloudflare 边缘节点 IP），则 CDN 生效 ‌。&lt;/p&gt;
+&lt;p&gt;我这里 &lt;code&gt;ping www.carlos.ip-ddns.com&lt;/code&gt;，记录 ip 地址，这里是 github 地址，cdn 开启不成功&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250312192236.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250312192236.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250312192236.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250312192236.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;命令 &lt;code&gt;curl -I https://www.carlos.ip-ddns.com&lt;/code&gt; ，返回 github，没有 cf 特俗字段，cdn 还是没有开启成功&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250312204322.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250312204322.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250312204322.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250312204322.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;ubuntu 命令 &lt;code&gt;dig www.carlos.ip-ddns.com +short&lt;/code&gt;，返回 github，懂的都懂，cdn 还是没有开启成功。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250312210715.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250312210715.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250312210715.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250312210715.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;正常情况，根域名添加 ns 记录，cf 控制台添加子域名 cname 记录，根域名 a 记录指向你的服务器 ip 地址，应该是可以开启 cdn 的，可能免费域名的缘故，没有开启 cdn 成功。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250312204135.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250312204135.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250312204135.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250312204135.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;cloudflare 域名管理那里手动添加同样的 dns 记录，我这个免费域名不支持托管，心累&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250312192459.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250312192459.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250312192459.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250312192459.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>cloudflare 常用功能</title>
+        <link>https://hugo-ap0.pages.dev/p/cloudflare-%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD/</link>
+        <pubDate>Wed, 12 Mar 2025 17:38:18 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/cloudflare-%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/18.webp" alt="Featured image of post cloudflare 常用功能" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;本文主要介绍 cloudflare 基本常用功能，让你少走弯路&lt;/p&gt;
+&lt;h2 id=&#34;常用功能&#34;&gt;常用功能
+&lt;/h2&gt;&lt;p&gt;以下是 Cloudflare 频率最高的 10 个功能及其核心应用场景&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DDoS 攻击防护：全球领先的分布式防御系统，通过流量清洗和边缘节点拦截大规模攻击，保障业务连续性‌。&lt;/li&gt;
+&lt;li&gt;内容分发网络（CDN）：全球分布式节点加速静态资源加载，隐藏源站 IP 并优化访问延迟，免费版支持自动缓存策略‌。&lt;/li&gt;
+&lt;li&gt;Web 应用防火墙（WAF）：拦截 SQL 注入、XSS 等 OWASP 十大 Web 漏洞攻击，支持自定义规则匹配攻击特征‌。&lt;/li&gt;
+&lt;li&gt;SSL/TLS 加密：提供免费泛域名证书，自动实现 HTTP 到 HTTPS 重定向，支持 TLS 1.3 协议强化数据传输安全‌。&lt;/li&gt;
+&lt;li&gt;域名注册与托管：低成本域名注册服务（仅收 ICANN 成本费），集成 DNS 解析与流量代理功能‌。&lt;/li&gt;
+&lt;li&gt;智能路由与负载均衡：Argo 技术优化全球流量路径，结合负载均衡实现故障转移和服务器资源动态分配‌。&lt;/li&gt;
+&lt;li&gt;边缘计算（Workers）：无服务器计算平台，支持在边缘节点执行 JavaScript/Wasm 代码，实现个性化逻辑处理‌。&lt;/li&gt;
+&lt;li&gt;零信任安全访问：Zero Trust 架构提供精细化权限控制，支持多因素认证（MFA）和私有网络接入保护‌。&lt;/li&gt;
+&lt;li&gt;Always Online 容灾：当源站宕机时自动返回缓存副本，结合页面规则设置不同 URL 的缓存失效策略‌。&lt;/li&gt;
+&lt;li&gt;图像与移动端优化：自动压缩图片为 WebP 格式，延迟加载非首屏资源，适配移动端网络环境提升加载速度‌。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;配置建议&#34;&gt;配置建议
+&lt;/h2&gt;&lt;p&gt;企业用户常通过页面规则（Page Rules）实现功能组合，例如为后台路径关闭缓存、为静态资源设置强缓存，同时启用 Under Attack Mode 应对突发安全威胁‌。免费版已覆盖 80% 基础需求，大型企业可升级套餐获取自定义 WAF 规则、实时日志分析等进阶功能‌。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Cloudflare 与国内 CDN</title>
+        <link>https://hugo-ap0.pages.dev/p/cloudflare-%E4%B8%8E%E5%9B%BD%E5%86%85-cdn/</link>
+        <pubDate>Tue, 11 Mar 2025 23:57:45 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/cloudflare-%E4%B8%8E%E5%9B%BD%E5%86%85-cdn/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/45.webp" alt="Featured image of post Cloudflare 与国内 CDN" /&gt;&lt;h2 id=&#34;定位&#34;&gt;定位
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Cloudflare‌&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;全球性 CDN‌，服务覆盖全球 300+ 城市，节点主要分布在海外地区（如欧美、亚太非中国大陆地区），中国大陆节点较少‌。&lt;/p&gt;
+&lt;p&gt;功能集成‌，除 CDN 外，集成 DDoS 防护、Web 应用防火墙（WAF）、SSL 证书管理等安全功能‌。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;国内 CDN‌（如锐安盾、阿里云 CDN）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;本地化加速‌：节点集中在中国大陆境内，针对国内用户网络环境（如跨运营商、骨干网延迟）优化访问速度‌。&lt;/p&gt;
+&lt;p&gt;合规性适配‌：需符合中国互联网监管要求（如 ICP 备案、内容过滤）‌。&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结
+&lt;/h2&gt;&lt;p&gt;相同点‌：均为内容分发网络（CDN），通过缓存静态资源加速访问‌。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;核心差异&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;定位‌：Cloudflare 是全球化综合服务（CDN+安全），国内 CDN 专注本地化加速与合规‌。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;适用性‌&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;若用户群体以海外为主 → ‌Cloudflare 更优‌‌。&lt;/li&gt;
+&lt;li&gt;若用户群体集中在中国大陆 → ‌国内 CDN 更优‌‌。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;混合方案‌：可通过分线路解析（国内用国产 CDN，海外用 Cloudflare）实现全局加速‌。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Cloudflare for SaaS 定义</title>
+        <link>https://hugo-ap0.pages.dev/p/cloudflare-for-saas-%E5%AE%9A%E4%B9%89/</link>
+        <pubDate>Tue, 11 Mar 2025 23:22:37 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/cloudflare-for-saas-%E5%AE%9A%E4%B9%89/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/37.webp" alt="Featured image of post Cloudflare for SaaS 定义" /&gt;&lt;h2 id=&#34;saas&#34;&gt;‌SaaS
+&lt;/h2&gt;&lt;p&gt;‌SaaS（Software as a Service，软件即服务）‌ 是一种基于云端的软件服务模式，用户通过互联网访问服务商提供的应用程序，无需自行购买、安装或维护本地软硬件‌。&lt;/p&gt;
+&lt;p&gt;类比理解‌：类似“共享单车”，用户只需扫码使用，无需承担车辆维护责任‌。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;核心特征&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;服务商托管软件并负责维护、更新与安全‌；&lt;/li&gt;
+&lt;li&gt;用户通过订阅按需付费，降低初期投入成本‌。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;cloudflare-for-saas&#34;&gt;Cloudflare for SaaS
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;定义&lt;/strong&gt;：Cloudflare for SaaS‌ 是 Cloudflare 面向 SaaS 开发者提供的 ‌基础设施服务套件‌，专注于解决 SaaS 应用在域名管理、安全防护和性能优化方面的需求‌。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;核心功能&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自定义域名托管‌：允许客户绑定自己的域名（如 app.client-company.com）到你的 SaaS 平台，无需自行配置 DNS 或 SSL 证书‌；&lt;/li&gt;
+&lt;li&gt;自动化 SSL 证书‌：为每个客户域名自动签发和管理 SSL/TLS 证书（支持泛域名），保障 HTTPS 加密访问‌；&lt;/li&gt;
+&lt;li&gt;全球 CDN 加速‌：通过 Cloudflare 的全球网络分发静态和动态内容，降低延迟‌；&lt;/li&gt;
+&lt;li&gt;安全防护‌：集成 DDoS 防护、Web 应用防火墙（WAF）和 Bot 管理，抵御网络攻击‌。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;概念混淆&#34;&gt;概念混淆
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;明确上下文&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;讨论软件服务模式‌时，SaaS 指代“软件即服务”；&lt;/li&gt;
+&lt;li&gt;讨论开发工具‌时，Cloudflare for SaaS 是专为 SaaS 开发者提供的技术方案。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Cloudflare for SaaS 与通用 SaaS 概念不冲突&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cloudflare for SaaS‌ 是工具，帮助开发者构建 SaaS 应用；&lt;/li&gt;
+&lt;li&gt;通用 SaaS‌ 是商业模式，描述软件交付方式。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>hugo 部署到 cloudflare</title>
+        <link>https://hugo-ap0.pages.dev/p/hugo-%E9%83%A8%E7%BD%B2%E5%88%B0-cloudflare/</link>
+        <pubDate>Tue, 11 Mar 2025 21:12:53 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/hugo-%E9%83%A8%E7%BD%B2%E5%88%B0-cloudflare/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/52.webp" alt="Featured image of post hugo 部署到 cloudflare" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;本文主题是 hugo 如何部署到 cloudflare，访问效果在国内其实和 github pages 差不多，呵呵&lt;/p&gt;
+&lt;h2 id=&#34;实操&#34;&gt;实操
+&lt;/h2&gt;&lt;p&gt;选择 pages&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311210040.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250311210040.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311210040.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311210040.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;选择仓库&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311061153.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250311061153.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311061153.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311061153.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;根据自己实际情况填写，构建命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo --gc --minify --environment production
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311210217.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250311210217.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311210217.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311210217.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;我这里因为 github page 已经部署过了，所以再单独创建一份配置用来区分&lt;/p&gt;
+&lt;p&gt;在 &lt;code&gt;/root/hugo/config/production&lt;/code&gt; 创建 &lt;code&gt;hugo.yaml&lt;/code&gt; 文件，然后上传到 github，通过 &lt;code&gt;--environment production&lt;/code&gt; 参数用来指定配置文件&lt;/p&gt;
+&lt;p&gt;通过 &lt;code&gt;HUGO_VERSION&lt;/code&gt; 指定 hugo 版本，我这里选择 &lt;code&gt;0.125.7&lt;/code&gt; 版本&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311210743.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250311210743.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311210743.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311210743.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;点击“保存并部署”即可将 github 的 hugo 源文件克隆到 cloudflare，cloudflare 就会自动生成 hugo 静态文件并发布&lt;/p&gt;
+&lt;h2 id=&#34;删除项目&#34;&gt;删除项目
+&lt;/h2&gt;&lt;p&gt;点击设置，划到最底部，点击删除即可。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311061506.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250311061506.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311061506.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250311061506.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;h2 id=&#34;补充说明&#34;&gt;补充说明
+&lt;/h2&gt;&lt;p&gt;如果样式错误，可以通过参数 &lt;code&gt;--baseURL &amp;quot;https://custom-url.com/&amp;quot;&lt;/code&gt; 强制指定域名完整命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo --baseURL &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://custom-url.com/&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

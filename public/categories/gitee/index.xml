@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Gitee on carlos</title>
+        <link>https://hugo-ap0.pages.dev/categories/gitee/</link>
+        <description>Recent content in Gitee on carlos</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Example Person</copyright>
+        <lastBuildDate>Thu, 13 Mar 2025 16:55:17 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/categories/gitee/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>gitee 导入 github 项目</title>
+        <link>https://hugo-ap0.pages.dev/p/gitee-%E5%AF%BC%E5%85%A5-github-%E9%A1%B9%E7%9B%AE/</link>
+        <pubDate>Mon, 10 Mar 2025 02:27:12 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/gitee-%E5%AF%BC%E5%85%A5-github-%E9%A1%B9%E7%9B%AE/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/12.webp" alt="Featured image of post gitee 导入 github 项目" /&gt;&lt;h2 id=&#34;从-github-导入项目到码云&#34;&gt;从 github 导入项目到码云
+&lt;/h2&gt;&lt;p&gt;码云支持 github 导入项目&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/_resources/1-5.png&#34;
+   data-webp=&#34;/_resources/1-5.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/_resources/1-5.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/_resources/1-5.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;h2 id=&#34;自动同步-github-项目&#34;&gt;自动同步 github 项目
+&lt;/h2&gt;&lt;p&gt;仓库 -&amp;gt; 管理 -&amp;gt; 基本设置&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/_resources/2-3.png&#34;
+   data-webp=&#34;/_resources/2-3.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/_resources/2-3.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/_resources/2-3.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

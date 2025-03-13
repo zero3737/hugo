@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Vscode on carlos</title>
+        <link>https://hugo-ap0.pages.dev/tags/vscode/</link>
+        <description>Recent content in Vscode on carlos</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Example Person</copyright>
+        <lastBuildDate>Thu, 13 Mar 2025 19:04:13 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/tags/vscode/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>vscode 批量修改不同文件中的相同数据</title>
+        <link>https://hugo-ap0.pages.dev/p/vscode-%E6%89%B9%E9%87%8F%E4%BF%AE%E6%94%B9%E4%B8%8D%E5%90%8C%E6%96%87%E4%BB%B6%E4%B8%AD%E7%9A%84%E7%9B%B8%E5%90%8C%E6%95%B0%E6%8D%AE/</link>
+        <pubDate>Thu, 13 Mar 2025 19:03:44 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/vscode-%E6%89%B9%E9%87%8F%E4%BF%AE%E6%94%B9%E4%B8%8D%E5%90%8C%E6%96%87%E4%BB%B6%E4%B8%AD%E7%9A%84%E7%9B%B8%E5%90%8C%E6%95%B0%E6%8D%AE/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/44.webp" alt="Featured image of post vscode 批量修改不同文件中的相同数据" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;vscode 中有全局搜索功能，然后通过正则匹配需要修改的内容，进行替换即可&lt;/p&gt;
+&lt;h2 id=&#34;操作&#34;&gt;操作
+&lt;/h2&gt;&lt;p&gt;右键打开项目&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313190149.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250313190149.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313190149.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313190149.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;鼠标聚焦在文件，快捷键 &lt;code&gt;crtl+shift+f&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313165435.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250313165435.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313165435.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250313165435.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;我这里需要将图片 jpg 后缀改为 webp，通过正则匹配 &lt;code&gt;\.jpg$&lt;/code&gt; jpg 后缀，然后替换即可&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Edge on carlos</title>
+        <link>https://hugo-ap0.pages.dev/categories/edge/</link>
+        <description>Recent content in Edge on carlos</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Example Person</copyright>
+        <lastBuildDate>Thu, 13 Mar 2025 16:55:20 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/categories/edge/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>关闭 edge 自动填充表单功能</title>
+        <link>https://hugo-ap0.pages.dev/p/%E5%85%B3%E9%97%AD-edge-%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E8%A1%A8%E5%8D%95%E5%8A%9F%E8%83%BD/</link>
+        <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/%E5%85%B3%E9%97%AD-edge-%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E8%A1%A8%E5%8D%95%E5%8A%9F%E8%83%BD/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/39.webp" alt="Featured image of post 关闭 edge 自动填充表单功能" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;如何关闭 edge 自动填充表单功能&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250308200920.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250308200920.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250308200920.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250308200920.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;在输入框中，输入信息，会自动弹出经常输入的信息，而且删不掉，没有任何实际作用。&lt;/p&gt;
+&lt;h2 id=&#34;实操&#34;&gt;实操
+&lt;/h2&gt;&lt;p&gt;地址栏输入 &lt;code&gt;edge://wallet/settings&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250308201144.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250308201144.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250308201144.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250308201144.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;关闭“保存并填充基本信息”即可&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
