@@ -9,7 +9,7 @@ categories:
   - linux
   - ubuntu
   - windows
-image: ./bg/13.jpg
+image: ./bg/13.webp
 author: carlos
 ---
 

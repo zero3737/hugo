@@ -7,7 +7,7 @@ tags:
 categories:
   - 笔记
   - obsidian
-image: ./bg/18.jpg
+image: ./bg/18.webp
 author: carlos
 ---
 

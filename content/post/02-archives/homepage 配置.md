@@ -9,7 +9,7 @@ categories:
   - docker
   - ubuntu
   - linux
-image: ./bg/54.jpg
+image: ./bg/54.webp
 author: carlos
 ---
 

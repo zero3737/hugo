@@ -9,7 +9,7 @@ categories:
   - github
   - git
   - 编程
-image: ./bg/20.jpg
+image: ./bg/20.webp
 author: carlos
 ---
 

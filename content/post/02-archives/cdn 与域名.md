@@ -7,7 +7,7 @@ tags:
   - cdn
 categories:
   - 计算机网络
-image: ./bg/30.jpg
+image: ./bg/30.webp
 author: carlos
 ---
 

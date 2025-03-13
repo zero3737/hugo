@@ -9,7 +9,7 @@ categories:
   - 邮箱
   - windows
   - 电脑知识
-image: ./bg/19.jpg
+image: ./bg/19.webp
 author: carlos
 ---
 

@@ -7,7 +7,7 @@ tags:
 categories:
   - hugo
   - 笔记
-image: ./bg/15.jpg
+image: ./bg/15.webp
 author: carlos
 ---
 

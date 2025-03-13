@@ -6,7 +6,7 @@ tags:
   - dns
 categories:
   - 计算机网络
-image: ./bg/35.jpg
+image: ./bg/35.webp
 author: carlos
 ---
 

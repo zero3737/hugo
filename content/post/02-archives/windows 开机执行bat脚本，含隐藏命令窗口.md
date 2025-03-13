@@ -7,7 +7,7 @@ tags:
 categories:
   - windows
   - 运维
-image: ./bg/30.jpg
+image: ./bg/30.webp
 author: carlos
 ---
 

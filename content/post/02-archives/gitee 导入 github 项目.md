@@ -7,7 +7,7 @@ tags:
 categories:
   - gitee
   - github
-image: ./bg/12.jpg
+image: ./bg/12.webp
 author: carlos
 ---
 

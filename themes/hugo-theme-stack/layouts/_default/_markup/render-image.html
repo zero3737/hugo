@@ -53,9 +53,51 @@
 </p> -->
 
 {{if .Page.Site.Params.fancybox }}
-<div class="post-img-view">
-	<a data-fancybox="gallery" href="{{ $fullURL }}">
-		<img loading='lazy' src="{{ $fullURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />
+<!-- <div class="post-img-view">
+	<a data-fancybox="gallery" href='{{ $fullURL | replaceRE "(\\.[a-z]+)$" ".webp" }}'>
+		<img loading='lazy' src='{{ $fullURL | replaceRE "(\\.[a-z]+)$" ".webp" }}' alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />
 	</a>
-</div>
+</div> -->
+
+	<!-- <a data-fancybox="gallery" 
+	href="{{ $fullURL }}" 
+	data-webp="{{ $fullURL | replaceRE `(\.[a-z]+)$` `.webp` }}">
+   
+   <picture>
+	 <source srcset="{{ $fullURL | replaceRE `(\.[a-z]+)$` `.webp` }}" type="image/webp">
+	 <img src="{{ $fullURL }}" 
+		  alt="{{ .Text }}" 
+		  {{ with .Title }}title="{{ . }}"{{ end }} 
+		  loading="lazy">
+   </picture>
+ </a> -->
+
+{{- $originalURL := $fullURL -}}
+{{- $webpURL := replaceRE `(\.[a-z]+)$` `.webp` $originalURL | relURL -}}
+{{- $decodedPath := replace $webpURL "%20" " " -}}
+{{- $webpExists := fileExists (path.Join "static" (strings.TrimPrefix "/" $decodedPath)) -}}
+
+
+
+<a data-fancybox="gallery" 
+   href="{{ if $webpExists }}{{ $webpURL }}{{ else }}{{ $originalURL }}{{ end }}"
+   data-webp="{{ $webpURL }}"
+   data-original="{{ $originalURL }}"
+   class="webp-fancybox">
+  
+  <picture>
+    {{ if $webpExists }}
+    <!-- 第一重回退：服务端确认存在的 WebP -->
+    <source srcset="{{ $webpURL }}" type="image/webp">
+    {{ end }}
+    
+    <!-- 终极回退：原始图片 -->
+    <img src="{{ $originalURL }}"
+         alt="{{ .Text }}"
+         {{ with .Title }}title="{{ . }}"{{ end }}
+         loading="lazy"
+         data-fallback>
+  </picture>
+</a>
+ 
 {{ end }}

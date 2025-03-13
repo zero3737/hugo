@@ -7,7 +7,7 @@ tags:
   - dns
 categories:
   - 计算机网络
-image: ./bg/58.jpg
+image: ./bg/58.webp
 author: carlos
 ---
 

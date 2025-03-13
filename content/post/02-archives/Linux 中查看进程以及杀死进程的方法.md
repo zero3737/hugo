@@ -9,7 +9,7 @@ categories:
   - linux
   - ubuntu
   - 运维
-image: ./bg/10.jpg
+image: ./bg/10.webp
 author: carlos
 ---
 

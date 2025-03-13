@@ -11,7 +11,7 @@ categories:
   - github
   - 笔记
   - git
-image: ./bg/35.jpg
+image: ./bg/35.webp
 author: carlos
 ---
 

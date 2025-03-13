@@ -7,7 +7,7 @@ tags:
   - 域名
 categories:
   - 计算机网络
-image: ./bg/45.jpg
+image: ./bg/45.webp
 author: carlos
 ---
 

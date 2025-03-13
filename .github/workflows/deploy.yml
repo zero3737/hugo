@@ -25,6 +25,14 @@ jobs:
       # - name: 复制图片
       #   run: cp -r /home/runner/work/hugo/hugo/static/00-assets/ /home/runner/work/hugo/hugo/static/_resources
 
+      - name: Install cwebp
+        run: sudo apt-get install webp
+
+      - name: Compress images
+        run: |
+          chmod +x /home/runner/work/hugo/hugo/convert_images.sh
+          /home/runner/work/hugo/hugo/convert_images.sh
+
       - name: hugo 生成静态文件
         run: hugo --minify --gc --config ./hugo.yaml --baseURL "http://www.carlos.ip-ddns.com/"
 

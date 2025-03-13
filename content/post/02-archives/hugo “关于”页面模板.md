@@ -9,7 +9,7 @@ categories:
   - hugo
   - 笔记
   - 写作
-image: ./bg/03.jpg
+image: ./bg/03.webp
 author: carlos
 ---
 

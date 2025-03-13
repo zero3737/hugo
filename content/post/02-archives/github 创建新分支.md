@@ -7,7 +7,7 @@ tags:
 categories:
   - github
   - git
-image: ./bg/32.jpg
+image: ./bg/32.webp
 author: carlos
 ---
 

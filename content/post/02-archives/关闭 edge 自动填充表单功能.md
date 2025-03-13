@@ -11,7 +11,7 @@ categories:
   - 浏览器
   - windows
   - 电脑知识
-image: ./bg/39.jpg
+image: ./bg/39.webp
 author: carlos
 ---
 

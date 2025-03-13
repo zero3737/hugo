@@ -11,7 +11,7 @@ categories:
   - hugo
   - 笔记
   - git
-image: ./bg/03.jpg
+image: ./bg/03.webp
 author: carlos
 ---
 

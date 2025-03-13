@@ -7,7 +7,7 @@ tags:
 categories:
   - cloudflare
   - saas
-image: ./bg/37.jpg
+image: ./bg/37.webp
 author: carlos
 ---
 

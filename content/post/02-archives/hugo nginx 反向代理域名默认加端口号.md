@@ -9,7 +9,7 @@ categories:
   - hugo
   - 笔记
   - nginx
-image: ./bg/37.jpg
+image: ./bg/37.webp
 author: carlos
 ---
 

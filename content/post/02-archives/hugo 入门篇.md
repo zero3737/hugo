@@ -9,7 +9,7 @@ categories:
   - hugo
   - 笔记
   - obsidian
-image: ./bg/49.jpg
+image: ./bg/49.webp
 author: carlos
 ---
 

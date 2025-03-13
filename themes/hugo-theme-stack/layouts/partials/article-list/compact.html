@@ -12,6 +12,12 @@
         </div>
 
         {{- $image := partialCached "helper/image" (dict "Context" . "Type" "articleList") .RelPermalink "articleList" -}}
+
+        <!-- 自定义 -->
+        {{- $originalPath := $image.permalink -}}
+        {{- $webpPath := replaceRE `(\.[a-z]+)$` `.webp` $originalPath -}}
+        {{- $webpExists := fileExists (path.Join "static" $webpPath) -}}
+
         {{ if $image.exists }}
             <div class="article-image">
                 {{ if $image.resource }}
@@ -32,7 +38,15 @@
                         alt="{{ .Title }}"
                         loading="lazy">
                 {{ else }}
-                    <img src="{{ $image.permalink }}" loading="lazy" alt="Featured image of post {{ .Title }}" />
+                <!-- 自定义 -->
+                <picture class="webp-fallback">
+                    {{ if $webpExists }}
+                      <source srcset="{{ $webpPath }}" type="image/webp">
+                    {{ end }}
+                    <img src="{{ $originalPath }}" 
+                         loading="lazy" 
+                         alt="Featured image of post {{ .Title }}">
+                  </picture>
                 {{ end }}
             </div>
         {{ end }}

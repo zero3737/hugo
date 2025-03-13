@@ -11,7 +11,7 @@ categories:
   - 笔记
   - nginx
   - https
-image: ./bg/13.jpg
+image: ./bg/13.webp
 author: carlos
 ---
 

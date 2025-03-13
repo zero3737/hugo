@@ -7,7 +7,7 @@ tags:
 categories:
   - windows
   - 办公
-image: ./bg/02.jpg
+image: ./bg/02.webp
 author: carlos
 ---
 ## 前言

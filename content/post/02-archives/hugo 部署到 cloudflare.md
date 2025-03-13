@@ -11,7 +11,7 @@ categories:
   - cloudflare
   - github
   - git
-image: ./bg/52.jpg
+image: ./bg/52.webp
 author: carlos
 ---
 

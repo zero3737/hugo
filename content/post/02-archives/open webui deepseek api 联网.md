@@ -11,7 +11,7 @@ categories:
   - docker
   - deepseek
   - chatgpt
-image: ./bg/37.jpg
+image: ./bg/37.webp
 author: carlos
 ---
 

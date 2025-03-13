@@ -13,7 +13,7 @@ categories:
   - 编程
   - ubuntu
   - linux
-image: ./bg/44.jpg
+image: ./bg/44.webp
 author: carlos
 ---
 

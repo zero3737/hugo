@@ -5,7 +5,7 @@ tags:
   - cloudflare
 categories:
   - cloudflare
-image: ./bg/18.jpg
+image: ./bg/18.webp
 author: carlos
 ---
 
