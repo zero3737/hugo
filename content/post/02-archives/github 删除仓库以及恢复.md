@@ -4,9 +4,7 @@ title: github 删除仓库
 tags:
   - github
   - 编程
-categories:
-  - github
-  - 编程
+categories: []
 image: ./bg/20.webp
 author: carlos
 ---

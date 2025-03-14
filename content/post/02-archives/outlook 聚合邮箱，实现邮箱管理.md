@@ -5,10 +5,7 @@ tags:
   - 邮箱
   - windows
   - 电脑知识
-categories:
-  - 邮箱
-  - windows
-  - 电脑知识
+categories: []
 image: ./bg/19.webp
 author: carlos
 ---

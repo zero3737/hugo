@@ -4,9 +4,7 @@ title: windows 开机执行bat脚本，含隐藏命令窗口
 tags:
   - windows
   - 运维
-categories:
-  - windows
-  - 运维
+categories: []
 image: ./bg/30.webp
 author: carlos
 ---

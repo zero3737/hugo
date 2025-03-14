@@ -4,9 +4,7 @@ title: obsidian 知识库设计
 tags:
   - obsidian
   - 笔记
-categories:
-  - obsidian
-  - 笔记
+categories: []
 image: ./bg/25.webp
 author: carlos
 ---

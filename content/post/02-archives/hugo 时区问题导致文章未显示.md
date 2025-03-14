@@ -4,9 +4,7 @@ title: hugo 时区问题导致文章未显示
 tags:
   - Hugo
   - 笔记
-categories:
-  - hugo
-  - 笔记
+categories: []
 image: ./bg/15.webp
 author: carlos
 ---

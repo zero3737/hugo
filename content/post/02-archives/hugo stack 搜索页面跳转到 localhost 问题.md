@@ -4,9 +4,7 @@ title: hugo stack 搜索页面跳转到 localhost 问题
 tags:
   - Hugo
   - 笔记
-categories:
-  - hugo
-  - 笔记
+categories: []
 image: ./bg/46.webp
 author: carlos
 ---

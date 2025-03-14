@@ -6,11 +6,7 @@ tags:
   - Hugo
   - 笔记
   - git
-categories:
-  - github
-  - hugo
-  - 笔记
-  - git
+categories: []
 image: ./bg/03.webp
 author: carlos
 ---

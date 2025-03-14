@@ -4,9 +4,7 @@ title: gitee 导入 github 项目
 tags:
   - gitee
   - github
-categories:
-  - gitee
-  - github
+categories: []
 image: ./bg/12.webp
 author: carlos
 ---

@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>写作 on carlos</title>
-        <link>https://hugo-ap0.pages.dev/categories/%E5%86%99%E4%BD%9C/</link>
+        <link>https://www.carlos.lh/categories/%E5%86%99%E4%BD%9C/</link>
         <description>Recent content in 写作 on carlos</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Thu, 13 Mar 2025 16:55:17 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/categories/%E5%86%99%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 13 Mar 2025 16:55:17 +0800</lastBuildDate><atom:link href="https://www.carlos.lh/categories/%E5%86%99%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>hugo “关于”页面模板</title>
-        <link>https://hugo-ap0.pages.dev/p/hugo-%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF/</link>
+        <link>https://www.carlos.lh/p/hugo-%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF/</link>
         <pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hugo-ap0.pages.dev/p/hugo-%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF/</guid>
-        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/03.webp" alt="Featured image of post hugo “关于”页面模板" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+        <guid>https://www.carlos.lh/p/hugo-%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF/</guid>
+        <description>&lt;img src="https://www.carlos.lh/bg/03.webp" alt="Featured image of post hugo “关于”页面模板" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;本文将分享一个全面且有创意的自我介绍框架，既能涵盖基础信息，又能突出个性和独特性。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;介绍自己 20 个角度&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;

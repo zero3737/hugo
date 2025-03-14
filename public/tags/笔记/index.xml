@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Thu, 13 Mar 2025 16:55:17 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 14 Mar 2025 23:24:39 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>hugo 配合 github action 自动化部署</title>
         <link>https://hugo-ap0.pages.dev/p/hugo-%E9%85%8D%E5%90%88-github-action-%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/</link>
         <pubDate>Tue, 11 Mar 2025 05:07:03 +0800</pubDate>

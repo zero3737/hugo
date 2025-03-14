@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>前端 on carlos</title>
-        <link>https://hugo-ap0.pages.dev/categories/%E5%89%8D%E7%AB%AF/</link>
+        <link>https://www.carlos.lh/categories/%E5%89%8D%E7%AB%AF/</link>
         <description>Recent content in 前端 on carlos</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Thu, 13 Mar 2025 16:55:16 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/categories/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 13 Mar 2025 16:55:16 +0800</lastBuildDate><atom:link href="https://www.carlos.lh/categories/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>图片懒加载</title>
-        <link>https://hugo-ap0.pages.dev/p/%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD/</link>
+        <link>https://www.carlos.lh/p/%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD/</link>
         <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hugo-ap0.pages.dev/p/%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD/</guid>
-        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/58.webp" alt="Featured image of post 图片懒加载" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+        <guid>https://www.carlos.lh/p/%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD/</guid>
+        <description>&lt;img src="https://www.carlos.lh/bg/58.webp" alt="Featured image of post 图片懒加载" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;图片懒加载是一种网页优化技术，用于延迟加载非关键的图片资源，直到用户滚动到它们的位置。这样可以加快页面初始加载速度，节省带宽，提升用户体验。&lt;/p&gt;
 &lt;h2 id=&#34;工作原理&#34;&gt;工作原理
 &lt;/h2&gt;&lt;ul&gt;

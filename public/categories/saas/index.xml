@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Saas on carlos</title>
-        <link>https://hugo-ap0.pages.dev/categories/saas/</link>
+        <link>https://www.carlos.lh/categories/saas/</link>
         <description>Recent content in Saas on carlos</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Thu, 13 Mar 2025 16:55:16 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/categories/saas/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 13 Mar 2025 16:55:16 +0800</lastBuildDate><atom:link href="https://www.carlos.lh/categories/saas/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Cloudflare for SaaS 定义</title>
-        <link>https://hugo-ap0.pages.dev/p/cloudflare-for-saas-%E5%AE%9A%E4%B9%89/</link>
+        <link>https://www.carlos.lh/p/cloudflare-for-saas-%E5%AE%9A%E4%B9%89/</link>
         <pubDate>Tue, 11 Mar 2025 23:22:37 +0800</pubDate>
         
-        <guid>https://hugo-ap0.pages.dev/p/cloudflare-for-saas-%E5%AE%9A%E4%B9%89/</guid>
-        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/37.webp" alt="Featured image of post Cloudflare for SaaS 定义" /&gt;&lt;h2 id=&#34;saas&#34;&gt;‌SaaS
+        <guid>https://www.carlos.lh/p/cloudflare-for-saas-%E5%AE%9A%E4%B9%89/</guid>
+        <description>&lt;img src="https://www.carlos.lh/bg/37.webp" alt="Featured image of post Cloudflare for SaaS 定义" /&gt;&lt;h2 id=&#34;saas&#34;&gt;‌SaaS
 &lt;/h2&gt;&lt;p&gt;‌SaaS（Software as a Service，软件即服务）‌ 是一种基于云端的软件服务模式，用户通过互联网访问服务商提供的应用程序，无需自行购买、安装或维护本地软硬件‌。&lt;/p&gt;
 &lt;p&gt;类比理解‌：类似“共享单车”，用户只需扫码使用，无需承担车辆维护责任‌。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;核心特征&lt;/strong&gt;&lt;/p&gt;

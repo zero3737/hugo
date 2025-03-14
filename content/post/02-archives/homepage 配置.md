@@ -5,10 +5,7 @@ tags:
   - docker
   - ubuntu
   - linux
-categories:
-  - docker
-  - ubuntu
-  - linux
+categories: []
 image: ./bg/54.webp
 author: carlos
 ---

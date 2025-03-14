@@ -5,10 +5,7 @@ tags:
   - linux
   - ubuntu
   - windows
-categories:
-  - linux
-  - ubuntu
-  - windows
+categories: []
 image: ./bg/13.webp
 author: carlos
 ---

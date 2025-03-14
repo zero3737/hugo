@@ -5,10 +5,7 @@ tags:
   - Hugo
   - 笔记
   - obsidian
-categories:
-  - hugo
-  - 笔记
-  - obsidian
+categories: []
 image: ./bg/49.webp
 author: carlos
 ---

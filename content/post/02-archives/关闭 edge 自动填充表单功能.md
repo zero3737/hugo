@@ -6,11 +6,7 @@ tags:
   - 浏览器
   - windows
   - 电脑知识
-categories:
-  - edge
-  - 浏览器
-  - windows
-  - 电脑知识
+categories: []
 image: ./bg/39.webp
 author: carlos
 ---

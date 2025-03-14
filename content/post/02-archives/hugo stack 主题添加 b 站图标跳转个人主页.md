@@ -4,9 +4,7 @@ title: hugo stack 主题添加 b 站图标跳转个人主页配置
 tags:
   - Hugo
   - 笔记
-categories:
-  - hugo
-  - 笔记
+categories: []
 image: ./bg/38.webp
 author: carlos
 ---

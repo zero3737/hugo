@@ -6,11 +6,7 @@ tags:
   - docker
   - deepseek
   - chatgpt
-categories:
-  - aigc
-  - docker
-  - deepseek
-  - chatgpt
+categories: []
 image: ./bg/56.webp
 author: carlos
 ---

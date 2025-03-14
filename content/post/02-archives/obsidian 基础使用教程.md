@@ -4,9 +4,7 @@ title: obsidian 基础使用教程
 tags:
   - 笔记
   - obsidian
-categories:
-  - 笔记
-  - obsidian
+categories: []
 image: ./bg/18.webp
 author: carlos
 ---

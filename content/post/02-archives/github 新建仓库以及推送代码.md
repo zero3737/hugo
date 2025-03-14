@@ -7,12 +7,7 @@ tags:
   - 编程
   - ubuntu
   - linux
-categories:
-  - github
-  - git
-  - 编程
-  - ubuntu
-  - linux
+categories: []
 image: ./bg/47.webp
 author: carlos
 ---

@@ -10,7 +10,7 @@
 <meta property='og:description' content="前言 本文主题是实现 hugo stack 主题，点击图片放大的功能。 原来图片很小，不方便自己查看，比如这里，根本看不清楚日志。 实操 修改 config.toml 或者 hugo.yaml 添加配置，编辑 /root/hugo 主目录下的 hugo.yaml，我的 Ubuntu 环境 1 2 params: fancybox: true 路径为/layouts/_default/_markup/render-image.html\u00a0添加内容为 1 2 3 4 5 6 7 {{if .Page.Site.Params.fancybox }} &lt;div class=&#34;post-img-view&#34;&gt; &lt;a data-fancybox=&#34;gallery&#34; href=&#34;{{ $Permalink }}&#34;&gt; &lt;img loading=&#39;lazy&#39; src=&#34;{{ $Permalink }}&#34; alt=&#34;{{ .Text }}&#34; {{ with .Title}} title=&#34;{{ . }}&#34;{{ end }} /&gt; &lt;/a&gt; &lt;/div&gt; {{ end }} 路径为 /root/hugo/themes/hugo-theme-stack/layouts/partials/footer，编辑 custom.html 内容为： 1 2 3 4 5 {{if .">
 <meta property='og:url' content='https://hugo-ap0.pages.dev/p/hugo-stack-%E5%9B%BE%E7%89%87%E7%82%B9%E5%87%BB%E6%94%BE%E5%A4%A7/'>
 <meta property='og:site_name' content='carlos'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:tag' content='笔记' /><meta property='article:published_time' content='2025-03-09T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-03-13T16:55:17&#43;08:00'/><meta property='og:image' content='https://hugo-ap0.pages.dev/bg/40.webp' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:tag' content='笔记' /><meta property='article:published_time' content='2025-03-09T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-03-14T23:23:45&#43;08:00'/><meta property='og:image' content='https://hugo-ap0.pages.dev/bg/40.webp' />
 <meta name="twitter:title" content="hugo stack 图片点击放大">
 <meta name="twitter:description" content="前言 本文主题是实现 hugo stack 主题，点击图片放大的功能。 原来图片很小，不方便自己查看，比如这里，根本看不清楚日志。 实操 修改 config.toml 或者 hugo.yaml 添加配置，编辑 /root/hugo 主目录下的 hugo.yaml，我的 Ubuntu 环境 1 2 params: fancybox: true 路径为/layouts/_default/_markup/render-image.html\u00a0添加内容为 1 2 3 4 5 6 7 {{if .Page.Site.Params.fancybox }} &lt;div class=&#34;post-img-view&#34;&gt; &lt;a data-fancybox=&#34;gallery&#34; href=&#34;{{ $Permalink }}&#34;&gt; &lt;img loading=&#39;lazy&#39; src=&#34;{{ $Permalink }}&#34; alt=&#34;{{ .Text }}&#34; {{ with .Title}} title=&#34;{{ . }}&#34;{{ end }} /&gt; &lt;/a&gt; &lt;/div&gt; {{ end }} 路径为 /root/hugo/themes/hugo-theme-stack/layouts/partials/footer，编辑 custom.html 内容为： 1 2 3 4 5 {{if ."><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hugo-ap0.pages.dev/bg/40.webp' />
@@ -309,18 +309,6 @@
 
     <div class="article-details">
     
-    <header class="article-category">
-        
-            <a href="/categories/hugo/" >
-                Hugo
-            </a>
-        
-            <a href="/categories/%E7%AC%94%E8%AE%B0/" >
-                笔记
-            </a>
-        
-    </header>
-    
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
@@ -561,7 +549,7 @@
 
 
         <span>
-            最后更新于 2025-03-13 16:55 CST
+            最后更新于 2025-03-14 23:23 CST
         </span>
     </section></footer>
 

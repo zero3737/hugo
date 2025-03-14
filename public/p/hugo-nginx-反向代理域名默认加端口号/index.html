@@ -10,7 +10,7 @@
 <meta property='og:description' content="前言 通过\u00a0hugo server\u00a0命令可以启动为服务端，默认端口为 1313。但如果直接通过 Nginx 的 proxy_pass 反代为公网服务会遇到一些问题，应该加上一些参数启动。 比如搜索页面加载图片失败，wss 一直访问失败 点击链接，域名会默认加端口号，导致访问失败 404 解决方案 appendPort 参数，这里需要设置为 false，这样你的 baseURL 就不会变成 &lt;域名&gt;:1313。如果不设置为 false，你在使用搜索等功能的时候，浏览器还是会向 1313 端口发送请求。 baseURL 参数，不然搜索页面中的笔记自动跳转 localhost。 liveReloadPort 参数，这个是 Hugo 用来实时更新网页内容的 WebSocket 端口。除了要设置 Nginx 支持 WebSocket，这里还要手动指定下 wss 访问的端口为与 https 相同的 443。 完整命令 1 hugo server --port=1313 --bind=192.168.15.210 --baseURL=https://www.carlos.lh/ --liveReloadPort 443 --appendPort=false ">
 <meta property='og:url' content='https://hugo-ap0.pages.dev/p/hugo-nginx-%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E5%9F%9F%E5%90%8D%E9%BB%98%E8%AE%A4%E5%8A%A0%E7%AB%AF%E5%8F%A3%E5%8F%B7/'>
 <meta property='og:site_name' content='carlos'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:tag' content='笔记' /><meta property='article:tag' content='nginx' /><meta property='article:published_time' content='2025-03-09T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-03-13T16:55:17&#43;08:00'/><meta property='og:image' content='https://hugo-ap0.pages.dev/bg/37.webp' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Hugo' /><meta property='article:tag' content='笔记' /><meta property='article:tag' content='nginx' /><meta property='article:published_time' content='2025-03-09T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-03-14T23:23:56&#43;08:00'/><meta property='og:image' content='https://hugo-ap0.pages.dev/bg/37.webp' />
 <meta name="twitter:title" content="hugo nginx 反向代理域名默认加端口号">
 <meta name="twitter:description" content="前言 通过\u00a0hugo server\u00a0命令可以启动为服务端，默认端口为 1313。但如果直接通过 Nginx 的 proxy_pass 反代为公网服务会遇到一些问题，应该加上一些参数启动。 比如搜索页面加载图片失败，wss 一直访问失败 点击链接，域名会默认加端口号，导致访问失败 404 解决方案 appendPort 参数，这里需要设置为 false，这样你的 baseURL 就不会变成 &lt;域名&gt;:1313。如果不设置为 false，你在使用搜索等功能的时候，浏览器还是会向 1313 端口发送请求。 baseURL 参数，不然搜索页面中的笔记自动跳转 localhost。 liveReloadPort 参数，这个是 Hugo 用来实时更新网页内容的 WebSocket 端口。除了要设置 Nginx 支持 WebSocket，这里还要手动指定下 wss 访问的端口为与 https 相同的 443。 完整命令 1 hugo server --port=1313 --bind=192.168.15.210 --baseURL=https://www.carlos.lh/ --liveReloadPort 443 --appendPort=false "><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://hugo-ap0.pages.dev/bg/37.webp' />
@@ -309,22 +309,6 @@
 
     <div class="article-details">
     
-    <header class="article-category">
-        
-            <a href="/categories/hugo/" >
-                Hugo
-            </a>
-        
-            <a href="/categories/%E7%AC%94%E8%AE%B0/" >
-                笔记
-            </a>
-        
-            <a href="/categories/nginx/" >
-                Nginx
-            </a>
-        
-    </header>
-    
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
@@ -500,7 +484,7 @@
 
 
         <span>
-            最后更新于 2025-03-13 16:55 CST
+            最后更新于 2025-03-14 23:23 CST
         </span>
     </section></footer>
 

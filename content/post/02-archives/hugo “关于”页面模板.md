@@ -5,10 +5,7 @@ tags:
   - Hugo
   - 笔记
   - 写作
-categories:
-  - hugo
-  - 笔记
-  - 写作
+categories: []
 image: ./bg/03.webp
 author: carlos
 ---

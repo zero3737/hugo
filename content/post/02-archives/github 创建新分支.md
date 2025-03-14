@@ -4,9 +4,7 @@ title: github 创建新分支
 tags:
   - github
   - git
-categories:
-  - github
-  - git
+categories: []
 image: ./bg/32.webp
 author: carlos
 ---

@@ -4,9 +4,7 @@ title: hugo stack 主题基础配置
 tags:
   - Hugo
   - 笔记
-categories:
-  - hugo
-  - 笔记
+categories: []
 image: ./bg/09.webp
 author: carlos
 ---

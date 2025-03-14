@@ -4,9 +4,7 @@ title: hugo 修改时间格式
 tags:
   - Hugo
   - 笔记
-categories:
-  - hugo
-  - 笔记
+categories: []
 image: ./bg/27.webp
 author: carlos
 ---

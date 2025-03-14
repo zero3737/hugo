@@ -4,9 +4,7 @@ title: hugo 笔记图片管理
 tags:
   - Hugo
   - 笔记
-categories:
-  - hugo
-  - 笔记
+categories: []
 image: ./bg/34.webp
 author: carlos
 ---

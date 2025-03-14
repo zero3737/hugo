@@ -4,9 +4,7 @@ title: github 修改默认分支
 tags:
   - github
   - git
-categories:
-  - github
-  - git
+categories: []
 image: ./bg/53.webp
 author: carlos
 ---

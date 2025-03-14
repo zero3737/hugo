@@ -7,7 +7,519 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Thu, 13 Mar 2025 16:55:17 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 14 Mar 2025 23:26:13 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>网站实名与备案关系</title>
+        <link>https://hugo-ap0.pages.dev/p/%E7%BD%91%E7%AB%99%E5%AE%9E%E5%90%8D%E4%B8%8E%E5%A4%87%E6%A1%88%E5%85%B3%E7%B3%BB/</link>
+        <pubDate>Fri, 14 Mar 2025 23:21:06 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/%E7%BD%91%E7%AB%99%E5%AE%9E%E5%90%8D%E4%B8%8E%E5%A4%87%E6%A1%88%E5%85%B3%E7%B3%BB/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/06.webp" alt="Featured image of post 网站实名与备案关系" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;本文用来梳理网站中实名与备案的关系&lt;/p&gt;
+&lt;h2 id=&#34;域名购买与实名制的关系&#34;&gt;域名购买与实名制的关系
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;实名制是强制要求&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;根据中国《互联网域名管理办法》，‌国内域名（如 &lt;code&gt;.cn&lt;/code&gt;、&lt;code&gt;.com.cn&lt;/code&gt; 等）必须在购买后 5 天内完成实名认证‌，否则域名将被暂停解析（无法访问）‌。&lt;/li&gt;
+&lt;li&gt;实名认证需提交‌企业营业执照‌或个人身份证信息‌，且主体需与后续备案主体一致‌。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;实名与备案的关联性。实名认证是备案的前提条件，但‌备案并非购买域名的强制要求‌。若域名仅注册未实际使用（如未指向国内服务器搭建网站），则无需备案‌。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;备案的触发条件&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当域名解析至中国大陆境内的服务器‌并用于网站、小程序等公开服务时，‌必须完成 ICP 备案‌。未备案的域名会被拦截访问‌。&lt;/li&gt;
+&lt;li&gt;备案需通过云服务商（如腾讯云、阿里云）提交域名、服务器 IP、主体信息等材料，审核周期约 20 个工作日‌。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;无需备案的场景&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;若域名解析至 ‌境外服务器‌（如中国香港、新加坡等），或仅作为保留域名（未实际使用），则无需备案‌。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结
+&lt;/h2&gt;&lt;p&gt;购买国内域名‌必须实名认证‌，但‌备案仅在实际使用境内服务器时触发‌。若仅持有域名或指向海外服务器，无需备案‌。&lt;/p&gt;
+&lt;p&gt;所以，国内要想使用 cdn 服务必须备案，若要购买域名，强制实名，无需备案。因为 cdn 服务使用了国内服务器，必须备案。&lt;/p&gt;
+&lt;p&gt;备案是国内特色，服务器在国外，并没有这么多繁琐的操作。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>dns 服务器以及域名关系</title>
+        <link>https://hugo-ap0.pages.dev/p/dns-%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BB%A5%E5%8F%8A%E5%9F%9F%E5%90%8D%E5%85%B3%E7%B3%BB/</link>
+        <pubDate>Fri, 14 Mar 2025 23:12:38 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/dns-%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BB%A5%E5%8F%8A%E5%9F%9F%E5%90%8D%E5%85%B3%E7%B3%BB/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/38.webp" alt="Featured image of post dns 服务器以及域名关系" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;dns 服务器和域名关系，用来确定是否需要搭建 dns 服务器。&lt;/p&gt;
+&lt;h2 id=&#34;dns-服务器&#34;&gt;dns 服务器
+&lt;/h2&gt;&lt;p&gt;自建完 dns  服务器需在域名注册商处将域名 NS（Name Server）记录指向您自建的 DNS 服务器 IP 地址，完成域名托管权转移‌。&lt;/p&gt;
+&lt;h2 id=&#34;域名&#34;&gt;域名
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;公网访问的强制要求&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;若需通过‌标准域名（如example.com）‌在公网被广泛访问，则必须购买合法域名并完成备案‌。公共DNS系统仅解析已注册且备案的域名，否则外部用户无法通过域名访问您的服务‌。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;私有网络或小范围访问的替代方案&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;自定义域名（无需购买）‌：通过自建DNS服务器定义私有域名（如myhome.local），可在局域网或指定设备间直接访问‌。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;完全自定义域名，并且公网解析&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在自建 DNS 服务器中配置权威解析（如&lt;code&gt;my.site&lt;/code&gt;），并将域名NS记录指向您的服务器 IP&lt;/p&gt;
+&lt;p&gt;需购买域名并拥有其管理权，否则公共DNS系统不会认可您的解析记录‌&lt;/p&gt;
+&lt;h2 id=&#34;自定义顶级域名&#34;&gt;自定义顶级域名
+&lt;/h2&gt;&lt;p&gt;在公网上解析完全自定义的顶级域名（如 &lt;code&gt;baidu.carlos2016&lt;/code&gt;）存在技术限制，因为公共互联网的DNS系统仅识别 ICANN 授权的标准顶级域名（如 .com、.net 等）。&lt;/p&gt;
+&lt;p&gt;仅需在内部网络使用 &lt;code&gt;baidu.carlos2016&lt;/code&gt; 这类域名，可自建DNS服务器。使用Bind或CoreDNS等工具搭建私有DNS服务器，并配置权威解析‌。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;公网限制&lt;/strong&gt;：自定义顶级域名（如 .carlos2016）无法在公网被全球DNS系统识别，仅适用于私有网络或特定DNS覆盖范围‌。&lt;/p&gt;
+&lt;p&gt;若需公网访问，必须注册ICANN认可的顶级域名（如 .com、.app）或其子域名‌。&lt;/p&gt;
+&lt;h2 id=&#34;域名层级管理&#34;&gt;域名层级管理
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;根域名（Root Domain）&lt;/strong&gt;：DNS层级的最顶端，用空标签 &lt;code&gt;.&lt;/code&gt; 表示（通常省略）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例&lt;/strong&gt;：&lt;code&gt;www.example.com.&lt;/code&gt;（末尾的 &lt;code&gt;.&lt;/code&gt; 表示根域名，实际使用中常省略为 &lt;code&gt;www.example.com&lt;/code&gt;）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;顶级域名&lt;/strong&gt;：紧接在根域名之下的层级，分为两类&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;‌通用顶级域名（gTLD）‌：如 .com、.net、.org&lt;/li&gt;
+&lt;li&gt;‌国家/地区顶级域名（ccTLD）‌：如 .cn（中国）、.us（美国）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;‌作用‌：标识域名的类别或归属地。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例‌&lt;/strong&gt;：example.com 中的 .com 是顶级域名。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;次级域名&lt;/strong&gt;：位于顶级域名下方，由用户注册的独特名称。标识具体组织、品牌或服务。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例&lt;/strong&gt;：&lt;code&gt;example.com&lt;/code&gt; 中的 &lt;code&gt;example&lt;/code&gt; 是次级域名。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;子域名&lt;/strong&gt;：在次级域名下进一步划分的层级，可多层嵌套。用于分类服务（如 &lt;code&gt;blog.example.com&lt;/code&gt;）、环境（如 &lt;code&gt;dev.example.com&lt;/code&gt;）或地理位置。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例&lt;/strong&gt;：&lt;code&gt;mail.server.example.com&lt;/code&gt; 中的 server 是子域名，mail 是更下一层的子域名。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;主机名&lt;/strong&gt;：域名最左侧的部分，标识网络中的具体设备或服务。指向服务器、虚拟机或服务的IP地址。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;示例&lt;/strong&gt;‌：&lt;code&gt;www.example.com&lt;/code&gt; 中的 &lt;code&gt;www&lt;/code&gt; 是主机名，表示Web服务器。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>腾讯 dnspod dns 负载均衡</title>
+        <link>https://hugo-ap0.pages.dev/p/%E8%85%BE%E8%AE%AF-dnspod-dns-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</link>
+        <pubDate>Fri, 14 Mar 2025 21:12:12 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/%E8%85%BE%E8%AE%AF-dnspod-dns-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/12.webp" alt="Featured image of post 腾讯 dnspod dns 负载均衡" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;dnspod 智能 dns，别称 dns 负载均衡，呵呵，概念很好，网站访问速度 0 提升。&lt;/p&gt;
+&lt;p&gt;如果你有境内外分线解析的需要可以配置。&lt;code&gt;www.example.com&lt;/code&gt; 将根据用户 IP 选择合适的线路。由于 &lt;code&gt;www.example.com&lt;/code&gt; 配置的是 &lt;code&gt;CNAME&lt;/code&gt; 的记录类型，访客对于分线过程无感知，浏览器地址栏不变。&lt;/p&gt;
+&lt;p&gt;cloudflare 也提供同样的服务，一般 dns 服务商都会提供这个服务，但是 cloudflare 收费，dnspod 免费，不过对网站访问速度 0 提升。而且 dnspod 只能解析 2 条域名。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314202832.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250314202832.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314202832.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314202832.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;需要额外购买域名，免费域名不支持托管 dnspod，比如：&lt;a class=&#34;link&#34; href=&#34;https://www.cloudns.net/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;cloudns&lt;/a&gt;
+，一直认证失败，呵呵呵&lt;/p&gt;
+&lt;p&gt;通过以下域名比价工具购买低价域名，该工具可能随时跑路，呵呵呵呵，手慢无&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.nazhumi.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;哪煮米 - 全网域名,一站比价&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;我选择 Spaceship 域名服务商，好像 7 块钱 1 年，用来测试足够了&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.spaceship.com/zh/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;启动您的网站、想法和未来 - Spaceship&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314204957.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250314204957.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314204957.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314204957.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;h2 id=&#34;添加域名&#34;&gt;添加域名
+&lt;/h2&gt;&lt;p&gt;将域名托管在 dnspod&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314205153.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250314205153.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314205153.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314205153.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;dnspod 添加域名就能获取 dns 服务器地址&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314205844.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250314205844.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314205844.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314205844.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;复制以下 dns 服务器地址，粘贴到域名服务商后台的名称服务器即可。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314205925.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250314205925.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314205925.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314205925.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;设置 dns 服务器，别称 ns 记录、name server 或者名称服务器？？？总之到你的域名服务商后台修改 dns 服务器&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314205512.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250314205512.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314205512.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314205512.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;把这个改成 dnspod 提供的 dns 服务器即可，然后你的任务就是“只需等待”&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314205536.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250314205536.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314205536.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314205536.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;h2 id=&#34;智能-dns&#34;&gt;智能 dns
+&lt;/h2&gt;&lt;p&gt;配置智能 dns，别称 dns 负载均衡？？？&lt;/p&gt;
+&lt;p&gt;添加 2 条相同的 cname 记录就会实现 dns 负载均衡，非常的傻瓜哦。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314210527.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250314210527.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314210527.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314210527.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;还可以设置解析线路，这也太棒了吧。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314210629.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250314210629.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314210629.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314210629.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;h2 id=&#34;https-访问失败&#34;&gt;https 访问失败
+&lt;/h2&gt;&lt;p&gt;找到“SSL 证书”&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314210914.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250314210914.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314210914.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314210914.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;申请免费证书&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314211002.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250314211002.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314211002.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314211002.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;默认下一步即可，认证成功就能访问 https 了&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314211045.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250314211045.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314211045.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314211045.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;自动添加 txt 记录，自动认证，非常的傻瓜哦&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314211143.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250314211143.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314211143.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250314211143.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>cloudns 托管到 cloudflare</title>
         <link>https://hugo-ap0.pages.dev/p/cloudns-%E6%89%98%E7%AE%A1%E5%88%B0-cloudflare/</link>
         <pubDate>Thu, 13 Mar 2025 02:28:40 +0800</pubDate>
@@ -1350,6 +1862,42 @@
 &lt;li&gt;若用户群体集中在中国大陆 → ‌国内 CDN 更优‌‌。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;混合方案‌：可通过分线路解析（国内用国产 CDN，海外用 Cloudflare）实现全局加速‌。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Cloudflare for SaaS 定义</title>
+        <link>https://hugo-ap0.pages.dev/p/cloudflare-for-saas-%E5%AE%9A%E4%B9%89/</link>
+        <pubDate>Tue, 11 Mar 2025 23:22:37 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/cloudflare-for-saas-%E5%AE%9A%E4%B9%89/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/37.webp" alt="Featured image of post Cloudflare for SaaS 定义" /&gt;&lt;h2 id=&#34;saas&#34;&gt;‌SaaS
+&lt;/h2&gt;&lt;p&gt;‌SaaS（Software as a Service，软件即服务）‌ 是一种基于云端的软件服务模式，用户通过互联网访问服务商提供的应用程序，无需自行购买、安装或维护本地软硬件‌。&lt;/p&gt;
+&lt;p&gt;类比理解‌：类似“共享单车”，用户只需扫码使用，无需承担车辆维护责任‌。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;核心特征&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;服务商托管软件并负责维护、更新与安全‌；&lt;/li&gt;
+&lt;li&gt;用户通过订阅按需付费，降低初期投入成本‌。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;cloudflare-for-saas&#34;&gt;Cloudflare for SaaS
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;定义&lt;/strong&gt;：Cloudflare for SaaS‌ 是 Cloudflare 面向 SaaS 开发者提供的 ‌基础设施服务套件‌，专注于解决 SaaS 应用在域名管理、安全防护和性能优化方面的需求‌。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;核心功能&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自定义域名托管‌：允许客户绑定自己的域名（如 app.client-company.com）到你的 SaaS 平台，无需自行配置 DNS 或 SSL 证书‌；&lt;/li&gt;
+&lt;li&gt;自动化 SSL 证书‌：为每个客户域名自动签发和管理 SSL/TLS 证书（支持泛域名），保障 HTTPS 加密访问‌；&lt;/li&gt;
+&lt;li&gt;全球 CDN 加速‌：通过 Cloudflare 的全球网络分发静态和动态内容，降低延迟‌；&lt;/li&gt;
+&lt;li&gt;安全防护‌：集成 DDoS 防护、Web 应用防火墙（WAF）和 Bot 管理，抵御网络攻击‌。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;概念混淆&#34;&gt;概念混淆
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;明确上下文&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;讨论软件服务模式‌时，SaaS 指代“软件即服务”；&lt;/li&gt;
+&lt;li&gt;讨论开发工具‌时，Cloudflare for SaaS 是专为 SaaS 开发者提供的技术方案。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Cloudflare for SaaS 与通用 SaaS 概念不冲突&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Cloudflare for SaaS‌ 是工具，帮助开发者构建 SaaS 应用；&lt;/li&gt;
+&lt;li&gt;通用 SaaS‌ 是商业模式，描述软件交付方式。&lt;/li&gt;
+&lt;/ul&gt;
 </description>
         </item>
         

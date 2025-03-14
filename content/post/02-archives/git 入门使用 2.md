@@ -5,10 +5,7 @@ tags:
   - git
   - github
   - 编程
-categories:
-  - git
-  - github
-  - 编程
+categories: []
 image: ./bg/13.webp
 author: carlos
 ---

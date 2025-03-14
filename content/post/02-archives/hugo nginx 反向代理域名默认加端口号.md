@@ -5,10 +5,7 @@ tags:
   - Hugo
   - 笔记
   - nginx
-categories:
-  - hugo
-  - 笔记
-  - nginx
+categories: []
 image: ./bg/37.webp
 author: carlos
 ---

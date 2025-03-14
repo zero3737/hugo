@@ -6,11 +6,7 @@ tags:
   - cloudflare
   - github
   - git
-categories:
-  - hugo
-  - cloudflare
-  - github
-  - git
+categories: []
 image: ./bg/52.webp
 author: carlos
 ---

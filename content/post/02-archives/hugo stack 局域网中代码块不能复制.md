@@ -6,11 +6,7 @@ tags:
   - 笔记
   - nginx
   - https
-categories:
-  - hugo
-  - 笔记
-  - nginx
-  - https
+categories: []
 image: ./bg/13.webp
 author: carlos
 ---

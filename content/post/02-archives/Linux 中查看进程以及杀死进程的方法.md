@@ -5,10 +5,7 @@ tags:
   - linux
   - ubuntu
   - 运维
-categories:
-  - linux
-  - ubuntu
-  - 运维
+categories: []
 image: ./bg/10.webp
 author: carlos
 ---

@@ -4,9 +4,7 @@ title: PowerToys 批量重命名
 tags:
   - windows
   - 办公
-categories:
-  - windows
-  - 办公
+categories: []
 image: ./bg/02.webp
 author: carlos
 ---

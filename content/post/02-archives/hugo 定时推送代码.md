@@ -10,15 +10,7 @@ tags:
   - 宝塔面板
   - Hugo
   - 笔记
-categories:
-  - git
-  - github
-  - shell
-  - ubuntu
-  - linux
-  - 宝塔面板
-  - hugo
-  - 笔记
+categories: []
 image: ./bg/27.webp
 author: carlos
 ---

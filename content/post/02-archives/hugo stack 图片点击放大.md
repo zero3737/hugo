@@ -4,9 +4,7 @@ title: hugo stack 图片点击放大
 tags:
   - Hugo
   - 笔记
-categories:
-  - hugo
-  - 笔记
+categories: []
 image: ./bg/40.webp
 author: carlos
 ---
