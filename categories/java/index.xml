@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Java on carlos</title>
+        <link>https://www.carlos.lh/categories/java/</link>
+        <description>Recent content in Java on carlos</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Example Person</copyright>
+        <lastBuildDate>Thu, 13 Mar 2025 16:55:16 +0800</lastBuildDate><atom:link href="https://www.carlos.lh/categories/java/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>正则表达式</title>
+        <link>https://www.carlos.lh/p/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
+        <pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.carlos.lh/p/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
+        <description>&lt;img src="https://www.carlos.lh/bg/08.webp" alt="Featured image of post 正则表达式" /&gt;&lt;h2 id=&#34;限定符&#34;&gt;限定符“？”
+&lt;/h2&gt;&lt;p&gt;当 “?” 紧跟在一个字符或子表达式之后时，它表示该字符或子表达式在匹配中可以出现0次或1次。换句话说，它是可选的。&lt;/p&gt;
+&lt;p&gt;例如，colou?r 可以匹配 “color” 或 “colour”。&lt;/p&gt;
+&lt;h2 id=&#34;限定符-1&#34;&gt;限定符“*”
+&lt;/h2&gt;&lt;p&gt;在正则表达式中，“* ”具有特殊的匹配规则，它表示前面的字符或子表达式可以出现任意次数，包括零次。例如，正则表达式a*可以匹配空字符串、一个“a”、两个连续的“a”、三个连续的“a”等等，即匹配零个或多个连续的字母“a”‌。&lt;/p&gt;
+&lt;h2 id=&#34;限定符-2&#34;&gt;限定符“+”
+&lt;/h2&gt;&lt;p&gt;在正则表达式中，“+”是一个量词，用于指定前面的字符或子表达式必须至少出现一次，并且可以重复出现多次。例如，正则表达式a+可以匹配“a”、“aa”、“aaa”等，但不能匹配空字符串。这是因为“+”要求前面的字符或子表达式至少出现一次。&lt;/p&gt;
+&lt;h2 id=&#34;限定符-3&#34;&gt;限定符“{}”
+&lt;/h2&gt;&lt;p&gt;在正则表达式中，“{}”内部可以包含一个数字或两个由逗号分隔的数字，具体含义如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;{n}‌：表示前面的字符或子表达式恰好出现n次。例如，a{3}将匹配三个连续的“a”字符‌。&lt;/li&gt;
+&lt;li&gt;{n,}‌：表示前面的字符或子表达式至少出现n次，可以更多。例如，a{1,}表示至少有一个“a”，可以是一个或多个连续的“a”字符‌。&lt;/li&gt;
+&lt;li&gt;{n,m}‌：表示前面的字符或子表达式至少出现n次，但不超过m次。例如，a{1,3}将匹配一个到三个连续的“a”字符‌。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;限定符-4&#34;&gt;限定符“()”
+&lt;/h2&gt;&lt;p&gt;在正则表达式中，括号“（）”可以将一些字符组合在一起，形成一个分组。这个分组通常用于确定优先级、重复次数或应用特殊的匹配规则。例如，(ab)可以将字符a和b组合在一起作为一个整体进行匹配，而(abc|bcd|cde)则表示匹配abc、bcd或cde这三者之一‌。&lt;/p&gt;
+&lt;h2 id=&#34;运算符&#34;&gt;运算符“|”
+&lt;/h2&gt;&lt;p&gt;在正则表达式中，“|”被称为选择符，它允许在两个或多个可能的匹配中进行选择。例如，正则表达式abc|def将匹配字符串“abc”或“def”。需要注意的是，选择符“|”会优先于其他运算符进行匹配，除非被括号等分组符号所包围。&lt;/p&gt;
+&lt;h2 id=&#34;字符类&#34;&gt;字符类“[]”
+&lt;/h2&gt;&lt;p&gt;‌正则表达式中的“[]”用于定义一个字符集合，匹配方括号内的任意一个字符‌。&lt;/p&gt;
+&lt;p&gt;在正则表达式中，&lt;code&gt;[]&lt;/code&gt;被称为字符类，它允许匹配方括号内指定的任意一个字符。例如，&lt;code&gt;[abc]&lt;/code&gt;表示匹配字符a、b或c中的任意一个；&lt;code&gt;[a-z]&lt;/code&gt;表示匹配任意一个小写字母；&lt;code&gt;[a-zA-Z0-9_]&lt;/code&gt;表示匹配任意一个字母、数字或下划线。此外，字符类还支持使用“^”符号进行取反操作，例如&lt;code&gt;[^abc]&lt;/code&gt;表示匹配不是a、b或c的任意一个字符‌。&lt;/p&gt;
+&lt;h2 id=&#34;元字符d&#34;&gt;元字符“\d”
+&lt;/h2&gt;&lt;p&gt;‌正则表达式中的\d代表匹配一个数字字符‌。等价于&lt;code&gt;[0-9]&lt;/code&gt;，即它可以匹配任何一个在0到9之间的单个数字‌。&lt;/p&gt;
+&lt;h2 id=&#34;元字符d-1&#34;&gt;元字符“\D”
+&lt;/h2&gt;&lt;p&gt;‌正则表达式中的\D代表匹配任何非数字字符‌。这里的“非数字字符”是指除了0到9的数字之外的所有字符，包括字母、空格、标点符号、特殊字符等。&lt;/p&gt;
+&lt;p&gt;具体来说，\D是\d的反义，\d匹配的是&lt;code&gt;[0-9]&lt;/code&gt;，即任何一个数字字符，而\D则匹配的是&lt;code&gt;[0-9]&lt;/code&gt;，即除了0到9之外的任何一个字符。&lt;/p&gt;
+&lt;h2 id=&#34;元字符w&#34;&gt;元字符“\w”
+&lt;/h2&gt;&lt;p&gt;正则表达式中的\w代表匹配任何字母（包括大写和小写字母）、数字字符以及下划线_‌。&lt;/p&gt;
+&lt;p&gt;具体来说，\w相当于&lt;code&gt;[a-zA-Z0-9_]&lt;/code&gt;，即它可以匹配以下字符：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;所有小写字母（a-z）&lt;/li&gt;
+&lt;li&gt;所有大写字母（A-Z）&lt;/li&gt;
+&lt;li&gt;所有数字（0-9）&lt;/li&gt;
+&lt;li&gt;下划线（_）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;元字符w-1&#34;&gt;元字符“\W”
+&lt;/h2&gt;&lt;p&gt;‌正则表达式中的\W代表匹配任何非单词字符‌。这里的“非单词字符”是指除了字母（包括大写和小写）、数字以及下划线之外的所有字符。&lt;/p&gt;
+&lt;p&gt;具体来说，\W是\w的反义，\w匹配的是&lt;code&gt;[a-zA-Z0-9_]&lt;/code&gt;，即字母、数字和下划线，而\W则匹配的是&lt;code&gt;[a-zA-Z0-9_]&lt;/code&gt;，即除了字母、数字和下划线之外的所有字符，包括空格、标点符号、特殊字符等。&lt;/p&gt;
+&lt;h2 id=&#34;元字符s&#34;&gt;元字符“\s”
+&lt;/h2&gt;&lt;p&gt;正则表达式中的\s表示匹配任何空白字符‌。这些空白字符包括空格、制表符（tab）、换行符等‌。&lt;/p&gt;
+&lt;h2 id=&#34;元字符b&#34;&gt;元字符“\b”
+&lt;/h2&gt;&lt;p&gt;在正则表达式中，\b 是一个表示单词边界的元字符。它用来匹配一个位置，这个位置前后分别是一个单词字符和一个非单词字符（或字符串的开始或结束）。&lt;/p&gt;
+&lt;p&gt;以下是一些例子来说明它的使用：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;正则表达式 \bword\b 会匹配独立的单词“word”。比如，在字符串“word boundary”中会匹配“word”，但在字符串“wordplay”中不会匹配。&lt;/li&gt;
+&lt;li&gt;正则表达式 \b123\b 会匹配独立的数字“123”。比如，在字符串“123 is a number”中会匹配“123”，但在字符串“1234”中不会匹配。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;元字符&#34;&gt;元字符“.”
+&lt;/h2&gt;&lt;p&gt;在正则表达式中，. 是一个非常重要的元字符，‌它代表匹配除换行符 \n 之外的任何单个字符‌。这意味着，. 可以匹配字母、数字、标点符号、空格等几乎所有字符（但不包括换行符，除非在特定的模式或标志下，如 JavaScript 中的 s 标志可以使其匹配换行符）。&lt;/p&gt;
+&lt;p&gt;‌匹配任意字符‌：正则表达式 a.b 可以匹配 acb、a1b、a b（注意这里的空格也是字符）等，但不能匹配 ab（因为中间没有字符）或 a\nb。&lt;/p&gt;
+&lt;h2 id=&#34;元字符-1&#34;&gt;元字符“^”
+&lt;/h2&gt;&lt;p&gt;在正则表达式中，符号“^”有两种主要用途：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;表示行的开始：当它出现在模式的开头时，表示字符串必须以该模式开头。例如，模式^abc将匹配以“abc”开头的任何字符串。&lt;/li&gt;
+&lt;li&gt;取反：当它在方括号内的字符类的开头时，表示字符类中的字符集的补集。例如，模式\[^abc\]将匹配任何不包含字符“a”、“b”或“c”的单个字符。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;元字符-2&#34;&gt;元字符“$”
+&lt;/h2&gt;&lt;p&gt;在正则表达式中，符号“$”主要用于表示行的结束。当它出现在模式的末尾时，表示字符串必须以该模式结束。&lt;/p&gt;
+&lt;p&gt;例如：正则表达式 abc$ 可以匹配以“abc”结尾的任何字符串，例如“123abc”，但不能匹配“abc123”。&lt;/p&gt;
+&lt;h2 id=&#34;贪婪和懒惰匹配&#34;&gt;“贪婪”和“懒惰”匹配
+&lt;/h2&gt;&lt;p&gt;正则表达式中的“贪婪”和“懒惰”是描述量词行为的术语。量词用来指定要匹配的字符数，而贪婪和懒惰决定了这些量词如何进行匹配。&lt;/p&gt;
+&lt;p&gt;贪婪量词：默认情况下，正则表达式中的量词是贪婪的，即它们会尽可能多地匹配字符。&lt;/p&gt;
+&lt;p&gt;例如，模式 .* 是一个贪婪量词，会匹配尽可能多的字符。例如，对于字符串“abc123”，模式 a.*3 会匹配“abc123”。&lt;/p&gt;
+&lt;p&gt;懒惰量词：懒惰量词通过在贪婪量词后面加上一个问号?来实现，它们会匹配尽可能少的字符。&lt;/p&gt;
+&lt;p&gt;例如，模式 .&lt;em&gt;? 是一个懒惰量词，会匹配尽可能少的字符。例如，对于字符串“abc123”，模式 a.&lt;/em&gt;?3 会匹配“abc3”。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

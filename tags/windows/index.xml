@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Windows on carlos</title><link>https://www.carlos.ip-ddns.com/tags/windows/</link><description>Recent content in Windows on carlos</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Example Person</copyright><lastBuildDate>Sat, 15 Mar 2025 15:20:24 +0000</lastBuildDate><atom:link href="https://www.carlos.ip-ddns.com/tags/windows/index.xml" rel="self" type="application/rss+xml"/><item><title>搜狗输入法永久关闭弹窗</title><link>https://www.carlos.ip-ddns.com/p/%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95%E6%B0%B8%E4%B9%85%E5%85%B3%E9%97%AD%E5%BC%B9%E7%AA%97/</link><pubDate>Sat, 15 Mar 2025 04:09:42 +0800</pubDate><guid>https://www.carlos.ip-ddns.com/p/%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95%E6%B0%B8%E4%B9%85%E5%85%B3%E9%97%AD%E5%BC%B9%E7%AA%97/</guid><description>&lt;img src="https://www.carlos.ip-ddns.com/bg/42.webp" alt="Featured image of post 搜狗输入法永久关闭弹窗" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>如何关闭搜狗输入法弹窗&lt;/p>
+&lt;h2 id="实操">实操
+&lt;/h2>&lt;p>打开设置，呵呵，哪里打开都可以&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250315040831.webp"
+data-webp="/00-assets/Pasted%20image%2020250315040831.webp"
+data-original="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250315040831.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250315040831.webp" type="image/webp">
+&lt;img src="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250315040831.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>把所有推荐都手动关闭，呵呵呵&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250315040917.webp"
+data-webp="/00-assets/Pasted%20image%2020250315040917.webp"
+data-original="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250315040917.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250315040917.webp" type="image/webp">
+&lt;img src="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250315040917.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item><item><title>outlook 聚合邮箱，实现邮箱管理</title><link>https://www.carlos.ip-ddns.com/p/outlook-%E8%81%9A%E5%90%88%E9%82%AE%E7%AE%B1%E5%AE%9E%E7%8E%B0%E9%82%AE%E7%AE%B1%E7%AE%A1%E7%90%86/</link><pubDate>Sun, 09 Mar 2025 23:32:19 +0800</pubDate><guid>https://www.carlos.ip-ddns.com/p/outlook-%E8%81%9A%E5%90%88%E9%82%AE%E7%AE%B1%E5%AE%9E%E7%8E%B0%E9%82%AE%E7%AE%B1%E7%AE%A1%E7%90%86/</guid><description>&lt;img src="https://www.carlos.ip-ddns.com/bg/19.webp" alt="Featured image of post outlook 聚合邮箱，实现邮箱管理" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>outlook 本土化非常好，可以同步 qq、163、gamil 以及微软邮箱&lt;/p>
+&lt;h2 id="qq-邮箱">qq 邮箱
+&lt;/h2>&lt;p>添加账户-输入邮箱账号&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309231028.webp"
+data-webp="/00-assets/Pasted%20image%2020250309231028.webp"
+data-original="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309231028.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309231028.webp" type="image/webp">
+&lt;img src="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309231028.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>输入邮箱服务器密码，不是 qq 账号密码&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309231116.webp"
+data-webp="/00-assets/Pasted%20image%2020250309231116.webp"
+data-original="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309231116.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309231116.webp" type="image/webp">
+&lt;img src="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309231116.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>获取 qq 邮箱服务器密码，设置-账号，划到底部&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309231242.webp"
+data-webp="/00-assets/Pasted%20image%2020250309231242.webp"
+data-original="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309231242.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309231242.webp" type="image/webp">
+&lt;img src="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309231242.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>找到管理服务&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309231416.webp"
+data-webp="/00-assets/Pasted%20image%2020250309231416.webp"
+data-original="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309231416.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309231416.webp" type="image/webp">
+&lt;img src="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309231416.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>生成授权码，即可获得 qq 邮箱服务器密码&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309231555.webp"
+data-webp="/00-assets/Pasted%20image%2020250309231555.webp"
+data-original="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309231555.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309231555.webp" type="image/webp">
+&lt;img src="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309231555.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>填入 Outlook 即可登录成功&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309231701.webp"
+data-webp="/00-assets/Pasted%20image%2020250309231701.webp"
+data-original="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309231701.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309231701.webp" type="image/webp">
+&lt;img src="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309231701.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="163-邮箱">163 邮箱
+&lt;/h2>&lt;p>和 qq 邮箱同理，先获取邮箱服务器密码，设置-&amp;ldquo;POP3/SMTP/IMAP&amp;rdquo;-开启，即可获取授权码&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309232432.webp"
+data-webp="/00-assets/Pasted%20image%2020250309232432.webp"
+data-original="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309232432.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309232432.webp" type="image/webp">
+&lt;img src="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309232432.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>然后填入 163 邮箱账号，以及授权码，即可同步邮箱&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309232720.webp"
+data-webp="/00-assets/Pasted%20image%2020250309232720.webp"
+data-original="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309232720.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309232720.webp" type="image/webp">
+&lt;img src="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309232720.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="微软和-gmail-邮箱">微软和 gmail 邮箱
+&lt;/h2>&lt;p>微软邮箱和 gmail 支持直接输入账户密码直接同步，不需要获取邮箱服务器密码&lt;/p>
+&lt;p>微软以及谷歌官网登陆，然后默认下一步即可同步邮箱&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309233129.webp"
+data-webp="/00-assets/Pasted%20image%2020250309233129.webp"
+data-original="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309233129.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309233129.webp" type="image/webp">
+&lt;img src="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250309233129.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item><item><title>windows 开机执行bat脚本，含隐藏命令窗口</title><link>https://www.carlos.ip-ddns.com/p/windows-%E5%BC%80%E6%9C%BA%E6%89%A7%E8%A1%8Cbat%E8%84%9A%E6%9C%AC%E5%90%AB%E9%9A%90%E8%97%8F%E5%91%BD%E4%BB%A4%E7%AA%97%E5%8F%A3/</link><pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.carlos.ip-ddns.com/p/windows-%E5%BC%80%E6%9C%BA%E6%89%A7%E8%A1%8Cbat%E8%84%9A%E6%9C%AC%E5%90%AB%E9%9A%90%E8%97%8F%E5%91%BD%E4%BB%A4%E7%AA%97%E5%8F%A3/</guid><description>&lt;img src="https://www.carlos.ip-ddns.com/bg/30.webp" alt="Featured image of post windows 开机执行bat脚本，含隐藏命令窗口" />&lt;h2 id="启动文件夹">启动文件夹
+&lt;/h2>&lt;p>按 Win + R 键打开“运行”对话框。&lt;/p>
+&lt;p>输入 shell:startup 并按 Enter 键，这将打开“启动”文件夹。这个文件夹中的所有程序都会在系统启动时自动运行。&lt;/p>
+&lt;p>将脚本放入“启动”文件夹‌。&lt;/p>
+&lt;h2 id="隐藏命令窗口">隐藏命令窗口
+&lt;/h2>&lt;p>创建文件，内容如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Set WshShell = CreateObject(&amp;#34;WScript.Shell&amp;#34;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">WshShell.Run chr(34) &amp;amp;&amp;#34;C:\path\to\your\batchfile.bat&amp;#34;&amp;amp; chr(34), 0
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>替换&amp;quot;C:\path\to\your\batchfile.bat&amp;quot;为你的批处理文件的实际路径。&lt;/p>
+&lt;p>保存文件，扩展名为.vbs，例如runBatchSilent.vbs。&lt;/p>
+&lt;p>将 vbs 文件放到“启动”文件夹，bat 文件放到自己喜欢的目录即可，vbs 中的路径一定要指向 bat 文件，原理是通过 vbs 隐藏命令窗口。&lt;/p></description></item><item><title>关闭 edge 自动填充表单功能</title><link>https://www.carlos.ip-ddns.com/p/%E5%85%B3%E9%97%AD-edge-%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E8%A1%A8%E5%8D%95%E5%8A%9F%E8%83%BD/</link><pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.carlos.ip-ddns.com/p/%E5%85%B3%E9%97%AD-edge-%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E8%A1%A8%E5%8D%95%E5%8A%9F%E8%83%BD/</guid><description>&lt;img src="https://www.carlos.ip-ddns.com/bg/39.webp" alt="Featured image of post 关闭 edge 自动填充表单功能" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>如何关闭 edge 自动填充表单功能&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250308200920.webp"
+data-webp="/00-assets/Pasted%20image%2020250308200920.webp"
+data-original="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250308200920.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250308200920.webp" type="image/webp">
+&lt;img src="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250308200920.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>在输入框中，输入信息，会自动弹出经常输入的信息，而且删不掉，没有任何实际作用。&lt;/p>
+&lt;h2 id="实操">实操
+&lt;/h2>&lt;p>地址栏输入 &lt;code>edge://wallet/settings&lt;/code>&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250308201144.webp"
+data-webp="/00-assets/Pasted%20image%2020250308201144.webp"
+data-original="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250308201144.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250308201144.webp" type="image/webp">
+&lt;img src="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250308201144.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>关闭“保存并填充基本信息”即可&lt;/p></description></item><item><title>PowerToys 批量重命名</title><link>https://www.carlos.ip-ddns.com/p/powertoys-%E6%89%B9%E9%87%8F%E9%87%8D%E5%91%BD%E5%90%8D/</link><pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.carlos.ip-ddns.com/p/powertoys-%E6%89%B9%E9%87%8F%E9%87%8D%E5%91%BD%E5%90%8D/</guid><description>&lt;img src="https://www.carlos.ip-ddns.com/bg/02.webp" alt="Featured image of post PowerToys 批量重命名" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>本文主题是如何批量重命名文件，从 00 开始递增，强制保留 2 位数&lt;/p>
+&lt;h2 id="使用-powerrename-批量重命名">使用 PowerRename 批量重命名
+&lt;/h2>&lt;p>右键点击选定的文件，选择“PowerRename”选项，打开 PowerRename 窗口。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250307030309.webp"
+data-webp="/00-assets/Pasted%20image%2020250307030309.webp"
+data-original="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250307030309.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250307030309.webp" type="image/webp">
+&lt;img src="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250307030309.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>启用正则表达式，输入 &lt;code>.*&lt;/code> 匹配任意文件名&lt;/p>
+&lt;p>在“替换为”字段中输入新的命名格式。使用 &lt;code>${padding=2;increment=1;start=0}&lt;/code> 来实现从 00 开始的两位数递增编号。&lt;/p>
+&lt;p>最后点击应用即可。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250307030156.webp"
+data-webp="/00-assets/Pasted%20image%2020250307030156.webp"
+data-original="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250307030156.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250307030156.webp" type="image/webp">
+&lt;img src="https://www.carlos.ip-ddns.com/00-assets/Pasted%20image%2020250307030156.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item><item><title>符号链接 mklink</title><link>https://www.carlos.ip-ddns.com/p/%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5-mklink/</link><pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.carlos.ip-ddns.com/p/%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5-mklink/</guid><description>&lt;img src="https://www.carlos.ip-ddns.com/bg/13.webp" alt="Featured image of post 符号链接 mklink" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>符号链接（Symbolic Link）是一种文件系统中的概念，它允许你创建一个指向另一个文件或目录的快捷方式。符号链接在 Windows、Linux 和 Mac 系统中都有支持，但它们的行为和兼容性可能会有所不同。下面我将详细解释符号链接的作用以及为什么在某些情况下可能无法兼容不同路径。&lt;/p>
+&lt;h2 id="windows-使用">Windows 使用
+&lt;/h2>&lt;p>在 Windows 系统中，可以使用 mklink 命令来创建符号链接。以下是基本语法：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">mklink /D &amp;#34;目标目录&amp;#34; &amp;#34;源目录&amp;#34;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>例如，假设你的 Joplin 导出目录是 D:\JoplinExport，而你的 Obsidian 目录是 C:\ObsidianVault，你可以使用以下命令在 Obsidian 目录中创建一个指向 Joplin 导出目录的符号链接：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">mklink /D &amp;#34;C:\ObsidianVault\JoplinExport&amp;#34; &amp;#34;D:\JoplinExport&amp;#34;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="linux-使用">Linux 使用
+&lt;/h2>&lt;p>在 Linux 或 Mac 系统中，可以使用 ln -s 命令来创建符号链接。以下是基本语法：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">ln -s 源目录 目标目录
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>例如，假设你的 Joplin 导出目录是 /home/user/JoplinExport，而你的 Obsidian 目录是 /home/user/ObsidianVault，你可以使用以下命令在 Obsidian 目录中创建一个指向 Joplin 导出目录的符号链接：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">ln -s /home/user/JoplinExport /home/user/ObsidianVault/JoplinExport
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="注意事项">注意事项
+&lt;/h2>&lt;ul>
+&lt;li>符号链接只是创建了一个指向实际文件的快捷方式，如果路径不正确，图片仍然无法显示。&lt;/li>
+&lt;li>符号链接的路径是相对于创建时的路径。如果目标文件或目录的路径发生变化，符号链接可能会失效。例如，如果你创建了一个符号链接指向 &lt;code>D:\JoplinExport&lt;/code>，但后来将 JoplinExport 文件夹移动到了 &lt;code>D:\NewFolder&lt;/code>，那么原来的符号链接将无法找到目标。&lt;/li>
+&lt;li>不同的文件系统对符号链接的支持程度不同。例如，NTFS 文件系统支持符号链接，但 FAT32 和 exFAT 文件系统不支持。如果你将符号链接从一个支持的文件系统移动到不支持的文件系统，符号链接可能会失效。&lt;/li>
+&lt;li>某些应用程序可能不支持符号链接。例如，某些程序可能无法正确解析符号链接，导致无法访问目标文件或目录。这可能是由于程序的设计或安全限制。&lt;/li>
+&lt;li>在不同操作系统之间移动符号链接可能会导致问题。例如，Windows 和 Linux 系统对符号链接的处理方式不同，如果你在 Windows 上创建了一个符号链接，然后在 Linux 系统上访问，可能会遇到兼容性问题。&lt;/li>
+&lt;/ul>
+&lt;h3 id="不支持符号链接功能">不支持符号链接功能‌
+&lt;/h3>&lt;p>exFAT是一种为移动存储设备（如U盘、SD卡）设计的轻量级文件系统，主要目标是‌跨平台兼容性‌（Windows/macOS/Linux）和‌大文件支持‌，但未包含符号链接等高级功能‌。&lt;/p>
+&lt;h3 id="与ntfs的对比">与NTFS的对比
+&lt;/h3>&lt;p>‌
+NTFS、ext4等文件系统支持符号链接，因为它们具备更复杂的元数据管理能力。而exFAT的设计简化了文件结构以提高兼容性，牺牲了此类高级特性‌。&lt;/p>
+&lt;h2 id="案例">案例
+&lt;/h2>&lt;p>假设你的 Joplin 导出目录是 D:\JoplinExport，而你的 Obsidian 目录是 C:\ObsidianVault，你可以使用以下命令在 Obsidian 目录中创建一个指向 Joplin 导出目录的符号链接：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">mklink /D &amp;#34;C:\ObsidianVault\JoplinExport&amp;#34; &amp;#34;D:\JoplinExport&amp;#34;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>注意，JoplinExport 目录下的资源文件夹一定要存在，不然无法加载资源，例如图片、视频、办公文件等。JoplinExport 目录下存在 images 目录，那么 &lt;code>C:\ObsidianVault\JoplinExport&lt;/code> 目录下也必须有 images 目录，不然无法加载图片资源。&lt;/p>
+&lt;h2 id="软链接与硬链接">软链接与硬链接
+&lt;/h2>&lt;p>一、跨文件系统支持&lt;/p>
+&lt;ul>
+&lt;li>软链接：可跨不同文件系统或分区创建，仅需存储目标文件的路径信息即可实现间接引用‌。&lt;/li>
+&lt;li>硬链接：仅能在同一文件系统内创建，因依赖共享同一inode的特性，无法跨越不同存储设备或分区‌。&lt;/li>
+&lt;/ul>
+&lt;p>二、目标类型支持&lt;/p>
+&lt;ul>
+&lt;li>软链接：若目标文件被删除或移动，软链接会失效（成为“悬挂链接”）‌。&lt;/li>
+&lt;li>硬链接：删除任一硬链接不会影响其他链接，只有当所有硬链接被删除后，文件数据才会被释放‌。&lt;/li>
+&lt;/ul>
+&lt;p>三、目标文件删除后的行为&lt;/p>
+&lt;ul>
+&lt;li>软链接：若目标文件被删除或移动，软链接会失效（成为“悬挂链接”）‌。&lt;/li>
+&lt;li>硬链接：删除任一硬链接不会影响其他链接，只有当所有硬链接被删除后，文件数据才会被释放‌。&lt;/li>
+&lt;/ul></description></item></channel></rss>
