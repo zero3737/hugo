@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Fri, 14 Mar 2025 23:57:43 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/tags/cloudflare/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 15 Mar 2025 01:34:37 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/tags/cloudflare/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>cloudflare worker 反代实现 dns 负载均衡</title>
         <link>https://hugo-ap0.pages.dev/p/cloudflare-worker-%E5%8F%8D%E4%BB%A3%E5%AE%9E%E7%8E%B0-dns-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</link>
         <pubDate>Fri, 14 Mar 2025 23:57:31 +0800</pubDate>
@@ -15,6 +15,7 @@
         <guid>https://hugo-ap0.pages.dev/p/cloudflare-worker-%E5%8F%8D%E4%BB%A3%E5%AE%9E%E7%8E%B0-dns-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</guid>
         <description>&lt;img src="https://hugo-ap0.pages.dev/bg/31.webp" alt="Featured image of post cloudflare worker 反代实现 dns 负载均衡" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
 &lt;/h2&gt;&lt;p&gt;dns 负载均衡一般都是根据用户的地理位置以及网络延迟来解析不同的域名，根据网络延迟实现负载均衡，自己实现太过困难，呵呵&lt;/p&gt;
+&lt;p&gt;而且 workers 反代不支持自定义域名，呵呵呵&lt;/p&gt;
 &lt;p&gt;反向代理应把握其作为&amp;quot;中间人&amp;quot;的定位，主要负责请求的智能路由和基础服务，不涉及业务逻辑处理或页面渲染。渲染工作实际上是由客户端浏览器或后端服务器的服务端渲染(SSR)功能完成的。&lt;/p&gt;
 &lt;p&gt;如果反代返回纯文本，添加对应的响应头即可。反向代理未正确处理后端返回的 Content-Type 响应头，导致浏览器无法识别为 HTML。&lt;/p&gt;
 &lt;h2 id=&#34;代码&#34;&gt;代码

@@ -7,7 +7,167 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Fri, 14 Mar 2025 23:24:39 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 15 Mar 2025 01:15:24 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>obsidian 中标签与分类</title>
+        <link>https://hugo-ap0.pages.dev/p/obsidian-%E4%B8%AD%E6%A0%87%E7%AD%BE%E4%B8%8E%E5%88%86%E7%B1%BB/</link>
+        <pubDate>Sat, 15 Mar 2025 01:11:27 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/obsidian-%E4%B8%AD%E6%A0%87%E7%AD%BE%E4%B8%8E%E5%88%86%E7%B1%BB/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/27.webp" alt="Featured image of post obsidian 中标签与分类" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;在 Obsidian 知识管理体系中，标签与分类是两种不同的组织结构&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;分类&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;主要通过文件夹实现专题式管理，适用于纵向层级划分（例如：读书笔记/先秦文学/五经）‌&lt;/li&gt;
+&lt;li&gt;标准分类通常采用单值模式，即一篇笔记默认归属一个文件夹‌&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;标签&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;侧重横向维度拓展，支持多重属性标注（例如：&lt;code&gt;#时间管理&lt;/code&gt; &lt;code&gt;#工作效率&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;天然支持多值体系，允许无限叠加关联标签‌&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;实操&#34;&gt;实操
+&lt;/h2&gt;&lt;p&gt;这是错误案例，根据分类定义，不可能有多个值&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250315011217.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250315011217.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250315011217.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250315011217.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;不确定分类就默认为空即可，不然不方便查找&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250315011458.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250315011458.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250315011458.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250315011458.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>obsidian 图片链接</title>
+        <link>https://hugo-ap0.pages.dev/p/obsidian-%E5%9B%BE%E7%89%87%E9%93%BE%E6%8E%A5/</link>
+        <pubDate>Sat, 15 Mar 2025 00:20:56 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/obsidian-%E5%9B%BE%E7%89%87%E9%93%BE%E6%8E%A5/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/56.webp" alt="Featured image of post obsidian 图片链接" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;我 obsidian 只装了图片链接插件，比如移动文件的时候，自动批量修改图片链接。obsidian 默认修改图片链接并不好用，有时候生效，有时候不生效，很奇怪。&lt;/p&gt;
+&lt;h2 id=&#34;插件安装&#34;&gt;插件安装
+&lt;/h2&gt;&lt;p&gt;安装第三方插件&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250306060718.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250306060718.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250306060718.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250306060718.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;开启开关，即可自动更新笔记图片&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250306060805.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250306060805.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250306060805.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250306060805.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>hugo 配合 github action 自动化部署</title>
         <link>https://hugo-ap0.pages.dev/p/hugo-%E9%85%8D%E5%90%88-github-action-%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/</link>
         <pubDate>Tue, 11 Mar 2025 05:07:03 +0800</pubDate>
