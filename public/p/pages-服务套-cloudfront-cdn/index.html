@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="前言 pages 服务如何套 cloudFront cdn，加速国内网络。前提，必须拥有一张国内信用卡，不是储蓄卡。aws 账号不要作弊！不要作弊！不要作弊！ CloudFront 免费套餐 1 2 3 4 5 AWS 免费套餐 1TB 的数据传出 1000 万次 HTTP 或 HTTPS 请求 200 万次 CloudFront 函数调用 每个月，永远免费 原理解析 Cloudflare 的模式 你需要在你购买域名的网站(比如可能是阿里云，可能是 namesilo，可能是 freenom 等等)那边把你的域名服务器(英文NameServer，一般简称NS)修改为 Cloudflare 的NS服务器，也就是说，需要 Cloudflare全面接管你的域名，接管后，你想要添加DNS解析(添加A记录)，就需要在 Cloudflare 中添加，而不是在你购买域名的服务商那边添加，添加解析时，把小云朵的开关打开，就会走 cdn，不打开就不会走 cdn。 CloudFront 模式 AWS 的 CloudFront 与 Cloudflare 工作模式不同，你无需(也无法)把你的域名交给 CloudFront 接管，要使用 CloudFront 做cdn，你需要准备两个域名： 你要套cdn的域名(A域名)：假设为“aa.test.com”； 源域名(B域名)：假设为“bb.test.com”。cdn是用于加速用的，你需要告诉cdn你要加速的内容(图片、视频、网站)存放在哪台服务器上，但不能填ip，只能填域名，所以你需要解析一个域名到你要加速的服务器上，这个域名就叫“源域名”。 CloudFront cdn 加速原理：就是把B域名(bb.test.com)解析到你的服务器上，然后在 CloudFront 的“选择源域”中填写B域名，这样 CloudFront 就知道你要加速的服务器是哪个服务器，最后它会自动生成一个xxx.cloudfront.net域名作为加速域名，然后你需要把你的网站域名(即你要套cdn的域名)“aa.test.com” cname 到“xxx.cloudfront.net”，最终效果就是你访问aa.test.com其实是在访问xxx.cloudfront.net(当然这是 cname，不是 301/302 跳转)，而xxx.cloudfront.net是 CloudFront 的域名，它会对应前面B域名所对应的那个网站。">
+<title>pages 服务套 cloudFront cdn</title>
+
+<link rel='canonical' href='https://hugo-ap0.pages.dev/p/pages-%E6%9C%8D%E5%8A%A1%E5%A5%97-cloudfront-cdn/'>
+
+<link rel="stylesheet" href="/scss/style.min.c8bea631cb49298ca88af154463382224452f4e21f446d0687dcbcb09a16ccad.css"><meta property='og:title' content="pages 服务套 cloudFront cdn">
+<meta property='og:description' content="前言 pages 服务如何套 cloudFront cdn，加速国内网络。前提，必须拥有一张国内信用卡，不是储蓄卡。aws 账号不要作弊！不要作弊！不要作弊！ CloudFront 免费套餐 1 2 3 4 5 AWS 免费套餐 1TB 的数据传出 1000 万次 HTTP 或 HTTPS 请求 200 万次 CloudFront 函数调用 每个月，永远免费 原理解析 Cloudflare 的模式 你需要在你购买域名的网站(比如可能是阿里云，可能是 namesilo，可能是 freenom 等等)那边把你的域名服务器(英文NameServer，一般简称NS)修改为 Cloudflare 的NS服务器，也就是说，需要 Cloudflare全面接管你的域名，接管后，你想要添加DNS解析(添加A记录)，就需要在 Cloudflare 中添加，而不是在你购买域名的服务商那边添加，添加解析时，把小云朵的开关打开，就会走 cdn，不打开就不会走 cdn。 CloudFront 模式 AWS 的 CloudFront 与 Cloudflare 工作模式不同，你无需(也无法)把你的域名交给 CloudFront 接管，要使用 CloudFront 做cdn，你需要准备两个域名： 你要套cdn的域名(A域名)：假设为“aa.test.com”； 源域名(B域名)：假设为“bb.test.com”。cdn是用于加速用的，你需要告诉cdn你要加速的内容(图片、视频、网站)存放在哪台服务器上，但不能填ip，只能填域名，所以你需要解析一个域名到你要加速的服务器上，这个域名就叫“源域名”。 CloudFront cdn 加速原理：就是把B域名(bb.test.com)解析到你的服务器上，然后在 CloudFront 的“选择源域”中填写B域名，这样 CloudFront 就知道你要加速的服务器是哪个服务器，最后它会自动生成一个xxx.cloudfront.net域名作为加速域名，然后你需要把你的网站域名(即你要套cdn的域名)“aa.test.com” cname 到“xxx.cloudfront.net”，最终效果就是你访问aa.test.com其实是在访问xxx.cloudfront.net(当然这是 cname，不是 301/302 跳转)，而xxx.cloudfront.net是 CloudFront 的域名，它会对应前面B域名所对应的那个网站。">
+<meta property='og:url' content='https://hugo-ap0.pages.dev/p/pages-%E6%9C%8D%E5%8A%A1%E5%A5%97-cloudfront-cdn/'>
+<meta property='og:site_name' content='carlos'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='aws' /><meta property='article:tag' content='cdn' /><meta property='article:tag' content='域名' /><meta property='article:tag' content='dns' /><meta property='article:tag' content='github' /><meta property='article:published_time' content='2025-03-16T22:01:59&#43;08:00'/><meta property='article:modified_time' content='2025-03-16T22:06:10&#43;08:00'/><meta property='og:image' content='https://hugo-ap0.pages.dev/bg/59.webp' />
+<meta name="twitter:title" content="pages 服务套 cloudFront cdn">
+<meta name="twitter:description" content="前言 pages 服务如何套 cloudFront cdn，加速国内网络。前提，必须拥有一张国内信用卡，不是储蓄卡。aws 账号不要作弊！不要作弊！不要作弊！ CloudFront 免费套餐 1 2 3 4 5 AWS 免费套餐 1TB 的数据传出 1000 万次 HTTP 或 HTTPS 请求 200 万次 CloudFront 函数调用 每个月，永远免费 原理解析 Cloudflare 的模式 你需要在你购买域名的网站(比如可能是阿里云，可能是 namesilo，可能是 freenom 等等)那边把你的域名服务器(英文NameServer，一般简称NS)修改为 Cloudflare 的NS服务器，也就是说，需要 Cloudflare全面接管你的域名，接管后，你想要添加DNS解析(添加A记录)，就需要在 Cloudflare 中添加，而不是在你购买域名的服务商那边添加，添加解析时，把小云朵的开关打开，就会走 cdn，不打开就不会走 cdn。 CloudFront 模式 AWS 的 CloudFront 与 Cloudflare 工作模式不同，你无需(也无法)把你的域名交给 CloudFront 接管，要使用 CloudFront 做cdn，你需要准备两个域名： 你要套cdn的域名(A域名)：假设为“aa.test.com”； 源域名(B域名)：假设为“bb.test.com”。cdn是用于加速用的，你需要告诉cdn你要加速的内容(图片、视频、网站)存放在哪台服务器上，但不能填ip，只能填域名，所以你需要解析一个域名到你要加速的服务器上，这个域名就叫“源域名”。 CloudFront cdn 加速原理：就是把B域名(bb.test.com)解析到你的服务器上，然后在 CloudFront 的“选择源域”中填写B域名，这样 CloudFront 就知道你要加速的服务器是哪个服务器，最后它会自动生成一个xxx.cloudfront.net域名作为加速域名，然后你需要把你的网站域名(即你要套cdn的域名)“aa.test.com” cname 到“xxx.cloudfront.net”，最终效果就是你访问aa.test.com其实是在访问xxx.cloudfront.net(当然这是 cname，不是 301/302 跳转)，而xxx.cloudfront.net是 CloudFront 的域名，它会对应前面B域名所对应的那个网站。"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://hugo-ap0.pages.dev/bg/59.webp' />
+    <link rel="shortcut icon" href="https://gohugo.io/favicon-32x32.png" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hue50fb72c0afb8b01efc1d26d121e9d46_66295_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">carlos</a></h1>
+            <h2 class="site-description">笔记分享，记录个人成长。</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/zero3737'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/4069668'
+                        target="_blank"
+                        title="Bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-bilibili"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6z" /><path d="M8 3l2 3" /><path d="M16 3l-2 3" /><path d="M9 13v-2" /><path d="M15 11v2" /></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://v.douyin.com/i54RfHqR/'
+                        target="_blank"
+                        title="tiktok"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-tiktok"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z" /></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%8F%8B%E9%93%BE/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友链</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#前言">前言</a>
+      <ol>
+        <li><a href="#cloudfront-免费套餐">CloudFront 免费套餐</a></li>
+        <li><a href="#原理解析">原理解析</a></li>
+        <li><a href="#举例说明">举例说明</a></li>
+      </ol>
+    </li>
+    <li><a href="#aws-控制台">aws 控制台</a></li>
+    <li><a href="#服务器端操作">服务器端操作</a></li>
+    <li><a href="#pages-服务-cdn-加速">pages 服务 cdn 加速</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/pages-%E6%9C%8D%E5%8A%A1%E5%A5%97-cloudfront-cdn/">
+                
+                <picture class="webp-fallback">
+                    
+                      <source srcset="/bg/59.webp" type="image/webp">
+                    
+                    <img src="/bg/59.webp" 
+                         loading="lazy" 
+                         alt="Featured image of post pages 服务套 cloudFront cdn">
+                  </picture>
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" >
+                计算机网络
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/pages-%E6%9C%8D%E5%8A%A1%E5%A5%97-cloudfront-cdn/">pages 服务套 cloudFront cdn</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">2025-03-16</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 1 分钟
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="前言">前言
+</h2><p>pages 服务如何套 cloudFront cdn，加速国内网络。前提，必须拥有一张国内信用卡，不是储蓄卡。aws 账号不要作弊！不要作弊！不要作弊！</p>
+<h3 id="cloudfront-免费套餐">CloudFront 免费套餐
+</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">AWS 免费套餐
+</span></span><span class="line"><span class="cl">1TB 的数据传出
+</span></span><span class="line"><span class="cl">1000 万次 HTTP 或 HTTPS 请求
+</span></span><span class="line"><span class="cl">200 万次 CloudFront 函数调用
+</span></span><span class="line"><span class="cl">每个月，永远免费
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="原理解析">原理解析
+</h3><p><strong>Cloudflare 的模式</strong></p>
+<p>你需要在你购买域名的网站(比如可能是阿里云，可能是 namesilo，可能是 freenom 等等)那边把你的域名服务器(英文NameServer，一般简称NS)修改为 Cloudflare 的NS服务器，也就是说，需要 Cloudflare全面接管你的域名，接管后，你想要添加DNS解析(添加A记录)，就需要在 Cloudflare 中添加，而不是在你购买域名的服务商那边添加，添加解析时，把小云朵的开关打开，就会走 cdn，不打开就不会走 cdn。</p>
+<p><strong>CloudFront 模式</strong></p>
+<p>AWS 的 CloudFront 与 Cloudflare 工作模式不同，你无需(也无法)把你的域名交给 CloudFront 接管，要使用 CloudFront 做cdn，你需要准备两个域名：</p>
+<ul>
+<li>你要套cdn的域名(A域名)：假设为“aa.test.com”；</li>
+<li>源域名(B域名)：假设为“bb.test.com”。cdn是用于加速用的，你需要告诉cdn你要加速的内容(图片、视频、网站)存放在哪台服务器上，但不能填ip，只能填域名，所以你需要解析一个域名到你要加速的服务器上，这个域名就叫“源域名”。</li>
+</ul>
+<p>CloudFront cdn 加速原理：就是把B域名(<code>bb.test.com</code>)解析到你的服务器上，然后在 CloudFront 的“选择源域”中填写B域名，这样 CloudFront 就知道你要加速的服务器是哪个服务器，最后它会自动生成一个<code>xxx.cloudfront.net</code>域名作为加速域名，然后你需要把你的网站域名(即你要套cdn的域名)“<code>aa.test.com</code>” cname 到“<code>xxx.cloudfront.net</code>”，最终效果就是你访问<code>aa.test.com</code>其实是在访问<code>xxx.cloudfront.net</code>(当然这是 cname，不是 301/302 跳转)，而<code>xxx.cloudfront.net</code>是 CloudFront 的域名，它会对应前面B域名所对应的那个网站。</p>
+<h3 id="举例说明">举例说明
+</h3><p>假设你现在有如下域名和服务器</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">A域名：aa.test.com
+</span></span><span class="line"><span class="cl">B域名: bb.test.com
+</span></span><span class="line"><span class="cl">服务器：11.22.33.44
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol>
+<li>假设你想把A域名(<code>aa.test.com</code>)套到cloudflare cdn上，用cdn来加速这个域名；</li>
+<li>那么你需要先把B域名(<code>bb.test.com</code>)解析到你的服务器(11.22.33.44)；</li>
+<li>然后把B域名(<code>bb.test.com</code>)填到 CloudFront 的“选择源域”里，把A域名(<code>aa.test.com</code>)填到“备用域名(CNAME)”里(这一栏与前一栏不是挨着，需要往下滚动很多才能看到)；</li>
+<li>然后填好其它选项后，最终创建好之后，它会生成一个“<code>xxx.cloudfront.net</code>”格式的域名，这个域名就是 CloudFront 给你分配的加速域名，比如你之前访问一张图片是这样访问的：<code>aa.test.com/imgs/1.jpg</code>，而用了cdn之后就是：<code>xxx.cloudfront.net/imgs/1.jpg</code>；</li>
+</ol>
+<p>按第4步的说法，虽然cdn可以加速，可是域名就变了，这是不可接受的，这就要用到前面第3步填的“备用域名”了，其实我觉得把它叫“自定义域名”更好一点，你需要添加一条DNS解析(CNAME记录)，把你在“备用域名”那一栏填的那个域名(<code>aa.test.com</code>)添加一个cname，对应到 CloudFront 给你分配的加速域名“<code>xxx.cloudfront.net</code>”，最终的请求的流向为</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">aa.test.com ====cname===&gt; xxx.cloudfront.net ===&gt; CDN服务器 ===bb.test.com===&gt; 源服务器
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="aws-控制台">aws 控制台
+</h2><p>打开以下地址，点击注册。创建账号不要作弊！不要作弊！不要作弊！</p>
+<p><a class="link" href="https://aws.amazon.com/cn/cloudfront/"  target="_blank" rel="noopener"
+    >Amazon CloudFront 内容分发网络(CDN)_免费CDN加速-AWS云服务</a>
+</p>
+<p>登录控制台，搜索 CloudFront 服务，</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+	<a data-fancybox="gallery" 
+   href="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316210608.png"
+   data-webp="/00-assets/Pasted%20image%2020250316210608.webp"
+   data-original="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316210608.png"
+   class="webp-fancybox">
+  
+  <picture>
+    
+    
+    
+    <img src="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316210608.png"
+         alt=""
+         
+         loading="lazy"
+         data-fallback>
+  </picture>
+</a>
+ 
+
+</p>
+<p>创建分配</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+	<a data-fancybox="gallery" 
+   href="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316210746.png"
+   data-webp="/00-assets/Pasted%20image%2020250316210746.webp"
+   data-original="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316210746.png"
+   class="webp-fancybox">
+  
+  <picture>
+    
+    
+    
+    <img src="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316210746.png"
+         alt=""
+         
+         loading="lazy"
+         data-fallback>
+  </picture>
+</a>
+ 
+
+</p>
+<p>然后在下图的“选择源域”中填写一个“源域名”</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+	<a data-fancybox="gallery" 
+   href="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316212250.png"
+   data-webp="/00-assets/Pasted%20image%2020250316212250.webp"
+   data-original="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316212250.png"
+   class="webp-fancybox">
+  
+  <picture>
+    
+    
+    
+    <img src="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316212250.png"
+         alt=""
+         
+         loading="lazy"
+         data-fallback>
+  </picture>
+</a>
+ 
+
+</p>
+<p>注意这个域名不能是你要套cdn的域名，这个域名只是用来告诉 CloudFront：“喂，你要加速的内容是<code>abc.examle.com</code>服务器中，记得给它加速哟”；它只能填域名，不能直接填ip，所以我们需要解析一个域名指向这个ip(你VPS的ip)，用域名的方式来告诉 CloudFront，告诉它要给哪台服务器的内容加速，这个域名我们叫“源域名”，它指向将要被加速的“源服务器”(就是你的VPS)；匹配查看器，其实就是匹配浏览器，“查看器”其实是browser的翻译，本来应该翻译为浏览器的，这aws的翻译也是厉害，不知道为什么会翻译成查看器的。</p>
+<p>接着往下，这些按默认就可以。这里选择源域填了之后，自动和前面的一样，不用理会。</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+	<a data-fancybox="gallery" 
+   href="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316212456.png"
+   data-webp="/00-assets/Pasted%20image%2020250316212456.webp"
+   data-original="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316212456.png"
+   class="webp-fancybox">
+  
+  <picture>
+    
+    
+    
+    <img src="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316212456.png"
+         alt=""
+         
+         loading="lazy"
+         data-fallback>
+  </picture>
+</a>
+ 
+
+</p>
+<p>缓存策略选择“CachingDisabled”(禁用缓存)，源请求策略选择“AllViewer”。这里能禁用就禁用，其他服务需要收费，aws 服务小心一点。</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+	<a data-fancybox="gallery" 
+   href="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316212700.png"
+   data-webp="/00-assets/Pasted%20image%2020250316212700.webp"
+   data-original="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316212700.png"
+   class="webp-fancybox">
+  
+  <picture>
+    
+    
+    
+    <img src="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316212700.png"
+         alt=""
+         
+         loading="lazy"
+         data-fallback>
+  </picture>
+</a>
+ 
+
+</p>
+<p>禁用防火墙，这是收费服务</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+	<a data-fancybox="gallery" 
+   href="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316212837.png"
+   data-webp="/00-assets/Pasted%20image%2020250316212837.webp"
+   data-original="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316212837.png"
+   class="webp-fancybox">
+  
+  <picture>
+    
+    
+    
+    <img src="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316212837.png"
+         alt=""
+         
+         loading="lazy"
+         data-fallback>
+  </picture>
+</a>
+ 
+
+</p>
+<p>这里“价格与级别”，看你的服务器在哪儿，一般来说第一个和第三个都可以，仅北美和欧洲肯定不行，因为你在国内是亚洲，它不对亚洲加速的话，你要它来干嘛。这个价格可以不用太在意，因为你个人使用不超过免费用量是不会收费的。特别注意这里的“备用域名(CNAME)”一栏要填“你真正要套cdn的域名”(就是你的网站域名，就是你要加速的域名)</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+	<a data-fancybox="gallery" 
+   href="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316212917.png"
+   data-webp="/00-assets/Pasted%20image%2020250316212917.webp"
+   data-original="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316212917.png"
+   class="webp-fancybox">
+  
+  <picture>
+    
+    
+    
+    <img src="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316212917.png"
+         alt=""
+         
+         loading="lazy"
+         data-fallback>
+  </picture>
+</a>
+ 
+
+</p>
+<p>这里要选择证书，点击“请求证书”来申请一个证书，点击后它会在另一个标签中打开新页面，这个证书不需要我们源域名(<code>bb.test.com</code>)或网站域名(<code>bb.test.com</code>)的证书，就是说这个证书归这个证书，跟你自己域名的证书无关</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+	<a data-fancybox="gallery" 
+   href="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316213003.png"
+   data-webp="/00-assets/Pasted%20image%2020250316213003.webp"
+   data-original="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316213003.png"
+   class="webp-fancybox">
+  
+  <picture>
+    
+    
+    
+    <img src="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316213003.png"
+         alt=""
+         
+         loading="lazy"
+         data-fallback>
+  </picture>
+</a>
+ 
+
+</p>
+<p>默认下一步即可，证书认证，不然 cdn 加速失败</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+	<a data-fancybox="gallery" 
+   href="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316213202.png"
+   data-webp="/00-assets/Pasted%20image%2020250316213202.webp"
+   data-original="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316213202.png"
+   class="webp-fancybox">
+  
+  <picture>
+    
+    
+    
+    <img src="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316213202.png"
+         alt=""
+         
+         loading="lazy"
+         data-fallback>
+  </picture>
+</a>
+ 
+
+</p>
+<p>以 <code>*.baidu.com</code> 为例子，填你拥有的地址，dns 验证，默认下一步即可。</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+	<a data-fancybox="gallery" 
+   href="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316213302.png"
+   data-webp="/00-assets/Pasted%20image%2020250316213302.webp"
+   data-original="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316213302.png"
+   class="webp-fancybox">
+  
+  <picture>
+    
+    
+    
+    <img src="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316213302.png"
+         alt=""
+         
+         loading="lazy"
+         data-fallback>
+  </picture>
+</a>
+ 
+
+</p>
+<p>在域名控制台添加对应的记录，添加完等待认证成功即可。</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+	<a data-fancybox="gallery" 
+   href="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316213502.png"
+   data-webp="/00-assets/Pasted%20image%2020250316213502.webp"
+   data-original="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316213502.png"
+   class="webp-fancybox">
+  
+  <picture>
+    
+    
+    
+    <img src="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316213502.png"
+         alt=""
+         
+         loading="lazy"
+         data-fallback>
+  </picture>
+</a>
+ 
+
+</p>
+<p>认证成功截图</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+	<a data-fancybox="gallery" 
+   href="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316213620.png"
+   data-webp="/00-assets/Pasted%20image%2020250316213620.webp"
+   data-original="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316213620.png"
+   class="webp-fancybox">
+  
+  <picture>
+    
+    
+    
+    <img src="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316213620.png"
+         alt=""
+         
+         loading="lazy"
+         data-fallback>
+  </picture>
+</a>
+ 
+
+</p>
+<p>回到之前请求证书的地方，点击右侧的“刷新”按钮，然后下拉菜单中就可以选择刚刚请求的证书了</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+	<a data-fancybox="gallery" 
+   href="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316213754.png"
+   data-webp="/00-assets/Pasted%20image%2020250316213754.webp"
+   data-original="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316213754.png"
+   class="webp-fancybox">
+  
+  <picture>
+    
+    
+    
+    <img src="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316213754.png"
+         alt=""
+         
+         loading="lazy"
+         data-fallback>
+  </picture>
+</a>
+ 
+
+</p>
+<p>下图都默认就行，或者把 http3 也选上，最终点“创建分配”</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+	<a data-fancybox="gallery" 
+   href="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316213837.png"
+   data-webp="/00-assets/Pasted%20image%2020250316213837.webp"
+   data-original="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316213837.png"
+   class="webp-fancybox">
+  
+  <picture>
+    
+    
+    
+    <img src="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316213837.png"
+         alt=""
+         
+         loading="lazy"
+         data-fallback>
+  </picture>
+</a>
+ 
+
+</p>
+<p>可以看到显示创建成功，它会给你分配一个“分配域名”，然后下边还会有一个“备用域名”，这时你就会比较明白什么叫备用域名了，因为它已经给你分配了，你直接用它分配的域名就能用，但是用我们自己的域名通过添加cname后，也是可以走cdn加速的，所以才叫“备用域名”</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+	<a data-fancybox="gallery" 
+   href="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316213950.png"
+   data-webp="/00-assets/Pasted%20image%2020250316213950.webp"
+   data-original="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316213950.png"
+   class="webp-fancybox">
+  
+  <picture>
+    
+    
+    
+    <img src="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316213950.png"
+         alt=""
+         
+         loading="lazy"
+         data-fallback>
+  </picture>
+</a>
+ 
+
+</p>
+<p>这两个域名都可以用来访问你的网站，只不过备用域名的好处就是自定义，更像是你自己的域名，而自动分配的域名就统一是 CloudFront 的域名(如果是做代理用的话，用 CloudFront 分配的域名也没什么，就是可能不容易记住)。</p>
+<p><code>www.carlos2016.cfd</code> 为 <code>dcrl3j7vhd2m7.cloudfront.net</code> 别名</p>
+<p>如果你想使用自定义域名(即上图的“备用域名”)，你需要在域名解析服务商那边添加一个cname记录，把自己要套cdn的域名作为名称，而把 CloudFront 给你分配的域名作为“目标”，添加之后就可以使用它了。</p>
+<p>按照本例的示例域名，aa.test.com就是套了cdn的域名，你用aa.test.com访问你的网站就是走了cdn的，而bb.test.com则是一个用来中转用的域名，真实使用的时候并不使用它</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">aa.test.com ====cname===&gt; xxx.cloudfront.net ===&gt; CDN服务器 ===bb.test.com===&gt; 源服务器
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="服务器端操作">服务器端操作
+</h2><p>CloudFront 会通过443端口和80端口，即https和http协议去请求你的服务器，你必须在你的服务器配置前面所说的“A域名”(套cdn的域名)和“B域名”(源域名)，如果是nginx，则server_name应该把<code>aa.test.com</code>和<code>bb.test.com</code>都写上</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-nginx" data-lang="nginx"><span class="line"><span class="cl"><span class="k">server</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="kn">listen</span> <span class="mi">80</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kn">server_name</span> <span class="s">aa.test.com</span> <span class="s">bb.test.com</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="kn">……</span>
+</span></span><span class="line"><span class="cl"><span class="err">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>bb.test.com</code>作为源域名，不用说肯定要配置的，不然CDN服务器没法通过这个域名获取到源站的内容，而<code>aa.test.com</code>是cname到<code>xxx.cloudfront.net</code>，理论上来说<code>aa.test.com</code>并没有直接参与访问你服务器的内容，为什么它也要在nginx中配置呢？</p>
+<p>原因是，你在浏览器(或其它客户端)发起请求的时候，用的是<code>aa.test.com</code>，虽然DNS那边最终会把cname的域名(即<code>xxx.cloudfront.net</code>)对应的ip返回，但浏览器并不知道这个ip是cname那边的，所以GET请求中header中的Host值还是<code>aa.test.com</code>，这个请求最终会被CDN服务器转发到你的VPS中，那么VPS中的nginx接收到这个请求，就会根据Host值判断应该用哪个server模块来处理你的请求(如果你同一个端口有多个模块的话)，当然如果同一端口只有一个模块，其实server_name可以不写<code>bb.test.com</code>，因为只有一个它默认就进去了，但建议还是写比较好。</p>
+<p>另外，server模块中的证书，一般来说用通配符证书都是能匹配上，如果是单独指定多个域名，申请证书时记得把<code>aa.test.com</code>和<code>bb.test.com</code>的证书都加上。</p>
+<h2 id="pages-服务-cdn-加速">pages 服务 cdn 加速
+</h2><p>填写 github 分配的地址即可，操作和上面的一样</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+	<a data-fancybox="gallery" 
+   href="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316215350.png"
+   data-webp="/00-assets/Pasted%20image%2020250316215350.webp"
+   data-original="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316215350.png"
+   class="webp-fancybox">
+  
+  <picture>
+    
+    
+    
+    <img src="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316215350.png"
+         alt=""
+         
+         loading="lazy"
+         data-fallback>
+  </picture>
+</a>
+ 
+
+</p>
+<p>域名控制台添加 cname 记录，将自己购买的域名指向 CloudFront 分配的域名</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+	<a data-fancybox="gallery" 
+   href="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316215444.png"
+   data-webp="/00-assets/Pasted%20image%2020250316215444.webp"
+   data-original="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316215444.png"
+   class="webp-fancybox">
+  
+  <picture>
+    
+    
+    
+    <img src="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316215444.png"
+         alt=""
+         
+         loading="lazy"
+         data-fallback>
+  </picture>
+</a>
+ 
+
+</p>
+<p>pages 自定义域名填写自己购买的域名</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+	<a data-fancybox="gallery" 
+   href="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316215706.png"
+   data-webp="/00-assets/Pasted%20image%2020250316215706.webp"
+   data-original="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316215706.png"
+   class="webp-fancybox">
+  
+  <picture>
+    
+    
+    
+    <img src="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316215706.png"
+         alt=""
+         
+         loading="lazy"
+         data-fallback>
+  </picture>
+</a>
+ 
+
+</p>
+<p>然后 cmd 测试，返回数据出现 CloudFront 特有的标记，就证明 cdn 开启成功</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+	<a data-fancybox="gallery" 
+   href="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316215901.png"
+   data-webp="/00-assets/Pasted%20image%2020250316215901.webp"
+   data-original="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316215901.png"
+   class="webp-fancybox">
+  
+  <picture>
+    
+    
+    
+    <img src="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316215901.png"
+         alt=""
+         
+         loading="lazy"
+         data-fallback>
+  </picture>
+</a>
+ 
+
+</p>
+<p>点击以下在线测试工具，就会发现中国绿</p>
+<p><a class="link" href="https://www.itdog.cn/ping/"  target="_blank" rel="noopener"
+    >在线ping_多地ping_多线路ping_持续ping_网络延迟测试_服务器延迟测试</a>
+</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+	<a data-fancybox="gallery" 
+   href="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316220034.png"
+   data-webp="/00-assets/Pasted%20image%2020250316220034.webp"
+   data-original="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316220034.png"
+   class="webp-fancybox">
+  
+  <picture>
+    
+    
+    
+    <img src="https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316220034.png"
+         alt=""
+         
+         loading="lazy"
+         data-fallback>
+  </picture>
+</a>
+ 
+
+</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/aws/">Aws</a>
+        
+            <a href="/tags/cdn/">Cdn</a>
+        
+            <a href="/tags/%E5%9F%9F%E5%90%8D/">域名</a>
+        
+            <a href="/tags/dns/">Dns</a>
+        
+            <a href="/tags/github/">Github</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 2025-03-16 22:06 CST
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/dns-%E5%90%8C%E6%AD%A5%E6%9C%BA%E5%88%B6/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/bg/03.webp" loading="lazy" data-key="" data-hash="/bg/03.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">DNS 同步机制</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/cdn-%E5%B7%A5%E4%BD%9C%E6%B5%81/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/bg/58.webp" loading="lazy" data-key="" data-hash="/bg/58.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">cdn 工作流</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/cdn-%E4%B8%8E%E5%9F%9F%E5%90%8D/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/bg/30.webp" loading="lazy" data-key="" data-hash="/bg/30.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">cdn 与域名</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/%E7%BD%91%E7%AB%99%E5%AE%9E%E5%90%8D%E4%B8%8E%E5%A4%87%E6%A1%88%E5%85%B3%E7%B3%BB/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/bg/06.webp" loading="lazy" data-key="" data-hash="/bg/06.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">网站实名与备案关系</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/dns-%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BB%A5%E5%8F%8A%E5%9F%9F%E5%90%8D%E5%85%B3%E7%B3%BB/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/bg/38.webp" loading="lazy" data-key="" data-hash="/bg/38.webp"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">dns 服务器以及域名关系</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 Example Person
+    </section>
+    
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<div id="particles-js"></div>
+
+<script src="https://cdn.bootcdn.net/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+<script>
+  particlesJS.load('particles-js', "https://letere-gzj.github.io/hugo-stack/background/particles/particlesjs-config.json", function() {
+    console.log('particles.js loaded - callback');
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+<style>
+  #particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+</style>
+
+    </body>
+</html>

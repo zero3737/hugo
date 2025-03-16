@@ -7,7 +7,249 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Sat, 15 Mar 2025 01:34:37 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/tags/cloudflare/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 17 Mar 2025 00:05:17 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/tags/cloudflare/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Cloudflare for SaaS 与 CDN</title>
+        <link>https://hugo-ap0.pages.dev/p/cloudflare-for-saas-%E4%B8%8E-cdn/</link>
+        <pubDate>Sun, 16 Mar 2025 23:59:41 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/cloudflare-for-saas-%E4%B8%8E-cdn/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/41.webp" alt="Featured image of post Cloudflare for SaaS 与 CDN" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;Cloudflare for SaaS 网站加速原理，与 cdn 加速的区别？参考了以下视频，优选 ip 的段落&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV1PPy6YzE5C/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=544eb84750dc9e319f56b1656a6ca6d2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;没有公网IP？cloudflare优选IP，高速内网穿透_哔哩哔哩_bilibili&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;Cloudflare for SaaS 开通条件需要 paypal 账号，绑定银行卡信息，懂得都懂，小心被反薅，免费的东西，永远是最贵的，呵呵。&lt;/p&gt;
+&lt;h2 id=&#34;核心机制差异&#34;&gt;核心机制差异
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;加速对象不同&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CDN‌：主要针对静态资源加速（如图片、CSS、JS等），通过全球330+节点缓存内容，用户访问时直接从最近的节点获取数据‌。&lt;/li&gt;
+&lt;li&gt;SaaS‌：更注重动态内容加速，通过「回源优化」实现。用户访问主域名时，请求被分流到Cloudflare优选IP节点，再通过跳转域名回源动态内容，减少源站负载‌。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;域名管理方式&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CDN‌：直接使用用户域名接入，无需额外域名配置，通过DNS解析到Cloudflare节点‌。&lt;/li&gt;
+&lt;li&gt;SaaS‌：需两个域名配合：主域名（如blog.a.com）用于前端展示，跳转域名（如b.com）作为回源域名，实现动态请求的分流和缓存策略设置‌。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;‌&lt;strong&gt;适用场景&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;‌CDN‌：适用于静态资源占比高的网站，如博客、电商产品页等‌。&lt;/li&gt;
+&lt;li&gt;SaaS‌：适合需要自定义域名、动态内容加速的场景，例如多租户SaaS平台或需要隐藏源站IP的应用‌。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;加速效果的共同原理&#34;&gt;加速效果的共同原理
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;全球节点覆盖&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;两者均依托Cloudflare的全球分布式网络，用户请求会被智能路由至最近的节点，减少物理距离导致的延迟‌。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;负载均衡技术&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CDN通过节点缓存减少源站请求量，同时通过Anycast技术均衡流量压力‌。&lt;/li&gt;
+&lt;li&gt;SaaS通过运营商分流（优选IP）和动态回源优化，降低源服务器直接暴露的风险‌。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;缓存策略优化&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;CDN默认缓存静态资源，而SaaS可通过自定义缓存规则（如设置跳转域名的缓存时间）加速动态内容更新频率较低的部分‌。&lt;/p&gt;
+&lt;h2 id=&#34;saas-与优选-ip-的关联性&#34;&gt;SaaS 与优选 IP 的关联性
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;SaaS 服务包含优选IP机制&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Cloudflare SaaS 在动态内容加速时，通过运营商分流策略自动选择「网络质量最优的IP节点」进行回源，这种机制本质上是优选IP技术的应用‌。例如用户访问主域名时，系统会根据运营商类型（如移动/电信/联通）自动分配对应的优选IP‌。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;优选IP并非SaaS专属功能&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;优选IP属于CDN优化的一种通用技术，可通过独立工具（如宝塔cf2dns插件）手动更新三网线路的优选IP列表‌。而SaaS将这一过程自动化集成到服务流程中，无需用户手动维护IP列表‌。&lt;/p&gt;
+&lt;h3 id=&#34;saas-如何选择cdn节点&#34;&gt;SaaS 如何选择CDN节点
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;动态分流与缓存策略结合&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;SaaS 通过「主域名+跳转域名」双域名架构实现分流：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;主域名（如 &lt;code&gt;blog.a.com&lt;/code&gt;）负责接收用户请求，并解析到Cloudflare优选IP节点‌；&lt;/li&gt;
+&lt;li&gt;跳转域名（如 &lt;code&gt;b.com&lt;/code&gt;）作为回退源，动态内容通过缓存规则（如边缘TTL设置）决定是否从最近CDN节点或源站获取‌。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;智能路由与网络优化&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Cloudflare 基于实时网络质量数据（如延迟、丢包率）选择最优节点，且支持：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;多运营商适配‌：为不同运营商用户分配对应线路的优选IP‌；&lt;/li&gt;
+&lt;li&gt;负载均衡‌：当某个节点压力过高时，自动切换至备用节点‌。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;关键差异与适用场景&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;‌&lt;strong&gt;维度&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;独立优选IP&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;‌&lt;strong&gt;SaaS服务&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;‌&lt;strong&gt;技术目标&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;提升单线路访问速度&lt;/td&gt;
+&lt;td&gt;全局动态加速与多租户支持&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;‌&lt;strong&gt;配置方式&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;需手动更新IP列表&lt;/td&gt;
+&lt;td&gt;自动化集成，通过域名策略实现优化&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;适用场景&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;简单静态站点或已有CDN补充优化&lt;/td&gt;
+&lt;td&gt;动态内容为主、需隐藏源站的企业级应用&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;结论&#34;&gt;结论
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;‌SaaS ≠ 优选IP‌：优选IP是SaaS实现加速的核心技术之一，但SaaS还包含域名管理、动态缓存等更复杂的服务架构‌；&lt;/li&gt;
+&lt;li&gt;节点选择逻辑‌：SaaS通过自动化优选IP和智能路由选择最优CDN节点，而独立优选IP仅解决单线路节点优化问题‌。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;结论-1&#34;&gt;结论
+&lt;/h2&gt;&lt;p&gt;Cloudflare for SaaS通过‌边缘节点缓存‌、‌智能路由‌、‌协议优化‌和‌自动化管理‌，将内容分发、安全与性能优化整合到全球网络中，显著降低延迟、提升可用性，并简化运维。其核心优势在于将传统需要复杂配置的加速技术（如CDN、SSL、负载均衡）无缝集成，为SaaS提供商及其终端用户提供无缝的快速体验。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>dnspod 实现网站国内外分流（境外接入 Cloudflare）</title>
+        <link>https://hugo-ap0.pages.dev/p/dnspod-%E5%AE%9E%E7%8E%B0%E7%BD%91%E7%AB%99%E5%9B%BD%E5%86%85%E5%A4%96%E5%88%86%E6%B5%81%E5%A2%83%E5%A4%96%E6%8E%A5%E5%85%A5-cloudflare/</link>
+        <pubDate>Sun, 16 Mar 2025 23:39:50 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/dnspod-%E5%AE%9E%E7%8E%B0%E7%BD%91%E7%AB%99%E5%9B%BD%E5%86%85%E5%A4%96%E5%88%86%E6%B5%81%E5%A2%83%E5%A4%96%E6%8E%A5%E5%85%A5-cloudflare/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/50.webp" alt="Featured image of post dnspod 实现网站国内外分流（境外接入 Cloudflare）" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;阿里云云解析 DNS / 腾讯云 DNSPod 支持境内外分线解析，&lt;code&gt;blog.uuanqin.top&lt;/code&gt; 将根据用户 IP 选择合适的线路。由于 &lt;code&gt;blog.uuanqin.top&lt;/code&gt; 配置的是 CNAME 的记录类型，访客对于分线过程无感知，浏览器地址栏不变。&lt;/p&gt;
+&lt;p&gt;境内用境内 CDN，境外用境外 CDN，取长补短。为了更加节省开支或避免由于攻击造成的高额账单，国内线路可以不用 CDN，直接连接国内源站。&lt;/p&gt;
+&lt;p&gt;阿里云云解析 DNS / 腾讯云 DNSPod 支持境内外分线解析，&lt;code&gt;blog.uuanqin.top&lt;/code&gt; 将根据用户 IP 选择合适的线路。由于 &lt;code&gt;blog.uuanqin.top&lt;/code&gt; 配置的是 &lt;code&gt;CNAME&lt;/code&gt; 的记录类型，访客对于分线过程无感知，浏览器地址栏不变。&lt;/p&gt;
+&lt;p&gt;至于国内 CDN 或源站的选择看你自己的情况，文章主要将介绍两个操作重点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用腾讯云 DNSPod 进行线路选择&lt;/li&gt;
+&lt;li&gt;CNAME 方式接入 Cloudflare&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;dnspod 实现网站国内外分流，需两个域名配合。免费域名托管到 Cloudflare 开启免费  cdn，收费域名托管在 DNSPod，用来实现 dns 负载均衡（别称智能 dns???）&lt;/p&gt;
+&lt;h2 id=&#34;cloudflare-控制台&#34;&gt;Cloudflare 控制台
+&lt;/h2&gt;&lt;p&gt;根据自己情况，添加 dns 记录，用来开启 Cloudflare cdn 服务。我这里填写免费域名，用来开启 cdn&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316232157.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250316232157.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316232157.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316232157.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;h2 id=&#34;dnspod-控制台&#34;&gt;DNSPod 控制台
+&lt;/h2&gt;&lt;p&gt;DNSPod 配置 3 条线路类型：国内、国外、默认。国内路线解析到国内源站，国外线路解析到 Cloudflare 免费 cdn 域名，实现国内外分流&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316233413.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250316233413.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316233413.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316233413.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;h2 id=&#34;验证&#34;&gt;验证
+&lt;/h2&gt;&lt;p&gt;连接机场节点测试，返回 Cloudflare 特有的标记&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316233703.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250316233703.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316233703.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316233703.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;关闭机场节点测试，返回国内源站特有信息。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316233800.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250316233800.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316233800.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250316233800.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;国内外测试返回不同的信息，证明 DNSPod dns 负载均衡配置成功。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>cloudflare worker 反代实现 dns 负载均衡</title>
         <link>https://hugo-ap0.pages.dev/p/cloudflare-worker-%E5%8F%8D%E4%BB%A3%E5%AE%9E%E7%8E%B0-dns-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</link>
         <pubDate>Fri, 14 Mar 2025 23:57:31 +0800</pubDate>
