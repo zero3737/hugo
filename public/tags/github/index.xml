@@ -7,7 +7,110 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Sun, 16 Mar 2025 22:06:10 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/tags/github/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 17 Mar 2025 03:30:21 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/tags/github/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>GitHub Pages 自定义域名绑定规则</title>
+        <link>https://hugo-ap0.pages.dev/p/github-pages-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%E8%A7%84%E5%88%99/</link>
+        <pubDate>Mon, 17 Mar 2025 03:29:46 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/github-pages-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A%E8%A7%84%E5%88%99/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/46.webp" alt="Featured image of post GitHub Pages 自定义域名绑定规则" /&gt;&lt;h2 id=&#34;官方限制&#34;&gt;官方限制
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;每个仓库仅支持1个自定义域名&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;无论是用户/组织主站（&lt;code&gt;username.github.io&lt;/code&gt;）还是项目站点（&lt;code&gt;username.github.io/repo&lt;/code&gt;），每个仓库的 CNAME 文件中只能包含‌一个域名‌，且仅首个域名生效‌。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;用户/组织主站的特殊限制&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;每个 GitHub 账户只能存在一个用户/组织主站仓库（即 &lt;code&gt;username.github.io&lt;/code&gt;），且该主站仅能绑定‌1个自定义域名‌‌。&lt;/p&gt;
+&lt;h2 id=&#34;突破限制的实践方案&#34;&gt;突破限制的实践方案
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;多仓库绑定不同域名&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;通过创建多个项目仓库（如 project1、project2），每个仓库可独立绑定不同的自定义域名。例如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;project1 仓库绑定 &lt;code&gt;domain1.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;project2 仓库绑定 domain2.com‌。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;通过外部服务实现多域名指向&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;利用 DNS 或 CDN 服务（如 Cloudflare）进行域名重定向或转发：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将多个域名的 DNS 解析指向同一 GitHub Pages 仓库的服务器 IP；&lt;/li&gt;
+&lt;li&gt;通过 CDN 的 URL 转发规则，将不同域名跳转到目标页面‌。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结
+&lt;/h2&gt;&lt;p&gt;综上，‌单个 GitHub Pages 仓库仅支持1个自定义域名‌，但通过多仓库或外部服务可实现多域名间接绑定‌。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>在 GitHub 上查看自己加星（star）的项目</title>
+        <link>https://hugo-ap0.pages.dev/p/%E5%9C%A8-github-%E4%B8%8A%E6%9F%A5%E7%9C%8B%E8%87%AA%E5%B7%B1%E5%8A%A0%E6%98%9Fstar%E7%9A%84%E9%A1%B9%E7%9B%AE/</link>
+        <pubDate>Mon, 17 Mar 2025 02:49:26 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/%E5%9C%A8-github-%E4%B8%8A%E6%9F%A5%E7%9C%8B%E8%87%AA%E5%B7%B1%E5%8A%A0%E6%98%9Fstar%E7%9A%84%E9%A1%B9%E7%9B%AE/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/26.webp" alt="Featured image of post 在 GitHub 上查看自己加星（star）的项目" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;如何在 github 页面查看自己 star 的项目&lt;/p&gt;
+&lt;h2 id=&#34;实操&#34;&gt;实操
+&lt;/h2&gt;&lt;p&gt;点击头像&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317024019.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250317024019.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317024019.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317024019.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;仓库导航栏点击 stars，即可查看自己 stars 项目了&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317024047.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250317024047.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317024047.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317024047.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>pages 服务套 cloudFront cdn</title>
         <link>https://hugo-ap0.pages.dev/p/pages-%E6%9C%8D%E5%8A%A1%E5%A5%97-cloudfront-cdn/</link>
         <pubDate>Sun, 16 Mar 2025 22:01:59 +0800</pubDate>

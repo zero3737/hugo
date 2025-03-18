@@ -7,7 +7,53 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Mon, 17 Mar 2025 00:00:20 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 17 Mar 2025 02:48:22 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Cloudflare 优选 ip 优化网站访问速度原理</title>
+        <link>https://hugo-ap0.pages.dev/p/cloudflare-%E4%BC%98%E9%80%89-ip-%E4%BC%98%E5%8C%96%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6%E5%8E%9F%E7%90%86/</link>
+        <pubDate>Mon, 17 Mar 2025 02:48:02 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/cloudflare-%E4%BC%98%E9%80%89-ip-%E4%BC%98%E5%8C%96%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6%E5%8E%9F%E7%90%86/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/02.webp" alt="Featured image of post Cloudflare 优选 ip 优化网站访问速度原理" /&gt;&lt;h2 id=&#34;优选-ip-优化原理&#34;&gt;优选 IP 优化原理
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;节点优选&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;通过筛选全球范围内延迟最低、带宽最优的 Cloudflare 节点 IP，将用户请求定向到最佳边缘节点，减少数据传输距离和网络拥堵‌。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;缓存加速&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;静态资源（如图片、CSS/JS 文件）缓存在优选节点，用户可直接从边缘节点获取内容，降低源服务器负载和响应时间‌。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;智能路由&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Cloudflare 实时分析全球网络状态，动态调整路由路径，避开拥堵或故障线路，提升访问稳定性‌。&lt;/p&gt;
+&lt;h2 id=&#34;控制台操作流程优选-ip-配置&#34;&gt;控制台操作流程（优选 IP 配置）
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;域名准备&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;主域名（如 &lt;code&gt;www.example.com&lt;/code&gt;）用于常规访问，DNS 解析托管在原有服务商（如阿里云）&lt;/li&gt;
+&lt;li&gt;次要域名（如 cf.example.com）接入 Cloudflare，用于绑定优选 IP 和源服务器‌。‌&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;cloudflare-配置步骤&#34;&gt;Cloudflare 配置步骤
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;添加次要域名&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;登录 Cloudflare 控制台，添加次要域名并完成 DNS 解析验证‌。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;设置 DNS 记录&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;创建 A 或 CNAME 记录（如 &lt;code&gt;cloudflare.example.com&lt;/code&gt;），指向源服务器 IP 或域名。&lt;/li&gt;
+&lt;li&gt;启用代理状态（小黄云图标亮起），开启 CDN 加速‌。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;SSL/TLS 设置&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;选择“完全”或“灵活”模式，绑定自定义主机名并配置证书‌。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;优选 IP 绑定与分流&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在 DNS 记录中添加优选 IP 的 A 记录（如 优选IP1、优选IP2），设置权重或分线路（如境外线路）‌。&lt;/li&gt;
+&lt;li&gt;通过 ‌Page Rules‌ 或 ‌Workers‌ 脚本实现动态 IP 调度（如根据用户地理位置分配节点）‌。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;性能优化与测试&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;缓存策略‌：在 ‌Caching‌ 中设置 Browser/Cache TTL，启用 Tiered Cache 分层缓存‌。&lt;/li&gt;
+&lt;li&gt;‌性能测试‌：使用 Cloudflare Observatory 或第三方工具（如 WebPageTest）验证加载速度和首屏时间‌。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;动态调度进阶方案&#34;&gt;动态调度进阶方案
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Workers 脚本‌：编写脚本实现智能路由，例如根据用户 IP 所在地区自动分配最优节点‌。&lt;/li&gt;
+&lt;li&gt;双 CDN 分流‌：国内用户走本地 CDN（如阿里云），境外用户通过 Cloudflare 优选 IP 加速‌。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>pages 服务套 cloudFront cdn</title>
         <link>https://hugo-ap0.pages.dev/p/pages-%E6%9C%8D%E5%8A%A1%E5%A5%97-cloudfront-cdn/</link>
         <pubDate>Sun, 16 Mar 2025 22:01:59 +0800</pubDate>

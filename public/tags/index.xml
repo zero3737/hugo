@@ -7,10 +7,106 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Mon, 17 Mar 2025 00:05:17 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 18 Mar 2025 21:48:50 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Steam</title>
+        <link>https://hugo-ap0.pages.dev/tags/steam/</link>
+        <pubDate>Tue, 18 Mar 2025 03:57:02 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/tags/steam/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>电脑知识</title>
+        <link>https://hugo-ap0.pages.dev/tags/%E7%94%B5%E8%84%91%E7%9F%A5%E8%AF%86/</link>
+        <pubDate>Tue, 18 Mar 2025 03:57:02 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/tags/%E7%94%B5%E8%84%91%E7%9F%A5%E8%AF%86/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>游戏</title>
+        <link>https://hugo-ap0.pages.dev/tags/%E6%B8%B8%E6%88%8F/</link>
+        <pubDate>Tue, 18 Mar 2025 03:57:02 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/tags/%E6%B8%B8%E6%88%8F/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Spotify</title>
+        <link>https://hugo-ap0.pages.dev/tags/spotify/</link>
+        <pubDate>Tue, 18 Mar 2025 03:55:06 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/tags/spotify/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>音乐</title>
+        <link>https://hugo-ap0.pages.dev/tags/%E9%9F%B3%E4%B9%90/</link>
+        <pubDate>Tue, 18 Mar 2025 03:55:06 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/tags/%E9%9F%B3%E4%B9%90/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>娱乐</title>
+        <link>https://hugo-ap0.pages.dev/tags/%E5%A8%B1%E4%B9%90/</link>
+        <pubDate>Tue, 18 Mar 2025 03:40:54 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/tags/%E5%A8%B1%E4%B9%90/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>个人成长</title>
+        <link>https://hugo-ap0.pages.dev/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/</link>
+        <pubDate>Mon, 17 Mar 2025 20:58:19 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>购物指南</title>
+        <link>https://hugo-ap0.pages.dev/tags/%E8%B4%AD%E7%89%A9%E6%8C%87%E5%8D%97/</link>
+        <pubDate>Mon, 17 Mar 2025 20:58:19 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/tags/%E8%B4%AD%E7%89%A9%E6%8C%87%E5%8D%97/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Obsidian</title>
+        <link>https://hugo-ap0.pages.dev/tags/obsidian/</link>
+        <pubDate>Mon, 17 Mar 2025 20:44:05 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/tags/obsidian/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>笔记</title>
+        <link>https://hugo-ap0.pages.dev/tags/%E7%AC%94%E8%AE%B0/</link>
+        <pubDate>Mon, 17 Mar 2025 20:44:05 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/tags/%E7%AC%94%E8%AE%B0/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Docker</title>
+        <link>https://hugo-ap0.pages.dev/tags/docker/</link>
+        <pubDate>Mon, 17 Mar 2025 20:32:57 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/tags/docker/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Emby</title>
+        <link>https://hugo-ap0.pages.dev/tags/emby/</link>
+        <pubDate>Mon, 17 Mar 2025 20:32:57 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/tags/emby/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Cdn</title>
         <link>https://hugo-ap0.pages.dev/tags/cdn/</link>
-        <pubDate>Sun, 16 Mar 2025 23:59:41 +0800</pubDate>
+        <pubDate>Mon, 17 Mar 2025 04:43:50 +0800</pubDate>
         
         <guid>https://hugo-ap0.pages.dev/tags/cdn/</guid>
         <description></description>
@@ -18,25 +114,49 @@
         <item>
         <title>Cloudflare</title>
         <link>https://hugo-ap0.pages.dev/tags/cloudflare/</link>
-        <pubDate>Sun, 16 Mar 2025 23:59:41 +0800</pubDate>
+        <pubDate>Mon, 17 Mar 2025 04:43:50 +0800</pubDate>
         
         <guid>https://hugo-ap0.pages.dev/tags/cloudflare/</guid>
         <description></description>
         </item>
         <item>
+        <title>Dns</title>
+        <link>https://hugo-ap0.pages.dev/tags/dns/</link>
+        <pubDate>Mon, 17 Mar 2025 04:43:50 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/tags/dns/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>域名</title>
         <link>https://hugo-ap0.pages.dev/tags/%E5%9F%9F%E5%90%8D/</link>
-        <pubDate>Sun, 16 Mar 2025 23:59:41 +0800</pubDate>
+        <pubDate>Mon, 17 Mar 2025 04:43:50 +0800</pubDate>
         
         <guid>https://hugo-ap0.pages.dev/tags/%E5%9F%9F%E5%90%8D/</guid>
         <description></description>
         </item>
         <item>
-        <title>Dns</title>
-        <link>https://hugo-ap0.pages.dev/tags/dns/</link>
-        <pubDate>Sun, 16 Mar 2025 23:39:50 +0800</pubDate>
+        <title>Github</title>
+        <link>https://hugo-ap0.pages.dev/tags/github/</link>
+        <pubDate>Mon, 17 Mar 2025 03:29:46 +0800</pubDate>
         
-        <guid>https://hugo-ap0.pages.dev/tags/dns/</guid>
+        <guid>https://hugo-ap0.pages.dev/tags/github/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>抽象</title>
+        <link>https://hugo-ap0.pages.dev/tags/%E6%8A%BD%E8%B1%A1/</link>
+        <pubDate>Mon, 17 Mar 2025 01:34:38 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/tags/%E6%8A%BD%E8%B1%A1/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>哲学</title>
+        <link>https://hugo-ap0.pages.dev/tags/%E5%93%B2%E5%AD%A6/</link>
+        <pubDate>Mon, 17 Mar 2025 01:34:38 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/tags/%E5%93%B2%E5%AD%A6/</guid>
         <description></description>
         </item>
         <item>
@@ -56,14 +176,6 @@
         <description></description>
         </item>
         <item>
-        <title>Github</title>
-        <link>https://hugo-ap0.pages.dev/tags/github/</link>
-        <pubDate>Sun, 16 Mar 2025 22:01:59 +0800</pubDate>
-        
-        <guid>https://hugo-ap0.pages.dev/tags/github/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>Nginx</title>
         <link>https://hugo-ap0.pages.dev/tags/nginx/</link>
         <pubDate>Sun, 16 Mar 2025 05:34:40 +0800</pubDate>
@@ -80,22 +192,6 @@
         <description></description>
         </item>
         <item>
-        <title>电脑知识</title>
-        <link>https://hugo-ap0.pages.dev/tags/%E7%94%B5%E8%84%91%E7%9F%A5%E8%AF%86/</link>
-        <pubDate>Sat, 15 Mar 2025 04:09:42 +0800</pubDate>
-        
-        <guid>https://hugo-ap0.pages.dev/tags/%E7%94%B5%E8%84%91%E7%9F%A5%E8%AF%86/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Docker</title>
-        <link>https://hugo-ap0.pages.dev/tags/docker/</link>
-        <pubDate>Sat, 15 Mar 2025 02:46:46 +0800</pubDate>
-        
-        <guid>https://hugo-ap0.pages.dev/tags/docker/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>Linux</title>
         <link>https://hugo-ap0.pages.dev/tags/linux/</link>
         <pubDate>Sat, 15 Mar 2025 02:46:46 +0800</pubDate>
@@ -109,46 +205,6 @@
         <pubDate>Sat, 15 Mar 2025 02:46:46 +0800</pubDate>
         
         <guid>https://hugo-ap0.pages.dev/tags/ubuntu/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>抽象</title>
-        <link>https://hugo-ap0.pages.dev/tags/%E6%8A%BD%E8%B1%A1/</link>
-        <pubDate>Sat, 15 Mar 2025 02:02:36 +0800</pubDate>
-        
-        <guid>https://hugo-ap0.pages.dev/tags/%E6%8A%BD%E8%B1%A1/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>个人成长</title>
-        <link>https://hugo-ap0.pages.dev/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/</link>
-        <pubDate>Sat, 15 Mar 2025 02:02:36 +0800</pubDate>
-        
-        <guid>https://hugo-ap0.pages.dev/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>哲学</title>
-        <link>https://hugo-ap0.pages.dev/tags/%E5%93%B2%E5%AD%A6/</link>
-        <pubDate>Sat, 15 Mar 2025 02:02:36 +0800</pubDate>
-        
-        <guid>https://hugo-ap0.pages.dev/tags/%E5%93%B2%E5%AD%A6/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Obsidian</title>
-        <link>https://hugo-ap0.pages.dev/tags/obsidian/</link>
-        <pubDate>Sat, 15 Mar 2025 01:11:27 +0800</pubDate>
-        
-        <guid>https://hugo-ap0.pages.dev/tags/obsidian/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>笔记</title>
-        <link>https://hugo-ap0.pages.dev/tags/%E7%AC%94%E8%AE%B0/</link>
-        <pubDate>Sat, 15 Mar 2025 01:11:27 +0800</pubDate>
-        
-        <guid>https://hugo-ap0.pages.dev/tags/%E7%AC%94%E8%AE%B0/</guid>
         <description></description>
         </item>
         <item>

@@ -5,7 +5,8 @@ tags:
   - linux
   - ubuntu
   - windows
-categories: []
+  - 电脑知识
+categories: 
 image: ./bg/13.webp
 author: carlos
 ---

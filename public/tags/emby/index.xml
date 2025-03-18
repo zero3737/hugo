@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Emby on carlos</title>
+        <link>https://hugo-ap0.pages.dev/tags/emby/</link>
+        <description>Recent content in Emby on carlos</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Example Person</copyright>
+        <lastBuildDate>Mon, 17 Mar 2025 20:33:16 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/tags/emby/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>emby 入门使用篇</title>
+        <link>https://hugo-ap0.pages.dev/p/emby-%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E7%AF%87/</link>
+        <pubDate>Mon, 17 Mar 2025 20:32:57 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/emby-%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E7%AF%87/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/57.webp" alt="Featured image of post emby 入门使用篇" /&gt;&lt;h2 id=&#34;媒体库配置参考&#34;&gt;媒体库配置参考
+&lt;/h2&gt;&lt;p&gt;语言和图像语言配置&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317202523.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250317202523.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317202523.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317202523.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+
+元数据大部分都能通过 TheMovieDb 刮削到&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317202649.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250317202649.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317202649.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317202649.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;某些敏感元数据刮削不到可以这个选项没有打开&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317202744.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250317202744.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317202744.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317202744.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;保存元数据到本地&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317202837.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250317202837.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317202837.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317202837.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;不清楚但是按照这个配置，能用就行&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317202941.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250317202941.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317202941.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317202941.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;字幕根据自己实际情况，这里 emby 运行逻辑不是很懂。勾上就会有字幕？嗯嗯&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317203008.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250317203008.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317203008.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317203008.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;补充说明&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果 TheMovieDb 还是刮削不到某些冷门元数据，比如 av、里番、3D 里番等等，需要去 github 寻找插件按照即可。有些插件还指定 emby 版本，呵呵呵。&lt;/p&gt;
+&lt;h2 id=&#34;多版本命名&#34;&gt;多版本命名
+&lt;/h2&gt;&lt;p&gt;Emby 中多版本电影的命名规则是将不同版本的同一部电影放在同一个文件夹下，电影文件名为“文件夹名 - 版本”。&lt;/p&gt;
+&lt;p&gt;对于 Emby 中的多版本电影命名，为了确保 Emby 能够正确识别并合并显示同一部电影的不同版本（例如 1080p 和 4K 版本），用户需要将所有不同版本的同一部电影放置在同一个文件夹内。在这个文件夹中，每部电影文件的命名应遵循“文件夹名 - 版本”的格式。例如，如果文件夹名为“ABC”，则文件夹内的电影文件可以命名为“ABC - 1080p.mp4”和“ABC - 4K.mp4”等‌。&lt;/p&gt;
+&lt;h2 id=&#34;剧集刮削不到元数据解决办法&#34;&gt;剧集刮削不到元数据解决办法
+&lt;/h2&gt;&lt;p&gt;当 EMBY 剧集直接显示原始视频文件名而非刮削信息时，通常是因为视频文件名包含过多信息导致EMBY 无法正确识别。解决方法是将视频文件名修改为规范的“sXXeXX”格式，以便 EMBY 能准确刮削数据。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/_resources/1738777748884.png&#34;
+   data-webp=&#34;/_resources/1738777748884.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/_resources/1738777748884.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/_resources/1738777748884.png&#34;
+         alt=&#34;1738777748884.png&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;千万不能将时间浪费在 season 1 季文件夹上，这是由于视频文件名太复杂导致的。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>emby 容器更新后启动失败的问题</title>
+        <link>https://hugo-ap0.pages.dev/p/emby-%E5%AE%B9%E5%99%A8%E6%9B%B4%E6%96%B0%E5%90%8E%E5%90%AF%E5%8A%A8%E5%A4%B1%E8%B4%A5%E7%9A%84%E9%97%AE%E9%A2%98/</link>
+        <pubDate>Mon, 17 Mar 2025 20:17:51 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/emby-%E5%AE%B9%E5%99%A8%E6%9B%B4%E6%96%B0%E5%90%8E%E5%90%AF%E5%8A%A8%E5%A4%B1%E8%B4%A5%E7%9A%84%E9%97%AE%E9%A2%98/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/51.webp" alt="Featured image of post emby 容器更新后启动失败的问题" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;优先通过版本回退解决，避免修改配置文件或删除数据。&lt;/p&gt;
+&lt;p&gt;emby 容器更新，导致容器启动失败，第一想到的是卸载新容器，回退旧容器。而不是删除配置文件，别乱搞配置文件，数据丢失得不偿失。&lt;/p&gt;
+&lt;p&gt;md，复制了一份 &lt;code&gt;library.db&lt;/code&gt; 文件，并重命名为 &lt;code&gt;library.db.bak&lt;/code&gt; ，想回退，md emby 居然不认了，数据库文件重命名不了一点。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317201229.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250317201229.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317201229.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317201229.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;h2 id=&#34;回退旧版容器&#34;&gt;回退旧版容器
+&lt;/h2&gt;&lt;p&gt;‌&lt;strong&gt;停止容器&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker stop &amp;lt;新容器名称或ID&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;删除容器&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker rm &amp;lt;新容器名称或ID&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;确认旧镜像版本&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;查看本地已有的Emby镜像列表，找到稳定版本标签（如&lt;code&gt;v4.7.11&lt;/code&gt;）：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker images &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep emby
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;重新启动旧版本容器&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;使用旧镜像运行容器，并确保挂载原有配置目录：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -d &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  --name&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;emby_old &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  -p 8096:8096 &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  -v /原有配置目录路径:/config &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;  linuxserver/emby:&amp;lt;旧版本标签&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

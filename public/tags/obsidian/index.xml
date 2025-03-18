@@ -7,7 +7,114 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Sat, 15 Mar 2025 01:15:24 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/tags/obsidian/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 17 Mar 2025 20:44:26 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/tags/obsidian/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>obsidian 如何恢复误删文件</title>
+        <link>https://hugo-ap0.pages.dev/p/obsidian-%E5%A6%82%E4%BD%95%E6%81%A2%E5%A4%8D%E8%AF%AF%E5%88%A0%E6%96%87%E4%BB%B6/</link>
+        <pubDate>Mon, 17 Mar 2025 20:44:05 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/obsidian-%E5%A6%82%E4%BD%95%E6%81%A2%E5%A4%8D%E8%AF%AF%E5%88%A0%E6%96%87%E4%BB%B6/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/05.webp" alt="Featured image of post obsidian 如何恢复误删文件" /&gt;&lt;h2 id=&#34;obsidian内置文件快照需预先启用&#34;&gt;Obsidian内置文件快照（需预先启用）
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;启用文件恢复插件&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;点击左下角「设置」→「核心插件」→开启「文件恢复」功能&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317204154.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250317204154.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317204154.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317204154.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;恢复历史版本&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;在设置界面点击「查看快照」，选择对应时间点的备份文件进行覆盖还原‌&lt;/p&gt;
+&lt;p&gt;‌
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317204252.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250317204252.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317204252.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317204252.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;或者，命令面板搜索“恢复”即可，&lt;code&gt;crtl + p&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317204340.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250317204340.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317204340.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250317204340.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>obsidian 中标签与分类</title>
         <link>https://hugo-ap0.pages.dev/p/obsidian-%E4%B8%AD%E6%A0%87%E7%AD%BE%E4%B8%8E%E5%88%86%E7%B1%BB/</link>
         <pubDate>Sat, 15 Mar 2025 01:11:27 +0800</pubDate>

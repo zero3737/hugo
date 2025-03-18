@@ -1,4 +1,4 @@
 ## 博客地址
 
-- [github pages 自定义域名](https://www.carlos.ip-ddns.com/)
-- [cloudflare pages 自定义域名](https://blog.carlos.ip-ddns.com/)
+- [cloudflare cdn 国外路线](https://blog.carlos.ip-ddns.com/)
+- [dnspod 智能 dns 境内外 cdn 分流](https://www.carlos2016.cfd/)
