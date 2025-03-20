@@ -7,20 +7,84 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Tue, 18 Mar 2025 21:48:50 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/tags/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Steam</title>
-        <link>https://hugo-ap0.pages.dev/tags/steam/</link>
-        <pubDate>Tue, 18 Mar 2025 03:57:02 +0800</pubDate>
+        <lastBuildDate>Thu, 20 Mar 2025 21:42:26 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Wallpaper</title>
+        <link>https://hugo-ap0.pages.dev/tags/wallpaper/</link>
+        <pubDate>Thu, 20 Mar 2025 21:42:05 +0800</pubDate>
         
-        <guid>https://hugo-ap0.pages.dev/tags/steam/</guid>
+        <guid>https://hugo-ap0.pages.dev/tags/wallpaper/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>备份</title>
+        <link>https://hugo-ap0.pages.dev/tags/%E5%A4%87%E4%BB%BD/</link>
+        <pubDate>Thu, 20 Mar 2025 21:42:05 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/tags/%E5%A4%87%E4%BB%BD/</guid>
         <description></description>
         </item>
         <item>
         <title>电脑知识</title>
         <link>https://hugo-ap0.pages.dev/tags/%E7%94%B5%E8%84%91%E7%9F%A5%E8%AF%86/</link>
-        <pubDate>Tue, 18 Mar 2025 03:57:02 +0800</pubDate>
+        <pubDate>Thu, 20 Mar 2025 21:42:05 +0800</pubDate>
         
         <guid>https://hugo-ap0.pages.dev/tags/%E7%94%B5%E8%84%91%E7%9F%A5%E8%AF%86/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>同步</title>
+        <link>https://hugo-ap0.pages.dev/tags/%E5%90%8C%E6%AD%A5/</link>
+        <pubDate>Thu, 20 Mar 2025 21:42:05 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/tags/%E5%90%8C%E6%AD%A5/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Windows</title>
+        <link>https://hugo-ap0.pages.dev/tags/windows/</link>
+        <pubDate>Thu, 20 Mar 2025 21:09:11 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/tags/windows/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Linux</title>
+        <link>https://hugo-ap0.pages.dev/tags/linux/</link>
+        <pubDate>Thu, 20 Mar 2025 02:58:43 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/tags/linux/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Ubuntu</title>
+        <link>https://hugo-ap0.pages.dev/tags/ubuntu/</link>
+        <pubDate>Thu, 20 Mar 2025 02:58:43 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/tags/ubuntu/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Docker</title>
+        <link>https://hugo-ap0.pages.dev/tags/docker/</link>
+        <pubDate>Thu, 20 Mar 2025 02:24:02 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/tags/docker/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Steam</title>
+        <link>https://hugo-ap0.pages.dev/tags/steam/</link>
+        <pubDate>Wed, 19 Mar 2025 23:51:51 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/tags/steam/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>挂载</title>
+        <link>https://hugo-ap0.pages.dev/tags/%E6%8C%82%E8%BD%BD/</link>
+        <pubDate>Wed, 19 Mar 2025 21:53:54 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/tags/%E6%8C%82%E8%BD%BD/</guid>
         <description></description>
         </item>
         <item>
@@ -85,14 +149,6 @@
         <pubDate>Mon, 17 Mar 2025 20:44:05 +0800</pubDate>
         
         <guid>https://hugo-ap0.pages.dev/tags/%E7%AC%94%E8%AE%B0/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Docker</title>
-        <link>https://hugo-ap0.pages.dev/tags/docker/</link>
-        <pubDate>Mon, 17 Mar 2025 20:32:57 +0800</pubDate>
-        
-        <guid>https://hugo-ap0.pages.dev/tags/docker/</guid>
         <description></description>
         </item>
         <item>
@@ -181,30 +237,6 @@
         <pubDate>Sun, 16 Mar 2025 05:34:40 +0800</pubDate>
         
         <guid>https://hugo-ap0.pages.dev/tags/nginx/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Windows</title>
-        <link>https://hugo-ap0.pages.dev/tags/windows/</link>
-        <pubDate>Sat, 15 Mar 2025 04:09:42 +0800</pubDate>
-        
-        <guid>https://hugo-ap0.pages.dev/tags/windows/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Linux</title>
-        <link>https://hugo-ap0.pages.dev/tags/linux/</link>
-        <pubDate>Sat, 15 Mar 2025 02:46:46 +0800</pubDate>
-        
-        <guid>https://hugo-ap0.pages.dev/tags/linux/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Ubuntu</title>
-        <link>https://hugo-ap0.pages.dev/tags/ubuntu/</link>
-        <pubDate>Sat, 15 Mar 2025 02:46:46 +0800</pubDate>
-        
-        <guid>https://hugo-ap0.pages.dev/tags/ubuntu/</guid>
         <description></description>
         </item>
         <item>

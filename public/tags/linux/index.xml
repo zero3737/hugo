@@ -7,7 +7,1092 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Tue, 18 Mar 2025 21:48:50 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/tags/linux/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 20 Mar 2025 04:18:27 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/tags/linux/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Ubuntu 复制显示进度</title>
+        <link>https://hugo-ap0.pages.dev/p/ubuntu-%E5%A4%8D%E5%88%B6%E6%98%BE%E7%A4%BA%E8%BF%9B%E5%BA%A6/</link>
+        <pubDate>Thu, 20 Mar 2025 02:58:43 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/ubuntu-%E5%A4%8D%E5%88%B6%E6%98%BE%E7%A4%BA%E8%BF%9B%E5%BA%A6/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/43.webp" alt="Featured image of post Ubuntu 复制显示进度" /&gt;&lt;h2 id=&#34;cp-和-rsync-区别&#34;&gt;cp 和 rsync 区别
+&lt;/h2&gt;&lt;p&gt;cp 命令不支持显示进度，改用 rsync&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;功能定位&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;cp‌：基础文件复制工具，仅将文件或目录完整复制到目标位置，无论源文件是否已存在于目标位置‌。&lt;/li&gt;
+&lt;li&gt;rsync‌：增量同步工具，通过比较源和目标文件的差异，仅传输修改或新增的部分，适用于频繁更新或大文件场景‌。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;传输效率&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;cp‌：每次执行均完整复制所有文件，资源消耗较高，尤其对大目录或重复复制场景效率低‌。&lt;/li&gt;
+&lt;li&gt;rsync‌：仅传输变化部分，节省带宽和时间，支持断点续传（-P参数），适合网络传输或备份任务‌。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;使用场景&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;cp‌：适合单次本地快速复制小文件或简单目录，无需复杂配置‌。&lt;/p&gt;
+&lt;p&gt;rsync‌：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;本地或远程增量同步（如 user@host:/path 格式）‌；&lt;/li&gt;
+&lt;li&gt;定期备份、镜像服务器、大文件传输等需高效处理的场景‌。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;附加功能&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;cp -a 可保留权限、时间戳等属性‌；&lt;/li&gt;
+&lt;li&gt;rsync -a 默认保留属性，且支持更多元数据（如符号链接、设备文件）‌。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;远程支持&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;cp‌：仅限本地操作，远程复制需依赖 scp 或 rsync‌。&lt;/li&gt;
+&lt;li&gt;rsync‌：原生支持远程路径，可通过 SSH 加密传输（如 -e ssh）‌。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;复制命令&#34;&gt;复制命令
+&lt;/h2&gt;&lt;p&gt;rsync 复制目录并显示进度&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rsync -avhP /mnt/usb01/content/ /mnt/hd01/wallpaper/content/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-a&lt;/code&gt;：归档模式，保留文件权限、时间戳等属性，并递归复制子目录（包含 -r 功能）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-v&lt;/code&gt;：显示详细传输过程‌。‌&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-h&lt;/code&gt;：以人类可读格式（如 KB、MB）显示文件大小‌。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-P&lt;/code&gt;：等价于 &lt;code&gt;--partial&lt;/code&gt; &lt;code&gt;--progress&lt;/code&gt;，显示每个文件的传输进度（百分比、速度、剩余时间），并支持断点续传‌。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;cp  命令复制目录&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cp -r /mnt/usb01/content/ /mnt/hd01/wallpaper
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>syncthing windows 端使用教程</title>
+        <link>https://hugo-ap0.pages.dev/p/syncthing-windows-%E7%AB%AF%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link>
+        <pubDate>Thu, 20 Mar 2025 02:24:02 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/syncthing-windows-%E7%AB%AF%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/02.webp" alt="Featured image of post syncthing windows 端使用教程" /&gt;&lt;h2 id=&#34;安装&#34;&gt;安装
+&lt;/h2&gt;&lt;p&gt;官网地址&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Bill-Stewart/SyncthingWindowsSetup&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Bill-Stewart/SyncthingWindowsSetup: Syncthing Windows Setup&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;默认下一步即可&lt;/p&gt;
+&lt;h2 id=&#34;初始化&#34;&gt;初始化
+&lt;/h2&gt;&lt;p&gt;设置开启局域网访问&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320020412.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250320020412.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320020412.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320020412.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;删除默认文件夹&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320020526.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250320020526.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320020526.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320020526.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;h2 id=&#34;添加设备&#34;&gt;添加设备
+&lt;/h2&gt;&lt;p&gt;找到标识&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320020657.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250320020657.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320020657.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320020657.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;服务端复制 id&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320020735.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250320020735.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320020735.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320020735.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;windows 端添加远程设备&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320020748.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250320020748.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320020748.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320020748.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;服务端添加设备&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320020911.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250320020911.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320020911.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320020911.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;h2 id=&#34;windwos-端添加文件夹&#34;&gt;windwos 端添加文件夹
+&lt;/h2&gt;&lt;p&gt;添加文件夹&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320022340.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250320022340.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320022340.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320022340.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;设置同步目录，分别是名称和路径&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320021157.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250320021157.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320021157.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320021157.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;打勾表示共享给服务端&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320021244.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250320021244.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320021244.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320021244.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;仅发送，表示不接受服务端的修改&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320021345.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250320021345.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320021345.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320021345.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;扫描并不是开始同步，我也不知道干什么，让他扫就行&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320021509.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250320021509.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320021509.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320021509.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;h2 id=&#34;服务端接受分享&#34;&gt;服务端接受分享
+&lt;/h2&gt;&lt;p&gt;添加，接受分享&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320021655.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250320021655.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320021655.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320021655.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;设置服务端同步目录&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320022020.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250320022020.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320022020.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320022020.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;设置共享&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320022047.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250320022047.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320022047.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320022047.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;设置仅接受&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320022128.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250320022128.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320022128.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320022128.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;h2 id=&#34;强制同步&#34;&gt;强制同步
+&lt;/h2&gt;&lt;p&gt;服务端仅接受，如果和远程不一样，有一个强制还原的选项，还原远程更改&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320033040.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250320033040.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320033040.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320033040.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;同理，如果本地和远程不一样，windows 端会有一个强制还原的选项&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320033223.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250320033223.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320033223.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320033223.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;h2 id=&#34;设置开机启动&#34;&gt;设置开机启动
+&lt;/h2&gt;&lt;p&gt;保存 syncthing.bat 脚本文件&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;# 打开 “记事本” 软件，将以下代码复制进去，另存为 syncthing.bat。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;start&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Syncthing&amp;#34;&lt;/span&gt; syncthing.exe -no-console -no-browser
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;如果上面的脚本不起作用改用 vbs 脚本&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;CreateObject(&amp;#34;WScript.Shell&amp;#34;).Run &amp;#34;&amp;#34;&amp;#34;C:\Users\carlos\AppData\Local\Programs\Syncthing\syncthing.exe&amp;#34;&amp;#34; -no-console -no-browser&amp;#34;, 0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;复制脚本文件到 syncthing.exe 同级目录。找到 syncthing.exe 所在目录，将 syncthing.bat 脚本文件复制到该目录。&lt;/p&gt;
+&lt;p&gt;将脚本文件快捷方式添加到 “启动” 菜单&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;选中 syncthing.bat 脚本文件，右键创建快捷方式&lt;/li&gt;
+&lt;li&gt;按下 win + R，输入 “shell:startup” 打开 “启动” 文件夹&lt;/li&gt;
+&lt;li&gt;将快捷方式复制到 “启动” 文件夹&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
+        <title>syncthing 安卓端使用教程</title>
+        <link>https://hugo-ap0.pages.dev/p/syncthing-%E5%AE%89%E5%8D%93%E7%AB%AF%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link>
+        <pubDate>Thu, 20 Mar 2025 00:59:22 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/syncthing-%E5%AE%89%E5%8D%93%E7%AB%AF%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/22.webp" alt="Featured image of post syncthing 安卓端使用教程" /&gt;&lt;h2 id=&#34;添加设备&#34;&gt;添加设备
+&lt;/h2&gt;&lt;p&gt;手机端客户端安装地址&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/syncthing/syncthing-android&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;syncthing/syncthing-android: Wrapper of syncthing for Android.&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;docker 版服务端点击连接，获取标识二维码，用来添加设备。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/_resources/f63ef6431cacb006ad5023cdcee47c50.png&#34;
+   data-webp=&#34;/_resources/f63ef6431cacb006ad5023cdcee47c50.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/_resources/f63ef6431cacb006ad5023cdcee47c50.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/_resources/f63ef6431cacb006ad5023cdcee47c50.png&#34;
+         alt=&#34;f63ef6431cacb006ad5023cdcee47c50.png&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;手机端顶部选项卡点击“设备”按钮。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/_resources/a931d66383d1cb67f6bfe23f82bc3385.png&#34;
+   data-webp=&#34;/_resources/a931d66383d1cb67f6bfe23f82bc3385.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/_resources/a931d66383d1cb67f6bfe23f82bc3385.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/_resources/a931d66383d1cb67f6bfe23f82bc3385.png&#34;
+         alt=&#34;a931d66383d1cb67f6bfe23f82bc3385.png&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;点击二维码添加设备。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/_resources/5e7450e67a2a5112ae384366610514e1.png&#34;
+   data-webp=&#34;/_resources/5e7450e67a2a5112ae384366610514e1.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/_resources/5e7450e67a2a5112ae384366610514e1.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/_resources/5e7450e67a2a5112ae384366610514e1.png&#34;
+         alt=&#34;5e7450e67a2a5112ae384366610514e1.png&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;h2 id=&#34;添加文件夹&#34;&gt;添加文件夹
+&lt;/h2&gt;&lt;p&gt;手机端右上方点击“+”号按钮。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/_resources/af2dc2de135e60c8d980787f3633de81.png&#34;
+   data-webp=&#34;/_resources/af2dc2de135e60c8d980787f3633de81.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/_resources/af2dc2de135e60c8d980787f3633de81.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/_resources/af2dc2de135e60c8d980787f3633de81.png&#34;
+         alt=&#34;af2dc2de135e60c8d980787f3633de81.png&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;点击文件夹图标，选择目录。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/_resources/ef8cb3a6e8c5e306d54049602838ec72.png&#34;
+   data-webp=&#34;/_resources/ef8cb3a6e8c5e306d54049602838ec72.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/_resources/ef8cb3a6e8c5e306d54049602838ec72.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/_resources/ef8cb3a6e8c5e306d54049602838ec72.png&#34;
+         alt=&#34;ef8cb3a6e8c5e306d54049602838ec72.png&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;选择好目录，点击“允许访问”。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/_resources/c3916577048330ffa7085525072e4093.png&#34;
+   data-webp=&#34;/_resources/c3916577048330ffa7085525072e4093.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/_resources/c3916577048330ffa7085525072e4093.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/_resources/c3916577048330ffa7085525072e4093.png&#34;
+         alt=&#34;c3916577048330ffa7085525072e4093.png&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;“文件夹类型”选择“仅发送”。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/_resources/b41585f6b5e648c03076f0733e064858.png&#34;
+   data-webp=&#34;/_resources/b41585f6b5e648c03076f0733e064858.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/_resources/b41585f6b5e648c03076f0733e064858.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/_resources/b41585f6b5e648c03076f0733e064858.png&#34;
+         alt=&#34;b41585f6b5e648c03076f0733e064858.png&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;docker 版服务端选择添加文件夹即可。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/_resources/b8a9e47f2e8ee6ee5aa41c16ee80a433.png&#34;
+   data-webp=&#34;/_resources/b8a9e47f2e8ee6ee5aa41c16ee80a433.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/_resources/b8a9e47f2e8ee6ee5aa41c16ee80a433.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/_resources/b8a9e47f2e8ee6ee5aa41c16ee80a433.png&#34;
+         alt=&#34;b8a9e47f2e8ee6ee5aa41c16ee80a433.png&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;设置好同步目录。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/_resources/8402f0ac56d48dd656cb068aa18b5f53.png&#34;
+   data-webp=&#34;/_resources/8402f0ac56d48dd656cb068aa18b5f53.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/_resources/8402f0ac56d48dd656cb068aa18b5f53.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/_resources/8402f0ac56d48dd656cb068aa18b5f53.png&#34;
+         alt=&#34;8402f0ac56d48dd656cb068aa18b5f53.png&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;服务端选择“仅接受”。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/_resources/445e8d6943d74d34253301f46f6e3f25.png&#34;
+   data-webp=&#34;/_resources/445e8d6943d74d34253301f46f6e3f25.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/_resources/445e8d6943d74d34253301f46f6e3f25.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/_resources/445e8d6943d74d34253301f46f6e3f25.png&#34;
+         alt=&#34;445e8d6943d74d34253301f46f6e3f25.png&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;h2 id=&#34;服务端忽略删除操作&#34;&gt;服务端忽略删除操作
+&lt;/h2&gt;&lt;p&gt;如果想让服务端忽略发送端（发送端：手机作为发送端）的删除操作，别称：无视删除操作。比如服务端同步好数据，这时候想节省手机内存，想删除手机备份好的数据，又不想影响服务端已经备份好的数据。&lt;/p&gt;
+&lt;p&gt;软件网页端“操作-高级-文件夹-Ignore Delete”打勾，即可忽略发送端删除操作。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/_resources/5faf55973e12fea0bc081446f3a9fd9b.png&#34;
+   data-webp=&#34;/_resources/5faf55973e12fea0bc081446f3a9fd9b.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/_resources/5faf55973e12fea0bc081446f3a9fd9b.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/_resources/5faf55973e12fea0bc081446f3a9fd9b.png&#34;
+         alt=&#34;5faf55973e12fea0bc081446f3a9fd9b.png&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;选择“文件夹”。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/_resources/c772effc12d648b5551384cd7e2d4142.png&#34;
+   data-webp=&#34;/_resources/c772effc12d648b5551384cd7e2d4142.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/_resources/c772effc12d648b5551384cd7e2d4142.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/_resources/c772effc12d648b5551384cd7e2d4142.png&#34;
+         alt=&#34;c772effc12d648b5551384cd7e2d4142.png&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;“忽略删除”选项打勾，然后滑动到底部保存即可。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/_resources/14240aad2b427aa586829459bce04eac.png&#34;
+   data-webp=&#34;/_resources/14240aad2b427aa586829459bce04eac.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/_resources/14240aad2b427aa586829459bce04eac.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/_resources/14240aad2b427aa586829459bce04eac.png&#34;
+         alt=&#34;14240aad2b427aa586829459bce04eac.png&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>onlyoffice 对接 nextcloud，以及常用扩展</title>
         <link>https://hugo-ap0.pages.dev/p/onlyoffice-%E5%AF%B9%E6%8E%A5-nextcloud%E4%BB%A5%E5%8F%8A%E5%B8%B8%E7%94%A8%E6%89%A9%E5%B1%95/</link>
         <pubDate>Sat, 15 Mar 2025 02:46:46 +0800</pubDate>

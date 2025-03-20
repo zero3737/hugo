@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Fri, 14 Mar 2025 23:23:37 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/tags/%E8%BF%90%E7%BB%B4/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 19 Mar 2025 21:59:49 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/tags/%E8%BF%90%E7%BB%B4/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Linux 中查看进程以及杀死进程的方法</title>
         <link>https://hugo-ap0.pages.dev/p/linux-%E4%B8%AD%E6%9F%A5%E7%9C%8B%E8%BF%9B%E7%A8%8B%E4%BB%A5%E5%8F%8A%E6%9D%80%E6%AD%BB%E8%BF%9B%E7%A8%8B%E7%9A%84%E6%96%B9%E6%B3%95/</link>
         <pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate>
@@ -93,12 +93,12 @@
 &lt;/div&gt;</description>
         </item>
         <item>
-        <title>windows 开机执行bat脚本，含隐藏命令窗口</title>
-        <link>https://hugo-ap0.pages.dev/p/windows-%E5%BC%80%E6%9C%BA%E6%89%A7%E8%A1%8Cbat%E8%84%9A%E6%9C%AC%E5%90%AB%E9%9A%90%E8%97%8F%E5%91%BD%E4%BB%A4%E7%AA%97%E5%8F%A3/</link>
+        <title>windows 开机执行 bat 脚本，含隐藏命令窗口</title>
+        <link>https://hugo-ap0.pages.dev/p/windows-%E5%BC%80%E6%9C%BA%E6%89%A7%E8%A1%8C-bat-%E8%84%9A%E6%9C%AC%E5%90%AB%E9%9A%90%E8%97%8F%E5%91%BD%E4%BB%A4%E7%AA%97%E5%8F%A3/</link>
         <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://hugo-ap0.pages.dev/p/windows-%E5%BC%80%E6%9C%BA%E6%89%A7%E8%A1%8Cbat%E8%84%9A%E6%9C%AC%E5%90%AB%E9%9A%90%E8%97%8F%E5%91%BD%E4%BB%A4%E7%AA%97%E5%8F%A3/</guid>
-        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/30.webp" alt="Featured image of post windows 开机执行bat脚本，含隐藏命令窗口" /&gt;&lt;h2 id=&#34;启动文件夹&#34;&gt;启动文件夹
+        <guid>https://hugo-ap0.pages.dev/p/windows-%E5%BC%80%E6%9C%BA%E6%89%A7%E8%A1%8C-bat-%E8%84%9A%E6%9C%AC%E5%90%AB%E9%9A%90%E8%97%8F%E5%91%BD%E4%BB%A4%E7%AA%97%E5%8F%A3/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/30.webp" alt="Featured image of post windows 开机执行 bat 脚本，含隐藏命令窗口" /&gt;&lt;h2 id=&#34;启动文件夹&#34;&gt;启动文件夹
 &lt;/h2&gt;&lt;p&gt;按 Win + R 键打开“运行”对话框。&lt;/p&gt;
 &lt;p&gt;输入 shell:startup 并按 Enter 键，这将打开“启动”文件夹。这个文件夹中的所有程序都会在系统启动时自动运行。&lt;/p&gt;
 &lt;p&gt;将脚本放入“启动”文件夹‌。&lt;/p&gt;

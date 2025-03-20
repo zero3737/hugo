@@ -5,6 +5,7 @@ tags:
   - 游戏
   - steam
   - 电脑知识
+  - wallpaper
 categories: 
 image: ./bg/39.webp
 author: carlos

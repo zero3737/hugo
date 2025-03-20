@@ -1,10 +1,11 @@
 ---
 date: 2025-03-08
-title: windows 开机执行bat脚本，含隐藏命令窗口
+title: windows 开机执行 bat 脚本，含隐藏命令窗口
 tags:
   - windows
   - 运维
-categories: []
+  - 电脑知识
+categories: 
 image: ./bg/30.webp
 author: carlos
 ---

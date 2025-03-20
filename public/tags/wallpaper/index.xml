@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Wallpaper on carlos</title>
+        <link>https://hugo-ap0.pages.dev/tags/wallpaper/</link>
+        <description>Recent content in Wallpaper on carlos</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Example Person</copyright>
+        <lastBuildDate>Thu, 20 Mar 2025 21:42:26 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/tags/wallpaper/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>wallpaper 壁纸备份</title>
+        <link>https://hugo-ap0.pages.dev/p/wallpaper-%E5%A3%81%E7%BA%B8%E5%A4%87%E4%BB%BD/</link>
+        <pubDate>Thu, 20 Mar 2025 21:42:05 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/wallpaper-%E5%A3%81%E7%BA%B8%E5%A4%87%E4%BB%BD/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/05.webp" alt="Featured image of post wallpaper 壁纸备份" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;呵呵，不兼容 rclone，本来想通过符号链接指向 rclone 挂载的磁盘目录，wallpaper 总是闪退，可能不兼容 rclone 挂载磁盘的文件系统。&lt;/p&gt;
+&lt;p&gt;raidrive 挂载的磁盘文件系统为 ntfs，如果创建软链接指向 raidrive 创建的磁盘，这可以正常打开，但是不能下载。ftp 方式比 smb 方式使用更加流畅。raidrive 免费版只支持挂载网络磁盘，要模拟本地磁盘必须给钱。如果模拟本地磁盘，则软链接应该可以完美兼容，也就说正常下载。&lt;/p&gt;
+&lt;p&gt;raidrive 收费版本，模拟本地磁盘，选择 ftp 方式，可能 ftp 比较适合小文件传输，所以使用体验比 smb 好，这可能是完美方案。&lt;/p&gt;
+&lt;p&gt;最后还是通过 syncthing 方案备份 wallpaper 壁纸，这样占用本地空间，看着难受，呵呵呵，如果通过软链接，则必须 windows 原生功能实现。我测试 smb 挂载网络磁盘正常打开，可不可下载不清楚，我这是通过 wifi，总是资源管理器崩溃。如果使用网线，可能使用体验会很好。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320213703.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250320213703.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320213703.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320213703.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;raidrive 收费版本，模拟本地磁盘，选择 ftp 方式挂载，应该使用体验最好，可是没钱，可以正常下载壁纸，可以切换壁纸，可以正常打开 wallpaper 软件。&lt;/p&gt;
+&lt;p&gt;还有通过 iSCSI 方式，这种方式也是挂载本地磁盘，但是 iSCSI 不支持共享目录，只能共享整块磁盘，和文件传输协议还是有点区别。&lt;/p&gt;
+&lt;h2 id=&#34;本地文件手动备份方案&#34;&gt;本地文件手动备份方案
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;单张壁纸导出&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;通过 Wallpaper Engine 内置保存功能：选中壁纸 → 点击保存图标 → 命名并确认 → 右键壁纸选择「在资源管理器中打开」定位本地文件‌。&lt;/p&gt;
+&lt;p&gt;文件路径示例：steamapps\workshop\content\431960（壁纸ID对应不同文件夹）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;批量文件备份&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;直接复制整个壁纸存储目录（包含视频、图片、配置文件等原始文件）至外部硬盘或云盘‌。适合需要完整备份动态壁纸交互属性的用户。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>wallpaper 入门使用篇</title>
+        <link>https://hugo-ap0.pages.dev/p/wallpaper-%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E7%AF%87/</link>
+        <pubDate>Wed, 19 Mar 2025 23:51:51 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/wallpaper-%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E7%AF%87/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/51.webp" alt="Featured image of post wallpaper 入门使用篇" /&gt;&lt;h2 id=&#34;取消在线订阅&#34;&gt;取消在线订阅
+&lt;/h2&gt;&lt;p&gt;主页 -&amp;gt; 社区中心&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250319234939.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250319234939.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250319234939.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250319234939.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;创意工坊 -&amp;gt; 订阅物品&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250319235011.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250319235011.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250319235011.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250319235011.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;可以取消在线订阅&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250319235054.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250319235054.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250319235054.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250319235054.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;h2 id=&#34;定时更换壁纸&#34;&gt;定时更换壁纸
+&lt;/h2&gt;&lt;p&gt;&lt;code&gt;crtl + a&lt;/code&gt; 全选点击加号&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320002827.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250320002827.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320002827.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320002827.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;点击设置&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320002920.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250320002920.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320002920.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320002920.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;登录时自动更换壁纸，也就是开机或者重启软件时候自动换壁纸&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320002948.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250320002948.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320002948.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320002948.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;保存播放列表，可以通过快捷键换壁纸&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320003040.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250320003040.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320003040.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320003040.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;设置快捷键即可换壁纸，可以创建多个播放列表&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320003113.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250320003113.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320003113.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250320003113.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>wallpaper 品质设置参考</title>
+        <link>https://hugo-ap0.pages.dev/p/wallpaper-%E5%93%81%E8%B4%A8%E8%AE%BE%E7%BD%AE%E5%8F%82%E8%80%83/</link>
+        <pubDate>Tue, 18 Mar 2025 02:25:39 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/p/wallpaper-%E5%93%81%E8%B4%A8%E8%AE%BE%E7%BD%AE%E5%8F%82%E8%80%83/</guid>
+        <description>&lt;img src="https://hugo-ap0.pages.dev/bg/39.webp" alt="Featured image of post wallpaper 品质设置参考" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;wallpaper 品质配置参考&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250318024428.png&#34;
+   data-webp=&#34;/00-assets/Pasted%20image%2020250318024428.webp&#34;
+   data-original=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250318024428.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://hugo-ap0.pages.dev/00-assets/Pasted%20image%2020250318024428.png&#34;
+         alt=&#34;&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;根据自己的显卡占用率设置，我使用的是 1060 亮机卡，呵呵&lt;/p&gt;
+&lt;h2 id=&#34;参数说明&#34;&gt;参数说明
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;帧率（FPS）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;作用‌：每秒画面刷新次数，60FPS为流畅基准&lt;/li&gt;
+&lt;li&gt;性能影响‌：实际是其他设置的综合结果表现&lt;/li&gt;
+&lt;li&gt;优化建议‌：目标锁定显示器刷新率（如60/144Hz）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;抗锯齿（AA）&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;FXAA：牺牲锐度换性能（性能消耗★）&lt;/li&gt;
+&lt;li&gt;TAA：动态画面更稳定（性能消耗★★）&lt;/li&gt;
+&lt;li&gt;MSAA：4x时性能消耗达★★★★&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;性能黑洞‌：8x MSAA可能消耗20%+ GPU资源&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;后处理（Post-Processing）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;关键特效‌：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;环境光遮蔽（SSAO/HBAO）：增加场景深度感（消耗★★★）&lt;/li&gt;
+&lt;li&gt;动态模糊：高速移动增强真实感（消耗★）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;性能技巧‌：关闭景深可提升3-5%帧率&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;纹理分辨率&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;显存依赖‌：4K纹理需要8GB+显存&lt;/li&gt;
+&lt;li&gt;优化公式‌：显存容量 × 0.75 = 安全纹理质量档位&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;阴影质量&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;硬件杀手‌：软阴影+动态光源时，性能下降可达30%&lt;/p&gt;
+&lt;p&gt;层级优化‌：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;分辨率：优先降至1024×1024&lt;/li&gt;
+&lt;li&gt;距离：缩减30%阴影投射范围&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;体积照明（Volumetric Lighting）&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;性能曲线‌：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;低：约5%性能损耗&lt;/li&gt;
+&lt;li&gt;超高：可能消耗15% GPU资源&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;替代方案‌：开启屏幕空间反射替代&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;反射效果&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;技术分级‌：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;屏幕空间反射（SSR）：性价比首选（消耗★★）&lt;/li&gt;
+&lt;li&gt;光线追踪反射：性能消耗★★★★★&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;折中方案‌：反射质量降至中档，分辨率减半&lt;/p&gt;
+&lt;h2 id=&#34;性能消耗梯度表&#34;&gt;性能消耗梯度表
+&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;参数等级&lt;/th&gt;
+&lt;th&gt;低→超高档性能差&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;阴影质量&lt;/td&gt;
+&lt;td&gt;18-22%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;光线追踪反射&lt;/td&gt;
+&lt;td&gt;25-40%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;体积照明&lt;/td&gt;
+&lt;td&gt;12-18%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;抗锯齿（MSAA 8x）&lt;/td&gt;
+&lt;td&gt;15-25%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;纹理过滤&lt;/td&gt;
+&lt;td&gt;3-5%&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
