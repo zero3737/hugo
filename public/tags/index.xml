@@ -7,20 +7,36 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>Example Person</copyright>
-        <lastBuildDate>Fri, 21 Mar 2025 20:10:53 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/tags/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>分析</title>
-        <link>https://hugo-ap0.pages.dev/tags/%E5%88%86%E6%9E%90/</link>
-        <pubDate>Fri, 21 Mar 2025 20:10:48 +0800</pubDate>
+        <lastBuildDate>Sun, 23 Mar 2025 18:57:34 +0800</lastBuildDate><atom:link href="https://hugo-ap0.pages.dev/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>游戏</title>
+        <link>https://hugo-ap0.pages.dev/tags/%E6%B8%B8%E6%88%8F/</link>
+        <pubDate>Sun, 23 Mar 2025 18:57:25 +0800</pubDate>
         
-        <guid>https://hugo-ap0.pages.dev/tags/%E5%88%86%E6%9E%90/</guid>
+        <guid>https://hugo-ap0.pages.dev/tags/%E6%B8%B8%E6%88%8F/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>游戏搬砖</title>
+        <link>https://hugo-ap0.pages.dev/tags/%E6%B8%B8%E6%88%8F%E6%90%AC%E7%A0%96/</link>
+        <pubDate>Sun, 23 Mar 2025 18:57:25 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/tags/%E6%B8%B8%E6%88%8F%E6%90%AC%E7%A0%96/</guid>
         <description></description>
         </item>
         <item>
         <title>购物指南</title>
         <link>https://hugo-ap0.pages.dev/tags/%E8%B4%AD%E7%89%A9%E6%8C%87%E5%8D%97/</link>
-        <pubDate>Fri, 21 Mar 2025 02:30:45 +0800</pubDate>
+        <pubDate>Sun, 23 Mar 2025 03:32:35 +0800</pubDate>
         
         <guid>https://hugo-ap0.pages.dev/tags/%E8%B4%AD%E7%89%A9%E6%8C%87%E5%8D%97/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>分析</title>
+        <link>https://hugo-ap0.pages.dev/tags/%E5%88%86%E6%9E%90/</link>
+        <pubDate>Fri, 21 Mar 2025 20:10:48 +0800</pubDate>
+        
+        <guid>https://hugo-ap0.pages.dev/tags/%E5%88%86%E6%9E%90/</guid>
         <description></description>
         </item>
         <item>
@@ -109,14 +125,6 @@
         <pubDate>Wed, 19 Mar 2025 21:53:54 +0800</pubDate>
         
         <guid>https://hugo-ap0.pages.dev/tags/%E6%8C%82%E8%BD%BD/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>游戏</title>
-        <link>https://hugo-ap0.pages.dev/tags/%E6%B8%B8%E6%88%8F/</link>
-        <pubDate>Tue, 18 Mar 2025 03:57:02 +0800</pubDate>
-        
-        <guid>https://hugo-ap0.pages.dev/tags/%E6%B8%B8%E6%88%8F/</guid>
         <description></description>
         </item>
         <item>
