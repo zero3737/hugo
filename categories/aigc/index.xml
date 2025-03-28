@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Aigc on carlos</title>
+        <link>https://www.carlos.lh/categories/aigc/</link>
+        <description>Recent content in Aigc on carlos</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Example Person</copyright>
+        <lastBuildDate>Thu, 13 Mar 2025 16:55:16 +0800</lastBuildDate><atom:link href="https://www.carlos.lh/categories/aigc/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>open webui 对接 deepseek</title>
+        <link>https://www.carlos.lh/p/open-webui-%E5%AF%B9%E6%8E%A5-deepseek/</link>
+        <pubDate>Sun, 09 Mar 2025 21:54:56 +0800</pubDate>
+        
+        <guid>https://www.carlos.lh/p/open-webui-%E5%AF%B9%E6%8E%A5-deepseek/</guid>
+        <description>&lt;img src="https://www.carlos.lh/bg/56.webp" alt="Featured image of post open webui 对接 deepseek" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;主流大模型平台的 API：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SiliconFlow (硅基流动)&lt;/li&gt;
+&lt;li&gt;百度云 千帆&lt;/li&gt;
+&lt;li&gt;字节跳动 火山方舟&lt;/li&gt;
+&lt;li&gt;阿里云 百炼&lt;/li&gt;
+&lt;li&gt;腾讯 知识引擎&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://note.youdao.com/ynoteshare/index.html?id=06a6ee8b16f8bac5048db5aeeee9a181&amp;amp;type=notebook&amp;amp;_time=1740688679358&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;详细地址&lt;/a&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;火山&#34;&gt;火山
+&lt;/h2&gt;&lt;p&gt;创建 api key：&lt;a class=&#34;link&#34; href=&#34;https://console.volcengine.com/ark&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;地址&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://www.carlos.lh/_resources/c2737dbbb941d2af59d096ebd328572d.png&#34;
+   data-webp=&#34;/_resources/c2737dbbb941d2af59d096ebd328572d.webp&#34;
+   data-original=&#34;https://www.carlos.lh/_resources/c2737dbbb941d2af59d096ebd328572d.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://www.carlos.lh/_resources/c2737dbbb941d2af59d096ebd328572d.png&#34;
+         alt=&#34;c2737dbbb941d2af59d096ebd328572d.png&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;创建接入点&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://www.carlos.lh/_resources/1f7dbe20c67bf9666199f6b25a40e6f6.png&#34;
+   data-webp=&#34;/_resources/1f7dbe20c67bf9666199f6b25a40e6f6.webp&#34;
+   data-original=&#34;https://www.carlos.lh/_resources/1f7dbe20c67bf9666199f6b25a40e6f6.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://www.carlos.lh/_resources/1f7dbe20c67bf9666199f6b25a40e6f6.png&#34;
+         alt=&#34;1f7dbe20c67bf9666199f6b25a40e6f6.png&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;没有实名认证，必须实名认证&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://www.carlos.lh/_resources/837a4ced5dd4f31832c4296e162694f4.png&#34;
+   data-webp=&#34;/_resources/837a4ced5dd4f31832c4296e162694f4.webp&#34;
+   data-original=&#34;https://www.carlos.lh/_resources/837a4ced5dd4f31832c4296e162694f4.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://www.carlos.lh/_resources/837a4ced5dd4f31832c4296e162694f4.png&#34;
+         alt=&#34;837a4ced5dd4f31832c4296e162694f4.png&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;one api 接入配置&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://www.carlos.lh/_resources/f8e9b0efaa447a2b304f4ddeb3e3264b.png&#34;
+   data-webp=&#34;/_resources/f8e9b0efaa447a2b304f4ddeb3e3264b.webp&#34;
+   data-original=&#34;https://www.carlos.lh/_resources/f8e9b0efaa447a2b304f4ddeb3e3264b.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://www.carlos.lh/_resources/f8e9b0efaa447a2b304f4ddeb3e3264b.png&#34;
+         alt=&#34;f8e9b0efaa447a2b304f4ddeb3e3264b.png&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;oben webui 通过“外部链接”方式对接 one api，one api 统一管理所有 api 接口。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://www.carlos.lh/_resources/3a11b9a7391484f94ca105b50fd7b515.png&#34;
+   data-webp=&#34;/_resources/3a11b9a7391484f94ca105b50fd7b515.webp&#34;
+   data-original=&#34;https://www.carlos.lh/_resources/3a11b9a7391484f94ca105b50fd7b515.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://www.carlos.lh/_resources/3a11b9a7391484f94ca105b50fd7b515.png&#34;
+         alt=&#34;3a11b9a7391484f94ca105b50fd7b515.png&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;这里 v1 为固定写法，不要钻牛角尖。秘钥填 one api 的。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://www.carlos.lh/_resources/4975450d6bdfc18aa9d2b3eb8283dd9c.png&#34;
+   data-webp=&#34;/_resources/4975450d6bdfc18aa9d2b3eb8283dd9c.webp&#34;
+   data-original=&#34;https://www.carlos.lh/_resources/4975450d6bdfc18aa9d2b3eb8283dd9c.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://www.carlos.lh/_resources/4975450d6bdfc18aa9d2b3eb8283dd9c.png&#34;
+         alt=&#34;4975450d6bdfc18aa9d2b3eb8283dd9c.png&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;填这个秘钥即可。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://www.carlos.lh/_resources/abd9981b1c2f3d54b8e9c7cf43887431.png&#34;
+   data-webp=&#34;/_resources/abd9981b1c2f3d54b8e9c7cf43887431.webp&#34;
+   data-original=&#34;https://www.carlos.lh/_resources/abd9981b1c2f3d54b8e9c7cf43887431.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://www.carlos.lh/_resources/abd9981b1c2f3d54b8e9c7cf43887431.png&#34;
+         alt=&#34;abd9981b1c2f3d54b8e9c7cf43887431.png&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;h2 id=&#34;腾讯&#34;&gt;腾讯
+&lt;/h2&gt;&lt;p&gt;创建 api key：&lt;a class=&#34;link&#34; href=&#34;https://console.cloud.tencent.com/lkeap/api&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;地址&lt;/a&gt;
+，必须要实名认证。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://www.carlos.lh/_resources/ff2790aa1bed7c9a8d63951b7e59d80d.png&#34;
+   data-webp=&#34;/_resources/ff2790aa1bed7c9a8d63951b7e59d80d.webp&#34;
+   data-original=&#34;https://www.carlos.lh/_resources/ff2790aa1bed7c9a8d63951b7e59d80d.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://www.carlos.lh/_resources/ff2790aa1bed7c9a8d63951b7e59d80d.png&#34;
+         alt=&#34;ff2790aa1bed7c9a8d63951b7e59d80d.png&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;查看文档即可，只有 r1 和 v3。&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://www.carlos.lh/_resources/fbba04c7b5371eee746323b8d05c3fe9.png&#34;
+   data-webp=&#34;/_resources/fbba04c7b5371eee746323b8d05c3fe9.webp&#34;
+   data-original=&#34;https://www.carlos.lh/_resources/fbba04c7b5371eee746323b8d05c3fe9.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://www.carlos.lh/_resources/fbba04c7b5371eee746323b8d05c3fe9.png&#34;
+         alt=&#34;fbba04c7b5371eee746323b8d05c3fe9.png&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;h2 id=&#34;百度&#34;&gt;百度
+&lt;/h2&gt;&lt;p&gt;申请地址：&lt;a class=&#34;link&#34; href=&#34;https://console.bce.baidu.com/qianfan/modelcenter/model/buildIn/list&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;地址1&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;申请 api key 即可&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://www.carlos.lh/_resources/6d0f0245a5d81b9d660424836afa45a6.png&#34;
+   data-webp=&#34;/_resources/6d0f0245a5d81b9d660424836afa45a6.webp&#34;
+   data-original=&#34;https://www.carlos.lh/_resources/6d0f0245a5d81b9d660424836afa45a6.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://www.carlos.lh/_resources/6d0f0245a5d81b9d660424836afa45a6.png&#34;
+         alt=&#34;6d0f0245a5d81b9d660424836afa45a6.png&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;参数填 deepseek-r1 即可&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://www.carlos.lh/_resources/8a402c9041b659fd33298a6a464a1617.png&#34;
+   data-webp=&#34;/_resources/8a402c9041b659fd33298a6a464a1617.webp&#34;
+   data-original=&#34;https://www.carlos.lh/_resources/8a402c9041b659fd33298a6a464a1617.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://www.carlos.lh/_resources/8a402c9041b659fd33298a6a464a1617.png&#34;
+         alt=&#34;8a402c9041b659fd33298a6a464a1617.png&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+&lt;p&gt;这里可查看哪些模型可以使用&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+	&lt;a data-fancybox=&#34;gallery&#34; 
+   href=&#34;https://www.carlos.lh/_resources/188d0c91d796544e7353288ac5c933df.png&#34;
+   data-webp=&#34;/_resources/188d0c91d796544e7353288ac5c933df.webp&#34;
+   data-original=&#34;https://www.carlos.lh/_resources/188d0c91d796544e7353288ac5c933df.png&#34;
+   class=&#34;webp-fancybox&#34;&gt;
+  
+  &lt;picture&gt;
+    
+    
+    
+    &lt;img src=&#34;https://www.carlos.lh/_resources/188d0c91d796544e7353288ac5c933df.png&#34;
+         alt=&#34;188d0c91d796544e7353288ac5c933df.png&#34;
+         
+         loading=&#34;lazy&#34;
+         data-fallback&gt;
+  &lt;/picture&gt;
+&lt;/a&gt;
+ 
+
+&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
