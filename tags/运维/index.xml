@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>运维 on carlos</title><link>https://www.carlos2016.cfd/tags/%E8%BF%90%E7%BB%B4/</link><description>Recent content in 运维 on carlos</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Example Person</copyright><lastBuildDate>Sun, 30 Mar 2025 16:10:24 +0000</lastBuildDate><atom:link href="https://www.carlos2016.cfd/tags/%E8%BF%90%E7%BB%B4/index.xml" rel="self" type="application/rss+xml"/><item><title>Linux 中查看进程以及杀死进程的方法</title><link>https://www.carlos2016.cfd/p/linux-%E4%B8%AD%E6%9F%A5%E7%9C%8B%E8%BF%9B%E7%A8%8B%E4%BB%A5%E5%8F%8A%E6%9D%80%E6%AD%BB%E8%BF%9B%E7%A8%8B%E7%9A%84%E6%96%B9%E6%B3%95/</link><pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.carlos2016.cfd/p/linux-%E4%B8%AD%E6%9F%A5%E7%9C%8B%E8%BF%9B%E7%A8%8B%E4%BB%A5%E5%8F%8A%E6%9D%80%E6%AD%BB%E8%BF%9B%E7%A8%8B%E7%9A%84%E6%96%B9%E6%B3%95/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/10.webp" alt="Featured image of post Linux 中查看进程以及杀死进程的方法" />&lt;h2 id="查看进程">查看进程
+&lt;/h2>&lt;p>&lt;strong>ps 命令&lt;/strong>：命令用于报告当前系统的进程状态。常用的组合有 &lt;code>ps aux&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>a&lt;/code>：显示所有用户的进程&lt;/li>
+&lt;li>&lt;code>u&lt;/code>：以用户友好的格式显示&lt;/li>
+&lt;li>&lt;code>x&lt;/code>：显示没有控制终端的进程&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">ps aux &lt;span class="p">|&lt;/span> grep 进程名
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309003651.webp"
+data-webp="/00-assets/Pasted%20image%2020250309003651.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309003651.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309003651.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309003651.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>第二列为 pid，关闭进程的时候会用到。&lt;/p>
+&lt;h2 id="关闭进程">关闭进程
+&lt;/h2>&lt;p>&lt;strong>&lt;code>kill&lt;/code> 命令&lt;/strong>：&lt;code>kill&lt;/code> 命令用于向进程发送信号，最常用的信号是 &lt;code>SIGTERM&lt;/code>（终止）和 &lt;code>SIGKILL&lt;/code>（强制终止）。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">kill&lt;/span> 进程ID &lt;span class="c1"># 发送 SIGTERM 信号&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">kill&lt;/span> -9 进程ID &lt;span class="c1"># 发送 SIGKILL 信号，强制终止&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>&lt;code>pkill&lt;/code> 命令&lt;/strong>：&lt;code>pkill&lt;/code> 命令可以根据进程名或其他属性直接终止进程，而无需先查找进程 ID。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">pkill 进程名
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>&lt;code>killall&lt;/code> 命令&lt;/strong>：&lt;code>killall&lt;/code> 命令可以根据进程名终止所有匹配的进程。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">killall 进程名
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>windows 开机执行 bat 脚本，含隐藏命令窗口</title><link>https://www.carlos2016.cfd/p/windows-%E5%BC%80%E6%9C%BA%E6%89%A7%E8%A1%8C-bat-%E8%84%9A%E6%9C%AC%E5%90%AB%E9%9A%90%E8%97%8F%E5%91%BD%E4%BB%A4%E7%AA%97%E5%8F%A3/</link><pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.carlos2016.cfd/p/windows-%E5%BC%80%E6%9C%BA%E6%89%A7%E8%A1%8C-bat-%E8%84%9A%E6%9C%AC%E5%90%AB%E9%9A%90%E8%97%8F%E5%91%BD%E4%BB%A4%E7%AA%97%E5%8F%A3/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/30.webp" alt="Featured image of post windows 开机执行 bat 脚本，含隐藏命令窗口" />&lt;h2 id="启动文件夹">启动文件夹
+&lt;/h2>&lt;p>按 Win + R 键打开“运行”对话框。&lt;/p>
+&lt;p>输入 shell:startup 并按 Enter 键，这将打开“启动”文件夹。这个文件夹中的所有程序都会在系统启动时自动运行。&lt;/p>
+&lt;p>将脚本放入“启动”文件夹‌。&lt;/p>
+&lt;h2 id="隐藏命令窗口">隐藏命令窗口
+&lt;/h2>&lt;p>创建文件，内容如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Set WshShell = CreateObject(&amp;#34;WScript.Shell&amp;#34;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">WshShell.Run chr(34) &amp;amp;&amp;#34;C:\path\to\your\batchfile.bat&amp;#34;&amp;amp; chr(34), 0
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>替换&amp;quot;C:\path\to\your\batchfile.bat&amp;quot;为你的批处理文件的实际路径。&lt;/p>
+&lt;p>保存文件，扩展名为.vbs，例如runBatchSilent.vbs。&lt;/p>
+&lt;p>将 vbs 文件放到“启动”文件夹，bat 文件放到自己喜欢的目录即可，vbs 中的路径一定要指向 bat 文件，原理是通过 vbs 隐藏命令窗口。&lt;/p></description></item></channel></rss>

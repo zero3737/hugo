@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Linux on carlos</title>
+        <link>https://www.carlos.lh/categories/linux/</link>
+        <description>Recent content in Linux on carlos</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Example Person</copyright>
+        <lastBuildDate>Thu, 13 Mar 2025 16:34:28 +0800</lastBuildDate><atom:link href="https://www.carlos.lh/categories/linux/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>符号链接 mklink</title>
+        <link>https://www.carlos.lh/p/%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5-mklink/</link>
+        <pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.carlos.lh/p/%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5-mklink/</guid>
+        <description>&lt;img src="https://www.carlos.lh/bg/13.webp" alt="Featured image of post 符号链接 mklink" /&gt;&lt;h2 id=&#34;前言&#34;&gt;前言
+&lt;/h2&gt;&lt;p&gt;符号链接（Symbolic Link）是一种文件系统中的概念，它允许你创建一个指向另一个文件或目录的快捷方式。符号链接在 Windows、Linux 和 Mac 系统中都有支持，但它们的行为和兼容性可能会有所不同。下面我将详细解释符号链接的作用以及为什么在某些情况下可能无法兼容不同路径。&lt;/p&gt;
+&lt;h2 id=&#34;windows-使用&#34;&gt;Windows 使用
+&lt;/h2&gt;&lt;p&gt;在 Windows 系统中，可以使用 mklink 命令来创建符号链接。以下是基本语法：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mklink /D &amp;#34;目标目录&amp;#34; &amp;#34;源目录&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;例如，假设你的 Joplin 导出目录是 D:\JoplinExport，而你的 Obsidian 目录是 C:\ObsidianVault，你可以使用以下命令在 Obsidian 目录中创建一个指向 Joplin 导出目录的符号链接：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mklink /D &amp;#34;C:\ObsidianVault\JoplinExport&amp;#34; &amp;#34;D:\JoplinExport&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;linux-使用&#34;&gt;Linux 使用
+&lt;/h2&gt;&lt;p&gt;在 Linux 或 Mac 系统中，可以使用 ln -s 命令来创建符号链接。以下是基本语法：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ln -s 源目录 目标目录
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;例如，假设你的 Joplin 导出目录是 /home/user/JoplinExport，而你的 Obsidian 目录是 /home/user/ObsidianVault，你可以使用以下命令在 Obsidian 目录中创建一个指向 Joplin 导出目录的符号链接：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ln -s /home/user/JoplinExport /home/user/ObsidianVault/JoplinExport
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;注意事项&#34;&gt;注意事项
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;符号链接只是创建了一个指向实际文件的快捷方式，如果路径不正确，图片仍然无法显示。&lt;/li&gt;
+&lt;li&gt;符号链接的路径是相对于创建时的路径。如果目标文件或目录的路径发生变化，符号链接可能会失效。例如，如果你创建了一个符号链接指向 &lt;code&gt;D:\JoplinExport&lt;/code&gt;，但后来将 JoplinExport 文件夹移动到了 &lt;code&gt;D:\NewFolder&lt;/code&gt;，那么原来的符号链接将无法找到目标。&lt;/li&gt;
+&lt;li&gt;不同的文件系统对符号链接的支持程度不同。例如，NTFS 文件系统支持符号链接，但 FAT32 和 exFAT 文件系统不支持。如果你将符号链接从一个支持的文件系统移动到不支持的文件系统，符号链接可能会失效。&lt;/li&gt;
+&lt;li&gt;某些应用程序可能不支持符号链接。例如，某些程序可能无法正确解析符号链接，导致无法访问目标文件或目录。这可能是由于程序的设计或安全限制。&lt;/li&gt;
+&lt;li&gt;在不同操作系统之间移动符号链接可能会导致问题。例如，Windows 和 Linux 系统对符号链接的处理方式不同，如果你在 Windows 上创建了一个符号链接，然后在 Linux 系统上访问，可能会遇到兼容性问题。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;不支持符号链接功能&#34;&gt;不支持符号链接功能‌
+&lt;/h3&gt;&lt;p&gt;exFAT是一种为移动存储设备（如U盘、SD卡）设计的轻量级文件系统，主要目标是‌跨平台兼容性‌（Windows/macOS/Linux）和‌大文件支持‌，但未包含符号链接等高级功能‌。&lt;/p&gt;
+&lt;h3 id=&#34;与ntfs的对比&#34;&gt;与NTFS的对比
+&lt;/h3&gt;&lt;p&gt;‌
+NTFS、ext4等文件系统支持符号链接，因为它们具备更复杂的元数据管理能力。而exFAT的设计简化了文件结构以提高兼容性，牺牲了此类高级特性‌。&lt;/p&gt;
+&lt;h2 id=&#34;案例&#34;&gt;案例
+&lt;/h2&gt;&lt;p&gt;假设你的 Joplin 导出目录是 D:\JoplinExport，而你的 Obsidian 目录是 C:\ObsidianVault，你可以使用以下命令在 Obsidian 目录中创建一个指向 Joplin 导出目录的符号链接：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mklink /D &amp;#34;C:\ObsidianVault\JoplinExport&amp;#34; &amp;#34;D:\JoplinExport&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;注意，JoplinExport 目录下的资源文件夹一定要存在，不然无法加载资源，例如图片、视频、办公文件等。JoplinExport 目录下存在 images 目录，那么 &lt;code&gt;C:\ObsidianVault\JoplinExport&lt;/code&gt; 目录下也必须有 images 目录，不然无法加载图片资源。&lt;/p&gt;
+&lt;h2 id=&#34;软链接与硬链接&#34;&gt;软链接与硬链接
+&lt;/h2&gt;&lt;p&gt;一、跨文件系统支持&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;软链接：可跨不同文件系统或分区创建，仅需存储目标文件的路径信息即可实现间接引用‌。&lt;/li&gt;
+&lt;li&gt;硬链接：仅能在同一文件系统内创建，因依赖共享同一inode的特性，无法跨越不同存储设备或分区‌。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;二、目标类型支持&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;软链接：若目标文件被删除或移动，软链接会失效（成为“悬挂链接”）‌。&lt;/li&gt;
+&lt;li&gt;硬链接：删除任一硬链接不会影响其他链接，只有当所有硬链接被删除后，文件数据才会被释放‌。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;三、目标文件删除后的行为&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;软链接：若目标文件被删除或移动，软链接会失效（成为“悬挂链接”）‌。&lt;/li&gt;
+&lt;li&gt;硬链接：删除任一硬链接不会影响其他链接，只有当所有硬链接被删除后，文件数据才会被释放‌。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

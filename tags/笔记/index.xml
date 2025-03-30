@@ -1,0 +1,2072 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>笔记 on carlos</title><link>https://www.carlos2016.cfd/tags/%E7%AC%94%E8%AE%B0/</link><description>Recent content in 笔记 on carlos</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Example Person</copyright><lastBuildDate>Sun, 30 Mar 2025 16:10:24 +0000</lastBuildDate><atom:link href="https://www.carlos2016.cfd/tags/%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml"/><item><title>obsidian 如何恢复误删文件</title><link>https://www.carlos2016.cfd/p/obsidian-%E5%A6%82%E4%BD%95%E6%81%A2%E5%A4%8D%E8%AF%AF%E5%88%A0%E6%96%87%E4%BB%B6/</link><pubDate>Mon, 17 Mar 2025 20:44:05 +0800</pubDate><guid>https://www.carlos2016.cfd/p/obsidian-%E5%A6%82%E4%BD%95%E6%81%A2%E5%A4%8D%E8%AF%AF%E5%88%A0%E6%96%87%E4%BB%B6/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/05.webp" alt="Featured image of post obsidian 如何恢复误删文件" />&lt;h2 id="obsidian内置文件快照需预先启用">Obsidian内置文件快照（需预先启用）
+&lt;/h2>&lt;p>&lt;strong>启用文件恢复插件&lt;/strong>&lt;/p>
+&lt;p>点击左下角「设置」→「核心插件」→开启「文件恢复」功能&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317204154.webp"
+data-webp="/00-assets/Pasted%20image%2020250317204154.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317204154.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317204154.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317204154.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>&lt;strong>恢复历史版本&lt;/strong>&lt;/p>
+&lt;p>在设置界面点击「查看快照」，选择对应时间点的备份文件进行覆盖还原‌&lt;/p>
+&lt;p>‌
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317204252.webp"
+data-webp="/00-assets/Pasted%20image%2020250317204252.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317204252.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317204252.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317204252.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>或者，命令面板搜索“恢复”即可，&lt;code>crtl + p&lt;/code>&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317204340.webp"
+data-webp="/00-assets/Pasted%20image%2020250317204340.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317204340.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317204340.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317204340.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item><item><title>obsidian 中标签与分类</title><link>https://www.carlos2016.cfd/p/obsidian-%E4%B8%AD%E6%A0%87%E7%AD%BE%E4%B8%8E%E5%88%86%E7%B1%BB/</link><pubDate>Sat, 15 Mar 2025 01:11:27 +0800</pubDate><guid>https://www.carlos2016.cfd/p/obsidian-%E4%B8%AD%E6%A0%87%E7%AD%BE%E4%B8%8E%E5%88%86%E7%B1%BB/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/27.webp" alt="Featured image of post obsidian 中标签与分类" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>在 Obsidian 知识管理体系中，标签与分类是两种不同的组织结构&lt;/p>
+&lt;p>&lt;strong>分类&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>主要通过文件夹实现专题式管理，适用于纵向层级划分（例如：读书笔记/先秦文学/五经）‌&lt;/li>
+&lt;li>标准分类通常采用单值模式，即一篇笔记默认归属一个文件夹‌&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>标签&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>侧重横向维度拓展，支持多重属性标注（例如：&lt;code>#时间管理&lt;/code> &lt;code>#工作效率&lt;/code>）&lt;/li>
+&lt;li>天然支持多值体系，允许无限叠加关联标签‌&lt;/li>
+&lt;/ul>
+&lt;h2 id="实操">实操
+&lt;/h2>&lt;p>这是错误案例，根据分类定义，不可能有多个值&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250315011217.webp"
+data-webp="/00-assets/Pasted%20image%2020250315011217.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250315011217.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250315011217.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250315011217.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>不确定分类就默认为空即可，不然不方便查找&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250315011458.webp"
+data-webp="/00-assets/Pasted%20image%2020250315011458.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250315011458.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250315011458.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250315011458.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item><item><title>obsidian 图片链接</title><link>https://www.carlos2016.cfd/p/obsidian-%E5%9B%BE%E7%89%87%E9%93%BE%E6%8E%A5/</link><pubDate>Sat, 15 Mar 2025 00:20:56 +0800</pubDate><guid>https://www.carlos2016.cfd/p/obsidian-%E5%9B%BE%E7%89%87%E9%93%BE%E6%8E%A5/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/56.webp" alt="Featured image of post obsidian 图片链接" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>我 obsidian 只装了图片链接插件，比如移动文件的时候，自动批量修改图片链接。obsidian 默认修改图片链接并不好用，有时候生效，有时候不生效，很奇怪。&lt;/p>
+&lt;h2 id="插件安装">插件安装
+&lt;/h2>&lt;p>安装第三方插件&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250306060718.webp"
+data-webp="/00-assets/Pasted%20image%2020250306060718.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250306060718.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250306060718.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250306060718.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>开启开关，即可自动更新笔记图片&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250306060805.webp"
+data-webp="/00-assets/Pasted%20image%2020250306060805.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250306060805.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250306060805.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250306060805.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item><item><title>hugo 配合 github action 自动化部署</title><link>https://www.carlos2016.cfd/p/hugo-%E9%85%8D%E5%90%88-github-action-%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/</link><pubDate>Tue, 11 Mar 2025 05:07:03 +0800</pubDate><guid>https://www.carlos2016.cfd/p/hugo-%E9%85%8D%E5%90%88-github-action-%E8%87%AA%E5%8A%A8%E5%8C%96%E9%83%A8%E7%BD%B2/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/03.webp" alt="Featured image of post hugo 配合 github action 自动化部署" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>hugo 配合 github action 实现自动化部署，例如将 hugo 源码推送到 github 仓库，通过 github 服务器的 hugo 服务生成静态文件，最后自动发布到 main 分支。&lt;/p>
+&lt;h2 id="实操">实操
+&lt;/h2>&lt;p>github 创建 source 分支用来存放源码，然后在本地 git 仓库新建 &lt;code>.github/workflows&lt;/code> 目录，文件名不能改变，这是 github action 默认识别路径。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311045254.webp"
+data-webp="/00-assets/Pasted%20image%2020250311045254.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311045254.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311045254.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311045254.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>在该目录下创建 &lt;code>任意名称.yaml&lt;/code>，内容如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Deploy Hugo to GitHub Pages&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">push&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">branches&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">source ] &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 仅监控source分支的推送&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">jobs&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">deploy&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">runs-on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">ubuntu-latest&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">steps&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">监测 source 分支&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">actions/checkout@v4&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">ref&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">source &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 明确检出source分支&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">hugo 设置&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">peaceiris/actions-hugo@v2&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">hugo-version&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s1">&amp;#39;0.125.7&amp;#39;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 指定Hugo版本&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">extended&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 启用扩展版&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">删除符号链接&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">rm -f /home/runner/work/hugo/hugo/static/_resources&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">复制图片&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">cp -r //home/runner/work/hugo/hugo/static/00-assets/ /home/runner/work/hugo/hugo/static/_resources&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">hugo 生成静态文件&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">hugo --minify --gc&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">发布到 main 分支 &lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">uses&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">peaceiris/actions-gh-pages@v4&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">with&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">deploy_key&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">${{ secrets.SSH_PRIVATE_KEY }}&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">publish_dir&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">./public &lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">publish_branch&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">main &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 正确参数名称&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">force_orphan&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 强制覆盖目标分支&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">env&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># 配置 Git 用户信息 &lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">GIT_USER_NAME&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;root&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">GIT_USER_EMAIL&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;root@localhost&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>runs-on 指定环境，可以指定 windows、ubuntu 以及 macos&lt;/li>
+&lt;li>on 为事件，自动执行脚本的事件，这里为 push 自动触发脚本&lt;/li>
+&lt;li>name 为注释&lt;/li>
+&lt;li>uses 为使用模块，这里加载了 &lt;code>actions/checkout@v4&lt;/code>、&lt;code>peaceiris/actions-hugo@v2&lt;/code> 等待模块&lt;/li>
+&lt;li>run 为执行命令，这里为 ubuntu 环境，所以都是 ubuntu 命令&lt;/li>
+&lt;li>&lt;code>${{ secrets.SSH_PRIVATE_KEY }}&lt;/code> 为变量名，我是通过 ssh 方式推送到 main 分支，用到 &lt;code>peaceiris/actions-gh-pages@v4&lt;/code> 模块，其他为官方默认配置，不必理会&lt;/li>
+&lt;/ul>
+&lt;p>将本地 git 公钥和私钥配置到 github，我这里默认已经配置好公钥，只需要将私钥配置到 action 即可&lt;/p>
+&lt;p>要想 github action 识别 &lt;code>${{ secrets.SSH_PRIVATE_KEY }}&lt;/code> 变量，需要手动配置，找到 Settings&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311050114.webp"
+data-webp="/00-assets/Pasted%20image%2020250311050114.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311050114.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311050114.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311050114.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>注意变量名要一致，我这里为 &lt;code>SSH_PRIVATE_KEY&lt;/code>，用的时候是 &lt;code>${{ secrets.SSH_PRIVATE_KEY }}&lt;/code>&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311050215.webp"
+data-webp="/00-assets/Pasted%20image%2020250311050215.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311050215.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311050215.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311050215.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>将 git 仓库推送到 github source 分支即可自动构建，点击进去，即可排查错误&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311050623.webp"
+data-webp="/00-assets/Pasted%20image%2020250311050623.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311050623.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311050623.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311050623.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item><item><title>hugo 部署到 github pages 部分文章 404</title><link>https://www.carlos2016.cfd/p/hugo-%E9%83%A8%E7%BD%B2%E5%88%B0-github-pages-%E9%83%A8%E5%88%86%E6%96%87%E7%AB%A0-404/</link><pubDate>Tue, 11 Mar 2025 00:33:02 +0800</pubDate><guid>https://www.carlos2016.cfd/p/hugo-%E9%83%A8%E7%BD%B2%E5%88%B0-github-pages-%E9%83%A8%E5%88%86%E6%96%87%E7%AB%A0-404/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/02.webp" alt="Featured image of post hugo 部署到 github pages 部分文章 404" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>我的部分文章是 joplin 导出，而静态资源是存放在 &lt;code>_resources&lt;/code> 目录。GitHub Pages 默认启用 Jekyll 引擎，会忽略以下划线 &lt;code>_&lt;/code> 开头的目录（如 &lt;code>_resources&lt;/code>）‌。&lt;/p>
+&lt;h2 id="解决方案">解决方案
+&lt;/h2>&lt;p>&lt;strong>禁用 Jekyll 处理&lt;/strong>&lt;/p>
+&lt;p>在项目根目录或发布分支（如 &lt;code>gh-pages&lt;/code>）中添加空文件 &lt;code>.nojekyll&lt;/code>，以阻止 Jekyll 过滤特殊命名目录‌。&lt;/p>
+&lt;p>在 hugo public 目录运行命令&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">touch .nojekyll
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>确保 &lt;code>.nojekyll&lt;/code> 文件被提交到 Git 仓库中。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311003040.webp"
+data-webp="/00-assets/Pasted%20image%2020250311003040.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311003040.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311003040.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311003040.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>访问成功，不会出现 404 错误。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311003236.webp"
+data-webp="/00-assets/Pasted%20image%2020250311003236.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311003236.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311003236.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311003236.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item><item><title>hugo 部署到 github pages</title><link>https://www.carlos2016.cfd/p/hugo-%E9%83%A8%E7%BD%B2%E5%88%B0-github-pages/</link><pubDate>Mon, 10 Mar 2025 23:44:35 +0800</pubDate><guid>https://www.carlos2016.cfd/p/hugo-%E9%83%A8%E7%BD%B2%E5%88%B0-github-pages/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/35.webp" alt="Featured image of post hugo 部署到 github pages" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>本文主题是 hugo 怎么部署到 github pages&lt;/p>
+&lt;h2 id="实操">实操
+&lt;/h2>&lt;p>设置 baseurl，不然会样式错误。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310233803.webp"
+data-webp="/00-assets/Pasted%20image%2020250310233803.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310233803.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310233803.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310233803.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>将 public 目录下的静态文件上传到 github，找到 Settings&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310233913.webp"
+data-webp="/00-assets/Pasted%20image%2020250310233913.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310233913.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310233913.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310233913.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>找到 pages，设置分支，设置根目录，保存即可。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310234041.webp"
+data-webp="/00-assets/Pasted%20image%2020250310234041.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310234041.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310234041.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310234041.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>如果 &lt;code>username.github.io&lt;/code> 作为仓库名，直接访问即可，我的是 hugo 作为仓库名，所以要在后面加 hugo 目录，完整 url：&lt;code>username.github.io/hugo&lt;/code>&lt;/p>
+&lt;p>访问成功截图&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310234348.webp"
+data-webp="/00-assets/Pasted%20image%2020250310234348.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310234348.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310234348.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310234348.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item><item><title>hugo 定时推送代码</title><link>https://www.carlos2016.cfd/p/hugo-%E5%AE%9A%E6%97%B6%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81/</link><pubDate>Mon, 10 Mar 2025 05:53:27 +0800</pubDate><guid>https://www.carlos2016.cfd/p/hugo-%E5%AE%9A%E6%97%B6%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/27.webp" alt="Featured image of post hugo 定时推送代码" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>提前配置好 git 仓库，配置好 ssh，该脚本是在 ssh 配置完成下编写，不然要输入用户名和密码&lt;/p>
+&lt;h2 id="实操">实操
+&lt;/h2>&lt;p>新建 sh 文件，内容如下&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> /root/hugo
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">hugo
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> /root/hugo/public
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git add .
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git commit -m &lt;span class="s2">&amp;#34;auto commit: &lt;/span>&lt;span class="k">$(&lt;/span>date +&lt;span class="s1">&amp;#39;%Y-%m-%d %H:%M:%S&amp;#39;&lt;/span>&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git push origin main
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo nohup sh /root/shell/hugo.sh start &lt;span class="p">&amp;amp;&lt;/span>&amp;gt;&amp;gt; /root/shell/shell.log &lt;span class="p">&amp;amp;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>宝塔创建计划任务&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310054915.webp"
+data-webp="/00-assets/Pasted%20image%2020250310054915.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310054915.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310054915.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310054915.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>宝塔定时执行脚本即可&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310055150.webp"
+data-webp="/00-assets/Pasted%20image%2020250310055150.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310055150.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310055150.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310055150.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>可以手动执行，测试脚本&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310055256.webp"
+data-webp="/00-assets/Pasted%20image%2020250310055256.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310055256.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310055256.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310055256.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item><item><title>hugo 修改时间格式</title><link>https://www.carlos2016.cfd/p/hugo-%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F/</link><pubDate>Sun, 09 Mar 2025 22:49:27 +0800</pubDate><guid>https://www.carlos2016.cfd/p/hugo-%E4%BF%AE%E6%94%B9%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/27.webp" alt="Featured image of post hugo 修改时间格式" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>hugo stack 默认的文章时间格式是英文的，本土化不是很好&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309224336.webp"
+data-webp="/00-assets/Pasted%20image%2020250309224336.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309224336.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309224336.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309224336.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="修改时间格式">修改时间格式
+&lt;/h2>&lt;p>配置文件 &lt;code>hugo.yaml&lt;/code> 搜索 &lt;code>dateFormat&lt;/code>，注释原本的时间格式&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309224526.webp"
+data-webp="/00-assets/Pasted%20image%2020250309224526.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309224526.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309224526.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309224526.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>添加代码&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">dateFormat&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># published: Jan 02, 2006&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># lastUpdated: Jan 02, 2006 15:04 MST&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">published&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="ld">2006-01-02&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">lastUpdated&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="ld">2006-01-02&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">15&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="m">04&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">MST&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这样就修改成功了&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309224906.webp"
+data-webp="/00-assets/Pasted%20image%2020250309224906.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309224906.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309224906.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309224906.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="配置最后修改于">配置「最后修改于」
+&lt;/h2>&lt;p>配置文件末尾添加代码&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">frontmatter&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">lastmod&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;:fileModTime&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;lastmod&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>效果图&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309224844.webp"
+data-webp="/00-assets/Pasted%20image%2020250309224844.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309224844.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309224844.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309224844.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item><item><title>hugo “关于”页面模板</title><link>https://www.carlos2016.cfd/p/hugo-%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF/</link><pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.carlos2016.cfd/p/hugo-%E5%85%B3%E4%BA%8E%E9%A1%B5%E9%9D%A2%E6%A8%A1%E6%9D%BF/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/03.webp" alt="Featured image of post hugo “关于”页面模板" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>本文将分享一个全面且有创意的自我介绍框架，既能涵盖基础信息，又能突出个性和独特性。&lt;/p>
+&lt;p>&lt;strong>介绍自己 20 个角度&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>个人简介&lt;/li>
+&lt;li>专业技能&lt;/li>
+&lt;li>工作经历&lt;/li>
+&lt;li>成就与荣誉&lt;/li>
+&lt;li>兴趣爱好&lt;/li>
+&lt;li>联系方式&lt;/li>
+&lt;li>性格特点&lt;/li>
+&lt;li>教育背景&lt;/li>
+&lt;li>语言能力&lt;/li>
+&lt;li>社会实践&lt;/li>
+&lt;li>社团活动&lt;/li>
+&lt;li>志愿经历&lt;/li>
+&lt;li>培训经历&lt;/li>
+&lt;li>个人作品&lt;/li>
+&lt;li>证书资质&lt;/li>
+&lt;li>行业见解&lt;/li>
+&lt;li>职业规划&lt;/li>
+&lt;li>个人价值观&lt;/li>
+&lt;li>技术栈&lt;/li>
+&lt;li>沟通风格&lt;/li>
+&lt;/ul>
+&lt;p>除了介绍自己，还能介绍博客的主题，博客初衷等待。&lt;/p>
+&lt;h2 id="关于页面案例">“关于”页面案例
+&lt;/h2>&lt;p>hugo “关于”页面模板&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-md" data-lang="md">&lt;span class="line">&lt;span class="cl">&lt;span class="gu">## 👤 我是谁？
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">-&lt;/span> 🎮 游戏老餮：原神开服玩家/王者荣耀泉水指挥官/Steam喜加一专业户
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">-&lt;/span> 💻 专业级赛博搬砖工，致富宣言：&amp;#34;只要副本刷得够，排骨顿顿能加肉&amp;#34;（懂的都懂）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">-&lt;/span> 🖼️ 壁纸收藏家：小红车创意工坊常驻嘉宾，桌面壁纸半小时一换星人
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">-&lt;/span> 🔄 人形重启键：&amp;#34;遇到问题先重启&amp;#34;是刻进DNA的祖传秘方（成功率51%）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">-&lt;/span> ⚠️ 免责声明：会写代码≠会修电脑！
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">## 🌸 我的快乐老家
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">-&lt;/span> 🌸 美少女游戏非专业测评员（XP系统公开版）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">-&lt;/span> 🕹️ 游戏日常：原神锄大地/王者0-10-0的快乐/Steam喜加一重症患者
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">-&lt;/span> 🔧 数码日常：图吧垃圾佬预备役
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">## 📒 关于这个博客
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gu">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">-&lt;/span> 🪟 Windows驯兽师笔记
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">-&lt;/span> 🐧 Ubuntu生存指南
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">-&lt;/span> 🕳️ 踩坑记录（同一个坑绝不掉两次...大概）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">-&lt;/span> 🎬 剪辑民工进化论
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">-&lt;/span> 📈 Excel野路子研究院
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">-&lt;/span> 💾 赛博口粮储备站（全网失效链接墓志铭合集）
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>hugo nginx 反向代理域名默认加端口号</title><link>https://www.carlos2016.cfd/p/hugo-nginx-%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E5%9F%9F%E5%90%8D%E9%BB%98%E8%AE%A4%E5%8A%A0%E7%AB%AF%E5%8F%A3%E5%8F%B7/</link><pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.carlos2016.cfd/p/hugo-nginx-%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E5%9F%9F%E5%90%8D%E9%BB%98%E8%AE%A4%E5%8A%A0%E7%AB%AF%E5%8F%A3%E5%8F%B7/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/37.webp" alt="Featured image of post hugo nginx 反向代理域名默认加端口号" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>通过 &lt;code>hugo server&lt;/code> 命令可以启动为服务端，默认端口为 1313。但如果直接通过 Nginx 的 proxy_pass 反代为公网服务会遇到一些问题，应该加上一些参数启动。&lt;/p>
+&lt;p>比如搜索页面加载图片失败，wss 一直访问失败&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308235044.webp"
+data-webp="/00-assets/Pasted%20image%2020250308235044.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308235044.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308235044.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308235044.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>点击链接，域名会默认加端口号，导致访问失败 404&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308235159.webp"
+data-webp="/00-assets/Pasted%20image%2020250308235159.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308235159.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308235159.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308235159.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="解决方案">解决方案
+&lt;/h2>&lt;ul>
+&lt;li>appendPort 参数，这里需要设置为 false，这样你的 baseURL 就不会变成 &amp;lt;域名&amp;gt;:1313。如果不设置为 false，你在使用搜索等功能的时候，浏览器还是会向 1313 端口发送请求。&lt;/li>
+&lt;li>baseURL 参数，不然搜索页面中的笔记自动跳转 localhost。&lt;/li>
+&lt;li>liveReloadPort 参数，这个是 Hugo 用来实时更新网页内容的 WebSocket 端口。除了要设置 Nginx 支持 WebSocket，这里还要手动指定下 wss 访问的端口为与 https 相同的 443。&lt;/li>
+&lt;/ul>
+&lt;p>完整命令&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">hugo server --port&lt;span class="o">=&lt;/span>&lt;span class="m">1313&lt;/span> --bind&lt;span class="o">=&lt;/span>192.168.15.210 --baseURL&lt;span class="o">=&lt;/span>https://www.carlos.lh/ --liveReloadPort &lt;span class="m">443&lt;/span> --appendPort&lt;span class="o">=&lt;/span>&lt;span class="nb">false&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>hugo stack 图片点击放大</title><link>https://www.carlos2016.cfd/p/hugo-stack-%E5%9B%BE%E7%89%87%E7%82%B9%E5%87%BB%E6%94%BE%E5%A4%A7/</link><pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.carlos2016.cfd/p/hugo-stack-%E5%9B%BE%E7%89%87%E7%82%B9%E5%87%BB%E6%94%BE%E5%A4%A7/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/40.webp" alt="Featured image of post hugo stack 图片点击放大" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>本文主题是实现 hugo stack 主题，点击图片放大的功能。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309005606.webp"
+data-webp="/00-assets/Pasted%20image%2020250309005606.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309005606.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309005606.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309005606.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>原来图片很小，不方便自己查看，比如这里，根本看不清楚日志。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309005706.webp"
+data-webp="/00-assets/Pasted%20image%2020250309005706.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309005706.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309005706.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309005706.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="实操">实操
+&lt;/h2>&lt;p>修改 config.toml 或者 hugo.yaml&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309005917.webp"
+data-webp="/00-assets/Pasted%20image%2020250309005917.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309005917.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309005917.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309005917.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>添加配置，编辑 &lt;code>/root/hugo&lt;/code> 主目录下的 hugo.yaml，我的 Ubuntu 环境&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">params&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">fancybox&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>路径为&lt;code>/layouts/_default/_markup/render-image.html&lt;/code> 添加内容为&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">{{if .Page.Site.Params.fancybox }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;post-img-view&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">data-fancybox&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;gallery&amp;#34;&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ $Permalink }}&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">img&lt;/span> &lt;span class="na">loading&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#39;lazy&amp;#39;&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ $Permalink }}&amp;#34;&lt;/span> &lt;span class="na">alt&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ .Text }}&amp;#34;&lt;/span> &lt;span class="err">{{&lt;/span> &lt;span class="na">with&lt;/span> &lt;span class="err">.&lt;/span>&lt;span class="na">Title&lt;/span>&lt;span class="err">}}&lt;/span> &lt;span class="na">title&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ . }}&amp;#34;&lt;/span>&lt;span class="err">{{&lt;/span> &lt;span class="na">end&lt;/span> &lt;span class="err">}}&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{ end }}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>路径为 &lt;code>/root/hugo/themes/hugo-theme-stack/layouts/partials/footer&lt;/code>，编辑 &lt;code>custom.html&lt;/code> 内容为：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">{{if .Page.Site.Params.fancybox }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">link&lt;/span> &lt;span class="na">rel&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;stylesheet&amp;#34;&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css&amp;#34;&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{ end }}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>重启 hugo 服务即可实现点击图片放大功能。&lt;/p></description></item><item><title>hugo stack 主题添加 b 站图标跳转个人主页配置</title><link>https://www.carlos2016.cfd/p/hugo-stack-%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0-b-%E7%AB%99%E5%9B%BE%E6%A0%87%E8%B7%B3%E8%BD%AC%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E9%85%8D%E7%BD%AE/</link><pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.carlos2016.cfd/p/hugo-stack-%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0-b-%E7%AB%99%E5%9B%BE%E6%A0%87%E8%B7%B3%E8%BD%AC%E4%B8%AA%E4%BA%BA%E4%B8%BB%E9%A1%B5%E9%85%8D%E7%BD%AE/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/38.webp" alt="Featured image of post hugo stack 主题添加 b 站图标跳转个人主页配置" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>本文主题是如何实现 hugo stack 主题添加 b 站图标（或者是称作徽标？）跳转个人主页配置&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309023944.webp"
+data-webp="/00-assets/Pasted%20image%2020250309023944.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309023944.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309023944.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309023944.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>就是添加这么一个小图标的功能，点击即可跳到 b 站的个人主页&lt;/p>
+&lt;h2 id="实操">实操
+&lt;/h2>&lt;p>下载对应图标：&lt;a class="link" href="https://tabler.io/icons" target="_blank" rel="noopener"
+>地址1&lt;/a>
+&lt;/p>
+&lt;p>保存格式为 svg，然后将资源放到 &lt;code>/root/hugo/themes/hugo-theme-stack/assets/icons&lt;/code> 目录下&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309024420.webp"
+data-webp="/00-assets/Pasted%20image%2020250309024420.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309024420.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309024420.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309024420.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>我的文件为 &lt;code>bilibili.svg&lt;/code>&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309024514.webp"
+data-webp="/00-assets/Pasted%20image%2020250309024514.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309024514.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309024514.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309024514.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>添加对应配置文件即可。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">menu&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">main&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">social&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">identifier&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">github&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">GitHub&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">url&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://github.com/zero3737&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">weight&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">1&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 权重值，决定图标在导航栏中的位置，越小越靠前&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">params&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">icon&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">brand-github&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">identifier&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">bilibili&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Bilibili&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">url&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;https://space.bilibili.com/4069668&amp;#34;&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 替换为你的 B 站个人主页链接&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">weight&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">2&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 权重值，决定图标在导航栏中的位置，越小越靠前&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">params&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">icon&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">bilibili &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 图标的名称，应与你放置在 `assets/icons/` 目录下的文件名（不带扩展名）一致&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>重启服务器，即可添加完成。&lt;/p></description></item><item><title>hugo stack 局域网中代码块不能复制</title><link>https://www.carlos2016.cfd/p/hugo-stack-%E5%B1%80%E5%9F%9F%E7%BD%91%E4%B8%AD%E4%BB%A3%E7%A0%81%E5%9D%97%E4%B8%8D%E8%83%BD%E5%A4%8D%E5%88%B6/</link><pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.carlos2016.cfd/p/hugo-stack-%E5%B1%80%E5%9F%9F%E7%BD%91%E4%B8%AD%E4%BB%A3%E7%A0%81%E5%9D%97%E4%B8%8D%E8%83%BD%E5%A4%8D%E5%88%B6/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/13.webp" alt="Featured image of post hugo stack 局域网中代码块不能复制" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>在局域网中复制代码，提示报错信息&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-txt" data-lang="txt">&lt;span class="line">&lt;span class="cl">Uncaught TypeError: Cannot read properties of undefined (reading &amp;#39;writeText&amp;#39;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> at HTMLButtonElement.&amp;lt;anonymous&amp;gt; (main.0761bcd8210a6cd3dc991b9464d19e763381e47bd94d7f30c1a0df2d68d6eb33.js:486:31)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308225610.webp"
+data-webp="/00-assets/Pasted%20image%2020250308225610.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308225610.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308225610.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308225610.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>而在本地却能正常复制粘贴，比如 localhost 可以正常复制粘贴。这可能是因为在局域网环境下，浏览器对剪贴板的访问权限被限制，导致&lt;code>navigator.clipboard&lt;/code>对象不可用，从而引发该错误。&lt;/p>
+&lt;h2 id="解决方案">解决方案
+&lt;/h2>&lt;p>&lt;strong>使用HTTPS&lt;/strong>：浏览器在非安全上下文（如HTTP）中可能会限制对剪贴板的访问。因此，建议在局域网中使用HTTPS来启动Hugo服务器。可以通过生成自签名的TLS证书来实现HTTPS，虽然浏览器可能会提示不安全，但对于本地开发和测试来说已经足够。&lt;/p>
+&lt;p>nginx 配置 https 即可&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-nginx" data-lang="nginx">&lt;span class="line">&lt;span class="cl">&lt;span class="k">server&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">listen&lt;/span> &lt;span class="mi">80&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">server_name&lt;/span> &lt;span class="s">www.carlos.lh&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># 强制HTTPS
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="kn">return&lt;/span> &lt;span class="mi">301&lt;/span> &lt;span class="s">https://&lt;/span>&lt;span class="nv">$host$request_uri&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">server&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">listen&lt;/span> &lt;span class="mi">443&lt;/span> &lt;span class="s">ssl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">server_name&lt;/span> &lt;span class="s">www.carlos.lh&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">ssl_certificate&lt;/span> &lt;span class="s">/root/ssl/server.crt&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">ssl_certificate_key&lt;/span> &lt;span class="s">/root/ssl/server.key.unsecure&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">ssl_session_cache&lt;/span> &lt;span class="s">shared:SSL:10m&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">ssl_session_timeout&lt;/span> &lt;span class="mi">5m&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">ssl_ciphers&lt;/span> &lt;span class="s">HIGH:!aNULL:!MD5&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">ssl_prefer_server_ciphers&lt;/span> &lt;span class="no">on&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">location&lt;/span> &lt;span class="s">/&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">proxy_pass&lt;/span> &lt;span class="s">http://192.168.15.210:1313&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1"># 将请求转发到本地的8080端口
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">proxy_set_header&lt;/span> &lt;span class="s">Host&lt;/span> &lt;span class="nv">$http_host&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">proxy_set_header&lt;/span> &lt;span class="s">X-Real-IP&lt;/span> &lt;span class="nv">$remote_addr&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">proxy_set_header&lt;/span> &lt;span class="s">X-Real-Port&lt;/span> &lt;span class="nv">$remote_port&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">proxy_set_header&lt;/span> &lt;span class="s">X-Forwarded-For&lt;/span> &lt;span class="nv">$proxy_add_x_forwarded_for&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">proxy_set_header&lt;/span> &lt;span class="s">X-Forwarded-Proto&lt;/span> &lt;span class="nv">$scheme&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">proxy_set_header&lt;/span> &lt;span class="s">X-Forwarded-Host&lt;/span> &lt;span class="nv">$host&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">proxy_set_header&lt;/span> &lt;span class="s">X-Forwarded-Port&lt;/span> &lt;span class="nv">$server_port&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">proxy_set_header&lt;/span> &lt;span class="s">REMOTE-HOST&lt;/span> &lt;span class="nv">$remote_addr&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">proxy_connect_timeout&lt;/span> &lt;span class="s">60s&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">proxy_send_timeout&lt;/span> &lt;span class="s">600s&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">proxy_read_timeout&lt;/span> &lt;span class="s">600s&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">proxy_http_version&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="s">.1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">proxy_set_header&lt;/span> &lt;span class="s">Upgrade&lt;/span> &lt;span class="nv">$http_upgrade&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">proxy_set_header&lt;/span> &lt;span class="s">Connection&lt;/span> &lt;span class="nv">$connection_upgrade&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># 其他配置...
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>局域网配置 https 即可正常复制，非常完美&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308230546.webp"
+data-webp="/00-assets/Pasted%20image%2020250308230546.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308230546.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308230546.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308230546.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item><item><title>hugo stack 搜索页面跳转到 localhost 问题</title><link>https://www.carlos2016.cfd/p/hugo-stack-%E6%90%9C%E7%B4%A2%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC%E5%88%B0-localhost-%E9%97%AE%E9%A2%98/</link><pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.carlos2016.cfd/p/hugo-stack-%E6%90%9C%E7%B4%A2%E9%A1%B5%E9%9D%A2%E8%B7%B3%E8%BD%AC%E5%88%B0-localhost-%E9%97%AE%E9%A2%98/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/46.webp" alt="Featured image of post hugo stack 搜索页面跳转到 localhost 问题" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>我是局域网访问，使用搜索功能的时候，可以搜索出笔记，但是图片加载不出来，点击链接，直接 404，直接访问到 localhost，正常是访问 ip 地址的。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308220615.webp"
+data-webp="/00-assets/Pasted%20image%2020250308220615.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308220615.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308220615.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308220615.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>这是因为启动命令没有设置 baseURL，添加这个参数即可正常访问。&lt;/p>
+&lt;h2 id="实操">实操
+&lt;/h2>&lt;p>命令添加参数 baseURL&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">hugo server --port=1313 --bind=0.0.0.0 --baseURL=&amp;#34;http://192.168.15.210/&amp;#34;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>加了参数之后，图片能正常加载，也能正常跳转指定的 ip 地址。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308221013.webp"
+data-webp="/00-assets/Pasted%20image%2020250308221013.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308221013.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308221013.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308221013.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item><item><title>hugo stack 主题基础配置</title><link>https://www.carlos2016.cfd/p/hugo-stack-%E4%B8%BB%E9%A2%98%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/</link><pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.carlos2016.cfd/p/hugo-stack-%E4%B8%BB%E9%A2%98%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/09.webp" alt="Featured image of post hugo stack 主题基础配置" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>本文是说明 hugo 基础配置，比如配置网站图标以及汉化主题等等。&lt;/p>
+&lt;h2 id="hugo-网站图片">hugo 网站图片
+&lt;/h2>&lt;p>hugo 配置文件，搜索 favicon 即可，填入图标地址即可。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250307035003.webp"
+data-webp="/00-assets/Pasted%20image%2020250307035003.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250307035003.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250307035003.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250307035003.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="stack-网站主页头像">stack 网站主页头像
+&lt;/h2>&lt;p>要修改 hugo 主页头像，不同主题修改方式不一样，以 stack 主题为例，将头像放到对应目录即可。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250307043911.webp"
+data-webp="/00-assets/Pasted%20image%2020250307043911.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250307043911.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250307043911.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250307043911.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>我的是 &lt;code>/root/hugo/themes/hugo-theme-stack/assets/img&lt;/code> 目录下。&lt;/p>
+&lt;h2 id="配置推广链接">配置推广链接
+&lt;/h2>&lt;p>我使用的 stack 主题，不同主题修改方式不同。&lt;/p>
+&lt;p>搜索 github，修改成自己 github 主页地址。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250307054226.webp"
+data-webp="/00-assets/Pasted%20image%2020250307054226.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250307054226.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250307054226.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250307054226.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="侧边栏汉化">侧边栏汉化
+&lt;/h2>&lt;p>侧边栏部分英文，需要修改页面数据。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308013647.webp"
+data-webp="/00-assets/Pasted%20image%2020250308013647.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308013647.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308013647.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308013647.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>找到对应目录，编辑 md 文件即可。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308013407.webp"
+data-webp="/00-assets/Pasted%20image%2020250308013407.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308013407.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308013407.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308013407.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>以 archives 为例，修改成“归档”即可。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308013933.webp"
+data-webp="/00-assets/Pasted%20image%2020250308013933.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308013933.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308013933.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308013933.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="language">Language
+&lt;/h2>&lt;p>如果只想保持一种语言，则 config 中的 language 只保留一种语言，如中文：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">languages&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">zh-cn&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">languageName&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">中文&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">weight&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308023414.webp"
+data-webp="/00-assets/Pasted%20image%2020250308023414.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308023414.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308023414.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308023414.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="友链归档多列显示">友链、归档多列显示
+&lt;/h2>&lt;p>&lt;code>/root/hugo/themes/hugo-theme-stack/assets/scss&lt;/code> 自定义 &lt;code>custom.scss&lt;/code> 样式&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="line">&lt;span class="cl">&lt;span class="p">@&lt;/span>&lt;span class="k">media&lt;/span> &lt;span class="o">(&lt;/span>&lt;span class="nt">min-width&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nt">1024px&lt;/span>&lt;span class="o">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">.&lt;/span>&lt;span class="nc">article-list--compact&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">display&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="k">grid&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">//&lt;/span> &lt;span class="err">目前是两列，如需三列，则后面再加一个1fr，以此类推&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">grid-template-columns&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="n">fr&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="n">fr&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">background&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">none&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">box-shadow&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">none&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">gap&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="kt">rem&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">article&lt;/span> &lt;span class="err">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">background&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">card&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">background&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">border&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">none&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">box-shadow&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">shadow&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="n">l2&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">margin-bottom&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">8&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">margin-right&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">8&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">border-radius&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">16&lt;/span>&lt;span class="kt">px&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="删除归档页面中的分类">删除归档页面中的分类
+&lt;/h2>&lt;p>定位 &lt;code>/root/hugo/themes/hugo-theme-stack/layouts/_default&lt;/code> 目录，编辑 &lt;code>archives.html&lt;/code> 文件即可&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308035843.webp"
+data-webp="/00-assets/Pasted%20image%2020250308035843.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308035843.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308035843.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308035843.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>注释图中 html 片段即可&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308040444.webp"
+data-webp="/00-assets/Pasted%20image%2020250308040444.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308040444.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308040444.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308040444.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="归档页面添加标签">归档页面添加标签
+&lt;/h2>&lt;p>在 &lt;code>layouts/_default/archives.html&lt;/code> 里的 &lt;code>&amp;lt;/header&amp;gt;&lt;/code> 后面加上如下代码：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">{{- $taxonomy := $.Site.GetPage &amp;#34;taxonomyTerm&amp;#34; &amp;#34;tags&amp;#34; -}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{- $terms := $taxonomy.Pages -}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{ if $terms }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">section&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;widget tagCloud&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">h2&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;section-title&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>{{ $taxonomy.Title }}&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">h2&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;tagCloud-tags&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ if ne (len $.Site.Taxonomies.tags) 0 }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ range $name, $taxonomy := $.Site.Taxonomies.tags }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ $tagCount := len $taxonomy.Pages }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ &amp;#34;&lt;/span>&lt;span class="err">/&lt;/span>&lt;span class="na">tags&lt;/span>&lt;span class="err">/&amp;#34;&lt;/span> &lt;span class="err">|&lt;/span> &lt;span class="na">relURL&lt;/span> &lt;span class="err">}}{{&lt;/span> &lt;span class="err">$&lt;/span>&lt;span class="na">name&lt;/span> &lt;span class="err">|&lt;/span> &lt;span class="na">urlize&lt;/span> &lt;span class="err">}}&amp;#34;&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;tagCloud-tags&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ $name }}&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">span&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;tagCloud-count&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>{{ $tagCount }}&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">span&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ end }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ end }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">section&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{ end }}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>/root/hugo/themes/hugo-theme-stack/assets/scss&lt;/code> 自定义 &lt;code>custom.scss&lt;/code> 样式&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-css" data-lang="css">&lt;span class="line">&lt;span class="cl">&lt;span class="p">.&lt;/span>&lt;span class="nc">tagCloud&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">.tagCloud-count&lt;/span> &lt;span class="err">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">color&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nf">var&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="o">--&lt;/span>&lt;span class="n">body&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="kc">text&lt;/span>&lt;span class="o">-&lt;/span>&lt;span class="kc">color&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="引入动态背景">引入动态背景
+&lt;/h2>&lt;p>定位 &lt;code>/root/hugo/themes/hugo-theme-stack/layouts/partials/footer&lt;/code> 编辑 &lt;code>custom.html&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;particles-js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https://cdn.bootcdn.net/ajax/libs/particles.js/2.0.0/particles.min.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">particlesJS&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">load&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;particles-js&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;https://letere-gzj.github.io/hugo-stack/background/particles/particlesjs-config.json&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kd">function&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">console&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">log&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;particles.js loaded - callback&amp;#39;&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">style&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">#&lt;/span>&lt;span class="nn">particles-js&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">position&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">fixed&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">top&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">left&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">width&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="kt">%&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">z-index&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="mi">-1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">style&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="图片懒加载">图片懒加载
+&lt;/h2>&lt;p>注：Stack 主题默认有懒加载，不需要自行添加&lt;/p>
+&lt;p>实现：&lt;code>/layouts/_default/_markup&lt;/code> 中新建 &lt;code>render-image.html&lt;/code> 然后丢入代码：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">p&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;md_image&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">img&lt;/span> &lt;span class="na">loading&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#39;lazy&amp;#39;&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ $Permalink }}&amp;#34;&lt;/span> &lt;span class="na">alt&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ .Text }}&amp;#34;&lt;/span> &lt;span class="err">{{&lt;/span> &lt;span class="na">with&lt;/span> &lt;span class="err">.&lt;/span>&lt;span class="na">Title&lt;/span>&lt;span class="err">}}&lt;/span> &lt;span class="na">title&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ . }}&amp;#34;&lt;/span>&lt;span class="err">{{&lt;/span> &lt;span class="na">end&lt;/span> &lt;span class="err">}}&lt;/span> &lt;span class="p">/&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">p&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>hugo 笔记图片管理</title><link>https://www.carlos2016.cfd/p/hugo-%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E7%AE%A1%E7%90%86/</link><pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.carlos2016.cfd/p/hugo-%E7%AC%94%E8%AE%B0%E5%9B%BE%E7%89%87%E7%AE%A1%E7%90%86/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/34.webp" alt="Featured image of post hugo 笔记图片管理" />&lt;h2 id="本地存储方案">本地存储方案
+&lt;/h2>&lt;p>一、static 文件夹集中管理&lt;/p>
+&lt;p>在 Hugo 项目根目录创建 static/images 文件夹，将图片统一存放于此。引用时使用绝对路径：&lt;code>![描述](/images/图片名.jpg)&lt;/code>。&lt;/p>
+&lt;p>优势：Hugo 构建时自动复制到网站根目录，路径稳定，适合高频更新且需长期保留的图片‌。&lt;/p>
+&lt;p>二、内容同级目录管理&lt;/p>
+&lt;p>在 content 目录下，创建与 Markdown 文件同名的文件夹（如 post.md 对应 post 文件夹），将图片存放其中。引用时使用相对路径：&lt;code>![描述](./图片名.jpg)。&lt;/code>&lt;/p>
+&lt;p>优势：图片与笔记文件物理位置绑定，迁移或备份时不易丢失关联，适合单篇笔记专属图片‌。&lt;/p>
+&lt;p>三、Assets 资源库管理&lt;/p>
+&lt;p>在 assets/images 中存放全局图片（如头像、Logo），通过配置文件 config.toml 指定路径。示例配置：&lt;code>avatarURL = &amp;quot;images/avatar.png&amp;quot;&lt;/code>。&lt;/p>
+&lt;p>优势：统一管理全站公共图片资源，便于复用和维护‌4。&lt;/p>
+&lt;h2 id="符号链接">符号链接
+&lt;/h2>&lt;p>hugo static 目录可以使用符号链接，而 content/post 目录是不能使用符号链接，hugo 默认忽略 post 中的符号链接。&lt;/p></description></item><item><title>hugo 入门篇</title><link>https://www.carlos2016.cfd/p/hugo-%E5%85%A5%E9%97%A8%E7%AF%87/</link><pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.carlos2016.cfd/p/hugo-%E5%85%A5%E9%97%A8%E7%AF%87/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/49.webp" alt="Featured image of post hugo 入门篇" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>本文是在 ubuntu 环境中安装 hugo。&lt;/p>
+&lt;h2 id="安装">安装
+&lt;/h2>&lt;p>安装命令&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">sudo apt update
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt -y install hugo
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>验证是否安装成功&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">hugo version
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>安装成功会显示如下信息。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/3a70e88f90cd0095f62fc5a4db7bea9c.png"
+data-webp="/_resources/3a70e88f90cd0095f62fc5a4db7bea9c.webp"
+data-original="https://www.carlos2016.cfd/_resources/3a70e88f90cd0095f62fc5a4db7bea9c.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/3a70e88f90cd0095f62fc5a4db7bea9c.png"
+alt="3a70e88f90cd0095f62fc5a4db7bea9c.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="启动与配置">启动与配置
+&lt;/h2>&lt;p>创建站点目录&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">hugo new site quickstart
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>将主题文件放到站点目录中的 themes 目录下&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/40b6311d8afdc67f7c5375a424df3e59.png"
+data-webp="/_resources/40b6311d8afdc67f7c5375a424df3e59.webp"
+data-original="https://www.carlos2016.cfd/_resources/40b6311d8afdc67f7c5375a424df3e59.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/40b6311d8afdc67f7c5375a424df3e59.png"
+alt="40b6311d8afdc67f7c5375a424df3e59.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>启动 hugo 服务&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">hugo server
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="绑定到-0000">绑定到 0.0.0.0
+&lt;/h3>&lt;p>hugo server 默认绑定到 127.0.0.1（localhost），因此只能在本机访问。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">hugo server --bind&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;0.0.0.0&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>在启动 hugo server 时，使用 &amp;ndash;bind 参数将其绑定到 0.0.0.0，这样可以监听所有网络接口。&lt;/p>
+&lt;p>这样，局域网内的其他设备可以通过你的服务器 IP 地址访问 Hugo 服务。例如，如果服务器的 IP 是 192.168.1.100，可以通过 &lt;code>http://192.168.1.100:1313&lt;/code> 访问。&lt;/p>
+&lt;h3 id="指定端口号">指定端口号
+&lt;/h3>&lt;p>如果需要指定端口号，可以使用 -p 参数：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">hugo server --bind&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;0.0.0.0&amp;#34;&lt;/span> -p &lt;span class="m">1234&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="设置-baseurl">设置 baseURL
+&lt;/h3>&lt;p>如果页面资源加载失败或样式错乱，可能是因为 baseURL 默认指向 localhost。可以通过 &amp;ndash;baseURL 参数指定为服务器的 IP 地址：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">hugo server --bind=&amp;#34;0.0.0.0&amp;#34; --baseURL=&amp;#34;http://192.168.1.100/&amp;#34;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>将 &lt;code>192.168.1.100&lt;/code> 替换为你的实际服务器 IP。&lt;/p>
+&lt;h2 id="主题">主题
+&lt;/h2>&lt;ul>
+&lt;li>把 hugo_blog/themes/hugo-theme-stack/exampleSite/config.yaml 文件拷贝到 hugo_blog 目录下。&lt;/li>
+&lt;li>把 hugo_blog/themes/hugo-theme-stack/exampleSite/content 目录下的文件拷贝到 hugo_blog 目录下。&lt;/li>
+&lt;/ul>
+&lt;p>hugo-theme-stack 主题有样例配置文件作为参考，直接复制粘贴即可。&lt;/p>
+&lt;h2 id="头部元数据">头部元数据
+&lt;/h2>&lt;p>Hugo 的 ‌Front Matter‌（文件头部元数据）定义了内容的核心参数，控制页面生成、URL 结构和内容管理。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>参数&lt;/th>
+&lt;th>说明&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>slug&lt;/td>
+&lt;td>自定义文章 URL 末尾部分，优先级高于标题（title）‌&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>draft&lt;/td>
+&lt;td>标记是否为草稿（true/false），草稿默认不发布到生产环境‌&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>categories&lt;/td>
+&lt;td>类别&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>tags&lt;/td>
+&lt;td>标签&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>image&lt;/td>
+&lt;td>定义文章或页面的封面图&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>title‌&lt;/td>
+&lt;td>定义页面标题&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>date&lt;/td>
+&lt;td>设置内容发布日期，控制文章在列表中的排序&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>description&lt;/td>
+&lt;td>提供页面摘要描述，用于 SEO 优化和社交媒体分享&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>weight&lt;/td>
+&lt;td>控制内容在列表或菜单中的排序权重&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>author&lt;/td>
+&lt;td>声明文章作者信息，支持多作者配置&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>categories 和 tags&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="l">categories = [&amp;#34;技术&amp;#34;, &amp;#34;前端&amp;#34;] &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 支持多层级 &lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="l">tags = [&amp;#34;Hugo&amp;#34;, &amp;#34;静态站点&amp;#34;] &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 多个标签以数组形式定义‌:ml-citation{ref=&amp;#34;1&amp;#34; data=&amp;#34;citationList&amp;#34;} &lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>image 基础用法，需将图片存放在 static 目录下，通过相对路径引用‌。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="l">image = &amp;#34;/img/logo3.png&amp;#34; &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 对应 static/img/logo3.png &lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>支持 http 远程调佣&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="l">image = &amp;#34;https://example.com/cover.jpg&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="文章不同元数据模板">文章不同元数据模板
+&lt;/h2>&lt;p>‌TOML 格式‌编写元数据，用来兼容 hugo&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-toml" data-lang="toml">&lt;span class="line">&lt;span class="cl">&lt;span class="err">+++&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">date&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;{{date:YYYY-MM-DD}}&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">title&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;{{title}}&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">tags&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;Hugo&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;静态站点&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">categories&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;技术&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;前端&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">description&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;hello world!&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">image&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;https://api.timelessq.com/bing/random&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">author&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;carlos&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">+++&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>YAML 格式‌编写元数据&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nn">---&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;示例文章&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">date&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="ld">2025-03-06&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">draft&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">false&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nn">---&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>JSON 格式&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;title&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;示例文章&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;date&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;2025-03-06&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;draft&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>hugo 时区问题导致文章未显示</title><link>https://www.carlos2016.cfd/p/hugo-%E6%97%B6%E5%8C%BA%E9%97%AE%E9%A2%98%E5%AF%BC%E8%87%B4%E6%96%87%E7%AB%A0%E6%9C%AA%E6%98%BE%E7%A4%BA/</link><pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.carlos2016.cfd/p/hugo-%E6%97%B6%E5%8C%BA%E9%97%AE%E9%A2%98%E5%AF%BC%E8%87%B4%E6%96%87%E7%AB%A0%E6%9C%AA%E6%98%BE%E7%A4%BA/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/15.webp" alt="Featured image of post hugo 时区问题导致文章未显示" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>在 hugo 中，当文章时间设置为当天的话，将文章发布到国外服务器中并进行构建的话，该文章可能没有显示在文章列表里。&lt;/p>
+&lt;p>Hugo 时间默认为格林威治时间，因为中国的时间比格林威治时间早 8 个小时，格林威治时间没有到你配置的时间的时候，文章是不会出现在文章列表里的。&lt;/p>
+&lt;h2 id="解决方案">解决方案
+&lt;/h2>&lt;p>解决方法一： 是在命令后添加 &amp;ndash;buildFuture 或 -F 选项 ，来构建未来发布的文章，比如：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">hugo server --buildFuture
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">hugo --buildFuture
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>解决方法二： 在站点配置文件 config.toml 中添加下面的配置：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">buildfuture = true
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>我的是 yaml 文件，文件末尾添加即可&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250306041658.webp"
+data-webp="/00-assets/Pasted%20image%2020250306041658.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250306041658.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250306041658.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250306041658.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item><item><title>obsidian 基础使用教程</title><link>https://www.carlos2016.cfd/p/obsidian-%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link><pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.carlos2016.cfd/p/obsidian-%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/18.webp" alt="Featured image of post obsidian 基础使用教程" />&lt;h2 id="文件与链接">文件与链接
+&lt;/h2>&lt;p>配置如图&lt;/p>
+&lt;ul>
+&lt;li>内部链接类型选择“相对路径”，兼容markdown&lt;/li>
+&lt;li>“使用wiki链接”关闭，兼容markdown&lt;/li>
+&lt;li>修改“附件默认存放路径”，不然图片默认存放根目录，很不美观&lt;/li>
+&lt;/ul>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305051412.webp"
+data-webp="/00-assets/Pasted%20image%2020250305051412.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305051412.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305051412.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305051412.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="兼容-joplin">兼容 joplin
+&lt;/h2>&lt;p>joplin 导出 markdown 默认目录结构。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305051749.webp"
+data-webp="/00-assets/Pasted%20image%2020250305051749.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305051749.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305051749.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305051749.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>obsidian 主流知识库目录结构要符合主流标准，不然很难管理。joplin 附件都是存放在自己的数据文件夹下，用户不用关心附件管理问题。而 obsidian 需要自己设计知识库目录结构，不然管理非常头疼。&lt;/p>
+&lt;p>我的设计思路非常简单，根目录下穿件 00-assets 目录，用于存放所有附件即可。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305052330.webp"
+data-webp="/00-assets/Pasted%20image%2020250305052330.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305052330.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305052330.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305052330.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>看起来非常清爽，为了兼容新的目录结构，需要使用符号链接。&lt;/p>
+&lt;p>先将 &lt;code>_resources&lt;/code> 目录重命名为 00-assets，然后运行命令&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-batch" data-lang="batch">&lt;span class="line">&lt;span class="cl">&lt;span class="k">mklink&lt;/span> /D &lt;span class="s2">&amp;#34;C:\Users\carlos\Desktop\obsidian\_resources&amp;#34;&lt;/span> &lt;span class="s2">&amp;#34;C:\Users\carlos\Desktop\obsidian\00-assets&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这样导出的 markdown 文件就能在 vscode 中正常显示图片，已经完美兼容 obsidian&lt;/p>
+&lt;h2 id="快捷键">快捷键
+&lt;/h2>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>快捷键&lt;/th>
+&lt;th>说明&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>ctrl+shift+v&lt;/code>&lt;/td>
+&lt;td>无格式粘贴&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>ctrl+o&lt;/code>&lt;/td>
+&lt;td>&lt;code>Ctrl+O&lt;/code> 可直接打开“打开文件”对话框，用于快速选择并加载本地文件‌。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>ctrl+p&lt;/code>&lt;/td>
+&lt;td>调出命令面板&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>右键快速插入表格&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305195822.webp"
+data-webp="/00-assets/Pasted%20image%2020250305195822.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305195822.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305195822.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305195822.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="元数据">元数据
+&lt;/h2>&lt;p>在笔记第 1 行输入 &lt;code>---&lt;/code> 用于添加元数据。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305201453.webp"
+data-webp="/00-assets/Pasted%20image%2020250305201453.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305201453.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305201453.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305201453.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="双链">双链
+&lt;/h2>&lt;p>反向链接，不用手动链接，当别的笔记提到当前文件名，就会自动提示。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305202010.webp"
+data-webp="/00-assets/Pasted%20image%2020250305202010.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305202010.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305202010.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305202010.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>不过很鸡肋唉，谁会写笔记的时候复制粘贴别的笔记名啊。&lt;/p>
+&lt;p>出链，和网页的跳转页面一样，就是跳转到需要链接的笔记。和反向链接一样，输入需要链接的笔记名，就会自动显示。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305202754.webp"
+data-webp="/00-assets/Pasted%20image%2020250305202754.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305202754.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305202754.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305202754.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="白板">白板
+&lt;/h2>&lt;p>侧边栏创建白板&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305203500.webp"
+data-webp="/00-assets/Pasted%20image%2020250305203500.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305203500.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305203500.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305203500.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>简单可视化操作，就是实现思维导图。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305203241.webp"
+data-webp="/00-assets/Pasted%20image%2020250305203241.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305203241.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305203241.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305203241.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="第三方插件">第三方插件
+&lt;/h2>&lt;p>如果网络访问不了官方社区，可以访问第三方社区：&lt;a class="link" href="[PKMer_PKMer]%28https://pkmer.cn/%29" >地址1&lt;/a>
+&lt;/p>
+&lt;p>首先关闭安全模式&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305204112.webp"
+data-webp="/00-assets/Pasted%20image%2020250305204112.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305204112.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305204112.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305204112.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>点击浏览即可安装第三方插件，访问的是 github&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305204145.webp"
+data-webp="/00-assets/Pasted%20image%2020250305204145.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305204145.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305204145.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305204145.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="模板">模板
+&lt;/h2>&lt;p>开启原生模板插件，点击左下角「设置」→「核心插件」→ 启用「模板」功能‌。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305212000.webp"
+data-webp="/00-assets/Pasted%20image%2020250305212000.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305212000.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305212000.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305212000.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>在「模板」插件设置中指定模板文件夹（如 Templates）‌。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305212044.webp"
+data-webp="/00-assets/Pasted%20image%2020250305212044.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305212044.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305212044.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305212044.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>编写模板内容，在 Templates 文件夹新建 hugo-template.md，内容如下&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="l">+++&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="l">date = &amp;#34;{{date:YYYY-MM-DD}}&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="l">author = &amp;#34;carlos&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="l">title = &amp;#34;{{title}}&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="l">description = &amp;#34;hello worlld!&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="l">tags = [&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;hello&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;world&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="l">+++&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>插入模板到新笔记&lt;/p>
+&lt;ul>
+&lt;li>新建笔记 → 点击左侧「插入模板」按钮 → 选择模板文件。&lt;/li>
+&lt;li>手动补充字段&lt;/li>
+&lt;/ul>
+&lt;p>Obsidian 原生模板语法只支持动态插入时间日期，其他需要自己手动填写。&lt;/p></description></item><item><title>obsidian 知识库设计</title><link>https://www.carlos2016.cfd/p/obsidian-%E7%9F%A5%E8%AF%86%E5%BA%93%E8%AE%BE%E8%AE%A1/</link><pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.carlos2016.cfd/p/obsidian-%E7%9F%A5%E8%AF%86%E5%BA%93%E8%AE%BE%E8%AE%A1/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/25.webp" alt="Featured image of post obsidian 知识库设计" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>知识库目录结构设计：&lt;/p>
+&lt;ul>
+&lt;li>临时收集层‌：设立Inbox文件夹存放未整理的零散笔记，作为缓冲区域‌。&lt;/li>
+&lt;li>时间维度‌：通过Calendar或日期格式文件夹（如2025/03/2025-03-06）管理日记、会议记录等时间敏感内容‌。&lt;/li>
+&lt;li>主题/领域层‌：按知识领域（如Domains/Science、Domains/Technology）或项目（如Projects/Work）分类核心笔记‌。&lt;/li>
+&lt;li>功能辅助层‌：设置Sources（文献）、Cards（卡片笔记）等文件夹存放特定类型内容‌。&lt;/li>
+&lt;/ul>
+&lt;p>动态调整机制：&lt;/p>
+&lt;ul>
+&lt;li>新笔记先进入&lt;code>Inbox&lt;/code>，定期整理后迁移至主题或时间目录‌。&lt;/li>
+&lt;li>高频使用的笔记可保留在主题目录，低频或完成的项目移至&lt;code>Archive&lt;/code>归档文件夹‌。&lt;/li>
+&lt;/ul>
+&lt;p>我这里只保留了草稿区和归档区。assets 用来保存图片和附件，templates 用来存放模板文件。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250306024401.webp"
+data-webp="/00-assets/Pasted%20image%2020250306024401.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250306024401.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250306024401.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250306024401.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="实例">实例
+&lt;/h2>&lt;p>方案1，以主题为主，时间为辅，适用场景‌：知识库以学科领域或长期项目为核心。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">📂 Knowledge_Base
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├─ 📂 Domains # 主题领域
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ├─ 📂 Science
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ └─ 📂 Technology
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├─ 📂 Projects # 短期项目
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├─ 📂 Calendar # 时间相关笔记（日记、会议记录）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> └─ 📂 Inbox # 临时收集区
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>方案2，时间轴驱动，‌适用场景‌：日记、日常灵感记录为主。&lt;/p>
+&lt;p>实现方式‌：&lt;/p>
+&lt;ul>
+&lt;li>设置日记模板路径为YYYY/MM/YYYY-MM-DD，按年月自动生成嵌套文件夹‌。&lt;/li>
+&lt;li>结合标签（如#会议、#灵感）实现跨时间检索。&lt;/li>
+&lt;/ul>
+&lt;p>方案3，功能导向扁平化，适用场景‌：追求快速检索，避免过度分类。&lt;/p>
+&lt;p>结构示例‌：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">📂 Notes
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├─ 📄 2025-03-06-会议纪要 # 直接以日期+标题命名
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├─ 📄 科技趋势分析 # 主题型笔记
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> └─ 📂 Archive # 低频内容归档
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="总结">总结
+&lt;/h2>&lt;ul>
+&lt;li>避免过度细分‌：文件夹层级建议不超过3层，依赖搜索和双向链接替代硬性分类‌。&lt;/li>
+&lt;li>统一命名规则‌：日期格式（如YYYY-MM-DD）、主题前缀（如[科技]XXX）提升可读性‌。&lt;/li>
+&lt;li>结合插件优化‌：使用Templater自动生成时间目录，或Quick Switcher快速跳转高频文件夹‌。&lt;/li>
+&lt;/ul></description></item></channel></rss>

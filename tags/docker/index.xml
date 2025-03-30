@@ -1,0 +1,1915 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docker on carlos</title><link>https://www.carlos2016.cfd/tags/docker/</link><description>Recent content in Docker on carlos</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Example Person</copyright><lastBuildDate>Sun, 30 Mar 2025 16:10:24 +0000</lastBuildDate><atom:link href="https://www.carlos2016.cfd/tags/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>syncthing windows 端使用教程</title><link>https://www.carlos2016.cfd/p/syncthing-windows-%E7%AB%AF%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link><pubDate>Thu, 20 Mar 2025 02:24:02 +0800</pubDate><guid>https://www.carlos2016.cfd/p/syncthing-windows-%E7%AB%AF%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/02.webp" alt="Featured image of post syncthing windows 端使用教程" />&lt;h2 id="安装">安装
+&lt;/h2>&lt;p>官网地址&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/Bill-Stewart/SyncthingWindowsSetup" target="_blank" rel="noopener"
+>Bill-Stewart/SyncthingWindowsSetup: Syncthing Windows Setup&lt;/a>
+&lt;/p>
+&lt;p>默认下一步即可&lt;/p>
+&lt;h2 id="初始化">初始化
+&lt;/h2>&lt;p>设置开启局域网访问&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020412.webp"
+data-webp="/00-assets/Pasted%20image%2020250320020412.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020412.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020412.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020412.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>删除默认文件夹&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020526.webp"
+data-webp="/00-assets/Pasted%20image%2020250320020526.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020526.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020526.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020526.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="添加设备">添加设备
+&lt;/h2>&lt;p>找到标识&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020657.webp"
+data-webp="/00-assets/Pasted%20image%2020250320020657.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020657.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020657.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020657.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>服务端复制 id&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020735.webp"
+data-webp="/00-assets/Pasted%20image%2020250320020735.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020735.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020735.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020735.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>windows 端添加远程设备&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020748.webp"
+data-webp="/00-assets/Pasted%20image%2020250320020748.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020748.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020748.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020748.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>服务端添加设备&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020911.webp"
+data-webp="/00-assets/Pasted%20image%2020250320020911.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020911.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020911.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020911.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="windwos-端添加文件夹">windwos 端添加文件夹
+&lt;/h2>&lt;p>添加文件夹&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022340.webp"
+data-webp="/00-assets/Pasted%20image%2020250320022340.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022340.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022340.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022340.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>设置同步目录，分别是名称和路径&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021157.webp"
+data-webp="/00-assets/Pasted%20image%2020250320021157.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021157.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021157.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021157.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>打勾表示共享给服务端&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021244.webp"
+data-webp="/00-assets/Pasted%20image%2020250320021244.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021244.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021244.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021244.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>仅发送，表示不接受服务端的修改&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021345.webp"
+data-webp="/00-assets/Pasted%20image%2020250320021345.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021345.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021345.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021345.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>扫描并不是开始同步，我也不知道干什么，让他扫就行&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021509.webp"
+data-webp="/00-assets/Pasted%20image%2020250320021509.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021509.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021509.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021509.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="服务端接受分享">服务端接受分享
+&lt;/h2>&lt;p>添加，接受分享&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021655.webp"
+data-webp="/00-assets/Pasted%20image%2020250320021655.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021655.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021655.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021655.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>设置服务端同步目录&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022020.webp"
+data-webp="/00-assets/Pasted%20image%2020250320022020.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022020.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022020.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022020.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>设置共享&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022047.webp"
+data-webp="/00-assets/Pasted%20image%2020250320022047.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022047.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022047.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022047.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>设置仅接受&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022128.webp"
+data-webp="/00-assets/Pasted%20image%2020250320022128.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022128.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022128.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022128.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="强制同步">强制同步
+&lt;/h2>&lt;p>服务端仅接受，如果和远程不一样，有一个强制还原的选项，还原远程更改&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320033040.webp"
+data-webp="/00-assets/Pasted%20image%2020250320033040.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320033040.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320033040.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320033040.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>同理，如果本地和远程不一样，windows 端会有一个强制还原的选项&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320033223.webp"
+data-webp="/00-assets/Pasted%20image%2020250320033223.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320033223.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320033223.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320033223.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="设置开机启动">设置开机启动
+&lt;/h2>&lt;p>保存 syncthing.bat 脚本文件&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cmd" data-lang="cmd">&lt;span class="line">&lt;span class="cl"># 打开 “记事本” 软件，将以下代码复制进去，另存为 syncthing.bat。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">start&lt;/span> &lt;span class="s2">&amp;#34;Syncthing&amp;#34;&lt;/span> syncthing.exe -no-console -no-browser
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>如果上面的脚本不起作用改用 vbs 脚本&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">CreateObject(&amp;#34;WScript.Shell&amp;#34;).Run &amp;#34;&amp;#34;&amp;#34;C:\Users\carlos\AppData\Local\Programs\Syncthing\syncthing.exe&amp;#34;&amp;#34; -no-console -no-browser&amp;#34;, 0
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>复制脚本文件到 syncthing.exe 同级目录。找到 syncthing.exe 所在目录，将 syncthing.bat 脚本文件复制到该目录。&lt;/p>
+&lt;p>将脚本文件快捷方式添加到 “启动” 菜单&lt;/p>
+&lt;ol>
+&lt;li>选中 syncthing.bat 脚本文件，右键创建快捷方式&lt;/li>
+&lt;li>按下 win + R，输入 “shell:startup” 打开 “启动” 文件夹&lt;/li>
+&lt;li>将快捷方式复制到 “启动” 文件夹&lt;/li>
+&lt;/ol></description></item><item><title>syncthing 安卓端使用教程</title><link>https://www.carlos2016.cfd/p/syncthing-%E5%AE%89%E5%8D%93%E7%AB%AF%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link><pubDate>Thu, 20 Mar 2025 00:59:22 +0800</pubDate><guid>https://www.carlos2016.cfd/p/syncthing-%E5%AE%89%E5%8D%93%E7%AB%AF%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/22.webp" alt="Featured image of post syncthing 安卓端使用教程" />&lt;h2 id="添加设备">添加设备
+&lt;/h2>&lt;p>手机端客户端安装地址&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/syncthing/syncthing-android" target="_blank" rel="noopener"
+>syncthing/syncthing-android: Wrapper of syncthing for Android.&lt;/a>
+&lt;/p>
+&lt;p>docker 版服务端点击连接，获取标识二维码，用来添加设备。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/f63ef6431cacb006ad5023cdcee47c50.png"
+data-webp="/_resources/f63ef6431cacb006ad5023cdcee47c50.webp"
+data-original="https://www.carlos2016.cfd/_resources/f63ef6431cacb006ad5023cdcee47c50.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/f63ef6431cacb006ad5023cdcee47c50.png"
+alt="f63ef6431cacb006ad5023cdcee47c50.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>手机端顶部选项卡点击“设备”按钮。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/a931d66383d1cb67f6bfe23f82bc3385.png"
+data-webp="/_resources/a931d66383d1cb67f6bfe23f82bc3385.webp"
+data-original="https://www.carlos2016.cfd/_resources/a931d66383d1cb67f6bfe23f82bc3385.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/a931d66383d1cb67f6bfe23f82bc3385.png"
+alt="a931d66383d1cb67f6bfe23f82bc3385.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>点击二维码添加设备。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/5e7450e67a2a5112ae384366610514e1.png"
+data-webp="/_resources/5e7450e67a2a5112ae384366610514e1.webp"
+data-original="https://www.carlos2016.cfd/_resources/5e7450e67a2a5112ae384366610514e1.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/5e7450e67a2a5112ae384366610514e1.png"
+alt="5e7450e67a2a5112ae384366610514e1.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="添加文件夹">添加文件夹
+&lt;/h2>&lt;p>手机端右上方点击“+”号按钮。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/af2dc2de135e60c8d980787f3633de81.png"
+data-webp="/_resources/af2dc2de135e60c8d980787f3633de81.webp"
+data-original="https://www.carlos2016.cfd/_resources/af2dc2de135e60c8d980787f3633de81.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/af2dc2de135e60c8d980787f3633de81.png"
+alt="af2dc2de135e60c8d980787f3633de81.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>点击文件夹图标，选择目录。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/ef8cb3a6e8c5e306d54049602838ec72.png"
+data-webp="/_resources/ef8cb3a6e8c5e306d54049602838ec72.webp"
+data-original="https://www.carlos2016.cfd/_resources/ef8cb3a6e8c5e306d54049602838ec72.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/ef8cb3a6e8c5e306d54049602838ec72.png"
+alt="ef8cb3a6e8c5e306d54049602838ec72.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>选择好目录，点击“允许访问”。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/c3916577048330ffa7085525072e4093.png"
+data-webp="/_resources/c3916577048330ffa7085525072e4093.webp"
+data-original="https://www.carlos2016.cfd/_resources/c3916577048330ffa7085525072e4093.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/c3916577048330ffa7085525072e4093.png"
+alt="c3916577048330ffa7085525072e4093.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>“文件夹类型”选择“仅发送”。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/b41585f6b5e648c03076f0733e064858.png"
+data-webp="/_resources/b41585f6b5e648c03076f0733e064858.webp"
+data-original="https://www.carlos2016.cfd/_resources/b41585f6b5e648c03076f0733e064858.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/b41585f6b5e648c03076f0733e064858.png"
+alt="b41585f6b5e648c03076f0733e064858.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>docker 版服务端选择添加文件夹即可。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/b8a9e47f2e8ee6ee5aa41c16ee80a433.png"
+data-webp="/_resources/b8a9e47f2e8ee6ee5aa41c16ee80a433.webp"
+data-original="https://www.carlos2016.cfd/_resources/b8a9e47f2e8ee6ee5aa41c16ee80a433.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/b8a9e47f2e8ee6ee5aa41c16ee80a433.png"
+alt="b8a9e47f2e8ee6ee5aa41c16ee80a433.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>设置好同步目录。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/8402f0ac56d48dd656cb068aa18b5f53.png"
+data-webp="/_resources/8402f0ac56d48dd656cb068aa18b5f53.webp"
+data-original="https://www.carlos2016.cfd/_resources/8402f0ac56d48dd656cb068aa18b5f53.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/8402f0ac56d48dd656cb068aa18b5f53.png"
+alt="8402f0ac56d48dd656cb068aa18b5f53.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>服务端选择“仅接受”。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/445e8d6943d74d34253301f46f6e3f25.png"
+data-webp="/_resources/445e8d6943d74d34253301f46f6e3f25.webp"
+data-original="https://www.carlos2016.cfd/_resources/445e8d6943d74d34253301f46f6e3f25.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/445e8d6943d74d34253301f46f6e3f25.png"
+alt="445e8d6943d74d34253301f46f6e3f25.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="服务端忽略删除操作">服务端忽略删除操作
+&lt;/h2>&lt;p>如果想让服务端忽略发送端（发送端：手机作为发送端）的删除操作，别称：无视删除操作。比如服务端同步好数据，这时候想节省手机内存，想删除手机备份好的数据，又不想影响服务端已经备份好的数据。&lt;/p>
+&lt;p>软件网页端“操作-高级-文件夹-Ignore Delete”打勾，即可忽略发送端删除操作。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/5faf55973e12fea0bc081446f3a9fd9b.png"
+data-webp="/_resources/5faf55973e12fea0bc081446f3a9fd9b.webp"
+data-original="https://www.carlos2016.cfd/_resources/5faf55973e12fea0bc081446f3a9fd9b.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/5faf55973e12fea0bc081446f3a9fd9b.png"
+alt="5faf55973e12fea0bc081446f3a9fd9b.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>选择“文件夹”。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/c772effc12d648b5551384cd7e2d4142.png"
+data-webp="/_resources/c772effc12d648b5551384cd7e2d4142.webp"
+data-original="https://www.carlos2016.cfd/_resources/c772effc12d648b5551384cd7e2d4142.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/c772effc12d648b5551384cd7e2d4142.png"
+alt="c772effc12d648b5551384cd7e2d4142.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>“忽略删除”选项打勾，然后滑动到底部保存即可。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/14240aad2b427aa586829459bce04eac.png"
+data-webp="/_resources/14240aad2b427aa586829459bce04eac.webp"
+data-original="https://www.carlos2016.cfd/_resources/14240aad2b427aa586829459bce04eac.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/14240aad2b427aa586829459bce04eac.png"
+alt="14240aad2b427aa586829459bce04eac.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item><item><title>emby 入门使用篇</title><link>https://www.carlos2016.cfd/p/emby-%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E7%AF%87/</link><pubDate>Mon, 17 Mar 2025 20:32:57 +0800</pubDate><guid>https://www.carlos2016.cfd/p/emby-%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E7%AF%87/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/57.webp" alt="Featured image of post emby 入门使用篇" />&lt;h2 id="媒体库配置参考">媒体库配置参考
+&lt;/h2>&lt;p>语言和图像语言配置&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202523.webp"
+data-webp="/00-assets/Pasted%20image%2020250317202523.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202523.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202523.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202523.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+元数据大部分都能通过 TheMovieDb 刮削到&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202649.webp"
+data-webp="/00-assets/Pasted%20image%2020250317202649.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202649.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202649.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202649.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>某些敏感元数据刮削不到可以这个选项没有打开&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202744.webp"
+data-webp="/00-assets/Pasted%20image%2020250317202744.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202744.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202744.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202744.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>保存元数据到本地&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202837.webp"
+data-webp="/00-assets/Pasted%20image%2020250317202837.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202837.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202837.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202837.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>不清楚但是按照这个配置，能用就行&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202941.webp"
+data-webp="/00-assets/Pasted%20image%2020250317202941.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202941.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202941.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202941.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>字幕根据自己实际情况，这里 emby 运行逻辑不是很懂。勾上就会有字幕？嗯嗯&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317203008.webp"
+data-webp="/00-assets/Pasted%20image%2020250317203008.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317203008.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317203008.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317203008.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>&lt;strong>补充说明&lt;/strong>&lt;/p>
+&lt;p>如果 TheMovieDb 还是刮削不到某些冷门元数据，比如 av、里番、3D 里番等等，需要去 github 寻找插件按照即可。有些插件还指定 emby 版本，呵呵呵。&lt;/p>
+&lt;h2 id="多版本命名">多版本命名
+&lt;/h2>&lt;p>Emby 中多版本电影的命名规则是将不同版本的同一部电影放在同一个文件夹下，电影文件名为“文件夹名 - 版本”。&lt;/p>
+&lt;p>对于 Emby 中的多版本电影命名，为了确保 Emby 能够正确识别并合并显示同一部电影的不同版本（例如 1080p 和 4K 版本），用户需要将所有不同版本的同一部电影放置在同一个文件夹内。在这个文件夹中，每部电影文件的命名应遵循“文件夹名 - 版本”的格式。例如，如果文件夹名为“ABC”，则文件夹内的电影文件可以命名为“ABC - 1080p.mp4”和“ABC - 4K.mp4”等‌。&lt;/p>
+&lt;h2 id="剧集刮削不到元数据解决办法">剧集刮削不到元数据解决办法
+&lt;/h2>&lt;p>当 EMBY 剧集直接显示原始视频文件名而非刮削信息时，通常是因为视频文件名包含过多信息导致EMBY 无法正确识别。解决方法是将视频文件名修改为规范的“sXXeXX”格式，以便 EMBY 能准确刮削数据。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/1738777748884.png"
+data-webp="/_resources/1738777748884.webp"
+data-original="https://www.carlos2016.cfd/_resources/1738777748884.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/1738777748884.png"
+alt="1738777748884.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>千万不能将时间浪费在 season 1 季文件夹上，这是由于视频文件名太复杂导致的。&lt;/p></description></item><item><title>emby 容器更新后启动失败的问题</title><link>https://www.carlos2016.cfd/p/emby-%E5%AE%B9%E5%99%A8%E6%9B%B4%E6%96%B0%E5%90%8E%E5%90%AF%E5%8A%A8%E5%A4%B1%E8%B4%A5%E7%9A%84%E9%97%AE%E9%A2%98/</link><pubDate>Mon, 17 Mar 2025 20:17:51 +0800</pubDate><guid>https://www.carlos2016.cfd/p/emby-%E5%AE%B9%E5%99%A8%E6%9B%B4%E6%96%B0%E5%90%8E%E5%90%AF%E5%8A%A8%E5%A4%B1%E8%B4%A5%E7%9A%84%E9%97%AE%E9%A2%98/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/51.webp" alt="Featured image of post emby 容器更新后启动失败的问题" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>优先通过版本回退解决，避免修改配置文件或删除数据。&lt;/p>
+&lt;p>emby 容器更新，导致容器启动失败，第一想到的是卸载新容器，回退旧容器。而不是删除配置文件，别乱搞配置文件，数据丢失得不偿失。&lt;/p>
+&lt;p>md，复制了一份 &lt;code>library.db&lt;/code> 文件，并重命名为 &lt;code>library.db.bak&lt;/code> ，想回退，md emby 居然不认了，数据库文件重命名不了一点。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317201229.webp"
+data-webp="/00-assets/Pasted%20image%2020250317201229.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317201229.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317201229.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317201229.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="回退旧版容器">回退旧版容器
+&lt;/h2>&lt;p>‌&lt;strong>停止容器&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">docker stop &amp;lt;新容器名称或ID&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>删除容器&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">docker rm &amp;lt;新容器名称或ID&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>确认旧镜像版本&lt;/strong>&lt;/p>
+&lt;p>查看本地已有的Emby镜像列表，找到稳定版本标签（如&lt;code>v4.7.11&lt;/code>）：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">docker images &lt;span class="p">|&lt;/span> grep emby
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>重新启动旧版本容器&lt;/strong>&lt;/p>
+&lt;p>使用旧镜像运行容器，并确保挂载原有配置目录：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">docker run -d &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --name&lt;span class="o">=&lt;/span>emby_old &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> -p 8096:8096 &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> -v /原有配置目录路径:/config &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> linuxserver/emby:&amp;lt;旧版本标签&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>onlyoffice 对接 nextcloud，以及常用扩展</title><link>https://www.carlos2016.cfd/p/onlyoffice-%E5%AF%B9%E6%8E%A5-nextcloud%E4%BB%A5%E5%8F%8A%E5%B8%B8%E7%94%A8%E6%89%A9%E5%B1%95/</link><pubDate>Sat, 15 Mar 2025 02:46:46 +0800</pubDate><guid>https://www.carlos2016.cfd/p/onlyoffice-%E5%AF%B9%E6%8E%A5-nextcloud%E4%BB%A5%E5%8F%8A%E5%B8%B8%E7%94%A8%E6%89%A9%E5%B1%95/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/46.webp" alt="Featured image of post onlyoffice 对接 nextcloud，以及常用扩展" />&lt;h2 id="nextcloud">nextcloud
+&lt;/h2>&lt;p>Nextcloud 是 ownCloud 创始人发起的分支项目，是一款用于自建企业云存储（私有网盘）的开源软件。支持 PC、IOS 和 Android 三个同步客户端，用户可以很方便地与服务器上存储的文件、日程安排、通讯录、书签等重要数据保持同步。它还支持将数据保存到第三方存储中：Amazon S3、Dropbox、FTP、Google Drive、SMB、WebDAV、SFTP等。&lt;/p>
+&lt;h2 id="连接外部存储">连接外部存储
+&lt;/h2>&lt;p>登录 Nextcloud 后台，通过 应用 管理，启用 External storage support 扩展。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/83f79a306ab27e5078ff8dfc76739f5f.png"
+data-webp="/_resources/83f79a306ab27e5078ff8dfc76739f5f.webp"
+data-original="https://www.carlos2016.cfd/_resources/83f79a306ab27e5078ff8dfc76739f5f.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/83f79a306ab27e5078ff8dfc76739f5f.png"
+alt="83f79a306ab27e5078ff8dfc76739f5f.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>打开：【管理设置】&amp;gt;【外部存储】&amp;gt;【Add storage】&amp;gt;【External Storage】，选择一个外部存储服务。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/df31c5ba8abb023b70681ca59344f2b7.png"
+data-webp="/_resources/df31c5ba8abb023b70681ca59344f2b7.webp"
+data-original="https://www.carlos2016.cfd/_resources/df31c5ba8abb023b70681ca59344f2b7.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/df31c5ba8abb023b70681ca59344f2b7.png"
+alt="df31c5ba8abb023b70681ca59344f2b7.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>根据实际情况配置，连接到相应的对象存储。建议选择本地，也可以选择 ftp、webdav 等方式挂载。我尝试过 webdav 挂载 alist，但是 onlyoffice 打不开 alist 上的文件，换成本地就能正常打开。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/e1751296db7b366f44e8ff81ea465317.png"
+data-webp="/_resources/e1751296db7b366f44e8ff81ea465317.webp"
+data-original="https://www.carlos2016.cfd/_resources/e1751296db7b366f44e8ff81ea465317.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/e1751296db7b366f44e8ff81ea465317.png"
+alt="e1751296db7b366f44e8ff81ea465317.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="手动安装扩展">手动安装扩展
+&lt;/h2>&lt;p>nextcloud 官方插件地址：https://apps.nextcloud.com/&lt;/p>
+&lt;p>点击图片红框下载即可。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/e5b752ce7dd322768d549a8c90f6cf4b.png"
+data-webp="/_resources/e5b752ce7dd322768d549a8c90f6cf4b.webp"
+data-original="https://www.carlos2016.cfd/_resources/e5b752ce7dd322768d549a8c90f6cf4b.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/e5b752ce7dd322768d549a8c90f6cf4b.png"
+alt="e5b752ce7dd322768d549a8c90f6cf4b.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>将下载的文件解压到 docker 容器中的 /var/www/html/apps 目录即可。每个版本的扩展目录都不一样。&lt;/p>
+&lt;p>我是如下版本号。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/fa0f7e9f49c907da417f4497e0733db6.png"
+data-webp="/_resources/fa0f7e9f49c907da417f4497e0733db6.webp"
+data-original="https://www.carlos2016.cfd/_resources/fa0f7e9f49c907da417f4497e0733db6.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/fa0f7e9f49c907da417f4497e0733db6.png"
+alt="fa0f7e9f49c907da417f4497e0733db6.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>具体目录参考官方文档：https://hub.docker.com/_/nextcloud/&lt;/p>
+&lt;h2 id="集成-onlyoffice">集成 onlyoffice
+&lt;/h2>&lt;p>手动安装完 onlyoffice，在“已禁用的应用”中启用。我这里已经启用，所以没有 onlyoffice。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/84c5d05c308f37bae6fce72857096817.png"
+data-webp="/_resources/84c5d05c308f37bae6fce72857096817.webp"
+data-original="https://www.carlos2016.cfd/_resources/84c5d05c308f37bae6fce72857096817.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/84c5d05c308f37bae6fce72857096817.png"
+alt="84c5d05c308f37bae6fce72857096817.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>onlyoffice 配置如下。记得关闭 jwt，并且外部存储挂载方式选择“本地”。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/4537091e299671b165ddb3225bd3000d.png"
+data-webp="/_resources/4537091e299671b165ddb3225bd3000d.webp"
+data-original="https://www.carlos2016.cfd/_resources/4537091e299671b165ddb3225bd3000d.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/4537091e299671b165ddb3225bd3000d.png"
+alt="4537091e299671b165ddb3225bd3000d.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>nextcloud 默认使用系统盘，使用系统盘兼容性最好，打开 onlyoffice 不会报错，通过 webdav 方式挂载 alist 会报错。或者也可以使用“本地”方式挂载。&lt;/p>
+&lt;p>onlyoffice 集成 nextcloud 是不能直接保存 office 本地文件，也就是说在线编辑完，是不能对本地文件直接修改。但是会在线保存文件，通过 web 端访问，上一次修改的记录还在，要保存，必须保存为副本，然后下载到本地。&lt;/p>
+&lt;h2 id="集成-mail">集成 mail
+&lt;/h2>&lt;p>手动安装 mail 扩展，实现邮件统一管理。不过需要邮件服务器密码，不是账号密码。所以没有手机号，是登录不了谷歌邮箱的，没有手机号，是获取不了应用密码，也就无法登录。&lt;/p>
+&lt;h2 id="集成-talk">集成 talk
+&lt;/h2>&lt;p>手动安装 talk，实现局域网文本传输。&lt;/p></description></item><item><title>onlyoffice 对接 alist</title><link>https://www.carlos2016.cfd/p/onlyoffice-%E5%AF%B9%E6%8E%A5-alist/</link><pubDate>Sat, 15 Mar 2025 02:46:09 +0800</pubDate><guid>https://www.carlos2016.cfd/p/onlyoffice-%E5%AF%B9%E6%8E%A5-alist/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/09.webp" alt="Featured image of post onlyoffice 对接 alist" />&lt;h2 id="前提说明">前提说明
+&lt;/h2>&lt;p>onlyoffice 对接 alist 并不能实现在线编辑，而且 onlyoffice 在手机上表现得很不好，连滑动文档都不可以，应该是专为电脑端开发软件。&lt;/p>
+&lt;p>代替方案，通过同步软件同步 office 文件，然后手机用专业 office 软件打开，也能实现多人编辑，缺点就是步骤繁琐。&lt;/p>
+&lt;p>OnlyOffice Document Server 并不能直接打开本地 Office 文件进行编辑，必须配合网盘使用，才能实现文档的在线预览和编辑功能，类似腾讯文档，区别就是可以内网使用。&lt;/p>
+&lt;p>onlyoffice 对接 alist，必须选用版本 7.1.1，因为此版本不会强制 jwt 校验，不然 onlyoffice 打开不了 alist 的 office 文档，必须自己参考官方文档手动开发。&lt;/p>
+&lt;p>onlyoffice 对接 alist 原理：&lt;/p>
+&lt;ol>
+&lt;li>alist 请求 nginx 中的 view.html。&lt;/li>
+&lt;li>view.html 请求 onlyoffice。&lt;/li>
+&lt;/ol>
+&lt;p>所以 onlyoffice 对接 alist，是通过手动编写 view.html 文件实现对接的。&lt;/p>
+&lt;h2 id="安装-onlyoffice">安装 onlyoffice
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">services&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">onlyoffice-documentserver&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">container_name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">onlyoffice-documentserver&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">image&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">onlyoffice/documentserver:7.1.1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">depends_on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">onlyoffice-postgresql&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">onlyoffice-rabbitmq&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">environment&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">DB_TYPE=postgres&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">DB_HOST=onlyoffice-postgresql&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">DB_PORT=5432&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">DB_NAME=onlyoffice&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">DB_USER=onlyoffice&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">AMQP_URI=amqp://guest:guest@onlyoffice-rabbitmq&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># Uncomment strings below to enable the JSON Web Token validation.&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">JWT_ENABLED=false&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># - JWT_SECRET=secret&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># - JWT_HEADER=Authorization&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># - JWT_IN_BODY=true&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">ports&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="s1">&amp;#39;9875:80&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="s1">&amp;#39;446:443&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">stdin_open&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">restart&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">always&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">stop_grace_period&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">60s&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">volumes&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">./data:/var/www/onlyoffice/Data&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">./log:/var/log/onlyoffice&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">./lib:/var/lib/onlyoffice/documentserver/App_Data/cache/files&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">./public:/var/www/onlyoffice/documentserver-example/public/files&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">./fonts:/usr/share/fonts&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">onlyoffice-rabbitmq&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">container_name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">onlyoffice-rabbitmq&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">image&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">rabbitmq&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">restart&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">always&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">expose&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="s1">&amp;#39;5672&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">onlyoffice-postgresql&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">container_name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">onlyoffice-postgresql&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">image&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">postgres:12&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">environment&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">POSTGRES_DB=onlyoffice&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">POSTGRES_USER=onlyoffice&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">POSTGRES_HOST_AUTH_METHOD=trust&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">restart&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">always&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">expose&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="s1">&amp;#39;5432&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">volumes&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">./postgresql_data:/var/lib/postgresql&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">volumes&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">postgresql_data&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="将-viewhtml-部署到-nginx">将 view.html 部署到 nginx
+&lt;/h2>&lt;p>view.html 内容如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">html&lt;/span> &lt;span class="na">lang&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;en&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">charset&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;UTF-8&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>OnlyOffice Viewer&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;placeholder&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;text/javascript&amp;#34;&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https:/onlyoffice/web-apps/apps/api/documents/api.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">function&lt;/span> &lt;span class="nx">getQueryParamValue&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">searchParams&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">URLSearchParams&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">window&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">location&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">search&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">searchParams&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">url&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">decodeURIComponent&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">getQueryParamValue&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;src&amp;#34;&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">fileName&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">url&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">substring&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">url&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">lastIndexOf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;/&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">url&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">lastIndexOf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;?&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="nx">url&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">lastIndexOf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;?&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="nx">url&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">fileExtension&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">fileName&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">split&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;.&amp;#39;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">pop&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">docEditor&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">DocsAPI&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">DocEditor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;placeholder&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;document&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;fileType&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">fileExtension&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;permissions&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;edit&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">false&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;comment&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;download&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;print&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;fillForms&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;title&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">fileName&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;url&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">url&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;editorConfig&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;lang&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;zh-CN&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;mode&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;view&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;height&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;1080px&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;type&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;desktop&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>其中的https:/onlyoffice/web-apps/apps/api/documents/api.js 地址的domain 替换为自己onlyoffice 的地址。&lt;/p>
+&lt;h2 id="alist-预览配置">alist 预览配置
+&lt;/h2>&lt;p>alist 预览配置指向 nginx 地址即可。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/15292e1a73d09ee8643517eb063bf3d9.png"
+data-webp="/_resources/15292e1a73d09ee8643517eb063bf3d9.webp"
+data-original="https://www.carlos2016.cfd/_resources/15292e1a73d09ee8643517eb063bf3d9.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/15292e1a73d09ee8643517eb063bf3d9.png"
+alt="15292e1a73d09ee8643517eb063bf3d9.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="onlyoffice-错误文档安全令牌未正确形成">onlyoffice 错误：“文档安全令牌未正确形成。”
+&lt;/h2>&lt;p>解决方案：禁用jwt，并且重启服务。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/ecb9e3a4cdd2ef4a7aed4ed9b9977d79.png"
+data-webp="/_resources/ecb9e3a4cdd2ef4a7aed4ed9b9977d79.webp"
+data-original="https://www.carlos2016.cfd/_resources/ecb9e3a4cdd2ef4a7aed4ed9b9977d79.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/ecb9e3a4cdd2ef4a7aed4ed9b9977d79.png"
+alt="ecb9e3a4cdd2ef4a7aed4ed9b9977d79.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>配置文件修改为：JWT_ENABLED=false&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/6ec8bb451636c0b0e5bd4d60eff2f25c.png"
+data-webp="/_resources/6ec8bb451636c0b0e5bd4d60eff2f25c.webp"
+data-original="https://www.carlos2016.cfd/_resources/6ec8bb451636c0b0e5bd4d60eff2f25c.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/6ec8bb451636c0b0e5bd4d60eff2f25c.png"
+alt="6ec8bb451636c0b0e5bd4d60eff2f25c.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>或者容器中修改：/etc/onlyoffice/documentserver/local.json&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;token&amp;#34;&lt;/span>&lt;span class="err">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;enable&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;request&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;inbox&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="kc">false&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;outbox&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="kc">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;browser&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;inbox&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;header&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Authorization&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;outbox&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;header&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Authorization&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>&lt;span class="err">,&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>将 3 个选项修改为 false。&lt;/p>
+&lt;h2 id="onlyoffice-文档下载失败">onlyoffice 文档下载失败
+&lt;/h2>&lt;p>原因是被禁用了私有IP访问服务，需要打开。&lt;/p>
+&lt;p>修改配置文件：/etc/onlyoffice/documentserver/default.json&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;#34;request-filtering-agent&amp;#34; : {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;allowPrivateIPAddress&amp;#34;: true,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;allowMetaIPAddress&amp;#34;: true
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">},
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="vim-操作说明">vim 操作说明
+&lt;/h2>&lt;p>命令模式 &lt;code>/&lt;/code> 可以搜索关键字，输入模式小写 n 寻找下一个，大写 N 寻找上一个。&lt;/p></description></item><item><title>open webui 长时间白屏</title><link>https://www.carlos2016.cfd/p/open-webui-%E9%95%BF%E6%97%B6%E9%97%B4%E7%99%BD%E5%B1%8F/</link><pubDate>Sun, 09 Mar 2025 22:22:02 +0800</pubDate><guid>https://www.carlos2016.cfd/p/open-webui-%E9%95%BF%E6%97%B6%E9%97%B4%E7%99%BD%E5%B1%8F/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/02.webp" alt="Featured image of post open webui 长时间白屏" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>open webui 进入不了主界面，长时间白屏&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309221804.webp"
+data-webp="/00-assets/Pasted%20image%2020250309221804.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309221804.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309221804.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309221804.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>这是因为前端页面长时间请求外国 api 接口造成的&lt;/p>
+&lt;h2 id="解决方法">解决方法
+&lt;/h2>&lt;p>关闭 open api 即可解决，这样前端就不会访问外国的 api 接口。外国软件，本地化不是很好。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309222046.webp"
+data-webp="/00-assets/Pasted%20image%2020250309222046.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309222046.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309222046.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309222046.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item><item><title>open webui 使用教程</title><link>https://www.carlos2016.cfd/p/open-webui-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link><pubDate>Sun, 09 Mar 2025 21:56:49 +0800</pubDate><guid>https://www.carlos2016.cfd/p/open-webui-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/49.webp" alt="Featured image of post open webui 使用教程" />&lt;h2 id="open-webui-导入模型-api">open webui 导入模型 api
+&lt;/h2>&lt;p>open webui 支持 3 种方式导入模型，分别是：OpenAI API、Ollama API 和直接连接。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/9e12b9fa9798cdd67e1a13d408bd2027.png"
+data-webp="/_resources/9e12b9fa9798cdd67e1a13d408bd2027.webp"
+data-original="https://www.carlos2016.cfd/_resources/9e12b9fa9798cdd67e1a13d408bd2027.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/9e12b9fa9798cdd67e1a13d408bd2027.png"
+alt="9e12b9fa9798cdd67e1a13d408bd2027.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>主流方式是 OpenAI API，许多第三方 api 都提供 OpenAI API 方式接入，比如腾讯、字节和百度。&lt;/p>
+&lt;p>Ollama API 是模型本地部署方案。所以 open webui 支持对接第三方 api 以及 Ollama 本地模型。&lt;/p>
+&lt;p>one api 只能通过“直接连接”方式对接 open webui&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/90a1ccefa40829851812ebf768521e1c.png"
+data-webp="/_resources/90a1ccefa40829851812ebf768521e1c.webp"
+data-original="https://www.carlos2016.cfd/_resources/90a1ccefa40829851812ebf768521e1c.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/90a1ccefa40829851812ebf768521e1c.png"
+alt="90a1ccefa40829851812ebf768521e1c.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>点击加号即可对接 one api&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/46f4a567d9983609698d465bf6f1fbc3.png"
+data-webp="/_resources/46f4a567d9983609698d465bf6f1fbc3.webp"
+data-original="https://www.carlos2016.cfd/_resources/46f4a567d9983609698d465bf6f1fbc3.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/46f4a567d9983609698d465bf6f1fbc3.png"
+alt="46f4a567d9983609698d465bf6f1fbc3.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>还可以通过函数方式创建模型，用来支持 deepseek 思维链功能。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/7acfae58c81f9a908f0656733390d24e.png"
+data-webp="/_resources/7acfae58c81f9a908f0656733390d24e.webp"
+data-original="https://www.carlos2016.cfd/_resources/7acfae58c81f9a908f0656733390d24e.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/7acfae58c81f9a908f0656733390d24e.png"
+alt="7acfae58c81f9a908f0656733390d24e.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item><item><title>open webui 对接 deepseek</title><link>https://www.carlos2016.cfd/p/open-webui-%E5%AF%B9%E6%8E%A5-deepseek/</link><pubDate>Sun, 09 Mar 2025 21:54:56 +0800</pubDate><guid>https://www.carlos2016.cfd/p/open-webui-%E5%AF%B9%E6%8E%A5-deepseek/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/56.webp" alt="Featured image of post open webui 对接 deepseek" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>主流大模型平台的 API：&lt;/p>
+&lt;ul>
+&lt;li>SiliconFlow (硅基流动)&lt;/li>
+&lt;li>百度云 千帆&lt;/li>
+&lt;li>字节跳动 火山方舟&lt;/li>
+&lt;li>阿里云 百炼&lt;/li>
+&lt;li>腾讯 知识引擎&lt;/li>
+&lt;/ul>
+&lt;p>&lt;a class="link" href="https://note.youdao.com/ynoteshare/index.html?id=06a6ee8b16f8bac5048db5aeeee9a181&amp;amp;type=notebook&amp;amp;_time=1740688679358" target="_blank" rel="noopener"
+>详细地址&lt;/a>
+&lt;/p>
+&lt;h2 id="火山">火山
+&lt;/h2>&lt;p>创建 api key：&lt;a class="link" href="https://console.volcengine.com/ark" target="_blank" rel="noopener"
+>地址&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/c2737dbbb941d2af59d096ebd328572d.png"
+data-webp="/_resources/c2737dbbb941d2af59d096ebd328572d.webp"
+data-original="https://www.carlos2016.cfd/_resources/c2737dbbb941d2af59d096ebd328572d.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/c2737dbbb941d2af59d096ebd328572d.png"
+alt="c2737dbbb941d2af59d096ebd328572d.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>创建接入点&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/1f7dbe20c67bf9666199f6b25a40e6f6.png"
+data-webp="/_resources/1f7dbe20c67bf9666199f6b25a40e6f6.webp"
+data-original="https://www.carlos2016.cfd/_resources/1f7dbe20c67bf9666199f6b25a40e6f6.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/1f7dbe20c67bf9666199f6b25a40e6f6.png"
+alt="1f7dbe20c67bf9666199f6b25a40e6f6.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>没有实名认证，必须实名认证&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/837a4ced5dd4f31832c4296e162694f4.png"
+data-webp="/_resources/837a4ced5dd4f31832c4296e162694f4.webp"
+data-original="https://www.carlos2016.cfd/_resources/837a4ced5dd4f31832c4296e162694f4.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/837a4ced5dd4f31832c4296e162694f4.png"
+alt="837a4ced5dd4f31832c4296e162694f4.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>one api 接入配置&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/f8e9b0efaa447a2b304f4ddeb3e3264b.png"
+data-webp="/_resources/f8e9b0efaa447a2b304f4ddeb3e3264b.webp"
+data-original="https://www.carlos2016.cfd/_resources/f8e9b0efaa447a2b304f4ddeb3e3264b.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/f8e9b0efaa447a2b304f4ddeb3e3264b.png"
+alt="f8e9b0efaa447a2b304f4ddeb3e3264b.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>oben webui 通过“外部链接”方式对接 one api，one api 统一管理所有 api 接口。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/3a11b9a7391484f94ca105b50fd7b515.png"
+data-webp="/_resources/3a11b9a7391484f94ca105b50fd7b515.webp"
+data-original="https://www.carlos2016.cfd/_resources/3a11b9a7391484f94ca105b50fd7b515.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/3a11b9a7391484f94ca105b50fd7b515.png"
+alt="3a11b9a7391484f94ca105b50fd7b515.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>这里 v1 为固定写法，不要钻牛角尖。秘钥填 one api 的。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/4975450d6bdfc18aa9d2b3eb8283dd9c.png"
+data-webp="/_resources/4975450d6bdfc18aa9d2b3eb8283dd9c.webp"
+data-original="https://www.carlos2016.cfd/_resources/4975450d6bdfc18aa9d2b3eb8283dd9c.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/4975450d6bdfc18aa9d2b3eb8283dd9c.png"
+alt="4975450d6bdfc18aa9d2b3eb8283dd9c.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>填这个秘钥即可。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/abd9981b1c2f3d54b8e9c7cf43887431.png"
+data-webp="/_resources/abd9981b1c2f3d54b8e9c7cf43887431.webp"
+data-original="https://www.carlos2016.cfd/_resources/abd9981b1c2f3d54b8e9c7cf43887431.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/abd9981b1c2f3d54b8e9c7cf43887431.png"
+alt="abd9981b1c2f3d54b8e9c7cf43887431.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="腾讯">腾讯
+&lt;/h2>&lt;p>创建 api key：&lt;a class="link" href="https://console.cloud.tencent.com/lkeap/api" target="_blank" rel="noopener"
+>地址&lt;/a>
+，必须要实名认证。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/ff2790aa1bed7c9a8d63951b7e59d80d.png"
+data-webp="/_resources/ff2790aa1bed7c9a8d63951b7e59d80d.webp"
+data-original="https://www.carlos2016.cfd/_resources/ff2790aa1bed7c9a8d63951b7e59d80d.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/ff2790aa1bed7c9a8d63951b7e59d80d.png"
+alt="ff2790aa1bed7c9a8d63951b7e59d80d.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>查看文档即可，只有 r1 和 v3。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/fbba04c7b5371eee746323b8d05c3fe9.png"
+data-webp="/_resources/fbba04c7b5371eee746323b8d05c3fe9.webp"
+data-original="https://www.carlos2016.cfd/_resources/fbba04c7b5371eee746323b8d05c3fe9.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/fbba04c7b5371eee746323b8d05c3fe9.png"
+alt="fbba04c7b5371eee746323b8d05c3fe9.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="百度">百度
+&lt;/h2>&lt;p>申请地址：&lt;a class="link" href="https://console.bce.baidu.com/qianfan/modelcenter/model/buildIn/list" target="_blank" rel="noopener"
+>地址1&lt;/a>
+&lt;/p>
+&lt;p>申请 api key 即可&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/6d0f0245a5d81b9d660424836afa45a6.png"
+data-webp="/_resources/6d0f0245a5d81b9d660424836afa45a6.webp"
+data-original="https://www.carlos2016.cfd/_resources/6d0f0245a5d81b9d660424836afa45a6.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/6d0f0245a5d81b9d660424836afa45a6.png"
+alt="6d0f0245a5d81b9d660424836afa45a6.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>参数填 deepseek-r1 即可&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/8a402c9041b659fd33298a6a464a1617.png"
+data-webp="/_resources/8a402c9041b659fd33298a6a464a1617.webp"
+data-original="https://www.carlos2016.cfd/_resources/8a402c9041b659fd33298a6a464a1617.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/8a402c9041b659fd33298a6a464a1617.png"
+alt="8a402c9041b659fd33298a6a464a1617.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>这里可查看哪些模型可以使用&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/188d0c91d796544e7353288ac5c933df.png"
+data-webp="/_resources/188d0c91d796544e7353288ac5c933df.webp"
+data-original="https://www.carlos2016.cfd/_resources/188d0c91d796544e7353288ac5c933df.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/188d0c91d796544e7353288ac5c933df.png"
+alt="188d0c91d796544e7353288ac5c933df.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item><item><title>open webui deepseek api 联网</title><link>https://www.carlos2016.cfd/p/open-webui-deepseek-api-%E8%81%94%E7%BD%91/</link><pubDate>Sun, 09 Mar 2025 21:52:37 +0800</pubDate><guid>https://www.carlos2016.cfd/p/open-webui-deepseek-api-%E8%81%94%E7%BD%91/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/37.webp" alt="Featured image of post open webui deepseek api 联网" />&lt;h2 id="火山-api-申请">火山 api 申请
+&lt;/h2>&lt;p>路径如下&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/558020a4688e631f36c1ee25a1b2e700.png"
+data-webp="/_resources/558020a4688e631f36c1ee25a1b2e700.webp"
+data-original="https://www.carlos2016.cfd/_resources/558020a4688e631f36c1ee25a1b2e700.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/558020a4688e631f36c1ee25a1b2e700.png"
+alt="558020a4688e631f36c1ee25a1b2e700.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>申请 api&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/e7ce6ac20832b41eda2cdc4c25faa517.png"
+data-webp="/_resources/e7ce6ac20832b41eda2cdc4c25faa517.webp"
+data-original="https://www.carlos2016.cfd/_resources/e7ce6ac20832b41eda2cdc4c25faa517.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/e7ce6ac20832b41eda2cdc4c25faa517.png"
+alt="e7ce6ac20832b41eda2cdc4c25faa517.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>可以查看剩余 token&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/a4c9c68e947160e62c43a23bfecbc974.png"
+data-webp="/_resources/a4c9c68e947160e62c43a23bfecbc974.webp"
+data-original="https://www.carlos2016.cfd/_resources/a4c9c68e947160e62c43a23bfecbc974.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/a4c9c68e947160e62c43a23bfecbc974.png"
+alt="a4c9c68e947160e62c43a23bfecbc974.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="火山联网">火山联网
+&lt;/h2>&lt;p>以火山为例：&lt;a class="link" href="https://console.volcengine.com/ark" target="_blank" rel="noopener"
+>地址&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/0b940231abda1bdab47807ab0c174e7c.png"
+data-webp="/_resources/0b940231abda1bdab47807ab0c174e7c.webp"
+data-original="https://www.carlos2016.cfd/_resources/0b940231abda1bdab47807ab0c174e7c.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/0b940231abda1bdab47807ab0c174e7c.png"
+alt="0b940231abda1bdab47807ab0c174e7c.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>默认即可，点击创建&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/0434e823f8fa0908808a8dee717b7a5f.png"
+data-webp="/_resources/0434e823f8fa0908808a8dee717b7a5f.webp"
+data-original="https://www.carlos2016.cfd/_resources/0434e823f8fa0908808a8dee717b7a5f.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/0434e823f8fa0908808a8dee717b7a5f.png"
+alt="0434e823f8fa0908808a8dee717b7a5f.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>需要手动开通联网功能，有免费额度。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/837b27e76f2732129abb108d9a8788de.png"
+data-webp="/_resources/837b27e76f2732129abb108d9a8788de.webp"
+data-original="https://www.carlos2016.cfd/_resources/837b27e76f2732129abb108d9a8788de.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/837b27e76f2732129abb108d9a8788de.png"
+alt="837b27e76f2732129abb108d9a8788de.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>api 调用&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/6ad5505749e5d30445d3de310cf45584.png"
+data-webp="/_resources/6ad5505749e5d30445d3de310cf45584.webp"
+data-original="https://www.carlos2016.cfd/_resources/6ad5505749e5d30445d3de310cf45584.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/6ad5505749e5d30445d3de310cf45584.png"
+alt="6ad5505749e5d30445d3de310cf45584.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>选择“openai-sdk”&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/c698649b1e53c917c9a1fd1daa2d5ce9.png"
+data-webp="/_resources/c698649b1e53c917c9a1fd1daa2d5ce9.webp"
+data-original="https://www.carlos2016.cfd/_resources/c698649b1e53c917c9a1fd1daa2d5ce9.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/c698649b1e53c917c9a1fd1daa2d5ce9.png"
+alt="c698649b1e53c917c9a1fd1daa2d5ce9.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>联网功能的 api 和默认的 api 不一样，有区别。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/f1262990056a5426a859bb9acca0c799.png"
+data-webp="/_resources/f1262990056a5426a859bb9acca0c799.webp"
+data-original="https://www.carlos2016.cfd/_resources/f1262990056a5426a859bb9acca0c799.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/f1262990056a5426a859bb9acca0c799.png"
+alt="f1262990056a5426a859bb9acca0c799.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>模型 id 也跟默认的不一样。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/604364ecd026d573cd6e18981bacc3d3.png"
+data-webp="/_resources/604364ecd026d573cd6e18981bacc3d3.webp"
+data-original="https://www.carlos2016.cfd/_resources/604364ecd026d573cd6e18981bacc3d3.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/604364ecd026d573cd6e18981bacc3d3.png"
+alt="604364ecd026d573cd6e18981bacc3d3.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>api key 没有变化，按照下图配置即可。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/c02f34c2d6e525bc45dd3129b00a4d6b.png"
+data-webp="/_resources/c02f34c2d6e525bc45dd3129b00a4d6b.webp"
+data-original="https://www.carlos2016.cfd/_resources/c02f34c2d6e525bc45dd3129b00a4d6b.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/c02f34c2d6e525bc45dd3129b00a4d6b.png"
+alt="c02f34c2d6e525bc45dd3129b00a4d6b.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>记得在这里启用，并修改名字。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/446cd6c557abc46b387046de73b42be1.png"
+data-webp="/_resources/446cd6c557abc46b387046de73b42be1.webp"
+data-original="https://www.carlos2016.cfd/_resources/446cd6c557abc46b387046de73b42be1.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/446cd6c557abc46b387046de73b42be1.png"
+alt="446cd6c557abc46b387046de73b42be1.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>主页选择新的模型 api，即可体验联网功能的 deepseek&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/0cf0ce5715c4ee25e3324a6fef6781c3.png"
+data-webp="/_resources/0cf0ce5715c4ee25e3324a6fef6781c3.webp"
+data-original="https://www.carlos2016.cfd/_resources/0cf0ce5715c4ee25e3324a6fef6781c3.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/0cf0ce5715c4ee25e3324a6fef6781c3.png"
+alt="0cf0ce5715c4ee25e3324a6fef6781c3.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="腾讯">腾讯
+&lt;/h2>&lt;p>&lt;a class="link" href="https://lke.cloud.tencent.com/lke#/app/home" target="_blank" rel="noopener"
+>控制台&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/a401dbae5d1b34d26689649480e74480.png"
+data-webp="/_resources/a401dbae5d1b34d26689649480e74480.webp"
+data-original="https://www.carlos2016.cfd/_resources/a401dbae5d1b34d26689649480e74480.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/a401dbae5d1b34d26689649480e74480.png"
+alt="a401dbae5d1b34d26689649480e74480.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>跟着文档走即可：&lt;a class="link" href="https://cloud.tencent.com/document/product/1759/116006" target="_blank" rel="noopener"
+>文档地址&lt;/a>
+&lt;/p>
+&lt;h2 id="阿里">阿里
+&lt;/h2>&lt;p>&lt;a class="link" href="https://bailian.console.aliyun.com/#/model-market" target="_blank" rel="noopener"
+>地址1&lt;/a>
+&lt;/p>
+&lt;p>创建 api key&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/880b5b6e9c60a59b11ab999a4ffc8fc3.png"
+data-webp="/_resources/880b5b6e9c60a59b11ab999a4ffc8fc3.webp"
+data-original="https://www.carlos2016.cfd/_resources/880b5b6e9c60a59b11ab999a4ffc8fc3.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/880b5b6e9c60a59b11ab999a4ffc8fc3.png"
+alt="880b5b6e9c60a59b11ab999a4ffc8fc3.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item><item><title>open webui deepseek 支持思维链</title><link>https://www.carlos2016.cfd/p/open-webui-deepseek-%E6%94%AF%E6%8C%81%E6%80%9D%E7%BB%B4%E9%93%BE/</link><pubDate>Sun, 09 Mar 2025 21:48:09 +0800</pubDate><guid>https://www.carlos2016.cfd/p/open-webui-deepseek-%E6%94%AF%E6%8C%81%E6%80%9D%E7%BB%B4%E9%93%BE/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/09.webp" alt="Featured image of post open webui deepseek 支持思维链" />&lt;h2 id="思维链">思维链
+&lt;/h2>&lt;p>deepseek 支持思维链代码：&lt;a class="link" href="https://openwebui.com/f/zgccrui/deepseek_r1" target="_blank" rel="noopener"
+>地址1&lt;/a>
+&lt;/p>
+&lt;p>填入本地地址即可&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/26038ada0439c2e602506f25fd869a43.png"
+data-webp="/_resources/26038ada0439c2e602506f25fd869a43.webp"
+data-original="https://www.carlos2016.cfd/_resources/26038ada0439c2e602506f25fd869a43.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/26038ada0439c2e602506f25fd869a43.png"
+alt="26038ada0439c2e602506f25fd869a43.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>管理员面板&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/96993edfca5420c7d6df4aff0a6bed49.png"
+data-webp="/_resources/96993edfca5420c7d6df4aff0a6bed49.webp"
+data-original="https://www.carlos2016.cfd/_resources/96993edfca5420c7d6df4aff0a6bed49.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/96993edfca5420c7d6df4aff0a6bed49.png"
+alt="96993edfca5420c7d6df4aff0a6bed49.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>注意链接是固定格式&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/aa9c3c78c85b3f4f6b4130cc08febaf5.png"
+data-webp="/_resources/aa9c3c78c85b3f4f6b4130cc08febaf5.webp"
+data-original="https://www.carlos2016.cfd/_resources/aa9c3c78c85b3f4f6b4130cc08febaf5.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/aa9c3c78c85b3f4f6b4130cc08febaf5.png"
+alt="aa9c3c78c85b3f4f6b4130cc08febaf5.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>点击启用，可以重命名。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/2f740c7a357c3bf2987f5b8f6448b524.png"
+data-webp="/_resources/2f740c7a357c3bf2987f5b8f6448b524.webp"
+data-original="https://www.carlos2016.cfd/_resources/2f740c7a357c3bf2987f5b8f6448b524.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/2f740c7a357c3bf2987f5b8f6448b524.png"
+alt="2f740c7a357c3bf2987f5b8f6448b524.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>该方式是导入 deepseek 模型，所以要重新选择刚刚创建的模型，one api 有所区别。如果之前导入过其他 api 模型，需要重新选择，这种方式是通过函数导入模型。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/f7dfb78c19f2a7e4865d5c6053249965.png"
+data-webp="/_resources/f7dfb78c19f2a7e4865d5c6053249965.webp"
+data-original="https://www.carlos2016.cfd/_resources/f7dfb78c19f2a7e4865d5c6053249965.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/f7dfb78c19f2a7e4865d5c6053249965.png"
+alt="f7dfb78c19f2a7e4865d5c6053249965.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item><item><title>homepage 配置</title><link>https://www.carlos2016.cfd/p/homepage-%E9%85%8D%E7%BD%AE/</link><pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.carlos2016.cfd/p/homepage-%E9%85%8D%E7%BD%AE/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/54.webp" alt="Featured image of post homepage 配置" />&lt;h2 id="homepage-主要配置文件功能介绍">Homepage 主要配置文件功能介绍
+&lt;/h2>&lt;p>1、settings.yaml&lt;/p>
+&lt;p>homepage的设置文件，用来设置：语言、布局、标题、favicon图标、背景图片等。&lt;/p>
+&lt;p>2、service.yaml&lt;/p>
+&lt;p>homepage的服务文件，用来设置：Docker或其他服务导航入口等。&lt;/p>
+&lt;p>3、widgets.yaml&lt;/p>
+&lt;p>homepage的小组件文件，用来设置：功能显示如：CPU、内存占用率、温度、上线时间等；搜索框、天气、日期和时间等。&lt;/p>
+&lt;p>4、bookmarks.yaml&lt;/p>
+&lt;p>homepage的书签文件，用来设置：网站收藏书签、书签图标、url等。&lt;/p>
+&lt;h2 id="settingsyaml">settings.yaml
+&lt;/h2>&lt;ul>
+&lt;li>language：语言设置&lt;/li>
+&lt;li>background：背景图片设置&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">providers&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">openweathermap&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">openweathermapapikey&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">weatherapi&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">weatherapiapikey&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">language&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">zh-CN&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">background&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">image&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://images.unsplash.com/photo-1502790671504-542ad42d5189?auto=format&amp;amp;fit=crop&amp;amp;w=2560&amp;amp;q=80&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">hideVersion&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="servicesyaml">services.yaml
+&lt;/h2>&lt;p>配置模板：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">- &lt;span class="nt">媒体影音&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">EmbyServer&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">icon&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">emby.png&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">href&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">http://x.x.x.x:8096/&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># Emby IP:8096&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Movies &amp;amp; TV Shows&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">ping&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">127.0.0.1&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># Emby IP&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">widget&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">type&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">emby&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">url&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">http://x.x.x.x:8096&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">key&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">xxxxxxxxxxxxxxxxxxxxxxxxxxxxx&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">enableBlocks&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># optional, defaults to false&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">enableNowPlaying&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># optional, defaults to true&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Group 组和 Service 服务之前要用 -，且上下级空格排列，下面参数要多几个空格对齐。&lt;/p>
+&lt;p>homepage内置自带图标集合。使用的是如下开源图标集：https://github.com/homarr-labs/dashboard-icons/blob/main/ICONS.md&lt;/p>
+&lt;p>我们可以在icon参数中，直接调用。只要是以上图标集中存在的图标即可。&lt;/p>
+&lt;p>href 中 url 结尾有 / 比如 &lt;code>http://xxxx:1234/&lt;/code>，与之后添加组件 widget 中的 url 不需要加 /，两者是不同的。&lt;/p>
+&lt;p>Homepage支持的服务非常多，每个具体的widget组件参数设置均不相同，具体可以查看：https://gethomepage.dev/widgets/&lt;/p>
+&lt;h2 id="widgetsyaml">widgets.yaml
+&lt;/h2>&lt;p>此为 homepage 的功能组件，注意和 service 的 widgets 服务组件参数区分。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># 比如上线时间、CPU使用率、温度范围最低最高等扩展显示&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>- &lt;span class="nt">resources&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">cpu&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">memory&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">disk&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">/&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">cputemp&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">false&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># disabled by default&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">uptime&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># disabled by default&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">expanded&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># show the expanded view&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="c"># 搜索框设置，可选搜索引擎：如百度、谷歌等，_blank搜索结果开新页面显示&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>- &lt;span class="nt">search&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">provider&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="l">google, baidu]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">target&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">_blank&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="c"># 天气组件&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>- &lt;span class="nt">openmeteo&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">label&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">中山小榄&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># optional&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">latitude&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">22.671981&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">longitude&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">113.243876&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">timezone&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Asia/Shanghai&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># optional&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">units&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">metric&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># or imperial&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">cache&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">5&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># Time in minutes to cache API responses, to stay within limits&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="bookmarksyaml">bookmarks.yaml
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">- &lt;span class="nt">Developer&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">Github&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">abbr&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">GH&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">href&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://github.com/&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>- &lt;span class="nt">Social&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">Reddit&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">icon&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">reddit.png&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">href&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://reddit.com/&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">The front page of the internet&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>- &lt;span class="nt">Entertainment&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">YouTube&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">abbr&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">YT&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">href&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://youtube.com/&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>也可使用http/https网页图标，如：https://www.baidu.com/favicon.ico&lt;/p></description></item></channel></rss>

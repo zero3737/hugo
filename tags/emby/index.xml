@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Emby on carlos</title><link>https://www.carlos2016.cfd/tags/emby/</link><description>Recent content in Emby on carlos</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Example Person</copyright><lastBuildDate>Sun, 30 Mar 2025 16:10:24 +0000</lastBuildDate><atom:link href="https://www.carlos2016.cfd/tags/emby/index.xml" rel="self" type="application/rss+xml"/><item><title>emby 入门使用篇</title><link>https://www.carlos2016.cfd/p/emby-%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E7%AF%87/</link><pubDate>Mon, 17 Mar 2025 20:32:57 +0800</pubDate><guid>https://www.carlos2016.cfd/p/emby-%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8%E7%AF%87/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/57.webp" alt="Featured image of post emby 入门使用篇" />&lt;h2 id="媒体库配置参考">媒体库配置参考
+&lt;/h2>&lt;p>语言和图像语言配置&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202523.webp"
+data-webp="/00-assets/Pasted%20image%2020250317202523.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202523.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202523.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202523.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+元数据大部分都能通过 TheMovieDb 刮削到&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202649.webp"
+data-webp="/00-assets/Pasted%20image%2020250317202649.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202649.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202649.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202649.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>某些敏感元数据刮削不到可以这个选项没有打开&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202744.webp"
+data-webp="/00-assets/Pasted%20image%2020250317202744.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202744.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202744.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202744.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>保存元数据到本地&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202837.webp"
+data-webp="/00-assets/Pasted%20image%2020250317202837.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202837.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202837.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202837.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>不清楚但是按照这个配置，能用就行&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202941.webp"
+data-webp="/00-assets/Pasted%20image%2020250317202941.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202941.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202941.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317202941.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>字幕根据自己实际情况，这里 emby 运行逻辑不是很懂。勾上就会有字幕？嗯嗯&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317203008.webp"
+data-webp="/00-assets/Pasted%20image%2020250317203008.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317203008.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317203008.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317203008.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>&lt;strong>补充说明&lt;/strong>&lt;/p>
+&lt;p>如果 TheMovieDb 还是刮削不到某些冷门元数据，比如 av、里番、3D 里番等等，需要去 github 寻找插件按照即可。有些插件还指定 emby 版本，呵呵呵。&lt;/p>
+&lt;h2 id="多版本命名">多版本命名
+&lt;/h2>&lt;p>Emby 中多版本电影的命名规则是将不同版本的同一部电影放在同一个文件夹下，电影文件名为“文件夹名 - 版本”。&lt;/p>
+&lt;p>对于 Emby 中的多版本电影命名，为了确保 Emby 能够正确识别并合并显示同一部电影的不同版本（例如 1080p 和 4K 版本），用户需要将所有不同版本的同一部电影放置在同一个文件夹内。在这个文件夹中，每部电影文件的命名应遵循“文件夹名 - 版本”的格式。例如，如果文件夹名为“ABC”，则文件夹内的电影文件可以命名为“ABC - 1080p.mp4”和“ABC - 4K.mp4”等‌。&lt;/p>
+&lt;h2 id="剧集刮削不到元数据解决办法">剧集刮削不到元数据解决办法
+&lt;/h2>&lt;p>当 EMBY 剧集直接显示原始视频文件名而非刮削信息时，通常是因为视频文件名包含过多信息导致EMBY 无法正确识别。解决方法是将视频文件名修改为规范的“sXXeXX”格式，以便 EMBY 能准确刮削数据。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/1738777748884.png"
+data-webp="/_resources/1738777748884.webp"
+data-original="https://www.carlos2016.cfd/_resources/1738777748884.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/1738777748884.png"
+alt="1738777748884.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>千万不能将时间浪费在 season 1 季文件夹上，这是由于视频文件名太复杂导致的。&lt;/p></description></item><item><title>emby 容器更新后启动失败的问题</title><link>https://www.carlos2016.cfd/p/emby-%E5%AE%B9%E5%99%A8%E6%9B%B4%E6%96%B0%E5%90%8E%E5%90%AF%E5%8A%A8%E5%A4%B1%E8%B4%A5%E7%9A%84%E9%97%AE%E9%A2%98/</link><pubDate>Mon, 17 Mar 2025 20:17:51 +0800</pubDate><guid>https://www.carlos2016.cfd/p/emby-%E5%AE%B9%E5%99%A8%E6%9B%B4%E6%96%B0%E5%90%8E%E5%90%AF%E5%8A%A8%E5%A4%B1%E8%B4%A5%E7%9A%84%E9%97%AE%E9%A2%98/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/51.webp" alt="Featured image of post emby 容器更新后启动失败的问题" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>优先通过版本回退解决，避免修改配置文件或删除数据。&lt;/p>
+&lt;p>emby 容器更新，导致容器启动失败，第一想到的是卸载新容器，回退旧容器。而不是删除配置文件，别乱搞配置文件，数据丢失得不偿失。&lt;/p>
+&lt;p>md，复制了一份 &lt;code>library.db&lt;/code> 文件，并重命名为 &lt;code>library.db.bak&lt;/code> ，想回退，md emby 居然不认了，数据库文件重命名不了一点。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317201229.webp"
+data-webp="/00-assets/Pasted%20image%2020250317201229.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317201229.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317201229.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317201229.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="回退旧版容器">回退旧版容器
+&lt;/h2>&lt;p>‌&lt;strong>停止容器&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">docker stop &amp;lt;新容器名称或ID&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>删除容器&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">docker rm &amp;lt;新容器名称或ID&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>确认旧镜像版本&lt;/strong>&lt;/p>
+&lt;p>查看本地已有的Emby镜像列表，找到稳定版本标签（如&lt;code>v4.7.11&lt;/code>）：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">docker images &lt;span class="p">|&lt;/span> grep emby
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>重新启动旧版本容器&lt;/strong>&lt;/p>
+&lt;p>使用旧镜像运行容器，并确保挂载原有配置目录：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">docker run -d &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> --name&lt;span class="o">=&lt;/span>emby_old &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> -p 8096:8096 &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> -v /原有配置目录路径:/config &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span> linuxserver/emby:&amp;lt;旧版本标签&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item></channel></rss>

@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Aws on carlos</title><link>https://www.carlos2016.cfd/tags/aws/</link><description>Recent content in Aws on carlos</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Example Person</copyright><lastBuildDate>Sun, 30 Mar 2025 16:10:24 +0000</lastBuildDate><atom:link href="https://www.carlos2016.cfd/tags/aws/index.xml" rel="self" type="application/rss+xml"/><item><title>pages 服务套 cloudFront cdn</title><link>https://www.carlos2016.cfd/p/pages-%E6%9C%8D%E5%8A%A1%E5%A5%97-cloudfront-cdn/</link><pubDate>Sun, 16 Mar 2025 22:01:59 +0800</pubDate><guid>https://www.carlos2016.cfd/p/pages-%E6%9C%8D%E5%8A%A1%E5%A5%97-cloudfront-cdn/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/59.webp" alt="Featured image of post pages 服务套 cloudFront cdn" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>pages 服务如何套 cloudFront cdn，加速国内网络。前提，必须拥有一张国内信用卡，不是储蓄卡。aws 账号不要作弊！不要作弊！不要作弊！&lt;/p>
+&lt;h3 id="cloudfront-免费套餐">CloudFront 免费套餐
+&lt;/h3>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-txt" data-lang="txt">&lt;span class="line">&lt;span class="cl">AWS 免费套餐
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1TB 的数据传出
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">1000 万次 HTTP 或 HTTPS 请求
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">200 万次 CloudFront 函数调用
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">每个月，永远免费
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="原理解析">原理解析
+&lt;/h3>&lt;p>&lt;strong>Cloudflare 的模式&lt;/strong>&lt;/p>
+&lt;p>你需要在你购买域名的网站(比如可能是阿里云，可能是 namesilo，可能是 freenom 等等)那边把你的域名服务器(英文NameServer，一般简称NS)修改为 Cloudflare 的NS服务器，也就是说，需要 Cloudflare全面接管你的域名，接管后，你想要添加DNS解析(添加A记录)，就需要在 Cloudflare 中添加，而不是在你购买域名的服务商那边添加，添加解析时，把小云朵的开关打开，就会走 cdn，不打开就不会走 cdn。&lt;/p>
+&lt;p>&lt;strong>CloudFront 模式&lt;/strong>&lt;/p>
+&lt;p>AWS 的 CloudFront 与 Cloudflare 工作模式不同，你无需(也无法)把你的域名交给 CloudFront 接管，要使用 CloudFront 做cdn，你需要准备两个域名：&lt;/p>
+&lt;ul>
+&lt;li>你要套cdn的域名(A域名)：假设为“aa.test.com”；&lt;/li>
+&lt;li>源域名(B域名)：假设为“bb.test.com”。cdn是用于加速用的，你需要告诉cdn你要加速的内容(图片、视频、网站)存放在哪台服务器上，但不能填ip，只能填域名，所以你需要解析一个域名到你要加速的服务器上，这个域名就叫“源域名”。&lt;/li>
+&lt;/ul>
+&lt;p>CloudFront cdn 加速原理：就是把B域名(&lt;code>bb.test.com&lt;/code>)解析到你的服务器上，然后在 CloudFront 的“选择源域”中填写B域名，这样 CloudFront 就知道你要加速的服务器是哪个服务器，最后它会自动生成一个&lt;code>xxx.cloudfront.net&lt;/code>域名作为加速域名，然后你需要把你的网站域名(即你要套cdn的域名)“&lt;code>aa.test.com&lt;/code>” cname 到“&lt;code>xxx.cloudfront.net&lt;/code>”，最终效果就是你访问&lt;code>aa.test.com&lt;/code>其实是在访问&lt;code>xxx.cloudfront.net&lt;/code>(当然这是 cname，不是 301/302 跳转)，而&lt;code>xxx.cloudfront.net&lt;/code>是 CloudFront 的域名，它会对应前面B域名所对应的那个网站。&lt;/p>
+&lt;h3 id="举例说明">举例说明
+&lt;/h3>&lt;p>假设你现在有如下域名和服务器&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-txt" data-lang="txt">&lt;span class="line">&lt;span class="cl">A域名：aa.test.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">B域名: bb.test.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">服务器：11.22.33.44
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ol>
+&lt;li>假设你想把A域名(&lt;code>aa.test.com&lt;/code>)套到cloudflare cdn上，用cdn来加速这个域名；&lt;/li>
+&lt;li>那么你需要先把B域名(&lt;code>bb.test.com&lt;/code>)解析到你的服务器(11.22.33.44)；&lt;/li>
+&lt;li>然后把B域名(&lt;code>bb.test.com&lt;/code>)填到 CloudFront 的“选择源域”里，把A域名(&lt;code>aa.test.com&lt;/code>)填到“备用域名(CNAME)”里(这一栏与前一栏不是挨着，需要往下滚动很多才能看到)；&lt;/li>
+&lt;li>然后填好其它选项后，最终创建好之后，它会生成一个“&lt;code>xxx.cloudfront.net&lt;/code>”格式的域名，这个域名就是 CloudFront 给你分配的加速域名，比如你之前访问一张图片是这样访问的：&lt;code>aa.test.com/imgs/1.jpg&lt;/code>，而用了cdn之后就是：&lt;code>xxx.cloudfront.net/imgs/1.jpg&lt;/code>；&lt;/li>
+&lt;/ol>
+&lt;p>按第4步的说法，虽然cdn可以加速，可是域名就变了，这是不可接受的，这就要用到前面第3步填的“备用域名”了，其实我觉得把它叫“自定义域名”更好一点，你需要添加一条DNS解析(CNAME记录)，把你在“备用域名”那一栏填的那个域名(&lt;code>aa.test.com&lt;/code>)添加一个cname，对应到 CloudFront 给你分配的加速域名“&lt;code>xxx.cloudfront.net&lt;/code>”，最终的请求的流向为&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-txt" data-lang="txt">&lt;span class="line">&lt;span class="cl">aa.test.com ====cname===&amp;gt; xxx.cloudfront.net ===&amp;gt; CDN服务器 ===bb.test.com===&amp;gt; 源服务器
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="aws-控制台">aws 控制台
+&lt;/h2>&lt;p>打开以下地址，点击注册。创建账号不要作弊！不要作弊！不要作弊！&lt;/p>
+&lt;p>&lt;a class="link" href="https://aws.amazon.com/cn/cloudfront/" target="_blank" rel="noopener"
+>Amazon CloudFront 内容分发网络(CDN)_免费CDN加速-AWS云服务&lt;/a>
+&lt;/p>
+&lt;p>登录控制台，搜索 CloudFront 服务，&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316210608.webp"
+data-webp="/00-assets/Pasted%20image%2020250316210608.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316210608.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316210608.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316210608.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>创建分配&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316210746.webp"
+data-webp="/00-assets/Pasted%20image%2020250316210746.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316210746.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316210746.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316210746.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>然后在下图的“选择源域”中填写一个“源域名”&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316212250.webp"
+data-webp="/00-assets/Pasted%20image%2020250316212250.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316212250.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316212250.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316212250.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>注意这个域名不能是你要套cdn的域名，这个域名只是用来告诉 CloudFront：“喂，你要加速的内容是&lt;code>abc.examle.com&lt;/code>服务器中，记得给它加速哟”；它只能填域名，不能直接填ip，所以我们需要解析一个域名指向这个ip(你VPS的ip)，用域名的方式来告诉 CloudFront，告诉它要给哪台服务器的内容加速，这个域名我们叫“源域名”，它指向将要被加速的“源服务器”(就是你的VPS)；匹配查看器，其实就是匹配浏览器，“查看器”其实是browser的翻译，本来应该翻译为浏览器的，这aws的翻译也是厉害，不知道为什么会翻译成查看器的。&lt;/p>
+&lt;p>接着往下，这些按默认就可以。这里选择源域填了之后，自动和前面的一样，不用理会。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316212456.webp"
+data-webp="/00-assets/Pasted%20image%2020250316212456.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316212456.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316212456.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316212456.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>缓存策略选择“CachingDisabled”(禁用缓存)，源请求策略选择“AllViewer”。这里能禁用就禁用，其他服务需要收费，aws 服务小心一点。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316212700.webp"
+data-webp="/00-assets/Pasted%20image%2020250316212700.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316212700.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316212700.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316212700.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>禁用防火墙，这是收费服务&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316212837.webp"
+data-webp="/00-assets/Pasted%20image%2020250316212837.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316212837.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316212837.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316212837.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>这里“价格与级别”，看你的服务器在哪儿，一般来说第一个和第三个都可以，仅北美和欧洲肯定不行，因为你在国内是亚洲，它不对亚洲加速的话，你要它来干嘛。这个价格可以不用太在意，因为你个人使用不超过免费用量是不会收费的。特别注意这里的“备用域名(CNAME)”一栏要填“你真正要套cdn的域名”(就是你的网站域名，就是你要加速的域名)&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316212917.webp"
+data-webp="/00-assets/Pasted%20image%2020250316212917.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316212917.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316212917.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316212917.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>这里要选择证书，点击“请求证书”来申请一个证书，点击后它会在另一个标签中打开新页面，这个证书不需要我们源域名(&lt;code>bb.test.com&lt;/code>)或网站域名(&lt;code>bb.test.com&lt;/code>)的证书，就是说这个证书归这个证书，跟你自己域名的证书无关&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316213003.webp"
+data-webp="/00-assets/Pasted%20image%2020250316213003.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316213003.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316213003.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316213003.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>默认下一步即可，证书认证，不然 cdn 加速失败&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316213202.webp"
+data-webp="/00-assets/Pasted%20image%2020250316213202.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316213202.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316213202.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316213202.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>以 &lt;code>*.baidu.com&lt;/code> 为例子，填你拥有的地址，dns 验证，默认下一步即可。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316213302.webp"
+data-webp="/00-assets/Pasted%20image%2020250316213302.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316213302.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316213302.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316213302.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>在域名控制台添加对应的记录，添加完等待认证成功即可。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316213502.webp"
+data-webp="/00-assets/Pasted%20image%2020250316213502.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316213502.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316213502.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316213502.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>认证成功截图&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316213620.webp"
+data-webp="/00-assets/Pasted%20image%2020250316213620.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316213620.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316213620.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316213620.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>回到之前请求证书的地方，点击右侧的“刷新”按钮，然后下拉菜单中就可以选择刚刚请求的证书了&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316213754.webp"
+data-webp="/00-assets/Pasted%20image%2020250316213754.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316213754.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316213754.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316213754.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>下图都默认就行，或者把 http3 也选上，最终点“创建分配”&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316213837.webp"
+data-webp="/00-assets/Pasted%20image%2020250316213837.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316213837.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316213837.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316213837.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>可以看到显示创建成功，它会给你分配一个“分配域名”，然后下边还会有一个“备用域名”，这时你就会比较明白什么叫备用域名了，因为它已经给你分配了，你直接用它分配的域名就能用，但是用我们自己的域名通过添加cname后，也是可以走cdn加速的，所以才叫“备用域名”&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316213950.webp"
+data-webp="/00-assets/Pasted%20image%2020250316213950.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316213950.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316213950.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316213950.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>这两个域名都可以用来访问你的网站，只不过备用域名的好处就是自定义，更像是你自己的域名，而自动分配的域名就统一是 CloudFront 的域名(如果是做代理用的话，用 CloudFront 分配的域名也没什么，就是可能不容易记住)。&lt;/p>
+&lt;p>&lt;code>www.carlos2016.cfd&lt;/code> 为 &lt;code>dcrl3j7vhd2m7.cloudfront.net&lt;/code> 别名&lt;/p>
+&lt;p>如果你想使用自定义域名(即上图的“备用域名”)，你需要在域名解析服务商那边添加一个cname记录，把自己要套cdn的域名作为名称，而把 CloudFront 给你分配的域名作为“目标”，添加之后就可以使用它了。&lt;/p>
+&lt;p>按照本例的示例域名，aa.test.com就是套了cdn的域名，你用aa.test.com访问你的网站就是走了cdn的，而bb.test.com则是一个用来中转用的域名，真实使用的时候并不使用它&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-txt" data-lang="txt">&lt;span class="line">&lt;span class="cl">aa.test.com ====cname===&amp;gt; xxx.cloudfront.net ===&amp;gt; CDN服务器 ===bb.test.com===&amp;gt; 源服务器
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="服务器端操作">服务器端操作
+&lt;/h2>&lt;p>CloudFront 会通过443端口和80端口，即https和http协议去请求你的服务器，你必须在你的服务器配置前面所说的“A域名”(套cdn的域名)和“B域名”(源域名)，如果是nginx，则server_name应该把&lt;code>aa.test.com&lt;/code>和&lt;code>bb.test.com&lt;/code>都写上&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-nginx" data-lang="nginx">&lt;span class="line">&lt;span class="cl">&lt;span class="k">server&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">listen&lt;/span> &lt;span class="mi">80&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">server_name&lt;/span> &lt;span class="s">aa.test.com&lt;/span> &lt;span class="s">bb.test.com&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">……&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;code>bb.test.com&lt;/code>作为源域名，不用说肯定要配置的，不然CDN服务器没法通过这个域名获取到源站的内容，而&lt;code>aa.test.com&lt;/code>是cname到&lt;code>xxx.cloudfront.net&lt;/code>，理论上来说&lt;code>aa.test.com&lt;/code>并没有直接参与访问你服务器的内容，为什么它也要在nginx中配置呢？&lt;/p>
+&lt;p>原因是，你在浏览器(或其它客户端)发起请求的时候，用的是&lt;code>aa.test.com&lt;/code>，虽然DNS那边最终会把cname的域名(即&lt;code>xxx.cloudfront.net&lt;/code>)对应的ip返回，但浏览器并不知道这个ip是cname那边的，所以GET请求中header中的Host值还是&lt;code>aa.test.com&lt;/code>，这个请求最终会被CDN服务器转发到你的VPS中，那么VPS中的nginx接收到这个请求，就会根据Host值判断应该用哪个server模块来处理你的请求(如果你同一个端口有多个模块的话)，当然如果同一端口只有一个模块，其实server_name可以不写&lt;code>bb.test.com&lt;/code>，因为只有一个它默认就进去了，但建议还是写比较好。&lt;/p>
+&lt;p>另外，server模块中的证书，一般来说用通配符证书都是能匹配上，如果是单独指定多个域名，申请证书时记得把&lt;code>aa.test.com&lt;/code>和&lt;code>bb.test.com&lt;/code>的证书都加上。&lt;/p>
+&lt;h2 id="pages-服务-cdn-加速">pages 服务 cdn 加速
+&lt;/h2>&lt;p>填写 github 分配的地址即可，操作和上面的一样&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316215350.webp"
+data-webp="/00-assets/Pasted%20image%2020250316215350.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316215350.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316215350.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316215350.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>域名控制台添加 cname 记录，将自己购买的域名指向 CloudFront 分配的域名&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316215444.webp"
+data-webp="/00-assets/Pasted%20image%2020250316215444.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316215444.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316215444.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316215444.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>pages 自定义域名填写自己购买的域名&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316215706.webp"
+data-webp="/00-assets/Pasted%20image%2020250316215706.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316215706.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316215706.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316215706.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>然后 cmd 测试，返回数据出现 CloudFront 特有的标记，就证明 cdn 开启成功&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316215901.webp"
+data-webp="/00-assets/Pasted%20image%2020250316215901.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316215901.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316215901.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316215901.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>点击以下在线测试工具，就会发现中国绿&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.itdog.cn/ping/" target="_blank" rel="noopener"
+>在线ping_多地ping_多线路ping_持续ping_网络延迟测试_服务器延迟测试&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316220034.webp"
+data-webp="/00-assets/Pasted%20image%2020250316220034.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316220034.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316220034.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316220034.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item></channel></rss>

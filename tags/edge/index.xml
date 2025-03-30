@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Edge on carlos</title><link>https://www.carlos2016.cfd/tags/edge/</link><description>Recent content in Edge on carlos</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Example Person</copyright><lastBuildDate>Sun, 30 Mar 2025 16:10:24 +0000</lastBuildDate><atom:link href="https://www.carlos2016.cfd/tags/edge/index.xml" rel="self" type="application/rss+xml"/><item><title>关闭 edge 自动填充表单功能</title><link>https://www.carlos2016.cfd/p/%E5%85%B3%E9%97%AD-edge-%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E8%A1%A8%E5%8D%95%E5%8A%9F%E8%83%BD/</link><pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.carlos2016.cfd/p/%E5%85%B3%E9%97%AD-edge-%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E8%A1%A8%E5%8D%95%E5%8A%9F%E8%83%BD/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/39.webp" alt="Featured image of post 关闭 edge 自动填充表单功能" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>如何关闭 edge 自动填充表单功能&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308200920.webp"
+data-webp="/00-assets/Pasted%20image%2020250308200920.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308200920.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308200920.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308200920.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>在输入框中，输入信息，会自动弹出经常输入的信息，而且删不掉，没有任何实际作用。&lt;/p>
+&lt;h2 id="实操">实操
+&lt;/h2>&lt;p>地址栏输入 &lt;code>edge://wallet/settings&lt;/code>&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308201144.webp"
+data-webp="/00-assets/Pasted%20image%2020250308201144.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308201144.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308201144.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308201144.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>关闭“保存并填充基本信息”即可&lt;/p></description></item></channel></rss>

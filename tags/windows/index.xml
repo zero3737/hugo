@@ -1,0 +1,1140 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Windows on carlos</title><link>https://www.carlos2016.cfd/tags/windows/</link><description>Recent content in Windows on carlos</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Example Person</copyright><lastBuildDate>Sun, 30 Mar 2025 16:10:24 +0000</lastBuildDate><atom:link href="https://www.carlos2016.cfd/tags/windows/index.xml" rel="self" type="application/rss+xml"/><item><title>windows robocopy 同步备份不同分区的目录</title><link>https://www.carlos2016.cfd/p/windows-robocopy-%E5%90%8C%E6%AD%A5%E5%A4%87%E4%BB%BD%E4%B8%8D%E5%90%8C%E5%88%86%E5%8C%BA%E7%9A%84%E7%9B%AE%E5%BD%95/</link><pubDate>Thu, 20 Mar 2025 21:09:11 +0800</pubDate><guid>https://www.carlos2016.cfd/p/windows-robocopy-%E5%90%8C%E6%AD%A5%E5%A4%87%E4%BB%BD%E4%B8%8D%E5%90%8C%E5%88%86%E5%8C%BA%E7%9A%84%E7%9B%AE%E5%BD%95/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/11.webp" alt="Featured image of post windows robocopy 同步备份不同分区的目录" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>本来想通过符号链接将文件备份到 onedrive，可是软链接对 onedrive 兼容不是很好，某些目录不能上传 onedrive&lt;/p>
+&lt;h2 id="robocopy-和复制区别">robocopy 和复制区别
+&lt;/h2>&lt;p>‌&lt;strong>robocopy&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>是专业的命令行文件复制工具，专为大规模数据迁移设计，支持多线程加速（/MT参数）‌；&lt;/li>
+&lt;li>支持断点续传（网络中断后可恢复复制）‌3、增量备份（仅复制新增或修改的文件）‌；&lt;/li>
+&lt;li>可保留文件属性（如时间戳、ACL权限）‌；&lt;/li>
+&lt;li>提供日志记录（/LOG参数）和错误重试机制（/R和/W参数）‌。&lt;/li>
+&lt;/ul>
+&lt;p>‌&lt;strong>常规复制&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>图形界面复制（右键复制粘贴）依赖剪贴板，仅适用于少量文件‌；&lt;/li>
+&lt;li>copy/xcopy命令为单线程操作，无法处理复杂场景（如网络中断恢复）‌；&lt;/li>
+&lt;li>默认不保留部分元数据（如权限），且无日志记录功能‌。&lt;/li>
+&lt;/ul>
+&lt;h2 id="robocopy-定时同步">robocopy 定时同步
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-bat" data-lang="bat">&lt;span class="line">&lt;span class="cl">robocopy &lt;span class="s2">&amp;#34;Y:\usb01\08_doc&amp;#34;&lt;/span> &lt;span class="s2">&amp;#34;C:\Users\carlos\OneDrive\附件\doc&amp;#34;&lt;/span> /MIR /MT:12 /R:2 /W:10 /B /MON:1 /MOT:60 /XF ~$* *.tmp Thumbs.db
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>&lt;code>/MIR&lt;/code>：镜像模式（删除目标中多余文件，慎用！）&lt;/li>
+&lt;li>&lt;code>/R:2 /W:10&lt;/code>：失败重试 2 次，每次等待 10 秒&lt;/li>
+&lt;li>&lt;code>/MON:1 /MOT:60&lt;/code>：检测到 1 个文件变化后触发同步，每隔 60 分钟检查一次&lt;/li>
+&lt;li>&lt;code>/MT:64&lt;/code>：参数（64 线程），显著提升文件复制速度，尤其是处理大量小文件时。线程数建议设置为 CPU 核心数的 2~4 倍（如 4 核 CPU 用 8~16 线程）。&lt;/li>
+&lt;/ul>
+&lt;h2 id="中文乱码问题">中文乱码问题
+&lt;/h2>&lt;p>修改为 gbk 编码&lt;/p>
+&lt;p>在简体中文系统中，ANSI 等同于 ‌GBK‌；在繁体中文系统中可能映射为 ‌Big5‌，日文系统中则为 ‌Shift_JIS‌‌。&lt;/p>
+&lt;p>记事本另存为&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320190137.webp"
+data-webp="/00-assets/Pasted%20image%2020250320190137.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320190137.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320190137.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320190137.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>选择 ANSI 编码，保存即可&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320190238.webp"
+data-webp="/00-assets/Pasted%20image%2020250320190238.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320190238.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320190238.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320190238.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="设置开机启动">设置开机启动
+&lt;/h2>&lt;p>batch 脚本，检查 rclone 盘符是否挂载&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cmd" data-lang="cmd">&lt;span class="line">&lt;span class="cl">&lt;span class="p">@&lt;/span>&lt;span class="k">echo&lt;/span> off
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">setlocal&lt;/span> enabledelayedexpansion
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">rem 设置源目录和目标目录&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">set&lt;/span> &lt;span class="s2">&amp;#34;source_dir=Y:\usb01\08_doc&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">set&lt;/span> &lt;span class="s2">&amp;#34;target_dir=C:\Users\carlos\OneDrive\附件\doc&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">rem 检查 Y: 盘是否挂载的函数&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">:&lt;/span>&lt;span class="nl">check_drive&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="k">exist&lt;/span> &lt;span class="s2">&amp;#34;Y:\&amp;#34;&lt;/span> &lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">echo&lt;/span> Y: 盘已挂载。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">goto&lt;/span> &lt;span class="nl">start_backup&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">)&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">echo&lt;/span> 等待 Y: 盘挂载...
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> timeout /t 10 &lt;span class="p">&amp;gt;&lt;/span>nul
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">goto&lt;/span> &lt;span class="nl">check_drive&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">:&lt;/span>&lt;span class="nl">start_backup&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">rem 执行 robocopy 命令&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">robocopy &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">!source_dir!&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">!target_dir!&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> /MIR /MT:12 /R:2 /W:10 /MON:1 /MOT:60 /XF ~$* *.tmp Thumbs.db /LOG:D:\script\backup\logfile.txt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">echo&lt;/span> 备份完成。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">pause&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>vbs 脚本，隐藏 cmd 窗口&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">WshShell.Run chr(34) &amp;amp;&amp;#34;D:\script\backup\backup.bat&amp;#34;&amp;amp; chr(34), 0
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>windows OneDrive 无法打开</title><link>https://www.carlos2016.cfd/p/windows-onedrive-%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80/</link><pubDate>Thu, 20 Mar 2025 05:06:30 +0800</pubDate><guid>https://www.carlos2016.cfd/p/windows-onedrive-%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/30.webp" alt="Featured image of post windows OneDrive 无法打开" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>可能装机工具默认禁用 onedrive 的问题&lt;/p>
+&lt;h2 id="操作">操作
+&lt;/h2>&lt;p>同时按Win+R（同时键盘上的Windows图标键和R键），输入gpedit.msc&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320050354.webp"
+data-webp="/00-assets/Pasted%20image%2020250320050354.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320050354.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320050354.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320050354.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>在本地组策略中依次点击：计算机配置-管理模板-Windows组件-OneDrive，双击右侧“禁止使用OneDrive进行文件存储”。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320050414.webp"
+data-webp="/00-assets/Pasted%20image%2020250320050414.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320050414.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320050414.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320050414.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>点击“未配置”或“已禁用”，重启电脑。默认&amp;quot;未配置&amp;quot;改成&amp;quot;已禁用&amp;quot;&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320050428.webp"
+data-webp="/00-assets/Pasted%20image%2020250320050428.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320050428.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320050428.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320050428.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item><item><title>windows 电脑图标变白</title><link>https://www.carlos2016.cfd/p/windows-%E7%94%B5%E8%84%91%E5%9B%BE%E6%A0%87%E5%8F%98%E7%99%BD/</link><pubDate>Thu, 20 Mar 2025 04:28:24 +0800</pubDate><guid>https://www.carlos2016.cfd/p/windows-%E7%94%B5%E8%84%91%E5%9B%BE%E6%A0%87%E5%8F%98%E7%99%BD/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/24.webp" alt="Featured image of post windows 电脑图标变白" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>win 11 图片变白&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320042743.webp"
+data-webp="/00-assets/Pasted%20image%2020250320042743.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320042743.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320042743.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320042743.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="操作">操作
+&lt;/h2>&lt;p>按下组合键 WIN+R ， 输入 regedit 再按回车运行，这时候会有一个提示，选择 “是”。&lt;/p>
+&lt;p>一层一层找到 计算机&lt;code>\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\DriveIcons\&lt;/code> 这个路径&lt;/p>
+&lt;p>根据自己变成空白的硬盘盘符（我这里是盘符 Y），右键点击DriveIcons建立一个跟你硬盘盘符同名的项，然后再次右击刚建立的项，建立一个名为 DefaultIcon的项。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320042641.webp"
+data-webp="/00-assets/Pasted%20image%2020250320042641.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320042641.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320042641.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320042641.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>选中刚刚创建的 DefaultIcon，在右边面板双击默认，然后会弹出一个面板，直接确定即可。此步必须做，否则不生效！！！&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320042712.webp"
+data-webp="/00-assets/Pasted%20image%2020250320042712.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320042712.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320042712.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320042712.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item><item><title>windows smb 添加缓存</title><link>https://www.carlos2016.cfd/p/windows-smb-%E6%B7%BB%E5%8A%A0%E7%BC%93%E5%AD%98/</link><pubDate>Thu, 20 Mar 2025 03:18:16 +0800</pubDate><guid>https://www.carlos2016.cfd/p/windows-smb-%E6%B7%BB%E5%8A%A0%E7%BC%93%E5%AD%98/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/16.webp" alt="Featured image of post windows smb 添加缓存" />&lt;h2 id="同步中心">同步中心
+&lt;/h2>&lt;p>控制面板，找到同步中心&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320030451.webp"
+data-webp="/00-assets/Pasted%20image%2020250320030451.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320030451.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320030451.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320030451.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>管理脱机文件，点击启用&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320030537.webp"
+data-webp="/00-assets/Pasted%20image%2020250320030537.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320030537.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320030537.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320030537.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>这里可以设置可以缓存脱机文件最大值&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320031720.webp"
+data-webp="/00-assets/Pasted%20image%2020250320031720.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320031720.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320031720.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320031720.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="资源管理器">资源管理器
+&lt;/h2>&lt;p>右键，点击“始终脱机可用”，即可下载脱机文件&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320031440.webp"
+data-webp="/00-assets/Pasted%20image%2020250320031440.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320031440.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320031440.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320031440.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>如果想删除脱机文件，找到对应目录，再次点击即可&lt;/p></description></item><item><title>syncthing windows 端使用教程</title><link>https://www.carlos2016.cfd/p/syncthing-windows-%E7%AB%AF%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link><pubDate>Thu, 20 Mar 2025 02:24:02 +0800</pubDate><guid>https://www.carlos2016.cfd/p/syncthing-windows-%E7%AB%AF%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/02.webp" alt="Featured image of post syncthing windows 端使用教程" />&lt;h2 id="安装">安装
+&lt;/h2>&lt;p>官网地址&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/Bill-Stewart/SyncthingWindowsSetup" target="_blank" rel="noopener"
+>Bill-Stewart/SyncthingWindowsSetup: Syncthing Windows Setup&lt;/a>
+&lt;/p>
+&lt;p>默认下一步即可&lt;/p>
+&lt;h2 id="初始化">初始化
+&lt;/h2>&lt;p>设置开启局域网访问&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020412.webp"
+data-webp="/00-assets/Pasted%20image%2020250320020412.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020412.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020412.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020412.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>删除默认文件夹&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020526.webp"
+data-webp="/00-assets/Pasted%20image%2020250320020526.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020526.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020526.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020526.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="添加设备">添加设备
+&lt;/h2>&lt;p>找到标识&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020657.webp"
+data-webp="/00-assets/Pasted%20image%2020250320020657.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020657.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020657.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020657.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>服务端复制 id&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020735.webp"
+data-webp="/00-assets/Pasted%20image%2020250320020735.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020735.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020735.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020735.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>windows 端添加远程设备&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020748.webp"
+data-webp="/00-assets/Pasted%20image%2020250320020748.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020748.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020748.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020748.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>服务端添加设备&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020911.webp"
+data-webp="/00-assets/Pasted%20image%2020250320020911.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020911.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020911.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020911.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="windwos-端添加文件夹">windwos 端添加文件夹
+&lt;/h2>&lt;p>添加文件夹&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022340.webp"
+data-webp="/00-assets/Pasted%20image%2020250320022340.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022340.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022340.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022340.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>设置同步目录，分别是名称和路径&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021157.webp"
+data-webp="/00-assets/Pasted%20image%2020250320021157.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021157.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021157.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021157.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>打勾表示共享给服务端&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021244.webp"
+data-webp="/00-assets/Pasted%20image%2020250320021244.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021244.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021244.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021244.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>仅发送，表示不接受服务端的修改&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021345.webp"
+data-webp="/00-assets/Pasted%20image%2020250320021345.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021345.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021345.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021345.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>扫描并不是开始同步，我也不知道干什么，让他扫就行&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021509.webp"
+data-webp="/00-assets/Pasted%20image%2020250320021509.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021509.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021509.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021509.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="服务端接受分享">服务端接受分享
+&lt;/h2>&lt;p>添加，接受分享&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021655.webp"
+data-webp="/00-assets/Pasted%20image%2020250320021655.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021655.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021655.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021655.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>设置服务端同步目录&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022020.webp"
+data-webp="/00-assets/Pasted%20image%2020250320022020.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022020.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022020.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022020.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>设置共享&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022047.webp"
+data-webp="/00-assets/Pasted%20image%2020250320022047.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022047.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022047.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022047.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>设置仅接受&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022128.webp"
+data-webp="/00-assets/Pasted%20image%2020250320022128.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022128.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022128.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022128.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="强制同步">强制同步
+&lt;/h2>&lt;p>服务端仅接受，如果和远程不一样，有一个强制还原的选项，还原远程更改&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320033040.webp"
+data-webp="/00-assets/Pasted%20image%2020250320033040.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320033040.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320033040.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320033040.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>同理，如果本地和远程不一样，windows 端会有一个强制还原的选项&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320033223.webp"
+data-webp="/00-assets/Pasted%20image%2020250320033223.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320033223.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320033223.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320033223.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="设置开机启动">设置开机启动
+&lt;/h2>&lt;p>保存 syncthing.bat 脚本文件&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cmd" data-lang="cmd">&lt;span class="line">&lt;span class="cl"># 打开 “记事本” 软件，将以下代码复制进去，另存为 syncthing.bat。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">start&lt;/span> &lt;span class="s2">&amp;#34;Syncthing&amp;#34;&lt;/span> syncthing.exe -no-console -no-browser
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>如果上面的脚本不起作用改用 vbs 脚本&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">CreateObject(&amp;#34;WScript.Shell&amp;#34;).Run &amp;#34;&amp;#34;&amp;#34;C:\Users\carlos\AppData\Local\Programs\Syncthing\syncthing.exe&amp;#34;&amp;#34; -no-console -no-browser&amp;#34;, 0
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>复制脚本文件到 syncthing.exe 同级目录。找到 syncthing.exe 所在目录，将 syncthing.bat 脚本文件复制到该目录。&lt;/p>
+&lt;p>将脚本文件快捷方式添加到 “启动” 菜单&lt;/p>
+&lt;ol>
+&lt;li>选中 syncthing.bat 脚本文件，右键创建快捷方式&lt;/li>
+&lt;li>按下 win + R，输入 “shell:startup” 打开 “启动” 文件夹&lt;/li>
+&lt;li>将快捷方式复制到 “启动” 文件夹&lt;/li>
+&lt;/ol></description></item><item><title>windows 安装 rclone 挂载 alist</title><link>https://www.carlos2016.cfd/p/windows-%E5%AE%89%E8%A3%85-rclone-%E6%8C%82%E8%BD%BD-alist/</link><pubDate>Wed, 19 Mar 2025 21:53:54 +0800</pubDate><guid>https://www.carlos2016.cfd/p/windows-%E5%AE%89%E8%A3%85-rclone-%E6%8C%82%E8%BD%BD-alist/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/54.webp" alt="Featured image of post windows 安装 rclone 挂载 alist" />&lt;h2 id="安装命令">安装命令
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cmd" data-lang="cmd">&lt;span class="line">&lt;span class="cl">winget install Rclone.Rclone
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">winget install WinFsp.WinFsp
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="rclone添加alist服务器地址">rclone添加alist服务器地址
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cmd" data-lang="cmd">&lt;span class="line">&lt;span class="cl">rclone config
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>输入 n。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/20dff48b3a5ba11575a27468ac08aa95.png"
+data-webp="/_resources/20dff48b3a5ba11575a27468ac08aa95.webp"
+data-original="https://www.carlos2016.cfd/_resources/20dff48b3a5ba11575a27468ac08aa95.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/20dff48b3a5ba11575a27468ac08aa95.png"
+alt="20dff48b3a5ba11575a27468ac08aa95.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>输入名字。这个名字之后命令会用到。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/38e8f560c63257e38a92bdf07030b918.png"
+data-webp="/_resources/38e8f560c63257e38a92bdf07030b918.webp"
+data-original="https://www.carlos2016.cfd/_resources/38e8f560c63257e38a92bdf07030b918.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/38e8f560c63257e38a92bdf07030b918.png"
+alt="38e8f560c63257e38a92bdf07030b918.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>这里选择 webdav，根据自己的 rclone 版本号选择。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/3acd186c19d6090332528599206b7988.png"
+data-webp="/_resources/3acd186c19d6090332528599206b7988.webp"
+data-original="https://www.carlos2016.cfd/_resources/3acd186c19d6090332528599206b7988.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/3acd186c19d6090332528599206b7988.png"
+alt="3acd186c19d6090332528599206b7988.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>输入 alist 服务器地址，注意 /dav。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/f5a83b7b9a646a4b9f5e2f1be7c91df1.png"
+data-webp="/_resources/f5a83b7b9a646a4b9f5e2f1be7c91df1.webp"
+data-original="https://www.carlos2016.cfd/_resources/f5a83b7b9a646a4b9f5e2f1be7c91df1.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/f5a83b7b9a646a4b9f5e2f1be7c91df1.png"
+alt="f5a83b7b9a646a4b9f5e2f1be7c91df1.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>输入6（根据自己版本号选择，描述一样即可，版本号不同，编号就不痛），再输入用户名，再输入y，后面填两次密码后一路回车即可。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/519c1135c49c2c9934715f44bf746e78.png"
+data-webp="/_resources/519c1135c49c2c9934715f44bf746e78.webp"
+data-original="https://www.carlos2016.cfd/_resources/519c1135c49c2c9934715f44bf746e78.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/519c1135c49c2c9934715f44bf746e78.png"
+alt="519c1135c49c2c9934715f44bf746e78.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>3 次回车，按 q 退出。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/332c409b5b63238994f0111b63cf6a0e.png"
+data-webp="/_resources/332c409b5b63238994f0111b63cf6a0e.webp"
+data-original="https://www.carlos2016.cfd/_resources/332c409b5b63238994f0111b63cf6a0e.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/332c409b5b63238994f0111b63cf6a0e.png"
+alt="332c409b5b63238994f0111b63cf6a0e.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="挂载alist">挂载alist
+&lt;/h2>&lt;p>输入命令即可挂载，该命令是挂载成本地磁盘的形式。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cmd" data-lang="cmd">&lt;span class="line">&lt;span class="cl">rclone mount smb: Z: &lt;span class="se">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se"> &lt;/span> --cache-dir &lt;span class="s2">&amp;#34;D:\rclone_cache\smb&amp;#34;&lt;/span> &lt;span class="se">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se"> &lt;/span> --vfs-cache-mode full &lt;span class="se">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se"> &lt;/span> --cache-chunk-size 64M &lt;span class="se">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se"> &lt;/span> --multi-thread-streams 16 --multi-thread-cutoff 32M --transfers 8 &lt;span class="se">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se"> &lt;/span> --buffer-size 128M &lt;span class="se">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se"> &lt;/span> --vfs-cache-max-size 2G --vfs-cache-max-age 6h &lt;span class="se">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se"> &lt;/span> --vfs-fast-fingerprint &lt;span class="se">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se"> &lt;/span> --no-modtime &lt;span class="se">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se"> &lt;/span> --file-perms 0755 &lt;span class="se">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se"> &lt;/span> --links &lt;span class="se">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se"> &lt;/span> --dir-cache-time 24h &lt;span class="se">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se"> &lt;/span> --poll-interval 5m &lt;span class="se">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se"> &lt;/span> --attr-timeout 5s
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>注意 &lt;code>--cache-dir D:alist&lt;/code> 参数，这里把缓存路径改成 d 盘 alist。&lt;/p>
+&lt;h2 id="rclone-403-错误">rclone 403 错误
+&lt;/h2>&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/ffa60f7ccd0d13c364a0789f9982e478.png"
+data-webp="/_resources/ffa60f7ccd0d13c364a0789f9982e478.webp"
+data-original="https://www.carlos2016.cfd/_resources/ffa60f7ccd0d13c364a0789f9982e478.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/ffa60f7ccd0d13c364a0789f9982e478.png"
+alt="ffa60f7ccd0d13c364a0789f9982e478.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>alist 后台，把权限全部打开即可解决。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/831307c1bbbe4ba9183e45aa77f944a2.png"
+data-webp="/_resources/831307c1bbbe4ba9183e45aa77f944a2.webp"
+data-original="https://www.carlos2016.cfd/_resources/831307c1bbbe4ba9183e45aa77f944a2.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/831307c1bbbe4ba9183e45aa77f944a2.png"
+alt="831307c1bbbe4ba9183e45aa77f944a2.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="rclone-eof-错误">rclone eof 错误
+&lt;/h2>&lt;p>把 alist ftp 驱动改成 smb 即可，可能由于 rclone 不兼容 alist ftp驱动吧。用 raidrive 就没有问题，但是该软件有广告。&lt;/p></description></item><item><title>搜狗输入法永久关闭弹窗</title><link>https://www.carlos2016.cfd/p/%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95%E6%B0%B8%E4%B9%85%E5%85%B3%E9%97%AD%E5%BC%B9%E7%AA%97/</link><pubDate>Sat, 15 Mar 2025 04:09:42 +0800</pubDate><guid>https://www.carlos2016.cfd/p/%E6%90%9C%E7%8B%97%E8%BE%93%E5%85%A5%E6%B3%95%E6%B0%B8%E4%B9%85%E5%85%B3%E9%97%AD%E5%BC%B9%E7%AA%97/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/42.webp" alt="Featured image of post 搜狗输入法永久关闭弹窗" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>如何关闭搜狗输入法弹窗&lt;/p>
+&lt;h2 id="实操">实操
+&lt;/h2>&lt;p>打开设置，呵呵，哪里打开都可以&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250315040831.webp"
+data-webp="/00-assets/Pasted%20image%2020250315040831.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250315040831.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250315040831.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250315040831.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>把所有推荐都手动关闭，呵呵呵&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250315040917.webp"
+data-webp="/00-assets/Pasted%20image%2020250315040917.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250315040917.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250315040917.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250315040917.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item><item><title>outlook 聚合邮箱，实现邮箱管理</title><link>https://www.carlos2016.cfd/p/outlook-%E8%81%9A%E5%90%88%E9%82%AE%E7%AE%B1%E5%AE%9E%E7%8E%B0%E9%82%AE%E7%AE%B1%E7%AE%A1%E7%90%86/</link><pubDate>Sun, 09 Mar 2025 23:32:19 +0800</pubDate><guid>https://www.carlos2016.cfd/p/outlook-%E8%81%9A%E5%90%88%E9%82%AE%E7%AE%B1%E5%AE%9E%E7%8E%B0%E9%82%AE%E7%AE%B1%E7%AE%A1%E7%90%86/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/19.webp" alt="Featured image of post outlook 聚合邮箱，实现邮箱管理" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>outlook 本土化非常好，可以同步 qq、163、gamil 以及微软邮箱&lt;/p>
+&lt;h2 id="qq-邮箱">qq 邮箱
+&lt;/h2>&lt;p>添加账户-输入邮箱账号&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231028.webp"
+data-webp="/00-assets/Pasted%20image%2020250309231028.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231028.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231028.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231028.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>输入邮箱服务器密码，不是 qq 账号密码&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231116.webp"
+data-webp="/00-assets/Pasted%20image%2020250309231116.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231116.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231116.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231116.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>获取 qq 邮箱服务器密码，设置-账号，划到底部&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231242.webp"
+data-webp="/00-assets/Pasted%20image%2020250309231242.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231242.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231242.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231242.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>找到管理服务&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231416.webp"
+data-webp="/00-assets/Pasted%20image%2020250309231416.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231416.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231416.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231416.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>生成授权码，即可获得 qq 邮箱服务器密码&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231555.webp"
+data-webp="/00-assets/Pasted%20image%2020250309231555.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231555.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231555.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231555.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>填入 Outlook 即可登录成功&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231701.webp"
+data-webp="/00-assets/Pasted%20image%2020250309231701.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231701.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231701.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231701.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="163-邮箱">163 邮箱
+&lt;/h2>&lt;p>和 qq 邮箱同理，先获取邮箱服务器密码，设置-&amp;ldquo;POP3/SMTP/IMAP&amp;rdquo;-开启，即可获取授权码&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309232432.webp"
+data-webp="/00-assets/Pasted%20image%2020250309232432.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309232432.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309232432.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309232432.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>然后填入 163 邮箱账号，以及授权码，即可同步邮箱&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309232720.webp"
+data-webp="/00-assets/Pasted%20image%2020250309232720.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309232720.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309232720.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309232720.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="微软和-gmail-邮箱">微软和 gmail 邮箱
+&lt;/h2>&lt;p>微软邮箱和 gmail 支持直接输入账户密码直接同步，不需要获取邮箱服务器密码&lt;/p>
+&lt;p>微软以及谷歌官网登陆，然后默认下一步即可同步邮箱&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309233129.webp"
+data-webp="/00-assets/Pasted%20image%2020250309233129.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309233129.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309233129.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309233129.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item><item><title>windows 开机执行 bat 脚本，含隐藏命令窗口</title><link>https://www.carlos2016.cfd/p/windows-%E5%BC%80%E6%9C%BA%E6%89%A7%E8%A1%8C-bat-%E8%84%9A%E6%9C%AC%E5%90%AB%E9%9A%90%E8%97%8F%E5%91%BD%E4%BB%A4%E7%AA%97%E5%8F%A3/</link><pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.carlos2016.cfd/p/windows-%E5%BC%80%E6%9C%BA%E6%89%A7%E8%A1%8C-bat-%E8%84%9A%E6%9C%AC%E5%90%AB%E9%9A%90%E8%97%8F%E5%91%BD%E4%BB%A4%E7%AA%97%E5%8F%A3/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/30.webp" alt="Featured image of post windows 开机执行 bat 脚本，含隐藏命令窗口" />&lt;h2 id="启动文件夹">启动文件夹
+&lt;/h2>&lt;p>按 Win + R 键打开“运行”对话框。&lt;/p>
+&lt;p>输入 shell:startup 并按 Enter 键，这将打开“启动”文件夹。这个文件夹中的所有程序都会在系统启动时自动运行。&lt;/p>
+&lt;p>将脚本放入“启动”文件夹‌。&lt;/p>
+&lt;h2 id="隐藏命令窗口">隐藏命令窗口
+&lt;/h2>&lt;p>创建文件，内容如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">Set WshShell = CreateObject(&amp;#34;WScript.Shell&amp;#34;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">WshShell.Run chr(34) &amp;amp;&amp;#34;C:\path\to\your\batchfile.bat&amp;#34;&amp;amp; chr(34), 0
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>替换&amp;quot;C:\path\to\your\batchfile.bat&amp;quot;为你的批处理文件的实际路径。&lt;/p>
+&lt;p>保存文件，扩展名为.vbs，例如runBatchSilent.vbs。&lt;/p>
+&lt;p>将 vbs 文件放到“启动”文件夹，bat 文件放到自己喜欢的目录即可，vbs 中的路径一定要指向 bat 文件，原理是通过 vbs 隐藏命令窗口。&lt;/p></description></item><item><title>关闭 edge 自动填充表单功能</title><link>https://www.carlos2016.cfd/p/%E5%85%B3%E9%97%AD-edge-%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E8%A1%A8%E5%8D%95%E5%8A%9F%E8%83%BD/</link><pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.carlos2016.cfd/p/%E5%85%B3%E9%97%AD-edge-%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%85%85%E8%A1%A8%E5%8D%95%E5%8A%9F%E8%83%BD/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/39.webp" alt="Featured image of post 关闭 edge 自动填充表单功能" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>如何关闭 edge 自动填充表单功能&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308200920.webp"
+data-webp="/00-assets/Pasted%20image%2020250308200920.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308200920.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308200920.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308200920.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>在输入框中，输入信息，会自动弹出经常输入的信息，而且删不掉，没有任何实际作用。&lt;/p>
+&lt;h2 id="实操">实操
+&lt;/h2>&lt;p>地址栏输入 &lt;code>edge://wallet/settings&lt;/code>&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308201144.webp"
+data-webp="/00-assets/Pasted%20image%2020250308201144.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308201144.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308201144.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308201144.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>关闭“保存并填充基本信息”即可&lt;/p></description></item><item><title>PowerToys 批量重命名</title><link>https://www.carlos2016.cfd/p/powertoys-%E6%89%B9%E9%87%8F%E9%87%8D%E5%91%BD%E5%90%8D/</link><pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.carlos2016.cfd/p/powertoys-%E6%89%B9%E9%87%8F%E9%87%8D%E5%91%BD%E5%90%8D/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/02.webp" alt="Featured image of post PowerToys 批量重命名" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>本文主题是如何批量重命名文件，从 00 开始递增，强制保留 2 位数&lt;/p>
+&lt;h2 id="使用-powerrename-批量重命名">使用 PowerRename 批量重命名
+&lt;/h2>&lt;p>右键点击选定的文件，选择“PowerRename”选项，打开 PowerRename 窗口。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250307030309.webp"
+data-webp="/00-assets/Pasted%20image%2020250307030309.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250307030309.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250307030309.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250307030309.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>启用正则表达式，输入 &lt;code>.*&lt;/code> 匹配任意文件名&lt;/p>
+&lt;p>在“替换为”字段中输入新的命名格式。使用 &lt;code>${padding=2;increment=1;start=0}&lt;/code> 来实现从 00 开始的两位数递增编号。&lt;/p>
+&lt;p>最后点击应用即可。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250307030156.webp"
+data-webp="/00-assets/Pasted%20image%2020250307030156.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250307030156.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250307030156.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250307030156.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item><item><title>符号链接 mklink</title><link>https://www.carlos2016.cfd/p/%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5-mklink/</link><pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.carlos2016.cfd/p/%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5-mklink/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/13.webp" alt="Featured image of post 符号链接 mklink" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>符号链接（Symbolic Link）是一种文件系统中的概念，它允许你创建一个指向另一个文件或目录的快捷方式。符号链接在 Windows、Linux 和 Mac 系统中都有支持，但它们的行为和兼容性可能会有所不同。下面我将详细解释符号链接的作用以及为什么在某些情况下可能无法兼容不同路径。&lt;/p>
+&lt;h2 id="windows-使用">Windows 使用
+&lt;/h2>&lt;p>在 Windows 系统中，可以使用 mklink 命令来创建符号链接。以下是基本语法：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">mklink /D &amp;#34;目标目录&amp;#34; &amp;#34;源目录&amp;#34;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>例如，假设你的 Joplin 导出目录是 D:\JoplinExport，而你的 Obsidian 目录是 C:\ObsidianVault，你可以使用以下命令在 Obsidian 目录中创建一个指向 Joplin 导出目录的符号链接：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">mklink /D &amp;#34;C:\ObsidianVault\JoplinExport&amp;#34; &amp;#34;D:\JoplinExport&amp;#34;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="linux-使用">Linux 使用
+&lt;/h2>&lt;p>在 Linux 或 Mac 系统中，可以使用 ln -s 命令来创建符号链接。以下是基本语法：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">ln -s 源目录 目标目录
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>例如，假设你的 Joplin 导出目录是 /home/user/JoplinExport，而你的 Obsidian 目录是 /home/user/ObsidianVault，你可以使用以下命令在 Obsidian 目录中创建一个指向 Joplin 导出目录的符号链接：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">ln -s /home/user/JoplinExport /home/user/ObsidianVault/JoplinExport
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="注意事项">注意事项
+&lt;/h2>&lt;ul>
+&lt;li>符号链接只是创建了一个指向实际文件的快捷方式，如果路径不正确，图片仍然无法显示。&lt;/li>
+&lt;li>符号链接的路径是相对于创建时的路径。如果目标文件或目录的路径发生变化，符号链接可能会失效。例如，如果你创建了一个符号链接指向 &lt;code>D:\JoplinExport&lt;/code>，但后来将 JoplinExport 文件夹移动到了 &lt;code>D:\NewFolder&lt;/code>，那么原来的符号链接将无法找到目标。&lt;/li>
+&lt;li>不同的文件系统对符号链接的支持程度不同。例如，NTFS 文件系统支持符号链接，但 FAT32 和 exFAT 文件系统不支持。如果你将符号链接从一个支持的文件系统移动到不支持的文件系统，符号链接可能会失效。&lt;/li>
+&lt;li>某些应用程序可能不支持符号链接。例如，某些程序可能无法正确解析符号链接，导致无法访问目标文件或目录。这可能是由于程序的设计或安全限制。&lt;/li>
+&lt;li>在不同操作系统之间移动符号链接可能会导致问题。例如，Windows 和 Linux 系统对符号链接的处理方式不同，如果你在 Windows 上创建了一个符号链接，然后在 Linux 系统上访问，可能会遇到兼容性问题。&lt;/li>
+&lt;/ul>
+&lt;h3 id="不支持符号链接功能">不支持符号链接功能‌
+&lt;/h3>&lt;p>exFAT是一种为移动存储设备（如U盘、SD卡）设计的轻量级文件系统，主要目标是‌跨平台兼容性‌（Windows/macOS/Linux）和‌大文件支持‌，但未包含符号链接等高级功能‌。&lt;/p>
+&lt;h3 id="与ntfs的对比">与NTFS的对比
+&lt;/h3>&lt;p>‌
+NTFS、ext4等文件系统支持符号链接，因为它们具备更复杂的元数据管理能力。而exFAT的设计简化了文件结构以提高兼容性，牺牲了此类高级特性‌。&lt;/p>
+&lt;h2 id="案例">案例
+&lt;/h2>&lt;p>假设你的 Joplin 导出目录是 D:\JoplinExport，而你的 Obsidian 目录是 C:\ObsidianVault，你可以使用以下命令在 Obsidian 目录中创建一个指向 Joplin 导出目录的符号链接：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">mklink /D &amp;#34;C:\ObsidianVault\JoplinExport&amp;#34; &amp;#34;D:\JoplinExport&amp;#34;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>注意，JoplinExport 目录下的资源文件夹一定要存在，不然无法加载资源，例如图片、视频、办公文件等。JoplinExport 目录下存在 images 目录，那么 &lt;code>C:\ObsidianVault\JoplinExport&lt;/code> 目录下也必须有 images 目录，不然无法加载图片资源。&lt;/p>
+&lt;h2 id="软链接与硬链接">软链接与硬链接
+&lt;/h2>&lt;p>一、跨文件系统支持&lt;/p>
+&lt;ul>
+&lt;li>软链接：可跨不同文件系统或分区创建，仅需存储目标文件的路径信息即可实现间接引用‌。&lt;/li>
+&lt;li>硬链接：仅能在同一文件系统内创建，因依赖共享同一inode的特性，无法跨越不同存储设备或分区‌。&lt;/li>
+&lt;/ul>
+&lt;p>二、目标类型支持&lt;/p>
+&lt;ul>
+&lt;li>软链接：若目标文件被删除或移动，软链接会失效（成为“悬挂链接”）‌。&lt;/li>
+&lt;li>硬链接：删除任一硬链接不会影响其他链接，只有当所有硬链接被删除后，文件数据才会被释放‌。&lt;/li>
+&lt;/ul>
+&lt;p>三、目标文件删除后的行为&lt;/p>
+&lt;ul>
+&lt;li>软链接：若目标文件被删除或移动，软链接会失效（成为“悬挂链接”）‌。&lt;/li>
+&lt;li>硬链接：删除任一硬链接不会影响其他链接，只有当所有硬链接被删除后，文件数据才会被释放‌。&lt;/li>
+&lt;/ul></description></item></channel></rss>

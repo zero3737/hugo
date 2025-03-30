@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>邮箱 on carlos</title><link>https://www.carlos2016.cfd/tags/%E9%82%AE%E7%AE%B1/</link><description>Recent content in 邮箱 on carlos</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Example Person</copyright><lastBuildDate>Sun, 30 Mar 2025 16:10:24 +0000</lastBuildDate><atom:link href="https://www.carlos2016.cfd/tags/%E9%82%AE%E7%AE%B1/index.xml" rel="self" type="application/rss+xml"/><item><title>outlook 聚合邮箱，实现邮箱管理</title><link>https://www.carlos2016.cfd/p/outlook-%E8%81%9A%E5%90%88%E9%82%AE%E7%AE%B1%E5%AE%9E%E7%8E%B0%E9%82%AE%E7%AE%B1%E7%AE%A1%E7%90%86/</link><pubDate>Sun, 09 Mar 2025 23:32:19 +0800</pubDate><guid>https://www.carlos2016.cfd/p/outlook-%E8%81%9A%E5%90%88%E9%82%AE%E7%AE%B1%E5%AE%9E%E7%8E%B0%E9%82%AE%E7%AE%B1%E7%AE%A1%E7%90%86/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/19.webp" alt="Featured image of post outlook 聚合邮箱，实现邮箱管理" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>outlook 本土化非常好，可以同步 qq、163、gamil 以及微软邮箱&lt;/p>
+&lt;h2 id="qq-邮箱">qq 邮箱
+&lt;/h2>&lt;p>添加账户-输入邮箱账号&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231028.webp"
+data-webp="/00-assets/Pasted%20image%2020250309231028.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231028.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231028.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231028.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>输入邮箱服务器密码，不是 qq 账号密码&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231116.webp"
+data-webp="/00-assets/Pasted%20image%2020250309231116.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231116.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231116.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231116.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>获取 qq 邮箱服务器密码，设置-账号，划到底部&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231242.webp"
+data-webp="/00-assets/Pasted%20image%2020250309231242.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231242.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231242.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231242.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>找到管理服务&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231416.webp"
+data-webp="/00-assets/Pasted%20image%2020250309231416.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231416.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231416.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231416.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>生成授权码，即可获得 qq 邮箱服务器密码&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231555.webp"
+data-webp="/00-assets/Pasted%20image%2020250309231555.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231555.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231555.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231555.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>填入 Outlook 即可登录成功&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231701.webp"
+data-webp="/00-assets/Pasted%20image%2020250309231701.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231701.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231701.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309231701.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="163-邮箱">163 邮箱
+&lt;/h2>&lt;p>和 qq 邮箱同理，先获取邮箱服务器密码，设置-&amp;ldquo;POP3/SMTP/IMAP&amp;rdquo;-开启，即可获取授权码&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309232432.webp"
+data-webp="/00-assets/Pasted%20image%2020250309232432.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309232432.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309232432.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309232432.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>然后填入 163 邮箱账号，以及授权码，即可同步邮箱&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309232720.webp"
+data-webp="/00-assets/Pasted%20image%2020250309232720.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309232720.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309232720.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309232720.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="微软和-gmail-邮箱">微软和 gmail 邮箱
+&lt;/h2>&lt;p>微软邮箱和 gmail 支持直接输入账户密码直接同步，不需要获取邮箱服务器密码&lt;/p>
+&lt;p>微软以及谷歌官网登陆，然后默认下一步即可同步邮箱&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309233129.webp"
+data-webp="/00-assets/Pasted%20image%2020250309233129.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309233129.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309233129.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309233129.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item></channel></rss>

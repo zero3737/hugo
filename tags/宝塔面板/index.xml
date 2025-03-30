@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>宝塔面板 on carlos</title><link>https://www.carlos2016.cfd/tags/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/</link><description>Recent content in 宝塔面板 on carlos</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Example Person</copyright><lastBuildDate>Sun, 30 Mar 2025 16:10:24 +0000</lastBuildDate><atom:link href="https://www.carlos2016.cfd/tags/%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/index.xml" rel="self" type="application/rss+xml"/><item><title>hugo 定时推送代码</title><link>https://www.carlos2016.cfd/p/hugo-%E5%AE%9A%E6%97%B6%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81/</link><pubDate>Mon, 10 Mar 2025 05:53:27 +0800</pubDate><guid>https://www.carlos2016.cfd/p/hugo-%E5%AE%9A%E6%97%B6%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/27.webp" alt="Featured image of post hugo 定时推送代码" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>提前配置好 git 仓库，配置好 ssh，该脚本是在 ssh 配置完成下编写，不然要输入用户名和密码&lt;/p>
+&lt;h2 id="实操">实操
+&lt;/h2>&lt;p>新建 sh 文件，内容如下&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> /root/hugo
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">hugo
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> /root/hugo/public
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git add .
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git commit -m &lt;span class="s2">&amp;#34;auto commit: &lt;/span>&lt;span class="k">$(&lt;/span>date +&lt;span class="s1">&amp;#39;%Y-%m-%d %H:%M:%S&amp;#39;&lt;/span>&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git push origin main
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo nohup sh /root/shell/hugo.sh start &lt;span class="p">&amp;amp;&lt;/span>&amp;gt;&amp;gt; /root/shell/shell.log &lt;span class="p">&amp;amp;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>宝塔创建计划任务&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310054915.webp"
+data-webp="/00-assets/Pasted%20image%2020250310054915.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310054915.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310054915.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310054915.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>宝塔定时执行脚本即可&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310055150.webp"
+data-webp="/00-assets/Pasted%20image%2020250310055150.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310055150.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310055150.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310055150.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>可以手动执行，测试脚本&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310055256.webp"
+data-webp="/00-assets/Pasted%20image%2020250310055256.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310055256.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310055256.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310055256.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item></channel></rss>

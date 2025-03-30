@@ -1,0 +1,2034 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on carlos</title><link>https://www.carlos2016.cfd/tags/linux/</link><description>Recent content in Linux on carlos</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Example Person</copyright><lastBuildDate>Sun, 30 Mar 2025 16:10:24 +0000</lastBuildDate><atom:link href="https://www.carlos2016.cfd/tags/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Ubuntu 复制显示进度</title><link>https://www.carlos2016.cfd/p/ubuntu-%E5%A4%8D%E5%88%B6%E6%98%BE%E7%A4%BA%E8%BF%9B%E5%BA%A6/</link><pubDate>Thu, 20 Mar 2025 02:58:43 +0800</pubDate><guid>https://www.carlos2016.cfd/p/ubuntu-%E5%A4%8D%E5%88%B6%E6%98%BE%E7%A4%BA%E8%BF%9B%E5%BA%A6/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/43.webp" alt="Featured image of post Ubuntu 复制显示进度" />&lt;h2 id="cp-和-rsync-区别">cp 和 rsync 区别
+&lt;/h2>&lt;p>cp 命令不支持显示进度，改用 rsync&lt;/p>
+&lt;p>&lt;strong>功能定位&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>cp‌：基础文件复制工具，仅将文件或目录完整复制到目标位置，无论源文件是否已存在于目标位置‌。&lt;/li>
+&lt;li>rsync‌：增量同步工具，通过比较源和目标文件的差异，仅传输修改或新增的部分，适用于频繁更新或大文件场景‌。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>传输效率&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>cp‌：每次执行均完整复制所有文件，资源消耗较高，尤其对大目录或重复复制场景效率低‌。&lt;/li>
+&lt;li>rsync‌：仅传输变化部分，节省带宽和时间，支持断点续传（-P参数），适合网络传输或备份任务‌。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>使用场景&lt;/strong>&lt;/p>
+&lt;p>cp‌：适合单次本地快速复制小文件或简单目录，无需复杂配置‌。&lt;/p>
+&lt;p>rsync‌：&lt;/p>
+&lt;ul>
+&lt;li>本地或远程增量同步（如 user@host:/path 格式）‌；&lt;/li>
+&lt;li>定期备份、镜像服务器、大文件传输等需高效处理的场景‌。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>附加功能&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>cp -a 可保留权限、时间戳等属性‌；&lt;/li>
+&lt;li>rsync -a 默认保留属性，且支持更多元数据（如符号链接、设备文件）‌。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>远程支持&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>cp‌：仅限本地操作，远程复制需依赖 scp 或 rsync‌。&lt;/li>
+&lt;li>rsync‌：原生支持远程路径，可通过 SSH 加密传输（如 -e ssh）‌。&lt;/li>
+&lt;/ul>
+&lt;h2 id="复制命令">复制命令
+&lt;/h2>&lt;p>rsync 复制目录并显示进度&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">rsync -avhP /mnt/usb01/content/ /mnt/hd01/wallpaper/content/
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;ul>
+&lt;li>&lt;code>-a&lt;/code>：归档模式，保留文件权限、时间戳等属性，并递归复制子目录（包含 -r 功能）&lt;/li>
+&lt;li>&lt;code>-v&lt;/code>：显示详细传输过程‌。‌&lt;/li>
+&lt;li>&lt;code>-h&lt;/code>：以人类可读格式（如 KB、MB）显示文件大小‌。&lt;/li>
+&lt;li>&lt;code>-P&lt;/code>：等价于 &lt;code>--partial&lt;/code> &lt;code>--progress&lt;/code>，显示每个文件的传输进度（百分比、速度、剩余时间），并支持断点续传‌。&lt;/li>
+&lt;/ul>
+&lt;p>cp 命令复制目录&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">cp -r /mnt/usb01/content/ /mnt/hd01/wallpaper
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>syncthing windows 端使用教程</title><link>https://www.carlos2016.cfd/p/syncthing-windows-%E7%AB%AF%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link><pubDate>Thu, 20 Mar 2025 02:24:02 +0800</pubDate><guid>https://www.carlos2016.cfd/p/syncthing-windows-%E7%AB%AF%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/02.webp" alt="Featured image of post syncthing windows 端使用教程" />&lt;h2 id="安装">安装
+&lt;/h2>&lt;p>官网地址&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/Bill-Stewart/SyncthingWindowsSetup" target="_blank" rel="noopener"
+>Bill-Stewart/SyncthingWindowsSetup: Syncthing Windows Setup&lt;/a>
+&lt;/p>
+&lt;p>默认下一步即可&lt;/p>
+&lt;h2 id="初始化">初始化
+&lt;/h2>&lt;p>设置开启局域网访问&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020412.webp"
+data-webp="/00-assets/Pasted%20image%2020250320020412.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020412.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020412.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020412.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>删除默认文件夹&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020526.webp"
+data-webp="/00-assets/Pasted%20image%2020250320020526.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020526.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020526.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020526.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="添加设备">添加设备
+&lt;/h2>&lt;p>找到标识&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020657.webp"
+data-webp="/00-assets/Pasted%20image%2020250320020657.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020657.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020657.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020657.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>服务端复制 id&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020735.webp"
+data-webp="/00-assets/Pasted%20image%2020250320020735.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020735.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020735.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020735.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>windows 端添加远程设备&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020748.webp"
+data-webp="/00-assets/Pasted%20image%2020250320020748.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020748.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020748.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020748.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>服务端添加设备&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020911.webp"
+data-webp="/00-assets/Pasted%20image%2020250320020911.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020911.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020911.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320020911.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="windwos-端添加文件夹">windwos 端添加文件夹
+&lt;/h2>&lt;p>添加文件夹&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022340.webp"
+data-webp="/00-assets/Pasted%20image%2020250320022340.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022340.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022340.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022340.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>设置同步目录，分别是名称和路径&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021157.webp"
+data-webp="/00-assets/Pasted%20image%2020250320021157.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021157.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021157.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021157.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>打勾表示共享给服务端&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021244.webp"
+data-webp="/00-assets/Pasted%20image%2020250320021244.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021244.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021244.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021244.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>仅发送，表示不接受服务端的修改&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021345.webp"
+data-webp="/00-assets/Pasted%20image%2020250320021345.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021345.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021345.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021345.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>扫描并不是开始同步，我也不知道干什么，让他扫就行&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021509.webp"
+data-webp="/00-assets/Pasted%20image%2020250320021509.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021509.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021509.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021509.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="服务端接受分享">服务端接受分享
+&lt;/h2>&lt;p>添加，接受分享&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021655.webp"
+data-webp="/00-assets/Pasted%20image%2020250320021655.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021655.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021655.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320021655.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>设置服务端同步目录&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022020.webp"
+data-webp="/00-assets/Pasted%20image%2020250320022020.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022020.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022020.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022020.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>设置共享&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022047.webp"
+data-webp="/00-assets/Pasted%20image%2020250320022047.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022047.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022047.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022047.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>设置仅接受&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022128.webp"
+data-webp="/00-assets/Pasted%20image%2020250320022128.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022128.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022128.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320022128.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="强制同步">强制同步
+&lt;/h2>&lt;p>服务端仅接受，如果和远程不一样，有一个强制还原的选项，还原远程更改&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320033040.webp"
+data-webp="/00-assets/Pasted%20image%2020250320033040.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320033040.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320033040.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320033040.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>同理，如果本地和远程不一样，windows 端会有一个强制还原的选项&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320033223.webp"
+data-webp="/00-assets/Pasted%20image%2020250320033223.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320033223.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320033223.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250320033223.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="设置开机启动">设置开机启动
+&lt;/h2>&lt;p>保存 syncthing.bat 脚本文件&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cmd" data-lang="cmd">&lt;span class="line">&lt;span class="cl"># 打开 “记事本” 软件，将以下代码复制进去，另存为 syncthing.bat。
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">start&lt;/span> &lt;span class="s2">&amp;#34;Syncthing&amp;#34;&lt;/span> syncthing.exe -no-console -no-browser
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>如果上面的脚本不起作用改用 vbs 脚本&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">CreateObject(&amp;#34;WScript.Shell&amp;#34;).Run &amp;#34;&amp;#34;&amp;#34;C:\Users\carlos\AppData\Local\Programs\Syncthing\syncthing.exe&amp;#34;&amp;#34; -no-console -no-browser&amp;#34;, 0
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>复制脚本文件到 syncthing.exe 同级目录。找到 syncthing.exe 所在目录，将 syncthing.bat 脚本文件复制到该目录。&lt;/p>
+&lt;p>将脚本文件快捷方式添加到 “启动” 菜单&lt;/p>
+&lt;ol>
+&lt;li>选中 syncthing.bat 脚本文件，右键创建快捷方式&lt;/li>
+&lt;li>按下 win + R，输入 “shell:startup” 打开 “启动” 文件夹&lt;/li>
+&lt;li>将快捷方式复制到 “启动” 文件夹&lt;/li>
+&lt;/ol></description></item><item><title>syncthing 安卓端使用教程</title><link>https://www.carlos2016.cfd/p/syncthing-%E5%AE%89%E5%8D%93%E7%AB%AF%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link><pubDate>Thu, 20 Mar 2025 00:59:22 +0800</pubDate><guid>https://www.carlos2016.cfd/p/syncthing-%E5%AE%89%E5%8D%93%E7%AB%AF%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/22.webp" alt="Featured image of post syncthing 安卓端使用教程" />&lt;h2 id="添加设备">添加设备
+&lt;/h2>&lt;p>手机端客户端安装地址&lt;/p>
+&lt;p>&lt;a class="link" href="https://github.com/syncthing/syncthing-android" target="_blank" rel="noopener"
+>syncthing/syncthing-android: Wrapper of syncthing for Android.&lt;/a>
+&lt;/p>
+&lt;p>docker 版服务端点击连接，获取标识二维码，用来添加设备。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/f63ef6431cacb006ad5023cdcee47c50.png"
+data-webp="/_resources/f63ef6431cacb006ad5023cdcee47c50.webp"
+data-original="https://www.carlos2016.cfd/_resources/f63ef6431cacb006ad5023cdcee47c50.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/f63ef6431cacb006ad5023cdcee47c50.png"
+alt="f63ef6431cacb006ad5023cdcee47c50.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>手机端顶部选项卡点击“设备”按钮。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/a931d66383d1cb67f6bfe23f82bc3385.png"
+data-webp="/_resources/a931d66383d1cb67f6bfe23f82bc3385.webp"
+data-original="https://www.carlos2016.cfd/_resources/a931d66383d1cb67f6bfe23f82bc3385.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/a931d66383d1cb67f6bfe23f82bc3385.png"
+alt="a931d66383d1cb67f6bfe23f82bc3385.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>点击二维码添加设备。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/5e7450e67a2a5112ae384366610514e1.png"
+data-webp="/_resources/5e7450e67a2a5112ae384366610514e1.webp"
+data-original="https://www.carlos2016.cfd/_resources/5e7450e67a2a5112ae384366610514e1.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/5e7450e67a2a5112ae384366610514e1.png"
+alt="5e7450e67a2a5112ae384366610514e1.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="添加文件夹">添加文件夹
+&lt;/h2>&lt;p>手机端右上方点击“+”号按钮。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/af2dc2de135e60c8d980787f3633de81.png"
+data-webp="/_resources/af2dc2de135e60c8d980787f3633de81.webp"
+data-original="https://www.carlos2016.cfd/_resources/af2dc2de135e60c8d980787f3633de81.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/af2dc2de135e60c8d980787f3633de81.png"
+alt="af2dc2de135e60c8d980787f3633de81.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>点击文件夹图标，选择目录。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/ef8cb3a6e8c5e306d54049602838ec72.png"
+data-webp="/_resources/ef8cb3a6e8c5e306d54049602838ec72.webp"
+data-original="https://www.carlos2016.cfd/_resources/ef8cb3a6e8c5e306d54049602838ec72.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/ef8cb3a6e8c5e306d54049602838ec72.png"
+alt="ef8cb3a6e8c5e306d54049602838ec72.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>选择好目录，点击“允许访问”。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/c3916577048330ffa7085525072e4093.png"
+data-webp="/_resources/c3916577048330ffa7085525072e4093.webp"
+data-original="https://www.carlos2016.cfd/_resources/c3916577048330ffa7085525072e4093.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/c3916577048330ffa7085525072e4093.png"
+alt="c3916577048330ffa7085525072e4093.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>“文件夹类型”选择“仅发送”。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/b41585f6b5e648c03076f0733e064858.png"
+data-webp="/_resources/b41585f6b5e648c03076f0733e064858.webp"
+data-original="https://www.carlos2016.cfd/_resources/b41585f6b5e648c03076f0733e064858.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/b41585f6b5e648c03076f0733e064858.png"
+alt="b41585f6b5e648c03076f0733e064858.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>docker 版服务端选择添加文件夹即可。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/b8a9e47f2e8ee6ee5aa41c16ee80a433.png"
+data-webp="/_resources/b8a9e47f2e8ee6ee5aa41c16ee80a433.webp"
+data-original="https://www.carlos2016.cfd/_resources/b8a9e47f2e8ee6ee5aa41c16ee80a433.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/b8a9e47f2e8ee6ee5aa41c16ee80a433.png"
+alt="b8a9e47f2e8ee6ee5aa41c16ee80a433.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>设置好同步目录。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/8402f0ac56d48dd656cb068aa18b5f53.png"
+data-webp="/_resources/8402f0ac56d48dd656cb068aa18b5f53.webp"
+data-original="https://www.carlos2016.cfd/_resources/8402f0ac56d48dd656cb068aa18b5f53.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/8402f0ac56d48dd656cb068aa18b5f53.png"
+alt="8402f0ac56d48dd656cb068aa18b5f53.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>服务端选择“仅接受”。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/445e8d6943d74d34253301f46f6e3f25.png"
+data-webp="/_resources/445e8d6943d74d34253301f46f6e3f25.webp"
+data-original="https://www.carlos2016.cfd/_resources/445e8d6943d74d34253301f46f6e3f25.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/445e8d6943d74d34253301f46f6e3f25.png"
+alt="445e8d6943d74d34253301f46f6e3f25.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="服务端忽略删除操作">服务端忽略删除操作
+&lt;/h2>&lt;p>如果想让服务端忽略发送端（发送端：手机作为发送端）的删除操作，别称：无视删除操作。比如服务端同步好数据，这时候想节省手机内存，想删除手机备份好的数据，又不想影响服务端已经备份好的数据。&lt;/p>
+&lt;p>软件网页端“操作-高级-文件夹-Ignore Delete”打勾，即可忽略发送端删除操作。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/5faf55973e12fea0bc081446f3a9fd9b.png"
+data-webp="/_resources/5faf55973e12fea0bc081446f3a9fd9b.webp"
+data-original="https://www.carlos2016.cfd/_resources/5faf55973e12fea0bc081446f3a9fd9b.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/5faf55973e12fea0bc081446f3a9fd9b.png"
+alt="5faf55973e12fea0bc081446f3a9fd9b.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>选择“文件夹”。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/c772effc12d648b5551384cd7e2d4142.png"
+data-webp="/_resources/c772effc12d648b5551384cd7e2d4142.webp"
+data-original="https://www.carlos2016.cfd/_resources/c772effc12d648b5551384cd7e2d4142.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/c772effc12d648b5551384cd7e2d4142.png"
+alt="c772effc12d648b5551384cd7e2d4142.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>“忽略删除”选项打勾，然后滑动到底部保存即可。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/14240aad2b427aa586829459bce04eac.png"
+data-webp="/_resources/14240aad2b427aa586829459bce04eac.webp"
+data-original="https://www.carlos2016.cfd/_resources/14240aad2b427aa586829459bce04eac.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/14240aad2b427aa586829459bce04eac.png"
+alt="14240aad2b427aa586829459bce04eac.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item><item><title>onlyoffice 对接 nextcloud，以及常用扩展</title><link>https://www.carlos2016.cfd/p/onlyoffice-%E5%AF%B9%E6%8E%A5-nextcloud%E4%BB%A5%E5%8F%8A%E5%B8%B8%E7%94%A8%E6%89%A9%E5%B1%95/</link><pubDate>Sat, 15 Mar 2025 02:46:46 +0800</pubDate><guid>https://www.carlos2016.cfd/p/onlyoffice-%E5%AF%B9%E6%8E%A5-nextcloud%E4%BB%A5%E5%8F%8A%E5%B8%B8%E7%94%A8%E6%89%A9%E5%B1%95/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/46.webp" alt="Featured image of post onlyoffice 对接 nextcloud，以及常用扩展" />&lt;h2 id="nextcloud">nextcloud
+&lt;/h2>&lt;p>Nextcloud 是 ownCloud 创始人发起的分支项目，是一款用于自建企业云存储（私有网盘）的开源软件。支持 PC、IOS 和 Android 三个同步客户端，用户可以很方便地与服务器上存储的文件、日程安排、通讯录、书签等重要数据保持同步。它还支持将数据保存到第三方存储中：Amazon S3、Dropbox、FTP、Google Drive、SMB、WebDAV、SFTP等。&lt;/p>
+&lt;h2 id="连接外部存储">连接外部存储
+&lt;/h2>&lt;p>登录 Nextcloud 后台，通过 应用 管理，启用 External storage support 扩展。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/83f79a306ab27e5078ff8dfc76739f5f.png"
+data-webp="/_resources/83f79a306ab27e5078ff8dfc76739f5f.webp"
+data-original="https://www.carlos2016.cfd/_resources/83f79a306ab27e5078ff8dfc76739f5f.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/83f79a306ab27e5078ff8dfc76739f5f.png"
+alt="83f79a306ab27e5078ff8dfc76739f5f.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>打开：【管理设置】&amp;gt;【外部存储】&amp;gt;【Add storage】&amp;gt;【External Storage】，选择一个外部存储服务。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/df31c5ba8abb023b70681ca59344f2b7.png"
+data-webp="/_resources/df31c5ba8abb023b70681ca59344f2b7.webp"
+data-original="https://www.carlos2016.cfd/_resources/df31c5ba8abb023b70681ca59344f2b7.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/df31c5ba8abb023b70681ca59344f2b7.png"
+alt="df31c5ba8abb023b70681ca59344f2b7.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>根据实际情况配置，连接到相应的对象存储。建议选择本地，也可以选择 ftp、webdav 等方式挂载。我尝试过 webdav 挂载 alist，但是 onlyoffice 打不开 alist 上的文件，换成本地就能正常打开。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/e1751296db7b366f44e8ff81ea465317.png"
+data-webp="/_resources/e1751296db7b366f44e8ff81ea465317.webp"
+data-original="https://www.carlos2016.cfd/_resources/e1751296db7b366f44e8ff81ea465317.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/e1751296db7b366f44e8ff81ea465317.png"
+alt="e1751296db7b366f44e8ff81ea465317.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="手动安装扩展">手动安装扩展
+&lt;/h2>&lt;p>nextcloud 官方插件地址：https://apps.nextcloud.com/&lt;/p>
+&lt;p>点击图片红框下载即可。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/e5b752ce7dd322768d549a8c90f6cf4b.png"
+data-webp="/_resources/e5b752ce7dd322768d549a8c90f6cf4b.webp"
+data-original="https://www.carlos2016.cfd/_resources/e5b752ce7dd322768d549a8c90f6cf4b.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/e5b752ce7dd322768d549a8c90f6cf4b.png"
+alt="e5b752ce7dd322768d549a8c90f6cf4b.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>将下载的文件解压到 docker 容器中的 /var/www/html/apps 目录即可。每个版本的扩展目录都不一样。&lt;/p>
+&lt;p>我是如下版本号。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/fa0f7e9f49c907da417f4497e0733db6.png"
+data-webp="/_resources/fa0f7e9f49c907da417f4497e0733db6.webp"
+data-original="https://www.carlos2016.cfd/_resources/fa0f7e9f49c907da417f4497e0733db6.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/fa0f7e9f49c907da417f4497e0733db6.png"
+alt="fa0f7e9f49c907da417f4497e0733db6.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>具体目录参考官方文档：https://hub.docker.com/_/nextcloud/&lt;/p>
+&lt;h2 id="集成-onlyoffice">集成 onlyoffice
+&lt;/h2>&lt;p>手动安装完 onlyoffice，在“已禁用的应用”中启用。我这里已经启用，所以没有 onlyoffice。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/84c5d05c308f37bae6fce72857096817.png"
+data-webp="/_resources/84c5d05c308f37bae6fce72857096817.webp"
+data-original="https://www.carlos2016.cfd/_resources/84c5d05c308f37bae6fce72857096817.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/84c5d05c308f37bae6fce72857096817.png"
+alt="84c5d05c308f37bae6fce72857096817.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>onlyoffice 配置如下。记得关闭 jwt，并且外部存储挂载方式选择“本地”。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/4537091e299671b165ddb3225bd3000d.png"
+data-webp="/_resources/4537091e299671b165ddb3225bd3000d.webp"
+data-original="https://www.carlos2016.cfd/_resources/4537091e299671b165ddb3225bd3000d.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/4537091e299671b165ddb3225bd3000d.png"
+alt="4537091e299671b165ddb3225bd3000d.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>nextcloud 默认使用系统盘，使用系统盘兼容性最好，打开 onlyoffice 不会报错，通过 webdav 方式挂载 alist 会报错。或者也可以使用“本地”方式挂载。&lt;/p>
+&lt;p>onlyoffice 集成 nextcloud 是不能直接保存 office 本地文件，也就是说在线编辑完，是不能对本地文件直接修改。但是会在线保存文件，通过 web 端访问，上一次修改的记录还在，要保存，必须保存为副本，然后下载到本地。&lt;/p>
+&lt;h2 id="集成-mail">集成 mail
+&lt;/h2>&lt;p>手动安装 mail 扩展，实现邮件统一管理。不过需要邮件服务器密码，不是账号密码。所以没有手机号，是登录不了谷歌邮箱的，没有手机号，是获取不了应用密码，也就无法登录。&lt;/p>
+&lt;h2 id="集成-talk">集成 talk
+&lt;/h2>&lt;p>手动安装 talk，实现局域网文本传输。&lt;/p></description></item><item><title>onlyoffice 对接 alist</title><link>https://www.carlos2016.cfd/p/onlyoffice-%E5%AF%B9%E6%8E%A5-alist/</link><pubDate>Sat, 15 Mar 2025 02:46:09 +0800</pubDate><guid>https://www.carlos2016.cfd/p/onlyoffice-%E5%AF%B9%E6%8E%A5-alist/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/09.webp" alt="Featured image of post onlyoffice 对接 alist" />&lt;h2 id="前提说明">前提说明
+&lt;/h2>&lt;p>onlyoffice 对接 alist 并不能实现在线编辑，而且 onlyoffice 在手机上表现得很不好，连滑动文档都不可以，应该是专为电脑端开发软件。&lt;/p>
+&lt;p>代替方案，通过同步软件同步 office 文件，然后手机用专业 office 软件打开，也能实现多人编辑，缺点就是步骤繁琐。&lt;/p>
+&lt;p>OnlyOffice Document Server 并不能直接打开本地 Office 文件进行编辑，必须配合网盘使用，才能实现文档的在线预览和编辑功能，类似腾讯文档，区别就是可以内网使用。&lt;/p>
+&lt;p>onlyoffice 对接 alist，必须选用版本 7.1.1，因为此版本不会强制 jwt 校验，不然 onlyoffice 打开不了 alist 的 office 文档，必须自己参考官方文档手动开发。&lt;/p>
+&lt;p>onlyoffice 对接 alist 原理：&lt;/p>
+&lt;ol>
+&lt;li>alist 请求 nginx 中的 view.html。&lt;/li>
+&lt;li>view.html 请求 onlyoffice。&lt;/li>
+&lt;/ol>
+&lt;p>所以 onlyoffice 对接 alist，是通过手动编写 view.html 文件实现对接的。&lt;/p>
+&lt;h2 id="安装-onlyoffice">安装 onlyoffice
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;span class="lnt">44
+&lt;/span>&lt;span class="lnt">45
+&lt;/span>&lt;span class="lnt">46
+&lt;/span>&lt;span class="lnt">47
+&lt;/span>&lt;span class="lnt">48
+&lt;/span>&lt;span class="lnt">49
+&lt;/span>&lt;span class="lnt">50
+&lt;/span>&lt;span class="lnt">51
+&lt;/span>&lt;span class="lnt">52
+&lt;/span>&lt;span class="lnt">53
+&lt;/span>&lt;span class="lnt">54
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">services&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">onlyoffice-documentserver&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">container_name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">onlyoffice-documentserver&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">image&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">onlyoffice/documentserver:7.1.1&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">depends_on&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">onlyoffice-postgresql&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">onlyoffice-rabbitmq&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">environment&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">DB_TYPE=postgres&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">DB_HOST=onlyoffice-postgresql&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">DB_PORT=5432&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">DB_NAME=onlyoffice&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">DB_USER=onlyoffice&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">AMQP_URI=amqp://guest:guest@onlyoffice-rabbitmq&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># Uncomment strings below to enable the JSON Web Token validation.&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">JWT_ENABLED=false&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># - JWT_SECRET=secret&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># - JWT_HEADER=Authorization&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="c"># - JWT_IN_BODY=true&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">ports&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="s1">&amp;#39;9875:80&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="s1">&amp;#39;446:443&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">stdin_open&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">restart&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">always&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">stop_grace_period&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">60s&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">volumes&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">./data:/var/www/onlyoffice/Data&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">./log:/var/log/onlyoffice&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">./lib:/var/lib/onlyoffice/documentserver/App_Data/cache/files&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">./public:/var/www/onlyoffice/documentserver-example/public/files&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">./fonts:/usr/share/fonts&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">onlyoffice-rabbitmq&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">container_name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">onlyoffice-rabbitmq&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">image&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">rabbitmq&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">restart&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">always&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">expose&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="s1">&amp;#39;5672&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">onlyoffice-postgresql&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">container_name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">onlyoffice-postgresql&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">image&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">postgres:12&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">environment&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">POSTGRES_DB=onlyoffice&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">POSTGRES_USER=onlyoffice&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">POSTGRES_HOST_AUTH_METHOD=trust&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">restart&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">always&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">expose&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="s1">&amp;#39;5432&amp;#39;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">volumes&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="l">./postgresql_data:/var/lib/postgresql&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">volumes&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">postgresql_data&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="将-viewhtml-部署到-nginx">将 view.html 部署到 nginx
+&lt;/h2>&lt;p>view.html 内容如下：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">html&lt;/span> &lt;span class="na">lang&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;en&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">meta&lt;/span> &lt;span class="na">charset&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;UTF-8&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>OnlyOffice Viewer&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">head&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">div&lt;/span> &lt;span class="na">id&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;placeholder&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">div&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;text/javascript&amp;#34;&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;https:/onlyoffice/web-apps/apps/api/documents/api.js&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">function&lt;/span> &lt;span class="nx">getQueryParamValue&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">searchParams&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">URLSearchParams&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nb">window&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">location&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">search&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">searchParams&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">get&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">name&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">url&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">decodeURIComponent&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">getQueryParamValue&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;src&amp;#34;&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">fileName&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">url&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">substring&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">url&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">lastIndexOf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;/&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">url&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">lastIndexOf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;?&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">!=&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span> &lt;span class="o">?&lt;/span> &lt;span class="nx">url&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">lastIndexOf&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;?&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">:&lt;/span> &lt;span class="nx">url&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">fileExtension&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">fileName&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">split&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s1">&amp;#39;.&amp;#39;&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">pop&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">docEditor&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">DocsAPI&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">DocEditor&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;placeholder&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;document&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;fileType&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">fileExtension&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;permissions&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;edit&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">false&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;comment&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;download&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;print&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;fillForms&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kc">true&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;title&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">fileName&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;url&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">url&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;editorConfig&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;lang&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;zh-CN&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;mode&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;view&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;height&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;1080px&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;type&amp;#34;&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;desktop&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">script&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">body&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">html&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>其中的https:/onlyoffice/web-apps/apps/api/documents/api.js 地址的domain 替换为自己onlyoffice 的地址。&lt;/p>
+&lt;h2 id="alist-预览配置">alist 预览配置
+&lt;/h2>&lt;p>alist 预览配置指向 nginx 地址即可。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/15292e1a73d09ee8643517eb063bf3d9.png"
+data-webp="/_resources/15292e1a73d09ee8643517eb063bf3d9.webp"
+data-original="https://www.carlos2016.cfd/_resources/15292e1a73d09ee8643517eb063bf3d9.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/15292e1a73d09ee8643517eb063bf3d9.png"
+alt="15292e1a73d09ee8643517eb063bf3d9.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="onlyoffice-错误文档安全令牌未正确形成">onlyoffice 错误：“文档安全令牌未正确形成。”
+&lt;/h2>&lt;p>解决方案：禁用jwt，并且重启服务。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/ecb9e3a4cdd2ef4a7aed4ed9b9977d79.png"
+data-webp="/_resources/ecb9e3a4cdd2ef4a7aed4ed9b9977d79.webp"
+data-original="https://www.carlos2016.cfd/_resources/ecb9e3a4cdd2ef4a7aed4ed9b9977d79.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/ecb9e3a4cdd2ef4a7aed4ed9b9977d79.png"
+alt="ecb9e3a4cdd2ef4a7aed4ed9b9977d79.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>配置文件修改为：JWT_ENABLED=false&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/6ec8bb451636c0b0e5bd4d60eff2f25c.png"
+data-webp="/_resources/6ec8bb451636c0b0e5bd4d60eff2f25c.webp"
+data-original="https://www.carlos2016.cfd/_resources/6ec8bb451636c0b0e5bd4d60eff2f25c.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/6ec8bb451636c0b0e5bd4d60eff2f25c.png"
+alt="6ec8bb451636c0b0e5bd4d60eff2f25c.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>或者容器中修改：/etc/onlyoffice/documentserver/local.json&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;token&amp;#34;&lt;/span>&lt;span class="err">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;enable&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;request&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;inbox&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="kc">false&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;outbox&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="kc">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;browser&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;inbox&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;header&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Authorization&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">},&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;outbox&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;header&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;Authorization&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>&lt;span class="err">,&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>将 3 个选项修改为 false。&lt;/p>
+&lt;h2 id="onlyoffice-文档下载失败">onlyoffice 文档下载失败
+&lt;/h2>&lt;p>原因是被禁用了私有IP访问服务，需要打开。&lt;/p>
+&lt;p>修改配置文件：/etc/onlyoffice/documentserver/default.json&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;#34;request-filtering-agent&amp;#34; : {
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;allowPrivateIPAddress&amp;#34;: true,
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;#34;allowMetaIPAddress&amp;#34;: true
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">},
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="vim-操作说明">vim 操作说明
+&lt;/h2>&lt;p>命令模式 &lt;code>/&lt;/code> 可以搜索关键字，输入模式小写 n 寻找下一个，大写 N 寻找上一个。&lt;/p></description></item><item><title>hugo 配置 webp 图片压缩</title><link>https://www.carlos2016.cfd/p/hugo-%E9%85%8D%E7%BD%AE-webp-%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9/</link><pubDate>Thu, 13 Mar 2025 18:47:06 +0800</pubDate><guid>https://www.carlos2016.cfd/p/hugo-%E9%85%8D%E7%BD%AE-webp-%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/06.webp" alt="Featured image of post hugo 配置 webp 图片压缩" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>hugo 整合 cwebp，自动化工作流。&lt;/p>
+&lt;p>‌cwebp 是谷歌官方开发的工具‌，属于 WebP 技术套件的一部分。该工具专门用于将其他格式的图片（如 PNG、JPEG）转换为 WebP 格式，其核心功能围绕谷歌提出的 WebP 图像格式标准实现‌。&lt;/p>
+&lt;h2 id="安装">安装
+&lt;/h2>&lt;p>&lt;strong>更新软件包列表&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">sudo apt update
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>安装 webp 工具包&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">sudo apt install webp
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>验证安装&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">cwebp -version
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="压缩脚本">压缩脚本
+&lt;/h2>&lt;p>将路径替换成脚本内容&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 示例脚本：convert_images.sh&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 说明 hugo 图片压缩脚本，需要安装 cwebp&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">#!/bin/bash&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1"># 遍历 content/images 目录下的 PNG/JPG 图片&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">find /root/hugo/static/bg -type f -name &lt;span class="s2">&amp;#34;*.png&amp;#34;&lt;/span> -o -name &lt;span class="s2">&amp;#34;*.jpg&amp;#34;&lt;/span> &lt;span class="p">|&lt;/span> &lt;span class="k">while&lt;/span> &lt;span class="nb">read&lt;/span> img&lt;span class="p">;&lt;/span> &lt;span class="k">do&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nv">webp_path&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="si">${&lt;/span>&lt;span class="nv">img&lt;/span>&lt;span class="p">%.*&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s2">.webp&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># 调用 cwebp 转换（需提前安装 cwebp 工具）&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> cwebp -q &lt;span class="m">80&lt;/span> &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$img&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> -o &lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$webp_path&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">done&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="修改模板文件">修改模板文件
+&lt;/h2>&lt;p>修改文章图片&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313184235.webp"
+data-webp="/00-assets/Pasted%20image%2020250313184235.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313184235.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313184235.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313184235.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>&lt;code>/root/hugo/themes/hugo-theme-stack/layouts/_default/_markup/render-image.html&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">{{- $originalURL := $fullURL -}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{- $webpURL := replaceRE `(\.[a-z]+)$` `.webp` $originalURL | relURL -}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{- $decodedPath := replace $webpURL &amp;#34;%20&amp;#34; &amp;#34; &amp;#34; -}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{- $webpExists := fileExists (path.Join &amp;#34;static&amp;#34; (strings.TrimPrefix &amp;#34;/&amp;#34; $decodedPath)) -}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">a&lt;/span> &lt;span class="na">data-fancybox&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;gallery&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">href&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ if $webpExists }}{{ $webpURL }}{{ else }}{{ $originalURL }}{{ end }}&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">data-webp&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ $webpURL }}&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">data-original&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ $originalURL }}&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;webp-fancybox&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">picture&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ if $webpExists }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!-- 第一重回退：服务端确认存在的 WebP --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">source&lt;/span> &lt;span class="na">srcset&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ $webpURL }}&amp;#34;&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;image/webp&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ end }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c">&amp;lt;!-- 终极回退：原始图片 --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">img&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ $originalURL }}&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">alt&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ .Text }}&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="err">{{&lt;/span> &lt;span class="na">with&lt;/span> &lt;span class="err">.&lt;/span>&lt;span class="na">Title&lt;/span> &lt;span class="err">}}&lt;/span>&lt;span class="na">title&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ . }}&amp;#34;&lt;/span>&lt;span class="err">{{&lt;/span> &lt;span class="na">end&lt;/span> &lt;span class="err">}}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">loading&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;lazy&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">data-fallback&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">picture&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">a&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>修改封面&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313184258.webp"
+data-webp="/00-assets/Pasted%20image%2020250313184258.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313184258.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313184258.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313184258.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>&lt;code>/root/hugo/themes/hugo-theme-stack/layouts/partials/article/components/header.html&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- 自定义变量 --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{- $originalPath := $image.permalink -}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{- $webpPath := replaceRE `(\.[a-z]+)$` `.webp` $originalPath -}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{- $webpExists := fileExists (path.Join &amp;#34;static&amp;#34; $webpPath) -}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">picture&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;webp-fallback&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ if $webpExists }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">source&lt;/span> &lt;span class="na">srcset&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ $webpPath }}&amp;#34;&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;image/webp&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ end }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">img&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ $originalPath }}&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">loading&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;lazy&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">alt&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;Featured image of post {{ .Title }}&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">picture&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>修改归档图片&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313184331.webp"
+data-webp="/00-assets/Pasted%20image%2020250313184331.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313184331.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313184331.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313184331.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>&lt;code>/root/hugo/themes/hugo-theme-stack/layouts/partials/article-list/compact.html&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-html" data-lang="html">&lt;span class="line">&lt;span class="cl">&lt;span class="c">&amp;lt;!-- 自定义变量 --&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{- $originalPath := $image.permalink -}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{- $webpPath := replaceRE `(\.[a-z]+)$` `.webp` $originalPath -}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{- $webpExists := fileExists (path.Join &amp;#34;static&amp;#34; $webpPath) -}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">picture&lt;/span> &lt;span class="na">class&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;webp-fallback&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ if $webpExists }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">source&lt;/span> &lt;span class="na">srcset&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ $webpPath }}&amp;#34;&lt;/span> &lt;span class="na">type&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;image/webp&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ end }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;&lt;/span>&lt;span class="nt">img&lt;/span> &lt;span class="na">src&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;{{ $originalPath }}&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">loading&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;lazy&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="na">alt&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;Featured image of post {{ .Title }}&amp;#34;&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">&amp;lt;/&lt;/span>&lt;span class="nt">picture&lt;/span>&lt;span class="p">&amp;gt;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="github--action">github action
+&lt;/h2>&lt;p>添加代码&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Install cwebp&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">sudo apt-get install webp&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">name&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Compress images&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">run&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">|&lt;/span>&lt;span class="sd">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> chmod +x /home/runner/work/hugo/hugo/convert_images.sh
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="sd"> /home/runner/work/hugo/hugo/convert_images.sh&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>完整代码截图，根据自己实际情况添加&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313184553.webp"
+data-webp="/00-assets/Pasted%20image%2020250313184553.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313184553.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313184553.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313184553.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>这样在提交代码的时候，就会自动化压缩图片以及 hugo 生成静态文件&lt;/p></description></item><item><title>hugo 定时推送代码</title><link>https://www.carlos2016.cfd/p/hugo-%E5%AE%9A%E6%97%B6%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81/</link><pubDate>Mon, 10 Mar 2025 05:53:27 +0800</pubDate><guid>https://www.carlos2016.cfd/p/hugo-%E5%AE%9A%E6%97%B6%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/27.webp" alt="Featured image of post hugo 定时推送代码" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>提前配置好 git 仓库，配置好 ssh，该脚本是在 ssh 配置完成下编写，不然要输入用户名和密码&lt;/p>
+&lt;h2 id="实操">实操
+&lt;/h2>&lt;p>新建 sh 文件，内容如下&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> /root/hugo
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">hugo
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">cd&lt;/span> /root/hugo/public
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git add .
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git commit -m &lt;span class="s2">&amp;#34;auto commit: &lt;/span>&lt;span class="k">$(&lt;/span>date +&lt;span class="s1">&amp;#39;%Y-%m-%d %H:%M:%S&amp;#39;&lt;/span>&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git push origin main
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo nohup sh /root/shell/hugo.sh start &lt;span class="p">&amp;amp;&lt;/span>&amp;gt;&amp;gt; /root/shell/shell.log &lt;span class="p">&amp;amp;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>宝塔创建计划任务&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310054915.webp"
+data-webp="/00-assets/Pasted%20image%2020250310054915.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310054915.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310054915.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310054915.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>宝塔定时执行脚本即可&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310055150.webp"
+data-webp="/00-assets/Pasted%20image%2020250310055150.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310055150.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310055150.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310055150.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>可以手动执行，测试脚本&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310055256.webp"
+data-webp="/00-assets/Pasted%20image%2020250310055256.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310055256.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310055256.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310055256.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item><item><title>github ssh 免密推送代码</title><link>https://www.carlos2016.cfd/p/github-ssh-%E5%85%8D%E5%AF%86%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81/</link><pubDate>Mon, 10 Mar 2025 05:08:44 +0800</pubDate><guid>https://www.carlos2016.cfd/p/github-ssh-%E5%85%8D%E5%AF%86%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/44.webp" alt="Featured image of post github ssh 免密推送代码" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>如果使用 https 方式推送代码，每次推送代码都需要输入用户名和密码，不方便，也不利于创建脚本&lt;/p>
+&lt;h2 id="生成-ssh-密钥对">生成 SSH 密钥对
+&lt;/h2>&lt;p>&lt;strong>执行密钥生成命令&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">ssh-keygen -t rsa -b &lt;span class="m">4096&lt;/span> -C &lt;span class="s2">&amp;#34;root@localhost&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这里的账户填写本地 git 账户，而非 github 账号&lt;/p>
+&lt;p>默认回车 3 次&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310044611.webp"
+data-webp="/00-assets/Pasted%20image%2020250310044611.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310044611.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310044611.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310044611.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>密钥生成后，id_rsa 为私钥（需保密），id_rsa.pub 为公钥（需上传）‌&lt;/p>
+&lt;p>&lt;strong>查看公钥内容&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">cat ~/.ssh/id_rsa.pub
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="github-添加公钥">github 添加公钥
+&lt;/h2>&lt;p>主页头像 -&amp;gt; &amp;ldquo;Settings&amp;rdquo;&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310044947.webp"
+data-webp="/00-assets/Pasted%20image%2020250310044947.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310044947.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310044947.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310044947.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>找到 &amp;ldquo;New SSH key&amp;rdquo;&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310045237.webp"
+data-webp="/00-assets/Pasted%20image%2020250310045237.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310045237.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310045237.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310045237.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>输入 github 账户密码&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310045511.webp"
+data-webp="/00-assets/Pasted%20image%2020250310045511.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310045511.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310045511.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310045511.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="配置-git-使用-ssh-协议">配置 git 使用 ssh 协议
+&lt;/h2>&lt;p>查看当前远程仓库协议&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">git remote -v
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310050519.webp"
+data-webp="/00-assets/Pasted%20image%2020250310050519.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310050519.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310050519.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310050519.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>若为 https 协议，需改为 ssh 格式&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">git remote set-url origin git@github.com:zero3737/hugo.git
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>仓库改为自己的&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310051040.webp"
+data-webp="/00-assets/Pasted%20image%2020250310051040.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310051040.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310051040.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310051040.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="测试-ssh-连接">测试 ssh 连接
+&lt;/h2>&lt;p>验证密钥配置是否成功&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">ssh -T git@github.com
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="推送代码">推送代码
+&lt;/h2>&lt;p>出现 &lt;code>Are you sure you want to continue connecting (yes/no/[fingerprint])?&lt;/code> 输入 yes 即可，此提示是 SSH 客户端的安全验证机制，在首次连接到某台服务器时触发。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310051908.webp"
+data-webp="/00-assets/Pasted%20image%2020250310051908.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310051908.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310051908.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310051908.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item><item><title>github 新建仓库以及推送代码</title><link>https://www.carlos2016.cfd/p/github-%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81/</link><pubDate>Mon, 10 Mar 2025 03:59:47 +0800</pubDate><guid>https://www.carlos2016.cfd/p/github-%E6%96%B0%E5%BB%BA%E4%BB%93%E5%BA%93%E4%BB%A5%E5%8F%8A%E6%8E%A8%E9%80%81%E4%BB%A3%E7%A0%81/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/47.webp" alt="Featured image of post github 新建仓库以及推送代码" />&lt;h2 id="github-新建仓库">github 新建仓库
+&lt;/h2>&lt;p>github 仓库主页选择 new&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310033650.webp"
+data-webp="/00-assets/Pasted%20image%2020250310033650.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310033650.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310033650.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310033650.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>输入仓库名，‌然后选择公开（Public）或私有（Private）权限‌。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310033741.webp"
+data-webp="/00-assets/Pasted%20image%2020250310033741.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310033741.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310033741.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310033741.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>划到底部，点击 “Create repository” 即可新建完毕&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310033845.webp"
+data-webp="/00-assets/Pasted%20image%2020250310033845.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310033845.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310033845.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310033845.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="ubuntu-安装-git">ubuntu 安装 git
+&lt;/h2>&lt;p>ubuntu 默认安装 git，呵呵，没有安装执行以下命令&lt;/p>
+&lt;p>一、更新系统软件包列表&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">sudo apt update
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>二、执行安装命令&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">sudo apt install git -y
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>三、验证安装结果&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">git --version
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="初始化-git">初始化 git
+&lt;/h2>&lt;p>配置 git 用户名和邮箱&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">git config --global user.name &lt;span class="s2">&amp;#34;root&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git config --global user.email &lt;span class="s2">&amp;#34;root@localhost&amp;#34;&lt;/span>‌
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>查看全局配置&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">git config --global user.name
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git config --global user.email
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>运行结果&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310035219.webp"
+data-webp="/00-assets/Pasted%20image%2020250310035219.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310035219.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310035219.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310035219.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>&lt;strong>补充说明&lt;/strong>&lt;/p>
+&lt;p>Git 全局配置中的用户名和邮箱均可完全自定义（如 &lt;code>root&lt;/code> 和 &lt;code>root@localhost&lt;/code>）。这两个命令设置的名字和邮箱会出现在每次提交记录中，而用户名的自定义是允许的，只要符合一定的规范。&lt;/p>
+&lt;p>在团队项目中，建议使用真实姓名或可识别昵称，便于追溯提交记录‌。&lt;/p>
+&lt;h2 id="关联本地与远程仓库">关联本地与远程仓库
+&lt;/h2>&lt;p>本地初始化仓库并关联远程地址&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">git init
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git remote add origin git@github.com:YourName/RepoName.git‌
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="上传代码">上传代码
+&lt;/h2>&lt;p>手动提交命令，提交到本地 git&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">git add . &lt;span class="c1"># 添加所有文件到暂存区&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git commit -m &lt;span class="s2">&amp;#34;提交说明&amp;#34;&lt;/span>‌
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>重命名当前分支为 main‌&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">git branch -M main
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>补充说明&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>若通过 &lt;code>git init&lt;/code> 初始化仓库后需将默认分支从 &lt;code>master&lt;/code> 改为 &lt;code>main&lt;/code>，执行一次 &lt;code>git branch -M main&lt;/code> 即可永久生效‌。&lt;/li>
+&lt;li>强制重命名当前本地分支‌（例如将默认分支从 master 改为 main），与 GitHub 仓库名无关‌。这是 git 本地命令。&lt;/li>
+&lt;/ul>
+&lt;p>推送到 github 仓库&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">git push -u origin main
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>补充说明&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>会将当前本地分支‌推送到远程仓库的 source 分支，并建立追踪关系（-u 参数的作用）‌。若远程 source 分支不存在，此命令会自动创建该分支‌。&lt;/li>
+&lt;li>本地分支名与远程分支名 ‌无需相同‌。例如，本地分支为 main，仍可推送至远程 source 分支‌。&lt;/li>
+&lt;li>后续使用 git push（不带参数）时，默认推送至已关联的远程分支（即 source）‌。&lt;/li>
+&lt;/ul>
+&lt;p>当本地分支名与远程分支名不一致时，‌需通过参数或配置明确指定映射关系‌，否则会因默认规则冲突导致推送失败‌。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">git push -u origin 本地分支名:远程分支名
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>如果是一个人，遇到冲突，不想处理，可以强制推送&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">git push -f origin main
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>可执行脚本定时提交&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="cp">#!/bin/bash
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="cp">&lt;/span>&lt;span class="nb">cd&lt;/span> /path/to/your/repo &lt;span class="c1"># 切换到项目目录‌&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git add . &lt;span class="c1"># 添加所有修改到暂存区‌&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git commit -m &lt;span class="s2">&amp;#34;Auto commit: &lt;/span>&lt;span class="k">$(&lt;/span>date +&lt;span class="s1">&amp;#39;%Y-%m-%d %H:%M:%S&amp;#39;&lt;/span>&lt;span class="k">)&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> &lt;span class="c1"># 自动生成带时间的提交说明‌&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">git push origin main &lt;span class="c1"># 推送代码到远程仓库‌&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>输入 github 账户名以及密码，不是 git 的用户名和密码&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310043619.webp"
+data-webp="/00-assets/Pasted%20image%2020250310043619.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310043619.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310043619.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250310043619.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item><item><title>Linux 中查看进程以及杀死进程的方法</title><link>https://www.carlos2016.cfd/p/linux-%E4%B8%AD%E6%9F%A5%E7%9C%8B%E8%BF%9B%E7%A8%8B%E4%BB%A5%E5%8F%8A%E6%9D%80%E6%AD%BB%E8%BF%9B%E7%A8%8B%E7%9A%84%E6%96%B9%E6%B3%95/</link><pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.carlos2016.cfd/p/linux-%E4%B8%AD%E6%9F%A5%E7%9C%8B%E8%BF%9B%E7%A8%8B%E4%BB%A5%E5%8F%8A%E6%9D%80%E6%AD%BB%E8%BF%9B%E7%A8%8B%E7%9A%84%E6%96%B9%E6%B3%95/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/10.webp" alt="Featured image of post Linux 中查看进程以及杀死进程的方法" />&lt;h2 id="查看进程">查看进程
+&lt;/h2>&lt;p>&lt;strong>ps 命令&lt;/strong>：命令用于报告当前系统的进程状态。常用的组合有 &lt;code>ps aux&lt;/code>&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>a&lt;/code>：显示所有用户的进程&lt;/li>
+&lt;li>&lt;code>u&lt;/code>：以用户友好的格式显示&lt;/li>
+&lt;li>&lt;code>x&lt;/code>：显示没有控制终端的进程&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">ps aux &lt;span class="p">|&lt;/span> grep 进程名
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309003651.webp"
+data-webp="/00-assets/Pasted%20image%2020250309003651.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309003651.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309003651.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250309003651.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>第二列为 pid，关闭进程的时候会用到。&lt;/p>
+&lt;h2 id="关闭进程">关闭进程
+&lt;/h2>&lt;p>&lt;strong>&lt;code>kill&lt;/code> 命令&lt;/strong>：&lt;code>kill&lt;/code> 命令用于向进程发送信号，最常用的信号是 &lt;code>SIGTERM&lt;/code>（终止）和 &lt;code>SIGKILL&lt;/code>（强制终止）。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">&lt;span class="nb">kill&lt;/span> 进程ID &lt;span class="c1"># 发送 SIGTERM 信号&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">kill&lt;/span> -9 进程ID &lt;span class="c1"># 发送 SIGKILL 信号，强制终止&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>&lt;code>pkill&lt;/code> 命令&lt;/strong>：&lt;code>pkill&lt;/code> 命令可以根据进程名或其他属性直接终止进程，而无需先查找进程 ID。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">pkill 进程名
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>&lt;code>killall&lt;/code> 命令&lt;/strong>：&lt;code>killall&lt;/code> 命令可以根据进程名终止所有匹配的进程。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">killall 进程名
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>homepage 配置</title><link>https://www.carlos2016.cfd/p/homepage-%E9%85%8D%E7%BD%AE/</link><pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.carlos2016.cfd/p/homepage-%E9%85%8D%E7%BD%AE/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/54.webp" alt="Featured image of post homepage 配置" />&lt;h2 id="homepage-主要配置文件功能介绍">Homepage 主要配置文件功能介绍
+&lt;/h2>&lt;p>1、settings.yaml&lt;/p>
+&lt;p>homepage的设置文件，用来设置：语言、布局、标题、favicon图标、背景图片等。&lt;/p>
+&lt;p>2、service.yaml&lt;/p>
+&lt;p>homepage的服务文件，用来设置：Docker或其他服务导航入口等。&lt;/p>
+&lt;p>3、widgets.yaml&lt;/p>
+&lt;p>homepage的小组件文件，用来设置：功能显示如：CPU、内存占用率、温度、上线时间等；搜索框、天气、日期和时间等。&lt;/p>
+&lt;p>4、bookmarks.yaml&lt;/p>
+&lt;p>homepage的书签文件，用来设置：网站收藏书签、书签图标、url等。&lt;/p>
+&lt;h2 id="settingsyaml">settings.yaml
+&lt;/h2>&lt;ul>
+&lt;li>language：语言设置&lt;/li>
+&lt;li>background：背景图片设置&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">providers&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">openweathermap&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">openweathermapapikey&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">weatherapi&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">weatherapiapikey&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">language&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">zh-CN&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">background&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">image&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://images.unsplash.com/photo-1502790671504-542ad42d5189?auto=format&amp;amp;fit=crop&amp;amp;w=2560&amp;amp;q=80&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">hideVersion&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="servicesyaml">services.yaml
+&lt;/h2>&lt;p>配置模板：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">- &lt;span class="nt">媒体影音&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">EmbyServer&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">icon&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">emby.png&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">href&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">http://x.x.x.x:8096/&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># Emby IP:8096&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Movies &amp;amp; TV Shows&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">ping&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">127.0.0.1&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># Emby IP&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">widget&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">type&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">emby&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">url&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">http://x.x.x.x:8096&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">key&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">xxxxxxxxxxxxxxxxxxxxxxxxxxxxx&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">enableBlocks&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># optional, defaults to false&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">enableNowPlaying&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># optional, defaults to true&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Group 组和 Service 服务之前要用 -，且上下级空格排列，下面参数要多几个空格对齐。&lt;/p>
+&lt;p>homepage内置自带图标集合。使用的是如下开源图标集：https://github.com/homarr-labs/dashboard-icons/blob/main/ICONS.md&lt;/p>
+&lt;p>我们可以在icon参数中，直接调用。只要是以上图标集中存在的图标即可。&lt;/p>
+&lt;p>href 中 url 结尾有 / 比如 &lt;code>http://xxxx:1234/&lt;/code>，与之后添加组件 widget 中的 url 不需要加 /，两者是不同的。&lt;/p>
+&lt;p>Homepage支持的服务非常多，每个具体的widget组件参数设置均不相同，具体可以查看：https://gethomepage.dev/widgets/&lt;/p>
+&lt;h2 id="widgetsyaml">widgets.yaml
+&lt;/h2>&lt;p>此为 homepage 的功能组件，注意和 service 的 widgets 服务组件参数区分。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># 比如上线时间、CPU使用率、温度范围最低最高等扩展显示&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>- &lt;span class="nt">resources&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">cpu&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">memory&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">disk&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">/&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">cputemp&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">false&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># disabled by default&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">uptime&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># disabled by default&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">expanded&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">true&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># show the expanded view&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="c"># 搜索框设置，可选搜索引擎：如百度、谷歌等，_blank搜索结果开新页面显示&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>- &lt;span class="nt">search&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">provider&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="l">google, baidu]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">target&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">_blank&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="c"># 天气组件&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>- &lt;span class="nt">openmeteo&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">label&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">中山小榄&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># optional&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">latitude&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">22.671981&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">longitude&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">113.243876&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">timezone&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">Asia/Shanghai&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># optional&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">units&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">metric&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># or imperial&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">cache&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">5&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># Time in minutes to cache API responses, to stay within limits&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="bookmarksyaml">bookmarks.yaml
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">- &lt;span class="nt">Developer&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">Github&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">abbr&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">GH&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">href&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://github.com/&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>- &lt;span class="nt">Social&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">Reddit&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">icon&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">reddit.png&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">href&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://reddit.com/&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">description&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">The front page of the internet&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>- &lt;span class="nt">Entertainment&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">YouTube&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>- &lt;span class="nt">abbr&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">YT&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">href&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="l">https://youtube.com/&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>也可使用http/https网页图标，如：https://www.baidu.com/favicon.ico&lt;/p></description></item><item><title>符号链接 mklink</title><link>https://www.carlos2016.cfd/p/%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5-mklink/</link><pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.carlos2016.cfd/p/%E7%AC%A6%E5%8F%B7%E9%93%BE%E6%8E%A5-mklink/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/13.webp" alt="Featured image of post 符号链接 mklink" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>符号链接（Symbolic Link）是一种文件系统中的概念，它允许你创建一个指向另一个文件或目录的快捷方式。符号链接在 Windows、Linux 和 Mac 系统中都有支持，但它们的行为和兼容性可能会有所不同。下面我将详细解释符号链接的作用以及为什么在某些情况下可能无法兼容不同路径。&lt;/p>
+&lt;h2 id="windows-使用">Windows 使用
+&lt;/h2>&lt;p>在 Windows 系统中，可以使用 mklink 命令来创建符号链接。以下是基本语法：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">mklink /D &amp;#34;目标目录&amp;#34; &amp;#34;源目录&amp;#34;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>例如，假设你的 Joplin 导出目录是 D:\JoplinExport，而你的 Obsidian 目录是 C:\ObsidianVault，你可以使用以下命令在 Obsidian 目录中创建一个指向 Joplin 导出目录的符号链接：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">mklink /D &amp;#34;C:\ObsidianVault\JoplinExport&amp;#34; &amp;#34;D:\JoplinExport&amp;#34;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="linux-使用">Linux 使用
+&lt;/h2>&lt;p>在 Linux 或 Mac 系统中，可以使用 ln -s 命令来创建符号链接。以下是基本语法：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">ln -s 源目录 目标目录
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>例如，假设你的 Joplin 导出目录是 /home/user/JoplinExport，而你的 Obsidian 目录是 /home/user/ObsidianVault，你可以使用以下命令在 Obsidian 目录中创建一个指向 Joplin 导出目录的符号链接：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">ln -s /home/user/JoplinExport /home/user/ObsidianVault/JoplinExport
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="注意事项">注意事项
+&lt;/h2>&lt;ul>
+&lt;li>符号链接只是创建了一个指向实际文件的快捷方式，如果路径不正确，图片仍然无法显示。&lt;/li>
+&lt;li>符号链接的路径是相对于创建时的路径。如果目标文件或目录的路径发生变化，符号链接可能会失效。例如，如果你创建了一个符号链接指向 &lt;code>D:\JoplinExport&lt;/code>，但后来将 JoplinExport 文件夹移动到了 &lt;code>D:\NewFolder&lt;/code>，那么原来的符号链接将无法找到目标。&lt;/li>
+&lt;li>不同的文件系统对符号链接的支持程度不同。例如，NTFS 文件系统支持符号链接，但 FAT32 和 exFAT 文件系统不支持。如果你将符号链接从一个支持的文件系统移动到不支持的文件系统，符号链接可能会失效。&lt;/li>
+&lt;li>某些应用程序可能不支持符号链接。例如，某些程序可能无法正确解析符号链接，导致无法访问目标文件或目录。这可能是由于程序的设计或安全限制。&lt;/li>
+&lt;li>在不同操作系统之间移动符号链接可能会导致问题。例如，Windows 和 Linux 系统对符号链接的处理方式不同，如果你在 Windows 上创建了一个符号链接，然后在 Linux 系统上访问，可能会遇到兼容性问题。&lt;/li>
+&lt;/ul>
+&lt;h3 id="不支持符号链接功能">不支持符号链接功能‌
+&lt;/h3>&lt;p>exFAT是一种为移动存储设备（如U盘、SD卡）设计的轻量级文件系统，主要目标是‌跨平台兼容性‌（Windows/macOS/Linux）和‌大文件支持‌，但未包含符号链接等高级功能‌。&lt;/p>
+&lt;h3 id="与ntfs的对比">与NTFS的对比
+&lt;/h3>&lt;p>‌
+NTFS、ext4等文件系统支持符号链接，因为它们具备更复杂的元数据管理能力。而exFAT的设计简化了文件结构以提高兼容性，牺牲了此类高级特性‌。&lt;/p>
+&lt;h2 id="案例">案例
+&lt;/h2>&lt;p>假设你的 Joplin 导出目录是 D:\JoplinExport，而你的 Obsidian 目录是 C:\ObsidianVault，你可以使用以下命令在 Obsidian 目录中创建一个指向 Joplin 导出目录的符号链接：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">mklink /D &amp;#34;C:\ObsidianVault\JoplinExport&amp;#34; &amp;#34;D:\JoplinExport&amp;#34;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>注意，JoplinExport 目录下的资源文件夹一定要存在，不然无法加载资源，例如图片、视频、办公文件等。JoplinExport 目录下存在 images 目录，那么 &lt;code>C:\ObsidianVault\JoplinExport&lt;/code> 目录下也必须有 images 目录，不然无法加载图片资源。&lt;/p>
+&lt;h2 id="软链接与硬链接">软链接与硬链接
+&lt;/h2>&lt;p>一、跨文件系统支持&lt;/p>
+&lt;ul>
+&lt;li>软链接：可跨不同文件系统或分区创建，仅需存储目标文件的路径信息即可实现间接引用‌。&lt;/li>
+&lt;li>硬链接：仅能在同一文件系统内创建，因依赖共享同一inode的特性，无法跨越不同存储设备或分区‌。&lt;/li>
+&lt;/ul>
+&lt;p>二、目标类型支持&lt;/p>
+&lt;ul>
+&lt;li>软链接：若目标文件被删除或移动，软链接会失效（成为“悬挂链接”）‌。&lt;/li>
+&lt;li>硬链接：删除任一硬链接不会影响其他链接，只有当所有硬链接被删除后，文件数据才会被释放‌。&lt;/li>
+&lt;/ul>
+&lt;p>三、目标文件删除后的行为&lt;/p>
+&lt;ul>
+&lt;li>软链接：若目标文件被删除或移动，软链接会失效（成为“悬挂链接”）‌。&lt;/li>
+&lt;li>硬链接：删除任一硬链接不会影响其他链接，只有当所有硬链接被删除后，文件数据才会被释放‌。&lt;/li>
+&lt;/ul></description></item></channel></rss>

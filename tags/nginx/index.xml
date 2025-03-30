@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nginx on carlos</title><link>https://www.carlos2016.cfd/tags/nginx/</link><description>Recent content in Nginx on carlos</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Example Person</copyright><lastBuildDate>Sun, 30 Mar 2025 16:10:24 +0000</lastBuildDate><atom:link href="https://www.carlos2016.cfd/tags/nginx/index.xml" rel="self" type="application/rss+xml"/><item><title>域名解析入门：只需 A 记录就能指向服务器？</title><link>https://www.carlos2016.cfd/p/%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E5%85%A5%E9%97%A8%E5%8F%AA%E9%9C%80-a-%E8%AE%B0%E5%BD%95%E5%B0%B1%E8%83%BD%E6%8C%87%E5%90%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</link><pubDate>Sun, 16 Mar 2025 05:34:40 +0800</pubDate><guid>https://www.carlos2016.cfd/p/%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E5%85%A5%E9%97%A8%E5%8F%AA%E9%9C%80-a-%E8%AE%B0%E5%BD%95%E5%B0%B1%E8%83%BD%E6%8C%87%E5%90%91%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/40.webp" alt="Featured image of post 域名解析入门：只需 A 记录就能指向服务器？" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>域名解析中，在控制台添加 a 记录指向任意 ip 地址，就能正常解析？&lt;/p>
+&lt;h2 id="流程">流程
+&lt;/h2>&lt;p>&lt;strong>添加A记录&lt;/strong>&lt;/p>
+&lt;p>在域名注册商的管理后台（如GoDaddy、Namecheap等）进入DNS解析设置页，添加一条 ‌A记录&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-txt" data-lang="txt">&lt;span class="line">&lt;span class="cl">类型 a 主机 @ 指向到 110.242.68.66
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">类型 a 主机 www 指向到 110.242.68.66
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>根据自己实际情况填写&lt;/p>
+&lt;p>&lt;strong>保存并等待生效&lt;/strong>&lt;/p>
+&lt;p>提交设置后，DNS解析通常 ‌10分钟-24小时‌ 内生效，可通过 ping 域名 或在线工具检测是否解析到目标IP‌。&lt;/p>
+&lt;h2 id="域名解析的权限逻辑">域名解析的权限逻辑
+&lt;/h2>&lt;p>&lt;strong>A记录解析的主动权在域名所有者&lt;/strong>&lt;/p>
+&lt;p>只要拥有域名的管理权限，即可在域名注册商后台添加A记录指向任意IP地址‌。域名A的所有者可将A记录指向你的服务器IP，但这不意味着该域名能直接访问你的服务器内容。&lt;/p>
+&lt;p>&lt;strong>服务器端的访问控制&lt;/strong>&lt;/p>
+&lt;p>若服务器未配置针对该域名的 ‌虚拟主机（Virtual Host）‌，访问请求可能被拒绝或显示默认页面‌。如果服务器未绑定该域名，即使解析成功，用户也无法正常加载目标内容‌。&lt;/p>
+&lt;h2 id="实际访问的限制条件">实际访问的限制条件
+&lt;/h2>&lt;p>&lt;strong>服务器绑定域名&lt;/strong>&lt;/p>
+&lt;p>需在Web服务器（如Nginx/Apache）中明确配置域名绑定，仅允许特定域名访问对应网站内容‌。&lt;/p>
+&lt;p>‌&lt;strong>示例配置（Nginx）&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-nginx" data-lang="nginx">&lt;span class="line">&lt;span class="cl">&lt;span class="k">server&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">listen&lt;/span> &lt;span class="mi">80&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">server_name&lt;/span> &lt;span class="s">your-domain.com&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1"># 仅允许your-domain.com访问
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="kn">root&lt;/span> &lt;span class="s">/var/www/html&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>防火墙与端口限制&lt;/strong>&lt;/p>
+&lt;p>服务器防火墙需开放 ‌80/443端口‌ 以允许HTTP/HTTPS流量‌。若服务器设置白名单或安全组策略，需额外允许来源IP或域名‌。&lt;/p>
+&lt;p>&lt;strong>HTTPS证书约束&lt;/strong>&lt;/p>
+&lt;p>若启用HTTPS，SSL证书需与访问域名匹配。其他域名因证书不匹配会被浏览器拦截‌。&lt;/p></description></item><item><title>hugo nginx 反向代理域名默认加端口号</title><link>https://www.carlos2016.cfd/p/hugo-nginx-%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E5%9F%9F%E5%90%8D%E9%BB%98%E8%AE%A4%E5%8A%A0%E7%AB%AF%E5%8F%A3%E5%8F%B7/</link><pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.carlos2016.cfd/p/hugo-nginx-%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86%E5%9F%9F%E5%90%8D%E9%BB%98%E8%AE%A4%E5%8A%A0%E7%AB%AF%E5%8F%A3%E5%8F%B7/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/37.webp" alt="Featured image of post hugo nginx 反向代理域名默认加端口号" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>通过 &lt;code>hugo server&lt;/code> 命令可以启动为服务端，默认端口为 1313。但如果直接通过 Nginx 的 proxy_pass 反代为公网服务会遇到一些问题，应该加上一些参数启动。&lt;/p>
+&lt;p>比如搜索页面加载图片失败，wss 一直访问失败&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308235044.webp"
+data-webp="/00-assets/Pasted%20image%2020250308235044.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308235044.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308235044.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308235044.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>点击链接，域名会默认加端口号，导致访问失败 404&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308235159.webp"
+data-webp="/00-assets/Pasted%20image%2020250308235159.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308235159.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308235159.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308235159.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="解决方案">解决方案
+&lt;/h2>&lt;ul>
+&lt;li>appendPort 参数，这里需要设置为 false，这样你的 baseURL 就不会变成 &amp;lt;域名&amp;gt;:1313。如果不设置为 false，你在使用搜索等功能的时候，浏览器还是会向 1313 端口发送请求。&lt;/li>
+&lt;li>baseURL 参数，不然搜索页面中的笔记自动跳转 localhost。&lt;/li>
+&lt;li>liveReloadPort 参数，这个是 Hugo 用来实时更新网页内容的 WebSocket 端口。除了要设置 Nginx 支持 WebSocket，这里还要手动指定下 wss 访问的端口为与 https 相同的 443。&lt;/li>
+&lt;/ul>
+&lt;p>完整命令&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">hugo server --port&lt;span class="o">=&lt;/span>&lt;span class="m">1313&lt;/span> --bind&lt;span class="o">=&lt;/span>192.168.15.210 --baseURL&lt;span class="o">=&lt;/span>https://www.carlos.lh/ --liveReloadPort &lt;span class="m">443&lt;/span> --appendPort&lt;span class="o">=&lt;/span>&lt;span class="nb">false&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>hugo stack 局域网中代码块不能复制</title><link>https://www.carlos2016.cfd/p/hugo-stack-%E5%B1%80%E5%9F%9F%E7%BD%91%E4%B8%AD%E4%BB%A3%E7%A0%81%E5%9D%97%E4%B8%8D%E8%83%BD%E5%A4%8D%E5%88%B6/</link><pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.carlos2016.cfd/p/hugo-stack-%E5%B1%80%E5%9F%9F%E7%BD%91%E4%B8%AD%E4%BB%A3%E7%A0%81%E5%9D%97%E4%B8%8D%E8%83%BD%E5%A4%8D%E5%88%B6/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/13.webp" alt="Featured image of post hugo stack 局域网中代码块不能复制" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>在局域网中复制代码，提示报错信息&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-txt" data-lang="txt">&lt;span class="line">&lt;span class="cl">Uncaught TypeError: Cannot read properties of undefined (reading &amp;#39;writeText&amp;#39;)
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> at HTMLButtonElement.&amp;lt;anonymous&amp;gt; (main.0761bcd8210a6cd3dc991b9464d19e763381e47bd94d7f30c1a0df2d68d6eb33.js:486:31)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308225610.webp"
+data-webp="/00-assets/Pasted%20image%2020250308225610.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308225610.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308225610.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308225610.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>而在本地却能正常复制粘贴，比如 localhost 可以正常复制粘贴。这可能是因为在局域网环境下，浏览器对剪贴板的访问权限被限制，导致&lt;code>navigator.clipboard&lt;/code>对象不可用，从而引发该错误。&lt;/p>
+&lt;h2 id="解决方案">解决方案
+&lt;/h2>&lt;p>&lt;strong>使用HTTPS&lt;/strong>：浏览器在非安全上下文（如HTTP）中可能会限制对剪贴板的访问。因此，建议在局域网中使用HTTPS来启动Hugo服务器。可以通过生成自签名的TLS证书来实现HTTPS，虽然浏览器可能会提示不安全，但对于本地开发和测试来说已经足够。&lt;/p>
+&lt;p>nginx 配置 https 即可&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-nginx" data-lang="nginx">&lt;span class="line">&lt;span class="cl">&lt;span class="k">server&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">listen&lt;/span> &lt;span class="mi">80&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">server_name&lt;/span> &lt;span class="s">www.carlos.lh&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># 强制HTTPS
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="kn">return&lt;/span> &lt;span class="mi">301&lt;/span> &lt;span class="s">https://&lt;/span>&lt;span class="nv">$host$request_uri&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">server&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">listen&lt;/span> &lt;span class="mi">443&lt;/span> &lt;span class="s">ssl&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">server_name&lt;/span> &lt;span class="s">www.carlos.lh&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">ssl_certificate&lt;/span> &lt;span class="s">/root/ssl/server.crt&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">ssl_certificate_key&lt;/span> &lt;span class="s">/root/ssl/server.key.unsecure&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">ssl_session_cache&lt;/span> &lt;span class="s">shared:SSL:10m&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">ssl_session_timeout&lt;/span> &lt;span class="mi">5m&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">ssl_ciphers&lt;/span> &lt;span class="s">HIGH:!aNULL:!MD5&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">ssl_prefer_server_ciphers&lt;/span> &lt;span class="no">on&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">location&lt;/span> &lt;span class="s">/&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">proxy_pass&lt;/span> &lt;span class="s">http://192.168.15.210:1313&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1"># 将请求转发到本地的8080端口
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">proxy_set_header&lt;/span> &lt;span class="s">Host&lt;/span> &lt;span class="nv">$http_host&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">proxy_set_header&lt;/span> &lt;span class="s">X-Real-IP&lt;/span> &lt;span class="nv">$remote_addr&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">proxy_set_header&lt;/span> &lt;span class="s">X-Real-Port&lt;/span> &lt;span class="nv">$remote_port&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">proxy_set_header&lt;/span> &lt;span class="s">X-Forwarded-For&lt;/span> &lt;span class="nv">$proxy_add_x_forwarded_for&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">proxy_set_header&lt;/span> &lt;span class="s">X-Forwarded-Proto&lt;/span> &lt;span class="nv">$scheme&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">proxy_set_header&lt;/span> &lt;span class="s">X-Forwarded-Host&lt;/span> &lt;span class="nv">$host&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">proxy_set_header&lt;/span> &lt;span class="s">X-Forwarded-Port&lt;/span> &lt;span class="nv">$server_port&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">proxy_set_header&lt;/span> &lt;span class="s">REMOTE-HOST&lt;/span> &lt;span class="nv">$remote_addr&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">proxy_connect_timeout&lt;/span> &lt;span class="s">60s&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">proxy_send_timeout&lt;/span> &lt;span class="s">600s&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">proxy_read_timeout&lt;/span> &lt;span class="s">600s&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">proxy_http_version&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="s">.1&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">proxy_set_header&lt;/span> &lt;span class="s">Upgrade&lt;/span> &lt;span class="nv">$http_upgrade&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kn">proxy_set_header&lt;/span> &lt;span class="s">Connection&lt;/span> &lt;span class="nv">$connection_upgrade&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="c1"># 其他配置...
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span>&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>局域网配置 https 即可正常复制，非常完美&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308230546.webp"
+data-webp="/00-assets/Pasted%20image%2020250308230546.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308230546.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308230546.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250308230546.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item></channel></rss>

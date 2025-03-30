@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dnspod on carlos</title><link>https://www.carlos2016.cfd/tags/dnspod/</link><description>Recent content in Dnspod on carlos</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Example Person</copyright><lastBuildDate>Sun, 30 Mar 2025 16:10:24 +0000</lastBuildDate><atom:link href="https://www.carlos2016.cfd/tags/dnspod/index.xml" rel="self" type="application/rss+xml"/><item><title>dnspod 实现网站国内外分流（境外接入 Cloudflare）</title><link>https://www.carlos2016.cfd/p/dnspod-%E5%AE%9E%E7%8E%B0%E7%BD%91%E7%AB%99%E5%9B%BD%E5%86%85%E5%A4%96%E5%88%86%E6%B5%81%E5%A2%83%E5%A4%96%E6%8E%A5%E5%85%A5-cloudflare/</link><pubDate>Sun, 16 Mar 2025 23:39:50 +0800</pubDate><guid>https://www.carlos2016.cfd/p/dnspod-%E5%AE%9E%E7%8E%B0%E7%BD%91%E7%AB%99%E5%9B%BD%E5%86%85%E5%A4%96%E5%88%86%E6%B5%81%E5%A2%83%E5%A4%96%E6%8E%A5%E5%85%A5-cloudflare/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/50.webp" alt="Featured image of post dnspod 实现网站国内外分流（境外接入 Cloudflare）" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>阿里云云解析 DNS / 腾讯云 DNSPod 支持境内外分线解析，&lt;code>blog.uuanqin.top&lt;/code> 将根据用户 IP 选择合适的线路。由于 &lt;code>blog.uuanqin.top&lt;/code> 配置的是 CNAME 的记录类型，访客对于分线过程无感知，浏览器地址栏不变。&lt;/p>
+&lt;p>境内用境内 CDN，境外用境外 CDN，取长补短。为了更加节省开支或避免由于攻击造成的高额账单，国内线路可以不用 CDN，直接连接国内源站。&lt;/p>
+&lt;p>阿里云云解析 DNS / 腾讯云 DNSPod 支持境内外分线解析，&lt;code>blog.uuanqin.top&lt;/code> 将根据用户 IP 选择合适的线路。由于 &lt;code>blog.uuanqin.top&lt;/code> 配置的是 &lt;code>CNAME&lt;/code> 的记录类型，访客对于分线过程无感知，浏览器地址栏不变。&lt;/p>
+&lt;p>至于国内 CDN 或源站的选择看你自己的情况，文章主要将介绍两个操作重点：&lt;/p>
+&lt;ul>
+&lt;li>使用腾讯云 DNSPod 进行线路选择&lt;/li>
+&lt;li>CNAME 方式接入 Cloudflare&lt;/li>
+&lt;/ul>
+&lt;p>dnspod 实现网站国内外分流，需两个域名配合。免费域名托管到 Cloudflare 开启免费 cdn，收费域名托管在 DNSPod，用来实现 dns 负载均衡（别称智能 dns???）&lt;/p>
+&lt;h2 id="cloudflare-控制台">Cloudflare 控制台
+&lt;/h2>&lt;p>根据自己情况，添加 dns 记录，用来开启 Cloudflare cdn 服务。我这里填写免费域名，用来开启 cdn&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316232157.webp"
+data-webp="/00-assets/Pasted%20image%2020250316232157.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316232157.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316232157.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316232157.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="dnspod-控制台">DNSPod 控制台
+&lt;/h2>&lt;p>DNSPod 配置 3 条线路类型：国内、国外、默认。国内路线解析到国内源站，国外线路解析到 Cloudflare 免费 cdn 域名，实现国内外分流&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316233413.webp"
+data-webp="/00-assets/Pasted%20image%2020250316233413.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316233413.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316233413.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316233413.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="验证">验证
+&lt;/h2>&lt;p>连接机场节点测试，返回 Cloudflare 特有的标记&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316233703.webp"
+data-webp="/00-assets/Pasted%20image%2020250316233703.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316233703.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316233703.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316233703.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>关闭机场节点测试，返回国内源站特有信息。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316233800.webp"
+data-webp="/00-assets/Pasted%20image%2020250316233800.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316233800.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316233800.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316233800.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>国内外测试返回不同的信息，证明 DNSPod dns 负载均衡配置成功。&lt;/p></description></item><item><title>腾讯 dnspod dns 负载均衡</title><link>https://www.carlos2016.cfd/p/%E8%85%BE%E8%AE%AF-dnspod-dns-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</link><pubDate>Fri, 14 Mar 2025 21:12:12 +0800</pubDate><guid>https://www.carlos2016.cfd/p/%E8%85%BE%E8%AE%AF-dnspod-dns-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/12.webp" alt="Featured image of post 腾讯 dnspod dns 负载均衡" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>dnspod 智能 dns，别称 dns 负载均衡，呵呵，概念很好，网站访问速度 0 提升。&lt;/p>
+&lt;p>如果你有境内外分线解析的需要可以配置。&lt;code>www.example.com&lt;/code> 将根据用户 IP 选择合适的线路。由于 &lt;code>www.example.com&lt;/code> 配置的是 &lt;code>CNAME&lt;/code> 的记录类型，访客对于分线过程无感知，浏览器地址栏不变。&lt;/p>
+&lt;p>cloudflare 也提供同样的服务，一般 dns 服务商都会提供这个服务，但是 cloudflare 收费，dnspod 免费，不过对网站访问速度 0 提升。而且 dnspod 只能解析 2 条域名。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314202832.webp"
+data-webp="/00-assets/Pasted%20image%2020250314202832.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314202832.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314202832.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314202832.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>需要额外购买域名，免费域名不支持托管 dnspod，比如：&lt;a class="link" href="https://www.cloudns.net/" target="_blank" rel="noopener"
+>cloudns&lt;/a>
+，一直认证失败，呵呵呵&lt;/p>
+&lt;p>通过以下域名比价工具购买低价域名，该工具可能随时跑路，呵呵呵呵，手慢无&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.nazhumi.com/" target="_blank" rel="noopener"
+>哪煮米 - 全网域名,一站比价&lt;/a>
+&lt;/p>
+&lt;p>我选择 Spaceship 域名服务商，好像 7 块钱 1 年，用来测试足够了&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.spaceship.com/zh/" target="_blank" rel="noopener"
+>启动您的网站、想法和未来 - Spaceship&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314204957.webp"
+data-webp="/00-assets/Pasted%20image%2020250314204957.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314204957.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314204957.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314204957.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="添加域名">添加域名
+&lt;/h2>&lt;p>将域名托管在 dnspod&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314205153.webp"
+data-webp="/00-assets/Pasted%20image%2020250314205153.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314205153.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314205153.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314205153.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>dnspod 添加域名就能获取 dns 服务器地址&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314205844.webp"
+data-webp="/00-assets/Pasted%20image%2020250314205844.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314205844.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314205844.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314205844.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>复制以下 dns 服务器地址，粘贴到域名服务商后台的名称服务器即可。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314205925.webp"
+data-webp="/00-assets/Pasted%20image%2020250314205925.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314205925.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314205925.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314205925.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>设置 dns 服务器，别称 ns 记录、name server 或者名称服务器？？？总之到你的域名服务商后台修改 dns 服务器&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314205512.webp"
+data-webp="/00-assets/Pasted%20image%2020250314205512.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314205512.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314205512.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314205512.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>把这个改成 dnspod 提供的 dns 服务器即可，然后你的任务就是“只需等待”&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314205536.webp"
+data-webp="/00-assets/Pasted%20image%2020250314205536.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314205536.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314205536.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314205536.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="智能-dns">智能 dns
+&lt;/h2>&lt;p>配置智能 dns，别称 dns 负载均衡？？？&lt;/p>
+&lt;p>添加 2 条相同的 cname 记录就会实现 dns 负载均衡，非常的傻瓜哦。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314210527.webp"
+data-webp="/00-assets/Pasted%20image%2020250314210527.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314210527.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314210527.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314210527.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>还可以设置解析线路，这也太棒了吧。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314210629.webp"
+data-webp="/00-assets/Pasted%20image%2020250314210629.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314210629.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314210629.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314210629.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="https-访问失败">https 访问失败
+&lt;/h2>&lt;p>找到“SSL 证书”&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314210914.webp"
+data-webp="/00-assets/Pasted%20image%2020250314210914.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314210914.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314210914.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314210914.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>申请免费证书&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314211002.webp"
+data-webp="/00-assets/Pasted%20image%2020250314211002.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314211002.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314211002.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314211002.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>默认下一步即可，认证成功就能访问 https 了&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314211045.webp"
+data-webp="/00-assets/Pasted%20image%2020250314211045.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314211045.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314211045.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314211045.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>自动添加 txt 记录，自动认证，非常的傻瓜哦&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314211143.webp"
+data-webp="/00-assets/Pasted%20image%2020250314211143.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314211143.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314211143.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250314211143.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item></channel></rss>

@@ -1,0 +1,1258 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cloudflare on carlos</title><link>https://www.carlos2016.cfd/tags/cloudflare/</link><description>Recent content in Cloudflare on carlos</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Example Person</copyright><lastBuildDate>Sun, 30 Mar 2025 16:10:24 +0000</lastBuildDate><atom:link href="https://www.carlos2016.cfd/tags/cloudflare/index.xml" rel="self" type="application/rss+xml"/><item><title>hugo 国内访问优化</title><link>https://www.carlos2016.cfd/p/hugo-%E5%9B%BD%E5%86%85%E8%AE%BF%E9%97%AE%E4%BC%98%E5%8C%96/</link><pubDate>Mon, 17 Mar 2025 04:43:50 +0800</pubDate><guid>https://www.carlos2016.cfd/p/hugo-%E5%9B%BD%E5%86%85%E8%AE%BF%E9%97%AE%E4%BC%98%E5%8C%96/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/50.webp" alt="Featured image of post hugo 国内访问优化" />&lt;h2 id="静态资源加速">静态资源加速‌
+&lt;/h2>&lt;p>‌CDN 分流‌：将 CSS/JS/图片等静态资源托管到国内 CDN（如七牛云、又拍云），或通过 jsDelivr 加速 GitHub 仓库文件‌。&lt;/p>
+&lt;p>‌资源压缩‌：使用 Hugo 内置的 minify 功能压缩 HTML/CSS/JS，并通过 ImageOptim 等工具压缩图片‌。&lt;/p>
+&lt;h2 id="cloudflarehugo-博客的加速方案">‌Cloudflare&amp;amp;Hugo 博客‌的加速方案
+&lt;/h2>&lt;p>&lt;strong>一、‌托管平台选择与基础加速‌&lt;/strong>&lt;/p>
+&lt;p>静态资源托管方案‌，将 Hugo 生成的静态网站部署至 ‌Cloudflare Pages‌‌ 或 ‌GitHub Pages‌‌，利用其全球 CDN 节点分发内容。&lt;/p>
+&lt;p>优先选择 ‌Cloudflare Pages‌，可直接与 Cloudflare CDN 深度集成，支持自动 HTTPS 和自定义域名‌。&lt;/p>
+&lt;p>‌自定义域名与回退源设置‌：在 Cloudflare 中绑定自定义域名（如 blog.example.com），并通过 DNS 解析商（如 DNSPod）添加 CNAME 记录指向 Cloudflare 分配的 Pages 域名（如 &lt;code>xxxx.pages.dev&lt;/code>）‌。&lt;/p>
+&lt;p>启用回退源（Fallback Origin）‌功能，将未缓存请求指向原始托管服务（如 GitHub Pages）‌。&lt;/p>
+&lt;p>&lt;strong>二、‌国内 CDN 节点优化‌&lt;/strong>&lt;/p>
+&lt;p>‌分线路解析（境内外分流）‌&lt;/p>
+&lt;p>使用 ‌DNSPod‌ 的线路分组功能：
+‌&lt;/p>
+&lt;ul>
+&lt;li>境外流量‌：解析至默认 Cloudflare CDN 节点。&lt;/li>
+&lt;li>境内流量‌：解析至优选 Cloudflare 国内友好 IP（如通过工具筛选延迟较低的 CN 节点）‌。&lt;/li>
+&lt;/ul>
+&lt;p>工具推荐：通过第三方脚本（如 CF优选IP工具）定期更新优选 IP 列表‌。
+‌
+自选节点与 CNAME 接入‌：在 DNS 解析中，将境内线路的 CNAME 记录指向优选 IP 对应的 Cloudflare 节点域名。&lt;/p>
+&lt;p>&lt;strong>三、‌缓存与性能调优‌&lt;/strong>&lt;/p>
+&lt;p>‌Cloudflare 缓存规则配置‌&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>启用 ‌Always Online‌ 功能，确保网站部分内容在源站不可用时仍可访问‌。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>设置 ‌缓存级别为“标准”‌，并调整 ‌浏览器缓存 TTL 至 4 小时以上‌，减少重复请求‌。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>创建页面规则，针对静态资源（如 CSS/JS/图片）强制缓存并忽略查询字符串‌。
+‌
+资源加速与压缩‌&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>使用 ‌Brotli 压缩‌ 替代 Gzip，降低传输体积‌。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>对 Hugo 生成的 CSS/JS 文件，通过 ‌公共 CDN（如 jsDelivr）‌ 加速加载，但需注意与自定义域名的兼容性‌。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>四、‌图片与媒体资源优化‌&lt;/strong>&lt;/p>
+&lt;p>‌图床与 CDN 分离‌：将图片等媒体资源托管至 ‌GitHub 仓库‌，并通过 ‌jsDelivr 或 Cloudflare CDN‌ 加速访问‌。&lt;/p>
+&lt;p>使用 ‌PicGo 工具‌ 自动上传图片至图床，并替换 Markdown 中的链接为 CDN 地址‌。
+‌
+懒加载与格式优化‌：在 Hugo 模板中集成 ‌懒加载（Lazy Load）‌ 插件，延迟加载非首屏图片‌。&lt;/p>
+&lt;p>转换图片为 WebP 格式，减少文件大小‌。&lt;/p>
+&lt;p>&lt;strong>五、‌监控与维护‌&lt;/strong>&lt;/p>
+&lt;p>‌速度测试与节点更新‌：使用 ‌ITDOG‌ 或 ‌17CE‌ 多节点测试工具，定期检测国内访问速度‌。&lt;/p>
+&lt;p>每 1-2 个月更新一次优选 Cloudflare IP 列表，避免节点失效导致降速‌。
+‌
+异常流量切换‌：在 DNSPod 中启用 ‌D监控（宕机切换）‌，当优选节点不可用时自动切换至备用线路‌。&lt;/p>
+&lt;p>&lt;strong>六、‌替代方案（低成本）‌&lt;/strong>&lt;/p>
+&lt;p>‌静态页面全量托管‌：将整个 Hugo 网站迁移至 ‌Cloudflare Pages‌ 或 ‌Vercel‌，直接利用其亚洲节点加速‌。&lt;/p>
+&lt;p>‌直连 VPS 反向代理‌：在境内部署 Nginx 反向代理服务器，缓存静态内容并转发动态请求至海外源站‌。&lt;/p>
+&lt;h2 id="总结">总结
+&lt;/h2>&lt;p>主流方案需结合 ‌Cloudflare Pages 托管 + 境内外分线路解析 + 自选节点优化 + 缓存策略‌，辅以图片分离与懒加载技术。通过 DNSPod 的分流能力和 Cloudflare 的灵活配置，可显著提升 Hugo 博客在国内的访问速度‌。&lt;/p></description></item><item><title>CloudflareSpeedTest‌ 实现网站访问加速</title><link>https://www.carlos2016.cfd/p/cloudflarespeedtest-%E5%AE%9E%E7%8E%B0%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E5%8A%A0%E9%80%9F/</link><pubDate>Mon, 17 Mar 2025 02:59:02 +0800</pubDate><guid>https://www.carlos2016.cfd/p/cloudflarespeedtest-%E5%AE%9E%E7%8E%B0%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E5%8A%A0%E9%80%9F/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/02.webp" alt="Featured image of post CloudflareSpeedTest‌ 实现网站访问加速" />&lt;h2 id="获取工具与基础配置">获取工具与基础配置
+&lt;/h2>&lt;p>&lt;strong>下载项目文件&lt;/strong>&lt;/p>
+&lt;p>访问 &lt;a class="link" href="https://github.com/XIU2/CloudflareSpeedTest" target="_blank" rel="noopener"
+>XIU2/CloudflareSpeedTest&lt;/a>
+ 的 Releases 页面，下载对应系统的可执行文件（支持 Windows/Linux/macOS）‌。&lt;/p>
+&lt;p>&lt;strong>解压与运行&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Windows 用户双击运行 CloudflareST.exe；&lt;/li>
+&lt;li>Linux/macOS 用户需通过命令行解压并赋予执行权限：&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">tar -zxf CloudflareST_linux_amd64.tar.gz
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">chmod +x CloudflareST
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">./CloudflareST
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="测速与优选-ip">测速与优选 IP
+&lt;/h2>&lt;p>&lt;strong>基础测速命令&lt;/strong>&lt;/p>
+&lt;p>直接运行程序会默认测试 IPv4/IPv6 的延迟和下载速度，输出结果按延迟从低到高排序。示例命令：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">./CloudflareST -dd -tll &lt;span class="m">90&lt;/span> &lt;span class="c1"># 测试延迟≤90ms的IP，并验证下载速度&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>参数说明：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>-dd&lt;/code>：测试下载速度；&lt;/li>
+&lt;li>&lt;code>-tll&lt;/code>：限制延迟阈值‌。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>筛选最佳 IP&lt;/strong>&lt;/p>
+&lt;p>测速完成后，结果中会标注延迟（Latency）和下载速度（Speed）。推荐选择延迟低且下载速度稳定的 IP 地址‌。&lt;/p>
+&lt;h2 id="应用优选-ip-至网站">应用优选 IP 至网站
+&lt;/h2>&lt;p>&lt;strong>DNS 解析配置&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>登录 Cloudflare 控制台，进入域名管理页面；&lt;/li>
+&lt;li>修改 A/AAAA 记录，将 IP 地址替换为优选后的 IP；&lt;/li>
+&lt;li>若需动态更新，可结合 DDNS 工具或定时任务定期执行测速并更新解析记录‌。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>CNAME 加速方案（进阶）&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>将域名 CNAME 指向已优选 IP 的其他域名；&lt;/li>
+&lt;li>通过 Cloudflare SaaS 回源，实现加速与负载均衡（需域名已接入 Cloudflare）‌。&lt;/li>
+&lt;/ul>
+&lt;h2 id="其他优化建议">其他优化建议
+&lt;/h2>&lt;ul>
+&lt;li>定期更新 IP 列表‌：Cloudflare IP 段可能动态调整，建议每周或每月重新测速‌；&lt;/li>
+&lt;li>关闭代理工具‌：测速时需关闭 VPN/代理，避免结果偏差‌；&lt;/li>
+&lt;li>‌多节点备份‌：优选 3-5 个 IP 备用，防止单节点失效‌。&lt;/li>
+&lt;/ul>
+&lt;h2 id="总结">总结
+&lt;/h2>&lt;p>通过上述操作，可有效优化 Cloudflare CDN 的访问速度，降低延迟并提升下载性能。若需进一步加速，可结合 Cloudflare Tunnel 实现免端口访问与内网穿透‌。&lt;/p></description></item><item><title>Cloudflare 优选 ip 优化网站访问速度原理</title><link>https://www.carlos2016.cfd/p/cloudflare-%E4%BC%98%E9%80%89-ip-%E4%BC%98%E5%8C%96%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6%E5%8E%9F%E7%90%86/</link><pubDate>Mon, 17 Mar 2025 02:48:02 +0800</pubDate><guid>https://www.carlos2016.cfd/p/cloudflare-%E4%BC%98%E9%80%89-ip-%E4%BC%98%E5%8C%96%E7%BD%91%E7%AB%99%E8%AE%BF%E9%97%AE%E9%80%9F%E5%BA%A6%E5%8E%9F%E7%90%86/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/02.webp" alt="Featured image of post Cloudflare 优选 ip 优化网站访问速度原理" />&lt;h2 id="优选-ip-优化原理">优选 IP 优化原理
+&lt;/h2>&lt;p>&lt;strong>节点优选&lt;/strong>&lt;/p>
+&lt;p>通过筛选全球范围内延迟最低、带宽最优的 Cloudflare 节点 IP，将用户请求定向到最佳边缘节点，减少数据传输距离和网络拥堵‌。&lt;/p>
+&lt;p>&lt;strong>缓存加速&lt;/strong>&lt;/p>
+&lt;p>静态资源（如图片、CSS/JS 文件）缓存在优选节点，用户可直接从边缘节点获取内容，降低源服务器负载和响应时间‌。&lt;/p>
+&lt;p>&lt;strong>智能路由&lt;/strong>&lt;/p>
+&lt;p>Cloudflare 实时分析全球网络状态，动态调整路由路径，避开拥堵或故障线路，提升访问稳定性‌。&lt;/p>
+&lt;h2 id="控制台操作流程优选-ip-配置">控制台操作流程（优选 IP 配置）
+&lt;/h2>&lt;p>&lt;strong>域名准备&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>主域名（如 &lt;code>www.example.com&lt;/code>）用于常规访问，DNS 解析托管在原有服务商（如阿里云）&lt;/li>
+&lt;li>次要域名（如 cf.example.com）接入 Cloudflare，用于绑定优选 IP 和源服务器‌。‌&lt;/li>
+&lt;/ul>
+&lt;h3 id="cloudflare-配置步骤">Cloudflare 配置步骤
+&lt;/h3>&lt;p>&lt;strong>添加次要域名&lt;/strong>&lt;/p>
+&lt;p>登录 Cloudflare 控制台，添加次要域名并完成 DNS 解析验证‌。&lt;/p>
+&lt;p>&lt;strong>设置 DNS 记录&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>创建 A 或 CNAME 记录（如 &lt;code>cloudflare.example.com&lt;/code>），指向源服务器 IP 或域名。&lt;/li>
+&lt;li>启用代理状态（小黄云图标亮起），开启 CDN 加速‌。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>SSL/TLS 设置&lt;/strong>&lt;/p>
+&lt;p>选择“完全”或“灵活”模式，绑定自定义主机名并配置证书‌。&lt;/p>
+&lt;p>&lt;strong>优选 IP 绑定与分流&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>在 DNS 记录中添加优选 IP 的 A 记录（如 优选IP1、优选IP2），设置权重或分线路（如境外线路）‌。&lt;/li>
+&lt;li>通过 ‌Page Rules‌ 或 ‌Workers‌ 脚本实现动态 IP 调度（如根据用户地理位置分配节点）‌。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>性能优化与测试&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>缓存策略‌：在 ‌Caching‌ 中设置 Browser/Cache TTL，启用 Tiered Cache 分层缓存‌。&lt;/li>
+&lt;li>‌性能测试‌：使用 Cloudflare Observatory 或第三方工具（如 WebPageTest）验证加载速度和首屏时间‌。&lt;/li>
+&lt;/ul>
+&lt;h2 id="动态调度进阶方案">动态调度进阶方案
+&lt;/h2>&lt;ul>
+&lt;li>Workers 脚本‌：编写脚本实现智能路由，例如根据用户 IP 所在地区自动分配最优节点‌。&lt;/li>
+&lt;li>双 CDN 分流‌：国内用户走本地 CDN（如阿里云），境外用户通过 Cloudflare 优选 IP 加速‌。&lt;/li>
+&lt;/ul></description></item><item><title>Cloudflare 自定义主机名、优选 ip、回源概念</title><link>https://www.carlos2016.cfd/p/cloudflare-%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E6%9C%BA%E5%90%8D%E4%BC%98%E9%80%89-ip%E5%9B%9E%E6%BA%90%E6%A6%82%E5%BF%B5/</link><pubDate>Mon, 17 Mar 2025 02:08:17 +0800</pubDate><guid>https://www.carlos2016.cfd/p/cloudflare-%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E6%9C%BA%E5%90%8D%E4%BC%98%E9%80%89-ip%E5%9B%9E%E6%BA%90%E6%A6%82%E5%BF%B5/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/17.webp" alt="Featured image of post Cloudflare 自定义主机名、优选 ip、回源概念" />&lt;h2 id="相关概念解释">相关概念解释
+&lt;/h2>&lt;p>&lt;strong>自定义主机名&lt;/strong>‌&lt;/p>
+&lt;ul>
+&lt;li>在 Cloudflare 中，自定义主机名指的是你可以将你的域名（如 &lt;code>www.example.com&lt;/code>）指向 Cloudflare 的 DNS 服务器，由 Cloudflare 为你的域名提供 DNS 解析、缓存、安全防护等服务。&lt;/li>
+&lt;li>通过自定义主机名，你可以利用 Cloudflare 的全球网络来加速你的网站，并享受其提供的安全防护功能。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>优选 IP&lt;/strong>‌&lt;/p>
+&lt;ul>
+&lt;li>Cloudflare 的优选 IP 功能允许你的网站仅对特定的、可信的 IP 地址范围开放访问。&lt;/li>
+&lt;li>这可以帮助你减少不必要的流量和潜在的攻击，提高网站的安全性。&lt;/li>
+&lt;li>需要注意的是，启用优选 IP 可能会限制一些合法的访问，因此需要谨慎配置。&lt;/li>
+&lt;/ul>
+&lt;p>‌&lt;strong>回源&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>当 Cloudflare 的缓存中没有用户请求的资源时，Cloudflare 会向你的原始服务器（即“源站”）请求该资源，这个过程被称为“回源”。&lt;/li>
+&lt;li>回源是 Cloudflare 加速网站的一个必要环节，但过多的回源请求会增加源站的负载和延迟。&lt;/li>
+&lt;li>因此，优化缓存策略和减少不必要的回源请求是提高网站加速效果的关键。&lt;/li>
+&lt;/ul>
+&lt;h2 id="优选-ip-加速原理">优选 IP 加速原理
+&lt;/h2>&lt;ul>
+&lt;li>优选 IP 是一种访问控制策略，它允许网站管理员设置仅对特定的、可信的 IP 地址范围开放访问。&lt;/li>
+&lt;li>通过限制访问来源，优选 IP 可以帮助减少不必要的流量和潜在的攻击，从而提高网站的安全性。&lt;/li>
+&lt;li>需要注意的是，优选 IP 并不直接加速网站内容的传输，而是通过减少潜在的安全威胁来间接提升网站的整体性能。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>使用优选 IP 的访问流程&lt;/strong>‌&lt;/p>
+&lt;ul>
+&lt;li>用户浏览器输入 &lt;code>www.example.com&lt;/code> 并发起访问请求。&lt;/li>
+&lt;li>DNS 服务器将域名解析为对应的 IP 地址（该 IP 地址可能由网站管理员设置为优选 IP）。&lt;/li>
+&lt;li>如果用户的 IP 地址在优选 IP 列表中，则请求被允许继续；否则，请求可能被拒绝或重定向到其他页面。&lt;/li>
+&lt;li>请求到达源站，源站处理请求并返回所需资源给用户。&lt;/li>
+&lt;/ul>
+&lt;h2 id="优选-ip-的核心机制与速度优化原理">优选 IP 的核心机制与速度优化原理
+&lt;/h2>&lt;p>&lt;strong>优选 IP 的功能与作用&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>‌并非单纯转发请求‌：优选 IP 不仅用于请求转发，而是通过选择最优的 Cloudflare 节点 IP 地址，优化用户到服务器的网络路径。例如，自动分配距离用户最近的节点，减少数据传输延迟‌。&lt;/li>
+&lt;li>‌访问控制与安全防护‌：若用户 IP 在优选列表中，请求会被允许并路由至最优节点；若不在列表内，可能触发安全规则（如拒绝访问或质验证），从而过滤恶意流量‌。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>优选 IP 列表的提供方&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>‌由 Cloudflare 提供‌：优选 IP 列表是 Cloudflare 基于其全球网络节点动态筛选的优质 IP 地址池，用户无需依赖第三方服务即可启用该功能‌。&lt;/li>
+&lt;li>动态优化机制‌：Cloudflare 会实时监测网络状态（如节点负载、延迟等），自动更新优选 IP 列表，确保访问路径的最优性‌。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>间接提升访问速度的途径&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>减少攻击干扰‌：通过优选 IP 过滤非法请求（如 DDoS 攻击流量），降低源站因恶意流量导致的负载过高或服务中断，间接保障正常用户的访问速度‌。&lt;/li>
+&lt;li>优化传输路径‌：将用户请求引导至低延迟、高带宽的 Cloudflare 节点，避免公网拥堵路径，提升数据传输效率‌。&lt;/li>
+&lt;li>缓存静态资源‌：若资源已缓存在优选 IP 对应的节点，用户可直接从节点获取内容，无需回源，进一步缩短响应时间‌。&lt;/li>
+&lt;/ul>
+&lt;h2 id="示例流程用户访问-wwwexamplecom">示例流程（用户访问 &lt;code>www.example.com&lt;/code>）
+&lt;/h2>&lt;ul>
+&lt;li>用户输入域名后，DNS 解析返回 Cloudflare 优选 IP（如 1.1.1.1）‌。&lt;/li>
+&lt;li>若用户 IP 合法且匹配优选规则，请求被路由至最近的 Cloudflare 节点。- 若节点已缓存资源，直接返回用户（无需回源）‌。若未缓存，节点向源站请求资源并缓存，后续用户可直接访问缓存内容‌。&lt;/li>
+&lt;li>非法请求被拦截，源站仅处理合法流量，确保服务稳定性‌。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>总结&lt;/strong>&lt;/p>
+&lt;p>优选 IP 是 Cloudflare 提供的网络优化与安全功能，通过动态选择优质节点、过滤攻击流量、缓存资源等机制，间接提升网站访问速度，其核心逻辑在于 ‌路径优化‌ 和 ‌安全防护‌ 的协同作用‌。&lt;/p>
+&lt;h2 id="通俗版解释">通俗版解释
+&lt;/h2>&lt;p>Cloudflare 自动帮你筛选出性能最好的服务器 IP‌（比如离用户最近的、网络不拥堵的节点）。&lt;/p>
+&lt;p>Cloudflare 的优选 IP 机制会和它的安全防护（比如防火墙）配合工作：&lt;/p>
+&lt;ul>
+&lt;li>如果某个 IP 地址发起大量攻击（比如 DDoS），Cloudflare 会自动把它踢出「优选列表」，或者直接屏蔽它。&lt;/li>
+&lt;li>正常用户的请求会被引导到「优质路线」，而可疑流量会被提前拦截，‌相当于变相帮你过滤了垃圾流量‌。&lt;/li>
+&lt;/ul>
+&lt;p>Cloudflare 的优选 IP ‌是动态调整的&lt;/p>
+&lt;ul>
+&lt;li>某个服务器节点突然卡顿了 → 自动切换到其他节点；&lt;/li>
+&lt;li>晚上欧洲用户增多 → 自动分配更多欧洲的 IP 给这些用户。你完全不用操心，Cloudflare 自己会在后台实时优化。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>总结&lt;/strong>&lt;/p>
+&lt;p>优选 IP = Cloudflare 自动选「最佳路线」的服务器 IP，帮你加速+防堵。&lt;/p></description></item><item><title>Cloudflare 配置自定义主机回退源，实现优选 ip</title><link>https://www.carlos2016.cfd/p/cloudflare-%E9%85%8D%E7%BD%AE%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E6%9C%BA%E5%9B%9E%E9%80%80%E6%BA%90%E5%AE%9E%E7%8E%B0%E4%BC%98%E9%80%89-ip/</link><pubDate>Mon, 17 Mar 2025 01:06:08 +0800</pubDate><guid>https://www.carlos2016.cfd/p/cloudflare-%E9%85%8D%E7%BD%AE%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E6%9C%BA%E5%9B%9E%E9%80%80%E6%BA%90%E5%AE%9E%E7%8E%B0%E4%BC%98%E9%80%89-ip/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/08.webp" alt="Featured image of post Cloudflare 配置自定义主机回退源，实现优选 ip" />&lt;h2 id="域名准备">域名准备
+&lt;/h2>&lt;ul>
+&lt;li>主域名‌（如a.com），用于对外访问，无需直接接入Cloudflare，但需支持DNS解析‌。&lt;/li>
+&lt;li>‌回源域名‌（如b.com或saas.b.com），需通过NS记录完全托管至Cloudflare，并指向源站服务器IP‌。&lt;/li>
+&lt;/ul>
+&lt;h2 id="回源域名配置">回源域名配置
+&lt;/h2>&lt;p>&lt;strong>DNS解析设置&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>添加A记录：将子域名（如origin.b.com）指向源站服务器IP，并开启代理（小黄云）‌。&lt;/li>
+&lt;li>添加CNAME记录：创建CDN子域名（如cdn.b.com），指向Cloudflare提供的泛播IP（如cloudflare.xxx.xyz），关闭代理‌。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>SSL/TLS设置&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>进入回源域名的SSL/TLS → 自定义主机名 → 设置回退源为origin.b.com‌。&lt;/li>
+&lt;li>添加主域名（a.com）作为自定义主机名，并完成TXT验证（需在主域名DNS中添加指定TXT记录）‌。&lt;/li>
+&lt;/ul>
+&lt;h2 id="主域名dns配置">主域名DNS配置
+&lt;/h2>&lt;p>&lt;strong>CNAME记录&lt;/strong>&lt;/p>
+&lt;p>将主域名（a.com）CNAME指向回源域名的CDN子域名（如cdn.b.com），关闭代理‌。&lt;/p>
+&lt;p>&lt;strong>子域名扩展&lt;/strong>&lt;/p>
+&lt;p>若需添加子域名（如blog.a.com），需在自定义主机名中添加该子域名，并在主域名DNS中配置对应的CNAME记录‌。&lt;/p>
+&lt;h2 id="验证与优化">验证与优化
+&lt;/h2>&lt;p>&lt;strong>验证生效&lt;/strong>&lt;/p>
+&lt;p>检查主域名解析状态，确保SSL证书已签发（约需10分钟）‌。&lt;/p>
+&lt;p>&lt;strong>优选IP机制&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Cloudflare的泛播IP会根据用户地理位置自动分配最优节点，无需手动指定IP‌。&lt;/li>
+&lt;li>若需进一步优化，可通过工具（如&lt;code>CloudflareSpeedTest&lt;/code>）测试本地最佳IP，并更新CNAME记录‌。&lt;/li>
+&lt;/ul>
+&lt;h2 id="cloudflarexxxxyz-域名的来源">&lt;code>cloudflare.xxx.xyz&lt;/code> 域名的来源
+&lt;/h2>&lt;p>&lt;strong>Cloudflare自动分配&lt;/strong>&lt;/p>
+&lt;p>此域名是Cloudflare为每个账户‌自动生成的泛播IP入口‌，用于通过CNAME记录间接接入其全球CDN网络。用户无需手动获取，只需在配置SaaS自定义主机名时，根据提示填入系统提供的默认泛播域名格式（如example.cloudflare.net或cdn.example.cloudflare.com）‌。&lt;/p>
+&lt;p>&lt;strong>查看方式&lt;/strong>&lt;/p>
+&lt;p>在回源域名的Cloudflare控制面板中，进入 ‌SSL/TLS → 自定义主机名 → 回退源设置‌，系统会显示当前账户绑定的泛播域名，格式通常为&lt;code>[随机字符].cloudflare.xxx.xyz‌&lt;/code>。&lt;/p>
+&lt;h2 id="费用说明">费用说明
+&lt;/h2>&lt;p>&lt;strong>基础功能免费&lt;/strong>&lt;/p>
+&lt;p>Cloudflare的泛播IP、CDN加速、SSL证书、基础DNS解析等功能均免费提供，无需绑定信用卡或付费套餐‌。&lt;/p>
+&lt;p>&lt;strong>高级功能付费&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>SaaS自定义主机名‌：需绑定信用卡验证，但基础使用（如回退源配置）仍免费‌。&lt;/li>
+&lt;li>内网穿透（Cloudflare Tunnel）‌：完全免费，不限流量和节点数量‌。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>注意事项&lt;/strong>&lt;/p>
+&lt;p>付费功能‌：SaaS自定义主机名需绑定信用卡或 PayPal‌。&lt;/p></description></item><item><title>Cloudflare for SaaS 与 CDN</title><link>https://www.carlos2016.cfd/p/cloudflare-for-saas-%E4%B8%8E-cdn/</link><pubDate>Sun, 16 Mar 2025 23:59:41 +0800</pubDate><guid>https://www.carlos2016.cfd/p/cloudflare-for-saas-%E4%B8%8E-cdn/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/41.webp" alt="Featured image of post Cloudflare for SaaS 与 CDN" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>Cloudflare for SaaS 网站加速原理，与 cdn 加速的区别？参考了以下视频，优选 ip 的段落&lt;/p>
+&lt;p>&lt;a class="link" href="https://www.bilibili.com/video/BV1PPy6YzE5C/?spm_id_from=333.337.search-card.all.click&amp;amp;vd_source=544eb84750dc9e319f56b1656a6ca6d2" target="_blank" rel="noopener"
+>没有公网IP？cloudflare优选IP，高速内网穿透_哔哩哔哩_bilibili&lt;/a>
+&lt;/p>
+&lt;p>Cloudflare for SaaS 开通条件需要 paypal 账号，绑定银行卡信息，懂得都懂，小心被反薅，免费的东西，永远是最贵的，呵呵。&lt;/p>
+&lt;h2 id="核心机制差异">核心机制差异
+&lt;/h2>&lt;p>&lt;strong>加速对象不同&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>CDN‌：主要针对静态资源加速（如图片、CSS、JS等），通过全球330+节点缓存内容，用户访问时直接从最近的节点获取数据‌。&lt;/li>
+&lt;li>SaaS‌：更注重动态内容加速，通过「回源优化」实现。用户访问主域名时，请求被分流到Cloudflare优选IP节点，再通过跳转域名回源动态内容，减少源站负载‌。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>域名管理方式&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>CDN‌：直接使用用户域名接入，无需额外域名配置，通过DNS解析到Cloudflare节点‌。&lt;/li>
+&lt;li>SaaS‌：需两个域名配合：主域名（如blog.a.com）用于前端展示，跳转域名（如b.com）作为回源域名，实现动态请求的分流和缓存策略设置‌。&lt;/li>
+&lt;/ul>
+&lt;p>‌&lt;strong>适用场景&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>‌CDN‌：适用于静态资源占比高的网站，如博客、电商产品页等‌。&lt;/li>
+&lt;li>SaaS‌：适合需要自定义域名、动态内容加速的场景，例如多租户SaaS平台或需要隐藏源站IP的应用‌。&lt;/li>
+&lt;/ul>
+&lt;h2 id="加速效果的共同原理">加速效果的共同原理
+&lt;/h2>&lt;p>&lt;strong>全球节点覆盖&lt;/strong>&lt;/p>
+&lt;p>两者均依托Cloudflare的全球分布式网络，用户请求会被智能路由至最近的节点，减少物理距离导致的延迟‌。&lt;/p>
+&lt;p>&lt;strong>负载均衡技术&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>CDN通过节点缓存减少源站请求量，同时通过Anycast技术均衡流量压力‌。&lt;/li>
+&lt;li>SaaS通过运营商分流（优选IP）和动态回源优化，降低源服务器直接暴露的风险‌。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>缓存策略优化&lt;/strong>&lt;/p>
+&lt;p>CDN默认缓存静态资源，而SaaS可通过自定义缓存规则（如设置跳转域名的缓存时间）加速动态内容更新频率较低的部分‌。&lt;/p>
+&lt;h2 id="saas-与优选-ip-的关联性">SaaS 与优选 IP 的关联性
+&lt;/h2>&lt;p>&lt;strong>SaaS 服务包含优选IP机制&lt;/strong>&lt;/p>
+&lt;p>Cloudflare SaaS 在动态内容加速时，通过运营商分流策略自动选择「网络质量最优的IP节点」进行回源，这种机制本质上是优选IP技术的应用‌。例如用户访问主域名时，系统会根据运营商类型（如移动/电信/联通）自动分配对应的优选IP‌。&lt;/p>
+&lt;p>&lt;strong>优选IP并非SaaS专属功能&lt;/strong>&lt;/p>
+&lt;p>优选IP属于CDN优化的一种通用技术，可通过独立工具（如宝塔cf2dns插件）手动更新三网线路的优选IP列表‌。而SaaS将这一过程自动化集成到服务流程中，无需用户手动维护IP列表‌。&lt;/p>
+&lt;h3 id="saas-如何选择cdn节点">SaaS 如何选择CDN节点
+&lt;/h3>&lt;p>&lt;strong>动态分流与缓存策略结合&lt;/strong>&lt;/p>
+&lt;p>SaaS 通过「主域名+跳转域名」双域名架构实现分流：&lt;/p>
+&lt;ul>
+&lt;li>主域名（如 &lt;code>blog.a.com&lt;/code>）负责接收用户请求，并解析到Cloudflare优选IP节点‌；&lt;/li>
+&lt;li>跳转域名（如 &lt;code>b.com&lt;/code>）作为回退源，动态内容通过缓存规则（如边缘TTL设置）决定是否从最近CDN节点或源站获取‌。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>智能路由与网络优化&lt;/strong>&lt;/p>
+&lt;p>Cloudflare 基于实时网络质量数据（如延迟、丢包率）选择最优节点，且支持：&lt;/p>
+&lt;ul>
+&lt;li>多运营商适配‌：为不同运营商用户分配对应线路的优选IP‌；&lt;/li>
+&lt;li>负载均衡‌：当某个节点压力过高时，自动切换至备用节点‌。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>关键差异与适用场景&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>‌&lt;strong>维度&lt;/strong>&lt;/th>
+&lt;th>&lt;strong>独立优选IP&lt;/strong>&lt;/th>
+&lt;th>‌&lt;strong>SaaS服务&lt;/strong>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>‌&lt;strong>技术目标&lt;/strong>&lt;/td>
+&lt;td>提升单线路访问速度&lt;/td>
+&lt;td>全局动态加速与多租户支持&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>‌&lt;strong>配置方式&lt;/strong>&lt;/td>
+&lt;td>需手动更新IP列表&lt;/td>
+&lt;td>自动化集成，通过域名策略实现优化&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;strong>适用场景&lt;/strong>&lt;/td>
+&lt;td>简单静态站点或已有CDN补充优化&lt;/td>
+&lt;td>动态内容为主、需隐藏源站的企业级应用&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="结论">结论
+&lt;/h3>&lt;ul>
+&lt;li>‌SaaS ≠ 优选IP‌：优选IP是SaaS实现加速的核心技术之一，但SaaS还包含域名管理、动态缓存等更复杂的服务架构‌；&lt;/li>
+&lt;li>节点选择逻辑‌：SaaS通过自动化优选IP和智能路由选择最优CDN节点，而独立优选IP仅解决单线路节点优化问题‌。&lt;/li>
+&lt;/ul>
+&lt;h2 id="结论-1">结论
+&lt;/h2>&lt;p>Cloudflare for SaaS通过‌边缘节点缓存‌、‌智能路由‌、‌协议优化‌和‌自动化管理‌，将内容分发、安全与性能优化整合到全球网络中，显著降低延迟、提升可用性，并简化运维。其核心优势在于将传统需要复杂配置的加速技术（如CDN、SSL、负载均衡）无缝集成，为SaaS提供商及其终端用户提供无缝的快速体验。&lt;/p>
+&lt;p>Cloudflare for SaaS 是一套‌整合型服务方案‌，专为 SaaS 提供商设计，覆盖域名解析、内容加速、安全防护等核心功能。以下是其关键能力及对应的服务模块：&lt;/p>
+&lt;p>&lt;strong>一、DNS 智能解析与路由优化&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>全球 Anycast DNS 网络‌：通过分布全球的 DNS 节点快速响应用户查询，自动将请求路由到最近的边缘节点，降低解析延迟‌。&lt;/li>
+&lt;li>分线路解析‌：支持结合国内外 DNS 服务商，实现域名按地域或网络环境分流（例如国内用户解析至优选 IP，海外用户使用默认节点）‌。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>二、CDN 加速与内容分发&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>静态资源缓存‌：将图片、CSS/JS 等静态文件缓存在全球 300+ 边缘节点，用户就近获取资源，减少回源请求‌。&lt;/li>
+&lt;li>动态内容优化‌：通过 Argo Smart Routing 动态选择最优传输路径，并结合 TCP 参数优化（如窗口调整、连接复用）提升动态请求响应速度‌。&lt;/li>
+&lt;li>边缘计算（Workers）‌：在边缘节点运行 JavaScript 代码，直接处理身份验证、API 转发等逻辑，减少回源压力‌。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>三、安全与防护能力&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>SSL/TLS 全托管‌：自动为自定义域名签发和管理 SSL 证书，支持免费泛域名证书，避免手动续期风险‌。&lt;/li>
+&lt;li>‌DDoS 防护与 WAF‌：在边缘层拦截大规模攻击和恶意流量（如 SQL 注入、XSS），保护源服务器稳定运行‌。&lt;/li>
+&lt;li>流量加密与合规性‌：通过 HTTPS 强制跳转、HSTS 等策略保障数据传输安全，满足企业级合规需求‌。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>四、统一管理与扩展性&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>自定义主机名（Custom Hostnames）‌：支持客户绑定独立域名（如 client.yoursaas.com），通过 API 或控制台统一管理证书和流量策略‌。&lt;/li>
+&lt;li>混合解析方案‌：允许 SaaS 提供商自建 DNS 服务器或使用第三方服务，仅将 CDN 和防护功能托管至 Cloudflare，提升灵活性‌。&lt;/li>
+&lt;li>数据分析与监控‌：提供实时流量统计、攻击日志和性能报告，辅助优化服务策略‌。&lt;/li>
+&lt;/ul></description></item><item><title>dnspod 实现网站国内外分流（境外接入 Cloudflare）</title><link>https://www.carlos2016.cfd/p/dnspod-%E5%AE%9E%E7%8E%B0%E7%BD%91%E7%AB%99%E5%9B%BD%E5%86%85%E5%A4%96%E5%88%86%E6%B5%81%E5%A2%83%E5%A4%96%E6%8E%A5%E5%85%A5-cloudflare/</link><pubDate>Sun, 16 Mar 2025 23:39:50 +0800</pubDate><guid>https://www.carlos2016.cfd/p/dnspod-%E5%AE%9E%E7%8E%B0%E7%BD%91%E7%AB%99%E5%9B%BD%E5%86%85%E5%A4%96%E5%88%86%E6%B5%81%E5%A2%83%E5%A4%96%E6%8E%A5%E5%85%A5-cloudflare/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/50.webp" alt="Featured image of post dnspod 实现网站国内外分流（境外接入 Cloudflare）" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>阿里云云解析 DNS / 腾讯云 DNSPod 支持境内外分线解析，&lt;code>blog.uuanqin.top&lt;/code> 将根据用户 IP 选择合适的线路。由于 &lt;code>blog.uuanqin.top&lt;/code> 配置的是 CNAME 的记录类型，访客对于分线过程无感知，浏览器地址栏不变。&lt;/p>
+&lt;p>境内用境内 CDN，境外用境外 CDN，取长补短。为了更加节省开支或避免由于攻击造成的高额账单，国内线路可以不用 CDN，直接连接国内源站。&lt;/p>
+&lt;p>阿里云云解析 DNS / 腾讯云 DNSPod 支持境内外分线解析，&lt;code>blog.uuanqin.top&lt;/code> 将根据用户 IP 选择合适的线路。由于 &lt;code>blog.uuanqin.top&lt;/code> 配置的是 &lt;code>CNAME&lt;/code> 的记录类型，访客对于分线过程无感知，浏览器地址栏不变。&lt;/p>
+&lt;p>至于国内 CDN 或源站的选择看你自己的情况，文章主要将介绍两个操作重点：&lt;/p>
+&lt;ul>
+&lt;li>使用腾讯云 DNSPod 进行线路选择&lt;/li>
+&lt;li>CNAME 方式接入 Cloudflare&lt;/li>
+&lt;/ul>
+&lt;p>dnspod 实现网站国内外分流，需两个域名配合。免费域名托管到 Cloudflare 开启免费 cdn，收费域名托管在 DNSPod，用来实现 dns 负载均衡（别称智能 dns???）&lt;/p>
+&lt;h2 id="cloudflare-控制台">Cloudflare 控制台
+&lt;/h2>&lt;p>根据自己情况，添加 dns 记录，用来开启 Cloudflare cdn 服务。我这里填写免费域名，用来开启 cdn&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316232157.webp"
+data-webp="/00-assets/Pasted%20image%2020250316232157.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316232157.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316232157.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316232157.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="dnspod-控制台">DNSPod 控制台
+&lt;/h2>&lt;p>DNSPod 配置 3 条线路类型：国内、国外、默认。国内路线解析到国内源站，国外线路解析到 Cloudflare 免费 cdn 域名，实现国内外分流&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316233413.webp"
+data-webp="/00-assets/Pasted%20image%2020250316233413.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316233413.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316233413.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316233413.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="验证">验证
+&lt;/h2>&lt;p>连接机场节点测试，返回 Cloudflare 特有的标记&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316233703.webp"
+data-webp="/00-assets/Pasted%20image%2020250316233703.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316233703.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316233703.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316233703.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>关闭机场节点测试，返回国内源站特有信息。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316233800.webp"
+data-webp="/00-assets/Pasted%20image%2020250316233800.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316233800.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316233800.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250316233800.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>国内外测试返回不同的信息，证明 DNSPod dns 负载均衡配置成功。&lt;/p></description></item><item><title>cloudflare worker 反代实现 dns 负载均衡</title><link>https://www.carlos2016.cfd/p/cloudflare-worker-%E5%8F%8D%E4%BB%A3%E5%AE%9E%E7%8E%B0-dns-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</link><pubDate>Fri, 14 Mar 2025 23:57:31 +0800</pubDate><guid>https://www.carlos2016.cfd/p/cloudflare-worker-%E5%8F%8D%E4%BB%A3%E5%AE%9E%E7%8E%B0-dns-%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/31.webp" alt="Featured image of post cloudflare worker 反代实现 dns 负载均衡" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>dns 负载均衡一般都是根据用户的地理位置以及网络延迟来解析不同的域名，根据网络延迟实现负载均衡，自己实现太过困难，呵呵&lt;/p>
+&lt;p>而且 workers 反代不支持自定义域名，呵呵呵&lt;/p>
+&lt;p>反向代理应把握其作为&amp;quot;中间人&amp;quot;的定位，主要负责请求的智能路由和基础服务，不涉及业务逻辑处理或页面渲染。渲染工作实际上是由客户端浏览器或后端服务器的服务端渲染(SSR)功能完成的。&lt;/p>
+&lt;p>如果反代返回纯文本，添加对应的响应头即可。反向代理未正确处理后端返回的 Content-Type 响应头，导致浏览器无法识别为 HTML。&lt;/p>
+&lt;h2 id="代码">代码
+&lt;/h2>&lt;p>根据网络延迟选择最优路线，玩具级别代码，只能说能用级别，呵呵呵&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;span class="lnt">15
+&lt;/span>&lt;span class="lnt">16
+&lt;/span>&lt;span class="lnt">17
+&lt;/span>&lt;span class="lnt">18
+&lt;/span>&lt;span class="lnt">19
+&lt;/span>&lt;span class="lnt">20
+&lt;/span>&lt;span class="lnt">21
+&lt;/span>&lt;span class="lnt">22
+&lt;/span>&lt;span class="lnt">23
+&lt;/span>&lt;span class="lnt">24
+&lt;/span>&lt;span class="lnt">25
+&lt;/span>&lt;span class="lnt">26
+&lt;/span>&lt;span class="lnt">27
+&lt;/span>&lt;span class="lnt">28
+&lt;/span>&lt;span class="lnt">29
+&lt;/span>&lt;span class="lnt">30
+&lt;/span>&lt;span class="lnt">31
+&lt;/span>&lt;span class="lnt">32
+&lt;/span>&lt;span class="lnt">33
+&lt;/span>&lt;span class="lnt">34
+&lt;/span>&lt;span class="lnt">35
+&lt;/span>&lt;span class="lnt">36
+&lt;/span>&lt;span class="lnt">37
+&lt;/span>&lt;span class="lnt">38
+&lt;/span>&lt;span class="lnt">39
+&lt;/span>&lt;span class="lnt">40
+&lt;/span>&lt;span class="lnt">41
+&lt;/span>&lt;span class="lnt">42
+&lt;/span>&lt;span class="lnt">43
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-js" data-lang="js">&lt;span class="line">&lt;span class="cl">&lt;span class="nx">addEventListener&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;fetch&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">event&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">event&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">respondWith&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">handleRequest&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">event&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">request&lt;/span>&lt;span class="p">));&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">const&lt;/span> &lt;span class="nx">backends&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;https://tencent.carlos.ip-ddns.com&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;https://github.carlos.ip-ddns.com&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="s2">&amp;#34;https://blog.carlos.ip-ddns.com&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">];&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">async&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">checkLatency&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">url&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">controller&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">AbortController&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">timeout&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">setTimeout&lt;/span>&lt;span class="p">(()&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">controller&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">abort&lt;/span>&lt;span class="p">(),&lt;/span> &lt;span class="mi">3000&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">start&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">Date&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">now&lt;/span>&lt;span class="p">();&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">try&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">await&lt;/span> &lt;span class="nx">fetch&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">url&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">method&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="s2">&amp;#34;HEAD&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">signal&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="nx">controller&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">signal&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nb">Date&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">now&lt;/span>&lt;span class="p">()&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="nx">start&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span> &lt;span class="k">catch&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">err&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="kc">Infinity&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="c1">// 超时或失败时返回最大值
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c1">&lt;/span> &lt;span class="p">}&lt;/span> &lt;span class="k">finally&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">clearTimeout&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">timeout&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="kr">async&lt;/span> &lt;span class="kd">function&lt;/span> &lt;span class="nx">handleRequest&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">request&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kd">let&lt;/span> &lt;span class="nx">latencies&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nb">Promise&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">all&lt;/span>&lt;span class="p">(&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">backends&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">map&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="kr">async&lt;/span> &lt;span class="nx">url&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="p">({&lt;/span> &lt;span class="nx">url&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">latency&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="kr">await&lt;/span> &lt;span class="nx">checkLatency&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">url&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">}))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">latencies&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">latencies&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">filter&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">entry&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">entry&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">latency&lt;/span> &lt;span class="o">!==&lt;/span> &lt;span class="kc">Infinity&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="nx">latencies&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">length&lt;/span> &lt;span class="o">===&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Response&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s2">&amp;#34;All backends are down&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="p">{&lt;/span> &lt;span class="nx">status&lt;/span>&lt;span class="o">:&lt;/span> &lt;span class="mi">503&lt;/span> &lt;span class="p">});&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nx">latencies&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">sort&lt;/span>&lt;span class="p">((&lt;/span>&lt;span class="nx">a&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">b&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="p">=&amp;gt;&lt;/span> &lt;span class="nx">a&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">latency&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="nx">b&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">latency&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">bestBackend&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nx">latencies&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">].&lt;/span>&lt;span class="nx">url&lt;/span>&lt;span class="p">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="kr">const&lt;/span> &lt;span class="nx">modifiedRequest&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">Request&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">bestBackend&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="k">new&lt;/span> &lt;span class="nx">URL&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">request&lt;/span>&lt;span class="p">.&lt;/span>&lt;span class="nx">url&lt;/span>&lt;span class="p">).&lt;/span>&lt;span class="nx">pathname&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nx">request&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="nx">fetch&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="nx">modifiedRequest&lt;/span>&lt;span class="p">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>cloudns 托管到 cloudflare</title><link>https://www.carlos2016.cfd/p/cloudns-%E6%89%98%E7%AE%A1%E5%88%B0-cloudflare/</link><pubDate>Thu, 13 Mar 2025 02:28:40 +0800</pubDate><guid>https://www.carlos2016.cfd/p/cloudns-%E6%89%98%E7%AE%A1%E5%88%B0-cloudflare/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/40.webp" alt="Featured image of post cloudns 托管到 cloudflare" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>cloudns(免费域名)托管到 cloudflare，正常购买的域名，只要在域名服务商管理后台添加 2 条 dns 记录，就能正常托管 cloudflare，但是免费域名需要额外配置。&lt;/p>
+&lt;h2 id="操作">操作
+&lt;/h2>&lt;p>注册cloudns：&lt;a class="link" href="https://www.cloudns.net/" target="_blank" rel="noopener"
+>地址1&lt;/a>
+&lt;/p>
+&lt;p>一个账号只能申请一个域名，点击这里申请&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313015351.webp"
+data-webp="/00-assets/Pasted%20image%2020250313015351.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313015351.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313015351.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313015351.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>申请免费域名即可&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313015415.webp"
+data-webp="/00-assets/Pasted%20image%2020250313015415.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313015415.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313015415.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313015415.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>点击申请的域名，进行 dns 记录添加&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313015446.webp"
+data-webp="/00-assets/Pasted%20image%2020250313015446.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313015446.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313015446.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313015446.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>然后 cloudflare 域名托管，默认操作即可，点击下一步，点击下一步&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313015648.webp"
+data-webp="/00-assets/Pasted%20image%2020250313015648.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313015648.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313015648.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313015648.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>域名管理后台添加 dns 记录，根据自己实际情况填写&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-txt" data-lang="txt">&lt;span class="line">&lt;span class="cl">类型 NS 主机 留空 指向到 ready.ns.cloudflare.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">类型 NS 主机 留空 指向到 auth.ns.cloudflare.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">类型 NS 主机 _acme-challenge 指向到 ready.ns.cloudflare.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">类型 NS 主机 _acme-challenge 指向到 auth.ns.cloudflare.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">类型 CNAME 主机 * 指向到 ready.ns.cloudflare.com
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>将 ns 记录改成自己的&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313015841.webp"
+data-webp="/00-assets/Pasted%20image%2020250313015841.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313015841.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313015841.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313015841.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>dns 记录配置参考，正常域名只要添加 2 条 ns 记录就能托管在 cloudflare，但是我用的是免费域名&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313020057.webp"
+data-webp="/00-assets/Pasted%20image%2020250313020057.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313020057.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313020057.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313020057.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>添加 7 条 dns 记录，可以不用配置 cloudflare 边缘证书，也不用更改“SSL/TLS 加密”模式&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-txt" data-lang="txt">&lt;span class="line">&lt;span class="cl">类型 NS 主机 留空 指向到 ready.ns.cloudflare.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">类型 NS 主机 留空 指向到 auth.ns.cloudflare.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">类型 NS 主机 _acme-challenge 指向到 ready.ns.cloudflare.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">类型 NS 主机 _acme-challenge 指向到 auth.ns.cloudflare.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">类型 NS 主机 maintunnel 指向到 ready.ns.cloudflare.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">类型 NS 主机 maintunnel 指向到 auth.ns.cloudflare.com
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">类型 CNAME 主机 * 指向到 maintunnel.mydns.ip-ddns.com
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>如果使用的是7条域名记录，那么须要在cloudflare添加一条CNAME记录&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>类型 CNAME 主机 maintunnel 指向到 &lt;code>fast-fast.asuscomm.com&lt;/code>&lt;/li>
+&lt;li>或指向到 &lt;code>cloudflare.182682.xyz&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>看这个域名应该是使用第三方服务，呵呵。&lt;/p>
+&lt;p>以上是实现了子级域名的基本操作，以后子级域名只需要在cloudflare上操作即可。&lt;/p>
+&lt;p>对于主域名 mydns.ip-ddns.com 的解析操作分为两种情况（假设服务器IP是 10.20.30.40）
+完全走CDN 【推荐使用这种方案】&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-txt" data-lang="txt">&lt;span class="line">&lt;span class="cl">#cloudns
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">类型 A 主机 留空 指向到 104.18.15.19
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#cloudflare 开启小黄云
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">类型 A 主机 @ 指向到 10.20.30.40 并开启小黄云
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>完全不走 CDN 【仅需要原始解析时使用】&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-txt" data-lang="txt">&lt;span class="line">&lt;span class="cl">#cloudns
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">类型 A 主机 留空 指向到 10.20.30.40
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">#cloudflare 不开启小黄云
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">类型 A 主机 @ 指向到 10.20.30.40
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>最后回到 cloudflare,大概 5 分钟左右就会看到域名已经生效可用。不管是 A、AAAA 还是隧道都要记得开启小黄云&lt;code>Proxied&lt;/code>&lt;/p>
+&lt;p>经过以上的操作就可以让 cloudns 在 cloudflare 上愉快的撒欢了。&lt;/p>
+&lt;p>我这里为 github pages 套 cdn，cloudflare dns 记录添加 a 记录指向以下 ip 地址即可&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-txt" data-lang="txt">&lt;span class="line">&lt;span class="cl">185.199.108.153
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">185.199.109.153
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">185.199.110.153
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">185.199.111.153
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>参考配置&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313021313.webp"
+data-webp="/00-assets/Pasted%20image%2020250313021313.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313021313.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313021313.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313021313.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>然后在 cloudns 域名管理后台添加一条 a 记录，ip 地址为默认 ip，不需要改变，照着抄就可以了，应该是 cloudflare ip 地址&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313021422.webp"
+data-webp="/00-assets/Pasted%20image%2020250313021422.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313021422.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313021422.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313021422.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="https-访问失败">https 访问失败
+&lt;/h2>&lt;p>如果添加 5 条记录，https 访问会不正常，需要域名添加 txt 记录进行认证，边缘证书认证成功截图&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313021641.webp"
+data-webp="/00-assets/Pasted%20image%2020250313021641.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313021641.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313021641.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313021641.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>如果是“txt 待认证”需要在域名管理后台添加 txt 记录进行认证，根据实际情况填写&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313021813.webp"
+data-webp="/00-assets/Pasted%20image%2020250313021813.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313021813.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313021813.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313021813.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>也可以在 cloudflare 进行添加 txt 记录&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313021927.webp"
+data-webp="/00-assets/Pasted%20image%2020250313021927.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313021927.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313021927.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313021927.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>txt 认证成功，删除即可，没什么鸟用，一般都是自动化认证的，呵呵。通过工具（如 &lt;code>acme.sh&lt;/code> 或 &lt;code>Certbot&lt;/code>）集成 Cloudflare 的 DNS API，自动完成 TXT 记录的添加和删除。&lt;/p>
+&lt;h2 id="重定向的次数过多解决方案">「重定向的次数过多」解决方案
+&lt;/h2>&lt;p>如果浏览器出现「重定向的次数过多」，需要额外配置 ssl 加密模型&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313022409.webp"
+data-webp="/00-assets/Pasted%20image%2020250313022409.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313022409.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313022409.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313022409.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>选择任意两个都可以&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313022432.webp"
+data-webp="/00-assets/Pasted%20image%2020250313022432.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313022432.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313022432.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313022432.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="验证成功">验证成功
+&lt;/h2>&lt;p>域名命令，出现 cf 特殊字段即可表示 cdn 开启成功，我这里给 github pages 套了 cdn&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cmd" data-lang="cmd">&lt;span class="line">&lt;span class="cl">curl -I https://www.carlos.ip-ddns.com
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313022602.webp"
+data-webp="/00-assets/Pasted%20image%2020250313022602.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313022602.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313022602.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313022602.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>或者 ping 自己的主机名，没有出现 github ip 地址表示开启 cdn 成功&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-txt" data-lang="txt">&lt;span class="line">&lt;span class="cl">ping www.carlos.ip-ddns.com
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313022806.webp"
+data-webp="/00-assets/Pasted%20image%2020250313022806.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313022806.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313022806.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313022806.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item><item><title>cloudflare 开启 cdn</title><link>https://www.carlos2016.cfd/p/cloudflare-%E5%BC%80%E5%90%AF-cdn/</link><pubDate>Thu, 13 Mar 2025 00:39:30 +0800</pubDate><guid>https://www.carlos2016.cfd/p/cloudflare-%E5%BC%80%E5%90%AF-cdn/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/30.webp" alt="Featured image of post cloudflare 开启 cdn" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>本文主要介绍网站如何在 cloudflare 上开启 cdn&lt;/p>
+&lt;h2 id="操作">操作
+&lt;/h2>&lt;p>在 cloudflare 上添加域名&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312184752.webp"
+data-webp="/00-assets/Pasted%20image%2020250312184752.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312184752.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312184752.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312184752.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>默认下一步即可，这里保存名称服务器（Name Servers）&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312184915.webp"
+data-webp="/00-assets/Pasted%20image%2020250312184915.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312184915.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312184915.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312184915.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>在域名注册商后台添加 ns 记录（Name Servers），我这里的是免费域名：&lt;a class="link" href="https://www.cloudns.net/" target="_blank" rel="noopener"
+>地址1&lt;/a>
+&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312185307.webp"
+data-webp="/00-assets/Pasted%20image%2020250312185307.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312185307.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312185307.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312185307.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>不同域名注册商操作不一样，但是都是大同小异，都是添加 dns 记录，成功截图&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312185451.webp"
+data-webp="/00-assets/Pasted%20image%2020250312185451.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312185451.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312185451.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312185451.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>在 Cloudflare 的 DNS 管理页面中，每个解析记录左侧的云朵图标‌需处于橙色点亮状态（表示流量经过 CDN）。灰色状态则代表直连服务器，未启用加速。&lt;/p>
+&lt;p>要求域名支持托管，不然任何设置都白费。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312185627.webp"
+data-webp="/00-assets/Pasted%20image%2020250312185627.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312185627.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312185627.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312185627.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>我这里主机名是 blog，橙色云朵表示已经开启 cdn&lt;/p>
+&lt;p>&lt;strong>SSL/TLS 模式配置&lt;/strong>&lt;/p>
+&lt;p>需在 Cloudflare 后台的 SSL/TLS 设置中选择 ‌Full‌ 或 ‌Full (Strict)‌ 模式，否则 HTTPS 请求可能无法通过 CDN 加密传输。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313003453.webp"
+data-webp="/00-assets/Pasted%20image%2020250313003453.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313003453.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313003453.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313003453.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>使用 CloudFlare 导致网站「重定向的次数过多」，记得点击一下，选择“完全”或者“完全（严格）”&lt;/p>
+&lt;h2 id="验证-cdn-是否生效">验证 CDN 是否生效
+&lt;/h2>&lt;p>&lt;strong>Ping 检测&lt;/strong>&lt;/p>
+&lt;p>在终端执行 &lt;code>ping yourdomain.com&lt;/code>，若返回的 IP 地址与源服务器不同（显示为 Cloudflare 边缘节点 IP），则 CDN 生效 ‌。&lt;/p>
+&lt;p>我这里 &lt;code>ping www.carlos.ip-ddns.com&lt;/code>，记录 ip 地址，这里是 github 地址，cdn 开启不成功&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312192236.webp"
+data-webp="/00-assets/Pasted%20image%2020250312192236.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312192236.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312192236.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312192236.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>命令 &lt;code>curl -I https://www.carlos.ip-ddns.com&lt;/code> ，返回 github，没有 cf 特俗字段，cdn 还是没有开启成功&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312204322.webp"
+data-webp="/00-assets/Pasted%20image%2020250312204322.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312204322.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312204322.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312204322.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>ubuntu 命令 &lt;code>dig www.carlos.ip-ddns.com +short&lt;/code>，返回 github，懂的都懂，cdn 还是没有开启成功。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312210715.webp"
+data-webp="/00-assets/Pasted%20image%2020250312210715.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312210715.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312210715.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312210715.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>正常情况，根域名添加 ns 记录，cf 控制台添加子域名 cname 记录，根域名 a 记录指向你的服务器 ip 地址，应该是可以开启 cdn 的，可能免费域名的缘故，没有开启 cdn 成功。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312204135.webp"
+data-webp="/00-assets/Pasted%20image%2020250312204135.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312204135.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312204135.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312204135.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>cloudflare 域名管理那里手动添加同样的 dns 记录，我这个免费域名不支持托管，心累&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312192459.webp"
+data-webp="/00-assets/Pasted%20image%2020250312192459.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312192459.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312192459.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250312192459.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item><item><title>cloudflare 常用功能</title><link>https://www.carlos2016.cfd/p/cloudflare-%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD/</link><pubDate>Wed, 12 Mar 2025 17:38:18 +0800</pubDate><guid>https://www.carlos2016.cfd/p/cloudflare-%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/18.webp" alt="Featured image of post cloudflare 常用功能" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>本文主要介绍 cloudflare 基本常用功能，让你少走弯路&lt;/p>
+&lt;h2 id="常用功能">常用功能
+&lt;/h2>&lt;p>以下是 Cloudflare 频率最高的 10 个功能及其核心应用场景&lt;/p>
+&lt;ul>
+&lt;li>DDoS 攻击防护：全球领先的分布式防御系统，通过流量清洗和边缘节点拦截大规模攻击，保障业务连续性‌。&lt;/li>
+&lt;li>内容分发网络（CDN）：全球分布式节点加速静态资源加载，隐藏源站 IP 并优化访问延迟，免费版支持自动缓存策略‌。&lt;/li>
+&lt;li>Web 应用防火墙（WAF）：拦截 SQL 注入、XSS 等 OWASP 十大 Web 漏洞攻击，支持自定义规则匹配攻击特征‌。&lt;/li>
+&lt;li>SSL/TLS 加密：提供免费泛域名证书，自动实现 HTTP 到 HTTPS 重定向，支持 TLS 1.3 协议强化数据传输安全‌。&lt;/li>
+&lt;li>域名注册与托管：低成本域名注册服务（仅收 ICANN 成本费），集成 DNS 解析与流量代理功能‌。&lt;/li>
+&lt;li>智能路由与负载均衡：Argo 技术优化全球流量路径，结合负载均衡实现故障转移和服务器资源动态分配‌。&lt;/li>
+&lt;li>边缘计算（Workers）：无服务器计算平台，支持在边缘节点执行 JavaScript/Wasm 代码，实现个性化逻辑处理‌。&lt;/li>
+&lt;li>零信任安全访问：Zero Trust 架构提供精细化权限控制，支持多因素认证（MFA）和私有网络接入保护‌。&lt;/li>
+&lt;li>Always Online 容灾：当源站宕机时自动返回缓存副本，结合页面规则设置不同 URL 的缓存失效策略‌。&lt;/li>
+&lt;li>图像与移动端优化：自动压缩图片为 WebP 格式，延迟加载非首屏资源，适配移动端网络环境提升加载速度‌。&lt;/li>
+&lt;/ul>
+&lt;h2 id="配置建议">配置建议
+&lt;/h2>&lt;p>企业用户常通过页面规则（Page Rules）实现功能组合，例如为后台路径关闭缓存、为静态资源设置强缓存，同时启用 Under Attack Mode 应对突发安全威胁‌。免费版已覆盖 80% 基础需求，大型企业可升级套餐获取自定义 WAF 规则、实时日志分析等进阶功能‌。&lt;/p></description></item><item><title>Cloudflare 与国内 CDN</title><link>https://www.carlos2016.cfd/p/cloudflare-%E4%B8%8E%E5%9B%BD%E5%86%85-cdn/</link><pubDate>Tue, 11 Mar 2025 23:57:45 +0800</pubDate><guid>https://www.carlos2016.cfd/p/cloudflare-%E4%B8%8E%E5%9B%BD%E5%86%85-cdn/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/45.webp" alt="Featured image of post Cloudflare 与国内 CDN" />&lt;h2 id="定位">定位
+&lt;/h2>&lt;p>&lt;strong>Cloudflare‌&lt;/strong>&lt;/p>
+&lt;p>全球性 CDN‌，服务覆盖全球 300+ 城市，节点主要分布在海外地区（如欧美、亚太非中国大陆地区），中国大陆节点较少‌。&lt;/p>
+&lt;p>功能集成‌，除 CDN 外，集成 DDoS 防护、Web 应用防火墙（WAF）、SSL 证书管理等安全功能‌。&lt;/p>
+&lt;p>&lt;strong>国内 CDN‌（如锐安盾、阿里云 CDN）&lt;/strong>&lt;/p>
+&lt;p>本地化加速‌：节点集中在中国大陆境内，针对国内用户网络环境（如跨运营商、骨干网延迟）优化访问速度‌。&lt;/p>
+&lt;p>合规性适配‌：需符合中国互联网监管要求（如 ICP 备案、内容过滤）‌。&lt;/p>
+&lt;h2 id="总结">总结
+&lt;/h2>&lt;p>相同点‌：均为内容分发网络（CDN），通过缓存静态资源加速访问‌。&lt;/p>
+&lt;p>&lt;strong>核心差异&lt;/strong>&lt;/p>
+&lt;p>定位‌：Cloudflare 是全球化综合服务（CDN+安全），国内 CDN 专注本地化加速与合规‌。&lt;/p>
+&lt;p>&lt;strong>适用性‌&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>若用户群体以海外为主 → ‌Cloudflare 更优‌‌。&lt;/li>
+&lt;li>若用户群体集中在中国大陆 → ‌国内 CDN 更优‌‌。&lt;/li>
+&lt;/ul>
+&lt;p>混合方案‌：可通过分线路解析（国内用国产 CDN，海外用 Cloudflare）实现全局加速‌。&lt;/p></description></item><item><title>Cloudflare for SaaS 定义</title><link>https://www.carlos2016.cfd/p/cloudflare-for-saas-%E5%AE%9A%E4%B9%89/</link><pubDate>Tue, 11 Mar 2025 23:22:37 +0800</pubDate><guid>https://www.carlos2016.cfd/p/cloudflare-for-saas-%E5%AE%9A%E4%B9%89/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/37.webp" alt="Featured image of post Cloudflare for SaaS 定义" />&lt;h2 id="saas">‌SaaS
+&lt;/h2>&lt;p>‌SaaS（Software as a Service，软件即服务）‌ 是一种基于云端的软件服务模式，用户通过互联网访问服务商提供的应用程序，无需自行购买、安装或维护本地软硬件‌。&lt;/p>
+&lt;p>类比理解‌：类似“共享单车”，用户只需扫码使用，无需承担车辆维护责任‌。&lt;/p>
+&lt;p>&lt;strong>核心特征&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>服务商托管软件并负责维护、更新与安全‌；&lt;/li>
+&lt;li>用户通过订阅按需付费，降低初期投入成本‌。&lt;/li>
+&lt;/ul>
+&lt;h2 id="cloudflare-for-saas">Cloudflare for SaaS
+&lt;/h2>&lt;p>&lt;strong>定义&lt;/strong>：Cloudflare for SaaS‌ 是 Cloudflare 面向 SaaS 开发者提供的 ‌基础设施服务套件‌，专注于解决 SaaS 应用在域名管理、安全防护和性能优化方面的需求‌。&lt;/p>
+&lt;p>&lt;strong>核心功能&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>自定义域名托管‌：允许客户绑定自己的域名（如 app.client-company.com）到你的 SaaS 平台，无需自行配置 DNS 或 SSL 证书‌；&lt;/li>
+&lt;li>自动化 SSL 证书‌：为每个客户域名自动签发和管理 SSL/TLS 证书（支持泛域名），保障 HTTPS 加密访问‌；&lt;/li>
+&lt;li>全球 CDN 加速‌：通过 Cloudflare 的全球网络分发静态和动态内容，降低延迟‌；&lt;/li>
+&lt;li>安全防护‌：集成 DDoS 防护、Web 应用防火墙（WAF）和 Bot 管理，抵御网络攻击‌。&lt;/li>
+&lt;/ul>
+&lt;h2 id="概念混淆">概念混淆
+&lt;/h2>&lt;p>&lt;strong>明确上下文&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>讨论软件服务模式‌时，SaaS 指代“软件即服务”；&lt;/li>
+&lt;li>讨论开发工具‌时，Cloudflare for SaaS 是专为 SaaS 开发者提供的技术方案。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Cloudflare for SaaS 与通用 SaaS 概念不冲突&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Cloudflare for SaaS‌ 是工具，帮助开发者构建 SaaS 应用；&lt;/li>
+&lt;li>通用 SaaS‌ 是商业模式，描述软件交付方式。&lt;/li>
+&lt;/ul></description></item><item><title>hugo 部署到 cloudflare</title><link>https://www.carlos2016.cfd/p/hugo-%E9%83%A8%E7%BD%B2%E5%88%B0-cloudflare/</link><pubDate>Tue, 11 Mar 2025 21:12:53 +0800</pubDate><guid>https://www.carlos2016.cfd/p/hugo-%E9%83%A8%E7%BD%B2%E5%88%B0-cloudflare/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/52.webp" alt="Featured image of post hugo 部署到 cloudflare" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>本文主题是 hugo 如何部署到 cloudflare，访问效果在国内其实和 github pages 差不多，呵呵&lt;/p>
+&lt;h2 id="实操">实操
+&lt;/h2>&lt;p>选择 pages&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311210040.webp"
+data-webp="/00-assets/Pasted%20image%2020250311210040.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311210040.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311210040.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311210040.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>选择仓库&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311061153.webp"
+data-webp="/00-assets/Pasted%20image%2020250311061153.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311061153.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311061153.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311061153.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>根据自己实际情况填写，构建命令&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">hugo --gc --minify --environment production
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311210217.webp"
+data-webp="/00-assets/Pasted%20image%2020250311210217.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311210217.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311210217.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311210217.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>我这里因为 github page 已经部署过了，所以再单独创建一份配置用来区分&lt;/p>
+&lt;p>在 &lt;code>/root/hugo/config/production&lt;/code> 创建 &lt;code>hugo.yaml&lt;/code> 文件，然后上传到 github，通过 &lt;code>--environment production&lt;/code> 参数用来指定配置文件&lt;/p>
+&lt;p>通过 &lt;code>HUGO_VERSION&lt;/code> 指定 hugo 版本，我这里选择 &lt;code>0.125.7&lt;/code> 版本&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311210743.webp"
+data-webp="/00-assets/Pasted%20image%2020250311210743.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311210743.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311210743.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311210743.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>点击“保存并部署”即可将 github 的 hugo 源文件克隆到 cloudflare，cloudflare 就会自动生成 hugo 静态文件并发布&lt;/p>
+&lt;h2 id="删除项目">删除项目
+&lt;/h2>&lt;p>点击设置，划到最底部，点击删除即可。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311061506.webp"
+data-webp="/00-assets/Pasted%20image%2020250311061506.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311061506.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311061506.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250311061506.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="补充说明">补充说明
+&lt;/h2>&lt;p>如果样式错误，可以通过参数 &lt;code>--baseURL &amp;quot;https://custom-url.com/&amp;quot;&lt;/code> 强制指定域名完整命令&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-shell" data-lang="shell">&lt;span class="line">&lt;span class="cl">hugo --baseURL &lt;span class="s2">&amp;#34;https://custom-url.com/&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item></channel></rss>

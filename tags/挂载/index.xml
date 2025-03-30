@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>挂载 on carlos</title><link>https://www.carlos2016.cfd/tags/%E6%8C%82%E8%BD%BD/</link><description>Recent content in 挂载 on carlos</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Example Person</copyright><lastBuildDate>Sun, 30 Mar 2025 16:10:24 +0000</lastBuildDate><atom:link href="https://www.carlos2016.cfd/tags/%E6%8C%82%E8%BD%BD/index.xml" rel="self" type="application/rss+xml"/><item><title>windows 安装 rclone 挂载 alist</title><link>https://www.carlos2016.cfd/p/windows-%E5%AE%89%E8%A3%85-rclone-%E6%8C%82%E8%BD%BD-alist/</link><pubDate>Wed, 19 Mar 2025 21:53:54 +0800</pubDate><guid>https://www.carlos2016.cfd/p/windows-%E5%AE%89%E8%A3%85-rclone-%E6%8C%82%E8%BD%BD-alist/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/54.webp" alt="Featured image of post windows 安装 rclone 挂载 alist" />&lt;h2 id="安装命令">安装命令
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cmd" data-lang="cmd">&lt;span class="line">&lt;span class="cl">winget install Rclone.Rclone
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">winget install WinFsp.WinFsp
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="rclone添加alist服务器地址">rclone添加alist服务器地址
+&lt;/h2>&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cmd" data-lang="cmd">&lt;span class="line">&lt;span class="cl">rclone config
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>输入 n。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/20dff48b3a5ba11575a27468ac08aa95.png"
+data-webp="/_resources/20dff48b3a5ba11575a27468ac08aa95.webp"
+data-original="https://www.carlos2016.cfd/_resources/20dff48b3a5ba11575a27468ac08aa95.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/20dff48b3a5ba11575a27468ac08aa95.png"
+alt="20dff48b3a5ba11575a27468ac08aa95.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>输入名字。这个名字之后命令会用到。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/38e8f560c63257e38a92bdf07030b918.png"
+data-webp="/_resources/38e8f560c63257e38a92bdf07030b918.webp"
+data-original="https://www.carlos2016.cfd/_resources/38e8f560c63257e38a92bdf07030b918.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/38e8f560c63257e38a92bdf07030b918.png"
+alt="38e8f560c63257e38a92bdf07030b918.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>这里选择 webdav，根据自己的 rclone 版本号选择。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/3acd186c19d6090332528599206b7988.png"
+data-webp="/_resources/3acd186c19d6090332528599206b7988.webp"
+data-original="https://www.carlos2016.cfd/_resources/3acd186c19d6090332528599206b7988.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/3acd186c19d6090332528599206b7988.png"
+alt="3acd186c19d6090332528599206b7988.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>输入 alist 服务器地址，注意 /dav。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/f5a83b7b9a646a4b9f5e2f1be7c91df1.png"
+data-webp="/_resources/f5a83b7b9a646a4b9f5e2f1be7c91df1.webp"
+data-original="https://www.carlos2016.cfd/_resources/f5a83b7b9a646a4b9f5e2f1be7c91df1.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/f5a83b7b9a646a4b9f5e2f1be7c91df1.png"
+alt="f5a83b7b9a646a4b9f5e2f1be7c91df1.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>输入6（根据自己版本号选择，描述一样即可，版本号不同，编号就不痛），再输入用户名，再输入y，后面填两次密码后一路回车即可。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/519c1135c49c2c9934715f44bf746e78.png"
+data-webp="/_resources/519c1135c49c2c9934715f44bf746e78.webp"
+data-original="https://www.carlos2016.cfd/_resources/519c1135c49c2c9934715f44bf746e78.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/519c1135c49c2c9934715f44bf746e78.png"
+alt="519c1135c49c2c9934715f44bf746e78.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>3 次回车，按 q 退出。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/332c409b5b63238994f0111b63cf6a0e.png"
+data-webp="/_resources/332c409b5b63238994f0111b63cf6a0e.webp"
+data-original="https://www.carlos2016.cfd/_resources/332c409b5b63238994f0111b63cf6a0e.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/332c409b5b63238994f0111b63cf6a0e.png"
+alt="332c409b5b63238994f0111b63cf6a0e.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="挂载alist">挂载alist
+&lt;/h2>&lt;p>输入命令即可挂载，该命令是挂载成本地磁盘的形式。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;span class="lnt">11
+&lt;/span>&lt;span class="lnt">12
+&lt;/span>&lt;span class="lnt">13
+&lt;/span>&lt;span class="lnt">14
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-cmd" data-lang="cmd">&lt;span class="line">&lt;span class="cl">rclone mount smb: Z: &lt;span class="se">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se"> &lt;/span> --cache-dir &lt;span class="s2">&amp;#34;D:\rclone_cache\smb&amp;#34;&lt;/span> &lt;span class="se">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se"> &lt;/span> --vfs-cache-mode full &lt;span class="se">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se"> &lt;/span> --cache-chunk-size 64M &lt;span class="se">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se"> &lt;/span> --multi-thread-streams 16 --multi-thread-cutoff 32M --transfers 8 &lt;span class="se">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se"> &lt;/span> --buffer-size 128M &lt;span class="se">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se"> &lt;/span> --vfs-cache-max-size 2G --vfs-cache-max-age 6h &lt;span class="se">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se"> &lt;/span> --vfs-fast-fingerprint &lt;span class="se">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se"> &lt;/span> --no-modtime &lt;span class="se">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se"> &lt;/span> --file-perms 0755 &lt;span class="se">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se"> &lt;/span> --links &lt;span class="se">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se"> &lt;/span> --dir-cache-time 24h &lt;span class="se">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se"> &lt;/span> --poll-interval 5m &lt;span class="se">^
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se"> &lt;/span> --attr-timeout 5s
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>注意 &lt;code>--cache-dir D:alist&lt;/code> 参数，这里把缓存路径改成 d 盘 alist。&lt;/p>
+&lt;h2 id="rclone-403-错误">rclone 403 错误
+&lt;/h2>&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/ffa60f7ccd0d13c364a0789f9982e478.png"
+data-webp="/_resources/ffa60f7ccd0d13c364a0789f9982e478.webp"
+data-original="https://www.carlos2016.cfd/_resources/ffa60f7ccd0d13c364a0789f9982e478.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/ffa60f7ccd0d13c364a0789f9982e478.png"
+alt="ffa60f7ccd0d13c364a0789f9982e478.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>alist 后台，把权限全部打开即可解决。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/831307c1bbbe4ba9183e45aa77f944a2.png"
+data-webp="/_resources/831307c1bbbe4ba9183e45aa77f944a2.webp"
+data-original="https://www.carlos2016.cfd/_resources/831307c1bbbe4ba9183e45aa77f944a2.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/831307c1bbbe4ba9183e45aa77f944a2.png"
+alt="831307c1bbbe4ba9183e45aa77f944a2.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="rclone-eof-错误">rclone eof 错误
+&lt;/h2>&lt;p>把 alist ftp 驱动改成 smb 即可，可能由于 rclone 不兼容 alist ftp驱动吧。用 raidrive 就没有问题，但是该软件有广告。&lt;/p></description></item></channel></rss>

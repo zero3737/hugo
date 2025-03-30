@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>办公 on carlos</title><link>https://www.carlos2016.cfd/tags/%E5%8A%9E%E5%85%AC/</link><description>Recent content in 办公 on carlos</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Example Person</copyright><lastBuildDate>Sun, 30 Mar 2025 16:10:24 +0000</lastBuildDate><atom:link href="https://www.carlos2016.cfd/tags/%E5%8A%9E%E5%85%AC/index.xml" rel="self" type="application/rss+xml"/><item><title>PowerToys 批量重命名</title><link>https://www.carlos2016.cfd/p/powertoys-%E6%89%B9%E9%87%8F%E9%87%8D%E5%91%BD%E5%90%8D/</link><pubDate>Fri, 07 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.carlos2016.cfd/p/powertoys-%E6%89%B9%E9%87%8F%E9%87%8D%E5%91%BD%E5%90%8D/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/02.webp" alt="Featured image of post PowerToys 批量重命名" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>本文主题是如何批量重命名文件，从 00 开始递增，强制保留 2 位数&lt;/p>
+&lt;h2 id="使用-powerrename-批量重命名">使用 PowerRename 批量重命名
+&lt;/h2>&lt;p>右键点击选定的文件，选择“PowerRename”选项，打开 PowerRename 窗口。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250307030309.webp"
+data-webp="/00-assets/Pasted%20image%2020250307030309.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250307030309.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250307030309.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250307030309.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>启用正则表达式，输入 &lt;code>.*&lt;/code> 匹配任意文件名&lt;/p>
+&lt;p>在“替换为”字段中输入新的命名格式。使用 &lt;code>${padding=2;increment=1;start=0}&lt;/code> 来实现从 00 开始的两位数递增编号。&lt;/p>
+&lt;p>最后点击应用即可。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250307030156.webp"
+data-webp="/00-assets/Pasted%20image%2020250307030156.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250307030156.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250307030156.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250307030156.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item></channel></rss>

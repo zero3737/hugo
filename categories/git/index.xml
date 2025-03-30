@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Git on carlos</title>
+        <link>https://www.carlos.lh/categories/git/</link>
+        <description>Recent content in Git on carlos</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Example Person</copyright>
+        <lastBuildDate>Thu, 13 Mar 2025 16:55:17 +0800</lastBuildDate><atom:link href="https://www.carlos.lh/categories/git/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>git 入门使用</title>
+        <link>https://www.carlos.lh/p/git-%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8/</link>
+        <pubDate>Mon, 10 Mar 2025 02:09:10 +0800</pubDate>
+        
+        <guid>https://www.carlos.lh/p/git-%E5%85%A5%E9%97%A8%E4%BD%BF%E7%94%A8/</guid>
+        <description>&lt;img src="https://www.carlos.lh/bg/10.webp" alt="Featured image of post git 入门使用" /&gt;&lt;h2 id=&#34;概念&#34;&gt;概念
+&lt;/h2&gt;&lt;p&gt;所有的版本控制系统，其实只能跟踪文本文件的改动，比如 TXT 文件、网页、所有的程序代码等等。而图片、视频这些二进制文件，虽然也能由版本控制系统管理，但没法跟踪文件的变化，只能把二进制文件每次改动串起来，也就是只知道图片从 100KB 改成了 120KB。Microsoft 的 Word 格式是二进制格式，因此，版本控制系统是没法跟踪 Word 文件的改动的。&lt;/p&gt;
+&lt;p&gt;工作区：就是你在电脑里能看到的目录。&lt;/p&gt;
+&lt;p&gt;版本库：工作区有一个隐藏目录 .git，这个不算工作区，而是 Git 的版本库。版本库里存了很多东西，其中最重要的就是称为 stage（或者叫 index）的暂存区。&lt;/p&gt;
+&lt;p&gt;还有 Git 为我们自动创建的第一个分支 master，以及指向 master 的一个指针叫 HEAD。&lt;/p&gt;
+&lt;h2 id=&#34;配置姓名和邮箱&#34;&gt;配置姓名和邮箱
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global user.name &amp;#34;Your Name&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global user.email &amp;#34;email@example.com&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;--global&lt;/code&gt; 参数表示这台机器上所有的 Git 仓库都会使用这个配置。当然也可以对某个仓库指定不同的用户名和 Email 地址。&lt;/p&gt;
+&lt;h2 id=&#34;本地仓库&#34;&gt;本地仓库
+&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;命令&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git init&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;在当前目录下会自动生成 .git 隐藏文件夹，该隐藏文件夹就是 git 版本库。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git add &amp;lt;file&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;将文件添加到暂存区（将目标文件加入跟踪列表）。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git add -A&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;将所有文件添加到存储区。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git add -f App.class&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;强制添加。被 git 忽略的文件也可以强制添加。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git commit –m &amp;quot;message&amp;quot;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;将暂存区文件提交到版本库。&lt;code&gt;-m&lt;/code&gt; 参数为提交说明。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git status&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;显示工作目录和暂存区的状态。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git log --pretty=oneline&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;显示提交日志。&lt;code&gt;--pretty=oneline&lt;/code&gt; 只显示 commit id 和描述。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git reflog&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;查看命令历史。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git diff &amp;lt;file&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;比较当前文件和暂存区文件差异。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git diff HEAD [&amp;lt;path&amp;gt;...]&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;比较工作区与最新本地版本库。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git reset --hard HEAD^&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;将当前 HEAD 复位到指定状态。HEAD 表示当前版本，&lt;code&gt;HEAD^&lt;/code&gt; 表示上一个版本，&lt;code&gt;HEAD^^&lt;/code&gt; 表示上上一个版本，&lt;code&gt;HEAD~100&lt;/code&gt; 表示前 100 个版本。&lt;br/&gt;Git 的版本回退速度非常快，因为 Git 在内部有个指向当前版本的 HEAD 指针。当你回退版本的时候，Git 仅仅是改变 HEAD 指向。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git reset HEAD &amp;lt;file&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;把暂存区的修改撤销掉，重新放回工作区。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git checkout --file&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;文件在工作区的修改全部撤销。文件没有被放到暂存区，撤销修改就回到和版本库一模一样的状态；文件已经添加到暂存区后，撤销修改就回到添加到暂存区后的状态。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git rm file&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;删除文件，同时还会将这个删除操作记录放到缓存区。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;分支管理&#34;&gt;分支管理
+&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;命令&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git checkout master&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;切换分支。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git branch&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;查看当前有哪些分支。当前分支前面有个星号。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git branch dev&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;创建分支 dev。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git branch -d dev&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;删除 dev 分支。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git branch -D dev&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;强制删除 dev 分支。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git branch dev origin/dev&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;创建远程 origin 的 dev 分支到本地。默认克隆只有master分支。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git checkout -b dev&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;创建并切换到 dev 分支。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git merge dev&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;将当前分支合并到 dev 分支。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git merge --no-ff -m &amp;quot;merge with no-ff&amp;quot; dev&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;将当前分支合并到 dev 分支。&lt;code&gt;--no-ff&lt;/code&gt; 参数，表示禁用快速模式。&lt;br/&gt;普通模式：当前分支合并时会提交到版本库，不是简单的变更指针指向。&lt;br/&gt;快速模式：把当前分支指向指定分支。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git log –graph&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;查看分支合并图。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;分支策略&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;master 分支称为主分支，HEAD 表示指向当前分支。&lt;/p&gt;
+&lt;p&gt;master 分支应该是非常稳定的，dev 分支是不稳定的。1.0 版本发布时，再把 dev 分支合并到 master 上，在 master 分支发布 1.0 版本。每个人都在 dev 分支上干活，每个人都有自己的分支，时不时地往 dev 分支上合并。&lt;/p&gt;
+&lt;p&gt;在 master 分支修复 bug，必须新建 bug 分支，修复完切换到 master 分支合并 bug 分支。&lt;/p&gt;
+&lt;p&gt;在 dev 分支上开发新功能，新建 Feature 分支，新功能开发完毕切换到 dev 分支合并，如果不想合并必须强制删除。&lt;/p&gt;
+&lt;p&gt;总结：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;master 分支是主分支，因此要时刻与远程同步。&lt;/li&gt;
+&lt;li&gt;dev 分支是开发分支，团队所有成员都需要在上面工作，所以也需要与远程同步。&lt;/li&gt;
+&lt;li&gt;bug 分支只用于在本地修复 bug，就没必要推到远程了，除非老板要看看你每周到底修复了几个 bug。&lt;/li&gt;
+&lt;li&gt;feature 分支是否推到远程，取决于你是否和你的小伙伴合作在上面开发。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;status&#34;&gt;status
+&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;命令&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git stash&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;会把所有未提交的修改（包括暂存的和非暂存的）都保存起来。便于切换其他分支，修改其它分支的代码。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git stash list&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;列出通过 stash 储藏的修改。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git stash apply stash@{0}&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;恢复 stash@{0}。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git stash drop stash@{0}&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;删除 stash@{0}。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git stash pop&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;恢复的同时把stash内容删除。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;标签管理&#34;&gt;标签管理
+&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;命令&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git tag &amp;lt;name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;给最近的 commit 打上标签。tag 就是一个让人容易记住的有意义的名字，它跟某个 commit 绑在一起。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git tag v0.9 f52c633&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;给指定 commit id 打上标签。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git tag&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;显示所有标签。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;远程仓库&#34;&gt;远程仓库
+&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;命令&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git remote add [shortname] [url]&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;添加远程仓库关联。shortname 只能对应一个 url。&lt;br/&gt;注意：推送代码前必须先关联远程仓库。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git remote&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;不带参数，列出已经存在的远程连接。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git remote –v&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;列出远程连接，并显示对应 url。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git remote remove &amp;lt;name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;删除远程仓库。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git push &amp;lt;远程主机名&amp;gt; &amp;lt;本地分支名&amp;gt;:&amp;lt;远程分支名&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;将本地分支的更新，推送到远程主机。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git push origin master&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;将本地的 master 分支推送到 origin 主机的 master 分支。如果 master 不存在，则会被新建。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git push -u origin master&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;-u 选项指定一个默认主机，这样后面就可以不加任何参数使用 git push。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git push origin :master&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;删除指定的远程分支，因为这等同于推送一个空的本地分支到远程分支。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git push &amp;ndash;all origin&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;推送所有分支。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;git push -f origin dev:master&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;强制推送。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git clone &amp;lt;版本库的网址&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;本地主机生成一个目录，与远程主机的版本库同名。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git clone &amp;lt;版本库的网址&amp;gt; &amp;lt;本地目录名&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;如果要指定不同的目录名，可以将目录名作为git clone命令的第二个参数。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git pull &amp;lt;远程主机名&amp;gt; &amp;lt;远程分支名&amp;gt;:&amp;lt;本地分支名&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;拉取远程主机某个分支的更新，再与本地的指定分支合并。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git fetch &amp;lt;远程主机名&amp;gt; &amp;lt;远程分支名&amp;gt;:&amp;lt;本地分支名&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git fetch&lt;/code&gt; 和 &lt;code&gt;git pull&lt;/code&gt; 类似，但不会自动合并当前分支。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;git branch --set-upstream debug origin/debug&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;将本地 bug 分支与远程的 bug 分支关联。解决拉取时 git 提示 &lt;code&gt;no tracking information&lt;/code&gt; 的问题。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;克隆和拉取&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;clone 是本地没有 repository 时，将远程 repository 整个下载过来&lt;/p&gt;
+&lt;p&gt;pull 是本地有 repository 时，将远程 repository 里新的 commit 数据(如有的话)下载过来，并且与本地代码 merge。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

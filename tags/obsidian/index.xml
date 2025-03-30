@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Obsidian on carlos</title><link>https://www.carlos2016.cfd/tags/obsidian/</link><description>Recent content in Obsidian on carlos</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Example Person</copyright><lastBuildDate>Sun, 30 Mar 2025 16:10:24 +0000</lastBuildDate><atom:link href="https://www.carlos2016.cfd/tags/obsidian/index.xml" rel="self" type="application/rss+xml"/><item><title>obsidian 如何恢复误删文件</title><link>https://www.carlos2016.cfd/p/obsidian-%E5%A6%82%E4%BD%95%E6%81%A2%E5%A4%8D%E8%AF%AF%E5%88%A0%E6%96%87%E4%BB%B6/</link><pubDate>Mon, 17 Mar 2025 20:44:05 +0800</pubDate><guid>https://www.carlos2016.cfd/p/obsidian-%E5%A6%82%E4%BD%95%E6%81%A2%E5%A4%8D%E8%AF%AF%E5%88%A0%E6%96%87%E4%BB%B6/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/05.webp" alt="Featured image of post obsidian 如何恢复误删文件" />&lt;h2 id="obsidian内置文件快照需预先启用">Obsidian内置文件快照（需预先启用）
+&lt;/h2>&lt;p>&lt;strong>启用文件恢复插件&lt;/strong>&lt;/p>
+&lt;p>点击左下角「设置」→「核心插件」→开启「文件恢复」功能&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317204154.webp"
+data-webp="/00-assets/Pasted%20image%2020250317204154.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317204154.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317204154.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317204154.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>&lt;strong>恢复历史版本&lt;/strong>&lt;/p>
+&lt;p>在设置界面点击「查看快照」，选择对应时间点的备份文件进行覆盖还原‌&lt;/p>
+&lt;p>‌
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317204252.webp"
+data-webp="/00-assets/Pasted%20image%2020250317204252.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317204252.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317204252.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317204252.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>或者，命令面板搜索“恢复”即可，&lt;code>crtl + p&lt;/code>&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317204340.webp"
+data-webp="/00-assets/Pasted%20image%2020250317204340.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317204340.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317204340.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250317204340.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item><item><title>obsidian 中标签与分类</title><link>https://www.carlos2016.cfd/p/obsidian-%E4%B8%AD%E6%A0%87%E7%AD%BE%E4%B8%8E%E5%88%86%E7%B1%BB/</link><pubDate>Sat, 15 Mar 2025 01:11:27 +0800</pubDate><guid>https://www.carlos2016.cfd/p/obsidian-%E4%B8%AD%E6%A0%87%E7%AD%BE%E4%B8%8E%E5%88%86%E7%B1%BB/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/27.webp" alt="Featured image of post obsidian 中标签与分类" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>在 Obsidian 知识管理体系中，标签与分类是两种不同的组织结构&lt;/p>
+&lt;p>&lt;strong>分类&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>主要通过文件夹实现专题式管理，适用于纵向层级划分（例如：读书笔记/先秦文学/五经）‌&lt;/li>
+&lt;li>标准分类通常采用单值模式，即一篇笔记默认归属一个文件夹‌&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>标签&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>侧重横向维度拓展，支持多重属性标注（例如：&lt;code>#时间管理&lt;/code> &lt;code>#工作效率&lt;/code>）&lt;/li>
+&lt;li>天然支持多值体系，允许无限叠加关联标签‌&lt;/li>
+&lt;/ul>
+&lt;h2 id="实操">实操
+&lt;/h2>&lt;p>这是错误案例，根据分类定义，不可能有多个值&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250315011217.webp"
+data-webp="/00-assets/Pasted%20image%2020250315011217.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250315011217.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250315011217.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250315011217.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>不确定分类就默认为空即可，不然不方便查找&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250315011458.webp"
+data-webp="/00-assets/Pasted%20image%2020250315011458.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250315011458.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250315011458.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250315011458.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item><item><title>obsidian 图片链接</title><link>https://www.carlos2016.cfd/p/obsidian-%E5%9B%BE%E7%89%87%E9%93%BE%E6%8E%A5/</link><pubDate>Sat, 15 Mar 2025 00:20:56 +0800</pubDate><guid>https://www.carlos2016.cfd/p/obsidian-%E5%9B%BE%E7%89%87%E9%93%BE%E6%8E%A5/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/56.webp" alt="Featured image of post obsidian 图片链接" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>我 obsidian 只装了图片链接插件，比如移动文件的时候，自动批量修改图片链接。obsidian 默认修改图片链接并不好用，有时候生效，有时候不生效，很奇怪。&lt;/p>
+&lt;h2 id="插件安装">插件安装
+&lt;/h2>&lt;p>安装第三方插件&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250306060718.webp"
+data-webp="/00-assets/Pasted%20image%2020250306060718.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250306060718.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250306060718.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250306060718.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>开启开关，即可自动更新笔记图片&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250306060805.webp"
+data-webp="/00-assets/Pasted%20image%2020250306060805.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250306060805.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250306060805.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250306060805.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p></description></item><item><title>hugo 入门篇</title><link>https://www.carlos2016.cfd/p/hugo-%E5%85%A5%E9%97%A8%E7%AF%87/</link><pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.carlos2016.cfd/p/hugo-%E5%85%A5%E9%97%A8%E7%AF%87/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/49.webp" alt="Featured image of post hugo 入门篇" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>本文是在 ubuntu 环境中安装 hugo。&lt;/p>
+&lt;h2 id="安装">安装
+&lt;/h2>&lt;p>安装命令&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">sudo apt update
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">sudo apt -y install hugo
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>验证是否安装成功&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">hugo version
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>安装成功会显示如下信息。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/3a70e88f90cd0095f62fc5a4db7bea9c.png"
+data-webp="/_resources/3a70e88f90cd0095f62fc5a4db7bea9c.webp"
+data-original="https://www.carlos2016.cfd/_resources/3a70e88f90cd0095f62fc5a4db7bea9c.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/3a70e88f90cd0095f62fc5a4db7bea9c.png"
+alt="3a70e88f90cd0095f62fc5a4db7bea9c.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="启动与配置">启动与配置
+&lt;/h2>&lt;p>创建站点目录&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">hugo new site quickstart
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>将主题文件放到站点目录中的 themes 目录下&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/_resources/40b6311d8afdc67f7c5375a424df3e59.png"
+data-webp="/_resources/40b6311d8afdc67f7c5375a424df3e59.webp"
+data-original="https://www.carlos2016.cfd/_resources/40b6311d8afdc67f7c5375a424df3e59.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;img src="https://www.carlos2016.cfd/_resources/40b6311d8afdc67f7c5375a424df3e59.png"
+alt="40b6311d8afdc67f7c5375a424df3e59.png"
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>启动 hugo 服务&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">hugo server
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="绑定到-0000">绑定到 0.0.0.0
+&lt;/h3>&lt;p>hugo server 默认绑定到 127.0.0.1（localhost），因此只能在本机访问。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">hugo server --bind&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;0.0.0.0&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>在启动 hugo server 时，使用 &amp;ndash;bind 参数将其绑定到 0.0.0.0，这样可以监听所有网络接口。&lt;/p>
+&lt;p>这样，局域网内的其他设备可以通过你的服务器 IP 地址访问 Hugo 服务。例如，如果服务器的 IP 是 192.168.1.100，可以通过 &lt;code>http://192.168.1.100:1313&lt;/code> 访问。&lt;/p>
+&lt;h3 id="指定端口号">指定端口号
+&lt;/h3>&lt;p>如果需要指定端口号，可以使用 -p 参数：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-sh" data-lang="sh">&lt;span class="line">&lt;span class="cl">hugo server --bind&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;0.0.0.0&amp;#34;&lt;/span> -p &lt;span class="m">1234&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h3 id="设置-baseurl">设置 baseURL
+&lt;/h3>&lt;p>如果页面资源加载失败或样式错乱，可能是因为 baseURL 默认指向 localhost。可以通过 &amp;ndash;baseURL 参数指定为服务器的 IP 地址：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">hugo server --bind=&amp;#34;0.0.0.0&amp;#34; --baseURL=&amp;#34;http://192.168.1.100/&amp;#34;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>将 &lt;code>192.168.1.100&lt;/code> 替换为你的实际服务器 IP。&lt;/p>
+&lt;h2 id="主题">主题
+&lt;/h2>&lt;ul>
+&lt;li>把 hugo_blog/themes/hugo-theme-stack/exampleSite/config.yaml 文件拷贝到 hugo_blog 目录下。&lt;/li>
+&lt;li>把 hugo_blog/themes/hugo-theme-stack/exampleSite/content 目录下的文件拷贝到 hugo_blog 目录下。&lt;/li>
+&lt;/ul>
+&lt;p>hugo-theme-stack 主题有样例配置文件作为参考，直接复制粘贴即可。&lt;/p>
+&lt;h2 id="头部元数据">头部元数据
+&lt;/h2>&lt;p>Hugo 的 ‌Front Matter‌（文件头部元数据）定义了内容的核心参数，控制页面生成、URL 结构和内容管理。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>参数&lt;/th>
+&lt;th>说明&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>slug&lt;/td>
+&lt;td>自定义文章 URL 末尾部分，优先级高于标题（title）‌&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>draft&lt;/td>
+&lt;td>标记是否为草稿（true/false），草稿默认不发布到生产环境‌&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>categories&lt;/td>
+&lt;td>类别&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>tags&lt;/td>
+&lt;td>标签&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>image&lt;/td>
+&lt;td>定义文章或页面的封面图&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>title‌&lt;/td>
+&lt;td>定义页面标题&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>date&lt;/td>
+&lt;td>设置内容发布日期，控制文章在列表中的排序&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>description&lt;/td>
+&lt;td>提供页面摘要描述，用于 SEO 优化和社交媒体分享&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>weight&lt;/td>
+&lt;td>控制内容在列表或菜单中的排序权重&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>author&lt;/td>
+&lt;td>声明文章作者信息，支持多作者配置&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>categories 和 tags&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="l">categories = [&amp;#34;技术&amp;#34;, &amp;#34;前端&amp;#34;] &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 支持多层级 &lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="l">tags = [&amp;#34;Hugo&amp;#34;, &amp;#34;静态站点&amp;#34;] &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 多个标签以数组形式定义‌:ml-citation{ref=&amp;#34;1&amp;#34; data=&amp;#34;citationList&amp;#34;} &lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>image 基础用法，需将图片存放在 static 目录下，通过相对路径引用‌。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="l">image = &amp;#34;/img/logo3.png&amp;#34; &lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="c"># 对应 static/img/logo3.png &lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>支持 http 远程调佣&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="l">image = &amp;#34;https://example.com/cover.jpg&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="文章不同元数据模板">文章不同元数据模板
+&lt;/h2>&lt;p>‌TOML 格式‌编写元数据，用来兼容 hugo&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-toml" data-lang="toml">&lt;span class="line">&lt;span class="cl">&lt;span class="err">+++&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">date&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;{{date:YYYY-MM-DD}}&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">title&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;{{title}}&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">tags&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;Hugo&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;静态站点&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">categories&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;技术&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;前端&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">description&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;hello world!&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">image&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;https://api.timelessq.com/bing/random&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nx">author&lt;/span> &lt;span class="p">=&lt;/span> &lt;span class="s2">&amp;#34;carlos&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">+++&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>YAML 格式‌编写元数据&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nn">---&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">title&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;示例文章&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">date&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="ld">2025-03-06&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nt">draft&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="kc">false&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="nn">---&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>JSON 格式&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-json" data-lang="json">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;title&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;示例文章&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;date&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="s2">&amp;#34;2025-03-06&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="nt">&amp;#34;draft&amp;#34;&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="kc">false&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="p">}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item><item><title>obsidian 基础使用教程</title><link>https://www.carlos2016.cfd/p/obsidian-%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link><pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.carlos2016.cfd/p/obsidian-%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/18.webp" alt="Featured image of post obsidian 基础使用教程" />&lt;h2 id="文件与链接">文件与链接
+&lt;/h2>&lt;p>配置如图&lt;/p>
+&lt;ul>
+&lt;li>内部链接类型选择“相对路径”，兼容markdown&lt;/li>
+&lt;li>“使用wiki链接”关闭，兼容markdown&lt;/li>
+&lt;li>修改“附件默认存放路径”，不然图片默认存放根目录，很不美观&lt;/li>
+&lt;/ul>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305051412.webp"
+data-webp="/00-assets/Pasted%20image%2020250305051412.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305051412.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305051412.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305051412.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="兼容-joplin">兼容 joplin
+&lt;/h2>&lt;p>joplin 导出 markdown 默认目录结构。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305051749.webp"
+data-webp="/00-assets/Pasted%20image%2020250305051749.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305051749.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305051749.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305051749.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>obsidian 主流知识库目录结构要符合主流标准，不然很难管理。joplin 附件都是存放在自己的数据文件夹下，用户不用关心附件管理问题。而 obsidian 需要自己设计知识库目录结构，不然管理非常头疼。&lt;/p>
+&lt;p>我的设计思路非常简单，根目录下穿件 00-assets 目录，用于存放所有附件即可。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305052330.webp"
+data-webp="/00-assets/Pasted%20image%2020250305052330.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305052330.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305052330.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305052330.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>看起来非常清爽，为了兼容新的目录结构，需要使用符号链接。&lt;/p>
+&lt;p>先将 &lt;code>_resources&lt;/code> 目录重命名为 00-assets，然后运行命令&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-batch" data-lang="batch">&lt;span class="line">&lt;span class="cl">&lt;span class="k">mklink&lt;/span> /D &lt;span class="s2">&amp;#34;C:\Users\carlos\Desktop\obsidian\_resources&amp;#34;&lt;/span> &lt;span class="s2">&amp;#34;C:\Users\carlos\Desktop\obsidian\00-assets&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>这样导出的 markdown 文件就能在 vscode 中正常显示图片，已经完美兼容 obsidian&lt;/p>
+&lt;h2 id="快捷键">快捷键
+&lt;/h2>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>快捷键&lt;/th>
+&lt;th>说明&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>ctrl+shift+v&lt;/code>&lt;/td>
+&lt;td>无格式粘贴&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>ctrl+o&lt;/code>&lt;/td>
+&lt;td>&lt;code>Ctrl+O&lt;/code> 可直接打开“打开文件”对话框，用于快速选择并加载本地文件‌。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>ctrl+p&lt;/code>&lt;/td>
+&lt;td>调出命令面板&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>右键快速插入表格&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305195822.webp"
+data-webp="/00-assets/Pasted%20image%2020250305195822.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305195822.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305195822.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305195822.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="元数据">元数据
+&lt;/h2>&lt;p>在笔记第 1 行输入 &lt;code>---&lt;/code> 用于添加元数据。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305201453.webp"
+data-webp="/00-assets/Pasted%20image%2020250305201453.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305201453.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305201453.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305201453.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="双链">双链
+&lt;/h2>&lt;p>反向链接，不用手动链接，当别的笔记提到当前文件名，就会自动提示。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305202010.webp"
+data-webp="/00-assets/Pasted%20image%2020250305202010.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305202010.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305202010.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305202010.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>不过很鸡肋唉，谁会写笔记的时候复制粘贴别的笔记名啊。&lt;/p>
+&lt;p>出链，和网页的跳转页面一样，就是跳转到需要链接的笔记。和反向链接一样，输入需要链接的笔记名，就会自动显示。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305202754.webp"
+data-webp="/00-assets/Pasted%20image%2020250305202754.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305202754.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305202754.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305202754.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="白板">白板
+&lt;/h2>&lt;p>侧边栏创建白板&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305203500.webp"
+data-webp="/00-assets/Pasted%20image%2020250305203500.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305203500.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305203500.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305203500.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>简单可视化操作，就是实现思维导图。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305203241.webp"
+data-webp="/00-assets/Pasted%20image%2020250305203241.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305203241.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305203241.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305203241.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="第三方插件">第三方插件
+&lt;/h2>&lt;p>如果网络访问不了官方社区，可以访问第三方社区：&lt;a class="link" href="[PKMer_PKMer]%28https://pkmer.cn/%29" >地址1&lt;/a>
+&lt;/p>
+&lt;p>首先关闭安全模式&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305204112.webp"
+data-webp="/00-assets/Pasted%20image%2020250305204112.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305204112.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305204112.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305204112.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>点击浏览即可安装第三方插件，访问的是 github&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305204145.webp"
+data-webp="/00-assets/Pasted%20image%2020250305204145.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305204145.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305204145.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305204145.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="模板">模板
+&lt;/h2>&lt;p>开启原生模板插件，点击左下角「设置」→「核心插件」→ 启用「模板」功能‌。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305212000.webp"
+data-webp="/00-assets/Pasted%20image%2020250305212000.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305212000.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305212000.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305212000.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>在「模板」插件设置中指定模板文件夹（如 Templates）‌。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305212044.webp"
+data-webp="/00-assets/Pasted%20image%2020250305212044.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305212044.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305212044.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250305212044.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>编写模板内容，在 Templates 文件夹新建 hugo-template.md，内容如下&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt"> 1
+&lt;/span>&lt;span class="lnt"> 2
+&lt;/span>&lt;span class="lnt"> 3
+&lt;/span>&lt;span class="lnt"> 4
+&lt;/span>&lt;span class="lnt"> 5
+&lt;/span>&lt;span class="lnt"> 6
+&lt;/span>&lt;span class="lnt"> 7
+&lt;/span>&lt;span class="lnt"> 8
+&lt;/span>&lt;span class="lnt"> 9
+&lt;/span>&lt;span class="lnt">10
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="l">+++&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="l">date = &amp;#34;{{date:YYYY-MM-DD}}&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="l">author = &amp;#34;carlos&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="l">title = &amp;#34;{{title}}&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="l">description = &amp;#34;hello worlld!&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="l">tags = [&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;hello&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;world&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w">&lt;/span>&lt;span class="l">+++&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>插入模板到新笔记&lt;/p>
+&lt;ul>
+&lt;li>新建笔记 → 点击左侧「插入模板」按钮 → 选择模板文件。&lt;/li>
+&lt;li>手动补充字段&lt;/li>
+&lt;/ul>
+&lt;p>Obsidian 原生模板语法只支持动态插入时间日期，其他需要自己手动填写。&lt;/p></description></item><item><title>obsidian 知识库设计</title><link>https://www.carlos2016.cfd/p/obsidian-%E7%9F%A5%E8%AF%86%E5%BA%93%E8%AE%BE%E8%AE%A1/</link><pubDate>Thu, 06 Mar 2025 00:00:00 +0000</pubDate><guid>https://www.carlos2016.cfd/p/obsidian-%E7%9F%A5%E8%AF%86%E5%BA%93%E8%AE%BE%E8%AE%A1/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/25.webp" alt="Featured image of post obsidian 知识库设计" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>知识库目录结构设计：&lt;/p>
+&lt;ul>
+&lt;li>临时收集层‌：设立Inbox文件夹存放未整理的零散笔记，作为缓冲区域‌。&lt;/li>
+&lt;li>时间维度‌：通过Calendar或日期格式文件夹（如2025/03/2025-03-06）管理日记、会议记录等时间敏感内容‌。&lt;/li>
+&lt;li>主题/领域层‌：按知识领域（如Domains/Science、Domains/Technology）或项目（如Projects/Work）分类核心笔记‌。&lt;/li>
+&lt;li>功能辅助层‌：设置Sources（文献）、Cards（卡片笔记）等文件夹存放特定类型内容‌。&lt;/li>
+&lt;/ul>
+&lt;p>动态调整机制：&lt;/p>
+&lt;ul>
+&lt;li>新笔记先进入&lt;code>Inbox&lt;/code>，定期整理后迁移至主题或时间目录‌。&lt;/li>
+&lt;li>高频使用的笔记可保留在主题目录，低频或完成的项目移至&lt;code>Archive&lt;/code>归档文件夹‌。&lt;/li>
+&lt;/ul>
+&lt;p>我这里只保留了草稿区和归档区。assets 用来保存图片和附件，templates 用来存放模板文件。&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250306024401.webp"
+data-webp="/00-assets/Pasted%20image%2020250306024401.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250306024401.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250306024401.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250306024401.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;h2 id="实例">实例
+&lt;/h2>&lt;p>方案1，以主题为主，时间为辅，适用场景‌：知识库以学科领域或长期项目为核心。&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-text" data-lang="text">&lt;span class="line">&lt;span class="cl">📂 Knowledge_Base
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├─ 📂 Domains # 主题领域
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ ├─ 📂 Science
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> │ └─ 📂 Technology
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├─ 📂 Projects # 短期项目
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├─ 📂 Calendar # 时间相关笔记（日记、会议记录）
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> └─ 📂 Inbox # 临时收集区
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>方案2，时间轴驱动，‌适用场景‌：日记、日常灵感记录为主。&lt;/p>
+&lt;p>实现方式‌：&lt;/p>
+&lt;ul>
+&lt;li>设置日记模板路径为YYYY/MM/YYYY-MM-DD，按年月自动生成嵌套文件夹‌。&lt;/li>
+&lt;li>结合标签（如#会议、#灵感）实现跨时间检索。&lt;/li>
+&lt;/ul>
+&lt;p>方案3，功能导向扁平化，适用场景‌：追求快速检索，避免过度分类。&lt;/p>
+&lt;p>结构示例‌：&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">📂 Notes
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├─ 📄 2025-03-06-会议纪要 # 直接以日期+标题命名
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> ├─ 📄 科技趋势分析 # 主题型笔记
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> └─ 📂 Archive # 低频内容归档
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="总结">总结
+&lt;/h2>&lt;ul>
+&lt;li>避免过度细分‌：文件夹层级建议不超过3层，依赖搜索和双向链接替代硬性分类‌。&lt;/li>
+&lt;li>统一命名规则‌：日期格式（如YYYY-MM-DD）、主题前缀（如[科技]XXX）提升可读性‌。&lt;/li>
+&lt;li>结合插件优化‌：使用Templater自动生成时间目录，或Quick Switcher快速跳转高频文件夹‌。&lt;/li>
+&lt;/ul></description></item></channel></rss>

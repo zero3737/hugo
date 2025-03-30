@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Vscode on carlos</title><link>https://www.carlos2016.cfd/tags/vscode/</link><description>Recent content in Vscode on carlos</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><copyright>Example Person</copyright><lastBuildDate>Sun, 30 Mar 2025 16:10:24 +0000</lastBuildDate><atom:link href="https://www.carlos2016.cfd/tags/vscode/index.xml" rel="self" type="application/rss+xml"/><item><title>vscode 批量修改不同文件中的相同数据</title><link>https://www.carlos2016.cfd/p/vscode-%E6%89%B9%E9%87%8F%E4%BF%AE%E6%94%B9%E4%B8%8D%E5%90%8C%E6%96%87%E4%BB%B6%E4%B8%AD%E7%9A%84%E7%9B%B8%E5%90%8C%E6%95%B0%E6%8D%AE/</link><pubDate>Thu, 13 Mar 2025 19:03:44 +0800</pubDate><guid>https://www.carlos2016.cfd/p/vscode-%E6%89%B9%E9%87%8F%E4%BF%AE%E6%94%B9%E4%B8%8D%E5%90%8C%E6%96%87%E4%BB%B6%E4%B8%AD%E7%9A%84%E7%9B%B8%E5%90%8C%E6%95%B0%E6%8D%AE/</guid><description>&lt;img src="https://www.carlos2016.cfd/bg/44.webp" alt="Featured image of post vscode 批量修改不同文件中的相同数据" />&lt;h2 id="前言">前言
+&lt;/h2>&lt;p>vscode 中有全局搜索功能，然后通过正则匹配需要修改的内容，进行替换即可&lt;/p>
+&lt;h2 id="操作">操作
+&lt;/h2>&lt;p>右键打开项目&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313190149.webp"
+data-webp="/00-assets/Pasted%20image%2020250313190149.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313190149.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313190149.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313190149.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>鼠标聚焦在文件，快捷键 &lt;code>crtl+shift+f&lt;/code>&lt;/p>
+&lt;p>
+&lt;a data-fancybox="gallery"
+href="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313165435.webp"
+data-webp="/00-assets/Pasted%20image%2020250313165435.webp"
+data-original="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313165435.png"
+class="webp-fancybox">
+&lt;picture>
+&lt;source srcset="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313165435.webp" type="image/webp">
+&lt;img src="https://www.carlos2016.cfd/00-assets/Pasted%20image%2020250313165435.png"
+alt=""
+loading="lazy"
+data-fallback>
+&lt;/picture>
+&lt;/a>
+&lt;/p>
+&lt;p>我这里需要将图片 jpg 后缀改为 webp，通过正则匹配 &lt;code>\.jpg$&lt;/code> jpg 后缀，然后替换即可&lt;/p></description></item></channel></rss>
